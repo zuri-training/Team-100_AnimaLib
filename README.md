@@ -105,8 +105,6 @@ when you have downloaded the animation library on your computer
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="path_to_style.css" />
-
-    <link href="code_cdn" />
   </head>
   <body>
     <tagname class="animation"></tagname>
