@@ -37,14 +37,14 @@ For other Operating System Users, Kindly follow online documentation or guide on
 ```bash
 cd <directoryname>
 ```
-creating a virtual environment (this is optional but advisable)
-for window users use: if created successfully, activate the virtual environment.
+Creating a virtual environment (this is optional but advisable)
+For window users use: if created successfully, activate the virtual environment.
 For other Operating System Users, Kindly follow online documentation or guide on how to install and activate your virtual environment.
 
 ```bash
 virtualenv <virtualenvironmentname>
 ```
-install the required packages, use:
+Install the required packages, use:
 ```bash
 pip install -r requirements.txt
 
@@ -61,7 +61,7 @@ Migrate your tables to the database, using:
 python manage.py migrate
 ```
 
-finally, you can run your server using:
+Finally, you can run your server using:
 ```bash
 python manage.py runserver
 ```
