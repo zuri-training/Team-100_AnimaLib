@@ -134,6 +134,6 @@ Add other team members
 
 ## License
 
-[Zuri x I4G](https://www.linkedin.com/company/zuri-team)
+[Zuri x I4G](https://www.linkedin.com/company/zuri-team) <img src="https://res.cloudinary.com/dc29czhf9/image/upload/v1659116899/zuri_cofp2f.png" width="150" height="30" style="padding-left: 10px">
 
 Project idea was inspired by [Zuri x I4G](https://www.linkedin.com/company/zuri-team)
