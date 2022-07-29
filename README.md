@@ -132,6 +132,7 @@ Erica Osawaru - Erica - osawaruerica29@gmail.com (Product Design)
 Victor Emechebe - Rasta - victorasta21@gmail.com (Product Design)
 Fawazat Gbajumo - Fawazah - fawazatgbajumo@gmail.com (Product Design)
 Maryam Afolabi - Mimi96 - afolabimaryamoladoyin@gmail.com (Product Design)
+Uthman Akinsawe - awe80meimagery@gmail.com (Product Design)
 Add other team members
 ```
 
