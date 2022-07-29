@@ -70,6 +70,14 @@ Finally, you can run your server using:
 python manage.py runserver
 ```
 
+## Features
+NOTE: A majority of our features are provided for only authenticated users. Hence, you need to have registered, and logged in to the web application to enjoy these features.
+
+- Interactive documentation showing various animation samples. 
+- View User(s) comment about our product (every user can enjoy this)
+- User interaction via posting comments (for only logged in users)
+- Animation library downloadable as zip file. (for only logged in users)
+
 ## Usage/Examples - How to use library to add nice animation to your web page.
 
 When you are referencing the code on our server. That is, you want to embed a link that points to the css and js on our server.
@@ -112,14 +120,6 @@ When you have downloaded the animation library on your computer
   </body>
 </html>
 ```
-
-## Features
-NOTE: A majority of our features are provided for only authenticated users. Hence, you need to have registered, and logged in to the web application to enjoy these features.
-
-- Interactive documentation showing various animation samples. 
-- View User(s) comment about our product (every user can enjoy this)
-- User interaction via posting comments (for only logged in users)
-- Animation library downloadable as zip file. (for only logged in users)
 
 ## Contributors
 
