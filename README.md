@@ -21,7 +21,7 @@ This project provides an easy to use guide to developers, precisely beginners, o
 
 ## Optimization
 
-we converted both files (css and js) of the library to a zip file. The essence of this is to compress both files to a small size, before they are being saved to the client local computer.
+we converted both files (css and js) of the library to a zip file. The essence of this is to compress both files to a small size, before they are being saved to the client's local computer.
 
 ## Installation
 
@@ -126,6 +126,7 @@ when you have downloaded the animation library on your computer
 David Ikechi - Dayveed - daakwuru@gmail.com (BackEnd)
 Caleb - Octa - (Designer)
 Tola - Tolac - (BackEnd)
+Hamzah - Hamzah Opemipo - (Designer)
 Add other team members
 ```
 
