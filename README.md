@@ -134,6 +134,7 @@ Fawazat Gbajumo - Fawazah - fawazatgbajumo@gmail.com (Product Design)
 Maryam Afolabi - Mimi96 - afolabimaryamoladoyin@gmail.com (Product Design)
 Uthman Akinsawe - awe80meimagery@gmail.com (Product Design)
 Olanrewaju Adefolake Mariam -Flekkies - flourishflekkie@gmail.com (Product design)
+Adeyanju Aliyat Olakanmi - Adeyanju Aliyat - olakanmiadeyanju71@gmail.com (product design)
 Add other team members
 ```
 
