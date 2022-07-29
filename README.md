@@ -32,7 +32,7 @@ git clone https://github.com/zuri-training/anima_lib_team-100.git
 ```
 change directory to the project folder created after cloning.
 For window users use the command provided below.
-For other Operating System Users, Kindly follow online documentation or guide on how to install and activate your virtual environment.
+For other Operating System Users, Kindly follow online documentation or guide on how to change directory.
 
 ```bash
 cd <directoryname>
