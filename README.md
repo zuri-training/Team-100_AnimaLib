@@ -6,7 +6,7 @@ This project provides an easy to use guide to developers, precisely beginners, o
 
 ## Acknowledgements
 
-- [Zuri x I4G](#)
+- [Zuri x I4G](https://www.linkedin.com/company/zuri-team)
 - [proj-anima-lib Team 100](#)
 
 ## Tech Stack
@@ -114,10 +114,12 @@ When you have downloaded the animation library on your computer
 ```
 
 ## Features
+NOTE: A majority of our features are provided for only authenticated users. Hence, you need to have registered, and logged in to the web application to enjoy these features.
 
-- Interactive documentation showing various animation samples.
-- User interaction via comments
-- library download as zip file.
+- Interactive documentation showing various animation samples. 
+- View User(s) comment about our product (every user can enjoy this)
+- User interaction via posting comments (for only logged in users)
+- Animation library downloadable as zip file. (for only logged in users)
 
 ## Contributors
 
@@ -132,6 +134,6 @@ Add other team members
 
 ## License
 
-[Zuri x I4G](#)
+[Zuri x I4G](https://www.linkedin.com/company/zuri-team)
 
-Project idea was inspired by [Zuri x I4G](#)
+Project idea was inspired by [Zuri x I4G](https://www.linkedin.com/company/zuri-team)
