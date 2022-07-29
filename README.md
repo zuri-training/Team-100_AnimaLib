@@ -21,22 +21,25 @@ This project provides an easy to use guide to developers, precisely beginners, o
 
 ## Optimization
 
-we converted both files (css and js) of the library to a zip file. The essence of this is to compress both files to a small size, before they are being saved to the client's local computer.
+We converted both files (css and js) of the library to a zip file. The essence of this is to compress both files to a small size, before they are being saved to the client's local computer.
 
 ## Installation
 
 To install the project to your local computer or server.
-clone into a directory in your computer using:
+Clone into a directory in your computer using:
 ```bash
 git clone https://github.com/zuri-training/anima_lib_team-100.git
 ```
 change directory to the project folder created after cloning.
-for window users use:
+For window users use:
+For other Operating System Users, Kindly follow online documentation or guide on how to install and activate your virtual environment.
+
 ```bash
 cd <directoryname>
 ```
 creating a virtual environment (this is optional but advisable)
 for window users use: if created successfully, activate the virtual environment.
+For other Operating System Users, Kindly follow online documentation or guide on how to install and activate your virtual environment.
 
 ```bash
 virtualenv <virtualenvironmentname>
@@ -49,11 +52,11 @@ or
 
 pip3 install -r requirements.txt
 ```
-run migrations to prepare the models or table to be added to the database, use:
+Run migrations to prepare the models or table to be added to the database, use:
 ```bash
 python manage.py makemigrations
 ```
-migrate your tables to the database, using:
+Migrate your tables to the database, using:
 ```bash
 python manage.py migrate
 ```
@@ -62,18 +65,10 @@ finally, you can run your server using:
 ```bash
 python manage.py runserver
 ```
-Sadly, your the server may fail to locate the static files, this is because we've set debug mode to FALSE;
-Hence, to render your page nicely, allowing your server locate the Static files; use:
-```bash
-
-python manage.py runserver --insecure.
-or 
-set DEBUG=TRUE
-```
 
 ## Usage/Examples - How to use library to add nice animation to your web page.
 
-when you are referencing the code on our server. That is, you want to embed a link that points to the css and js on our server.
+When you are referencing the code on our server. That is, you want to embed a link that points to the css and js on our server.
 
 ```html
 <html>
@@ -94,7 +89,7 @@ when you are referencing the code on our server. That is, you want to embed a li
 </html>
 ```
 
-when you have downloaded the animation library on your computer
+When you have downloaded the animation library on your computer
 
 ```html
 <html>
@@ -126,7 +121,7 @@ when you have downloaded the animation library on your computer
 David Ikechi - Dayveed - daakwuru@gmail.com (BackEnd)
 Caleb - Octa - (Designer)
 Tola - Tolac - (BackEnd)
-Hamzah - Hamzah Opemipo - (Designer)
+Hamzah - Hamzah Opemipo - ahmzar3@gmail.com (Designer)
 Add other team members
 ```
 
