@@ -17,7 +17,7 @@ This project provides an easy to use guide to developers, precisely beginners, o
 
 **Database:** MySQL.
 
-**Version Control:** Github
+**Project Management and Version Control:** Github
 
 ## Optimization
 
