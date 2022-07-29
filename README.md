@@ -83,9 +83,8 @@ when you are referencing the code on our server. That is, you want to embed a li
     <title>page title</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="code_link" />
-
-    <link href="code_cdn" />
+    
+    <link rel="stylesheet" href="code_link_to_server" />
   </head>
   <body>
     <tagname class="animation"></tagname>
