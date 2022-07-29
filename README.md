@@ -26,57 +26,49 @@ we converted both files (css and js) of the library to a zip file. The essence o
 ## Installation
 
 To install the project to your local computer or server.
-
-```bash
 clone into a directory in your computer using:
+```bash
 git clone https://github.com/zuri-training/anima_lib_team-100.git
 ```
-
-```bash
 change directory to the project folder created after cloning.
 for window users use:
+```bash
 cd <directoryname>
 ```
-
-```bash
 creating a virtual environment (this is optional but advisable)
-for window users use:
-virtualenv <virtualenvironmentname>
-
-if created successfully, activate the virtual environment.
-```
+for window users use: if created successfully, activate the virtual environment.
 
 ```bash
+virtualenv <virtualenvironmentname>
+```
 install the required packages, use:
+```bash
 pip install -r requirements.txt
 
 or
 
 pip3 install -r requirements.txt
 ```
-
-```bash
 run migrations to prepare the models or table to be added to the database, use:
+```bash
 python manage.py makemigrations
 ```
-
-```bash
 migrate your tables to the database, using:
+```bash
 python manage.py migrate
 ```
 
-```bash
 finally, you can run your server using:
+```bash
 python manage.py runserver
 ```
-
-```bash
 Sadly, your the server may fail to locate the static files, this is because we've set debug mode to FALSE;
 Hence, to render your page nicely, allowing your server locate the Static files; use:
+```bash
 
 python manage.py runserver --insecure.
-
-or set DEBUG=TRUE
+or 
+set DEBUG=TRUE
 ```
 
 ## Usage/Examples - How to use library to add nice animation to your web page.
@@ -127,7 +119,7 @@ when you have downloaded the animation library on your computer
 
 ## Features
 
-- Interactive documentation showing various animation samples
+- Interactive documentation showing various animation samples.
 - User interaction via comments
 - library download as zip file.
 
