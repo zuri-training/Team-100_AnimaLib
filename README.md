@@ -48,7 +48,7 @@ For other Operating System Users, kindly follow online documentation or guide on
 ```bash
 virtualenv <virtualenvironmentname>
 ```
-Install the required packages, use:
+Install the required packages, using:
 ```bash
 pip install -r requirements.txt
 
@@ -56,7 +56,7 @@ or
 
 pip3 install -r requirements.txt
 ```
-Run migrations to prepare the models or table to be added to the database, use:
+Run migrations to prepare the models or table to be added to the database, using:
 ```bash
 python manage.py makemigrations
 ```
@@ -71,7 +71,7 @@ python manage.py runserver
 ```
 
 ## Features
-NOTE: A majority of our features are provided for only authenticated users. Hence, you need to have registered, and logged in to the web application to enjoy these features.
+NOTE: A majority of our features are provided for only authenticated users. Hence, you need to have registered and logged in to the web application to enjoy these features.
 
 - Interactive documentation showing various animation samples. 
 - View User(s) comment about our product (every user can enjoy this)
@@ -80,7 +80,7 @@ NOTE: A majority of our features are provided for only authenticated users. Henc
 
 ## Usage/Examples - How to use library to add nice animation to your web page.
 
-When you are referencing the code on our server. That is, you want to embed a link that points to the css and js on our server.
+When you are referencing the code on our server. That is,when you want to embed a link that points to the css and js on our server.
 
 ```html
 <html>
@@ -129,6 +129,7 @@ Caleb - Octa - (Product Design)
 Tola - Tolac - (BackEnd)
 Hamzah Opemipo - Hamzah - ahmzar3@gmail.com (Product Design)
 Erica Osawaru - Erica - osawaruerica29@gmail.com (Product Design)
+Victor Emechebe - Rasta - victorasta21@gmail.com (Product Design)
 Add other team members
 ```
 
