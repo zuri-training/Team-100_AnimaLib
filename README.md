@@ -125,7 +125,7 @@ When you have downloaded the animation library on your computer
 
 ```bash
 David Akwuru - Dayveed - daakwuru@gmail.com (BackEnd)
-Caleb - Octa - (Product Design)
+Caleb Oderinde - Octa - oderindecaleb@gmail.com (Product Design)
 Tola - Tolac - (BackEnd)
 Hamzah Opemipo - Hamzah - ahmzar3@gmail.com (Product Design)
 Erica Osawaru - Erica - osawaruerica29@gmail.com (Product Design)
