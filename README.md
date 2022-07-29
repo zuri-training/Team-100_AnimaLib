@@ -124,6 +124,7 @@ David Akwuru - Dayveed - daakwuru@gmail.com (BackEnd)
 Caleb - Octa - (Designer)
 Tola - Tolac - (BackEnd)
 Hamzah Opemipo - Hamzah - ahmzar3@gmail.com (Designer)
+Erica Osawaru - Erica - osawaruerica29@gmail.com
 Add other team members
 ```
 
