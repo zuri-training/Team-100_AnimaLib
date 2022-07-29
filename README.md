@@ -121,10 +121,10 @@ When you have downloaded the animation library on your computer
 
 ```bash
 David Akwuru - Dayveed - daakwuru@gmail.com (BackEnd)
-Caleb - Octa - (Designer)
+Caleb - Octa - (Product Design)
 Tola - Tolac - (BackEnd)
-Hamzah Opemipo - Hamzah - ahmzar3@gmail.com (Designer)
-Erica Osawaru - Erica - osawaruerica29@gmail.com
+Hamzah Opemipo - Hamzah - ahmzar3@gmail.com (Product Design)
+Erica Osawaru - Erica - osawaruerica29@gmail.com (Product Design)
 Add other team members
 ```
 
