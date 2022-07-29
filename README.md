@@ -118,10 +118,10 @@ When you have downloaded the animation library on your computer
 ## Contributors
 
 ```bash
-David Ikechi - Dayveed - daakwuru@gmail.com (BackEnd)
+David Akwuru - Dayveed - daakwuru@gmail.com (BackEnd)
 Caleb - Octa - (Designer)
 Tola - Tolac - (BackEnd)
-Hamzah - Hamzah Opemipo - ahmzar3@gmail.com (Designer)
+Hamzah Opemipo - Hamzah - ahmzar3@gmail.com (Designer)
 Add other team members
 ```
 
