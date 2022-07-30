@@ -135,6 +135,7 @@ Maryam Afolabi - Mimi96 - afolabimaryamoladoyin@gmail.com (Product Design)
 Uthman Akinsawe - awe80meimagery@gmail.com (Product Design)
 Olanrewaju Adefolake Mariam -Flekkies - flourishflekkie@gmail.com (Product design)
 Adeyanju Aliyat Olakanmi - Adeyanju Aliyat - olakanmiadeyanju71@gmail.com (product design)
+Abiola Oladimeji - Bizzdimeji(FrontEnd) - bizzdimeji@gmail.com (Fullstack)
 Add other team members
 ```
 
