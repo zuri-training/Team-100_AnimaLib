@@ -30,6 +30,7 @@ class CustomAccountManager(BaseUserManager):
         user.set_password(password)
         user.save()
         return user
+    
 # we are creating a custom user model that will be used to create a user account
 # and will be used to authenticate the user
 class newUser(AbstractBaseUser, PermissionsMixin):
