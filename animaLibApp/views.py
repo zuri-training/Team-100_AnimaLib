@@ -114,4 +114,26 @@ def contact(request):
         
     return render(request, 'animaLibApp/contact.html', {'form': form})
 
+# defining the logout view
+@login_required(login_url='/signin')
+def log_out(request):
+    logout(request)
+    return redirect('login')
 
+# this view allows a user to download the library as a zip file to their local machine
+def download_library(request):
+    if request.user.is_authenticated:
+        files = ["style.css","script.js"]
+        file_path = os.path.join("animaLibApp","static","library")
+        real_path = os.path.join(BASE_DIR, file_path)
+        # lets zip the file right away.
+        with zipfile.ZipFile('animalibt100.zip', 'w') as zipF:
+            for file in files:
+                zipF.write(os.path.join(real_path,file), basename(os.path.join(real_path,file)),compress_type = zipfile.ZIP_DEFLATED)
+        # download the files that was generated. 
+        response = HttpResponse(open(os.path.join(BASE_DIR,"animalibt100.zip"), 'rb'), content_type='application/zip')
+        response['Content-Disposition'] = 'attachment; filename=animalibt100.zip'
+        return response
+    else:
+        messages.add_message(request, cs.ERROR, 'Please create an account to download the library!')
+        return redirect('register')
