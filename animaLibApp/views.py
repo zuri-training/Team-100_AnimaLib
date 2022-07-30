@@ -10,6 +10,7 @@ from django.contrib.messages import constants as cs
 from django.contrib.auth import authenticate, login, logout
 from pathlib import Path
 import os
+from .forms import *
 from os.path import basename
 # this package allows files to be zipped.
 import zipfile
@@ -26,6 +27,7 @@ MESSAGE_TAGS = {
 def index(request):
     return render(request, 'animaLibApp/index.html')
 
+# This is a view for the login page of the website.
 def log_in(request):
     form = LoginForm()
     if request.method == 'POST':
@@ -77,5 +79,4 @@ def register(request):
         return render(request, 'animaLibApp/register.html', {'form': form})
     
     return render(request, 'animaLibApp/register.html', {'form': form})
-
 

@@ -21,3 +21,14 @@ class LoginForm(forms.ModelForm):
             'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your username'}),
             'password': forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Enter your password'}),
         }
+        
+class contactForm(forms.Form):
+    name = forms.CharField(max_length = 100, label='Name', 
+                                       widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your name'}))
+    email = forms.EmailField(max_length = 100, label='Email', 
+                                       widget = forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter your email'}))
+    subject = forms.CharField(label = 'Subject', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your subject'}))
+    message = forms.CharField(max_length = 1000, label='Message', 
+                                       widget = forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Enter your message', 'rows': 4}))
+        
+        
