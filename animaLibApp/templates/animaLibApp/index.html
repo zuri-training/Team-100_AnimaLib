@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+<!-- --------------------------------------------------------->
+{% load active_link_tags %}
+<!-- --------------------------------------------------------->
+{% block title %} Home page {% endblock %}
+<!-- ---------------------------------------------------------------------------- -->
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-4" style="margin-top: 30px">
+      <a href="{% url 'download' %}" class="btn btn-primary btn-xs">Download</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

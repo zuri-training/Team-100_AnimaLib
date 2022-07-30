@@ -1,0 +1,88 @@
+{% load static %}
+<!-- ---------------------------------------------------------------------- -->
+{% load active_link_tags %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+   <header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 logo">
+                <a href="{% url 'index' %}">
+                    {% comment %} <img src="{% static 'img/logo.png' %}" alt="logo" /> {% endcomment %}
+                    Anima_lib_T100
+                </a>
+            </div>
+            <div class="col-md-5 center-navs">
+                <a href="{% url 'index' %}" class="{% active_link 'index' strict=True %}">Home</a>
+                <a href="{% url 'documentation' %}" class="{% active_link 'documentation' strict=True %}">Documentation</a>
+                <a href="{% url 'contact' %}" class="{% active_link 'contact' strict=True %}">Contact Us</a>
+                
+            </div>
+            <div class="col-md-4 right-navs">
+                <a href="{% url 'login' %}" class="{% active_link 'login' strict=True %} btn">Login</a>
+                <a href="{% url 'register' %}" class="{% active_link 'register' strict=True %} btn">Register</a>
+
+            </div>
+
+        </div>
+    </div>
+    <header>
+    <main>{% block content %} {% endblock %}</main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 logo">
+                    <a href="{% url 'index' %}">
+                        {% comment %} <img src="{% static 'img/logo.png' %}" alt="logo" /> {% endcomment %}
+                        Anima_lib_T100
+                    </a><br>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec euismod, nisl eget consectetur sagittis,
+                        nisl nunc egestas nisi, eu aliquet nunc nisl eget
+                        consectetur sagittis.
+                    </p>
+                </div>
+                <div class="col-md-4 center-navs">
+                    <p>Quick links</p>
+                    <a href="#">account</a>
+                    <a href="{% url 'contact' %}"> contact</a>
+                    <a href="{% url 'documentation' %}">documentation</a>
+                </div><div class="col-md-4 right-navs">
+                    <p>
+                        &copy; 2022 Anima_lib_T100. All rights reserved.
+                    </p>
+                </div>
+            </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
