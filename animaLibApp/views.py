@@ -80,6 +80,38 @@ def register(request):
     
     return render(request, 'animaLibApp/register.html', {'form': form})
 
+# this is the view for the contact page of the website
+def contact(request):
+    form = contactForm()
+    sender = settings.EMAIL_HOST_USER
+    # open connection
+    connection = get_connection()
+    connection.open()
 
+    if request.method == 'POST':
+        # get the form data
+        user_name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        text = request.POST['message']
+        
+        mail_content = {
+            'name': user_name, 'sender': sender, 'subject': subject, 'message': text
+        }
+        
+        # render the email template to a string
+        message = render_to_string('mailer/contact.html', mail_content)
+        mes = EmailMultiAlternatives(f'contact: {subject}', '',sender, ["davidakwuruu@gmail.com"],
+                                     connection = connection)
+        mes.attach_alternative(message, "text/html")
+        
+        if mes.send():
+            messages.add_message(request, messages.SUCCESS, f'Thank you {user_name} for your message')
+        else:
+            messages.add_message(request, cs.ERROR, 'An error occured, please try again!')
+        # close the connection
+        connection.close()
+        
+    return render(request, 'animaLibApp/contact.html', {'form': form})
 
 
