@@ -1,0 +1,37 @@
+/* fonts import here */
+
+/* mobile first design */
+
+
+
+
+/* layout for larger devices */
+@media(min-width: 992px){
+    .maincontentContainer {
+        display: grid;
+
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr;
+    }
+
+    .homeIntroRow {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    /* anime-menu layout */
+    .anime-menuContentHolder {
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(autofit, minmax(5px, auto));
+    }
+    .menuItem-subItems {
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(autofit, minmax(5px, auto));
+    }
+}

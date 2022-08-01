@@ -1,0 +1,66 @@
+/* fonts import here */
+
+/* mobile first design */
+.maincontentContainer {
+    padding: 10px;
+    min-height: 80vh;
+}
+
+
+
+/* layout for larger devices */
+@media(min-width: 992px){
+    .pageSideBar {
+        border-right: 1px solid whitesmoke;
+        margin: 0px 10px 0px 5px;
+    }
+
+    /* anime-menu design */
+    .activeLink {
+        color: rgb(250, 87, 0);
+        padding-left: 10px;
+    }
+    
+    .amime-menuHeader {
+        font-size: 15pt;
+        font-weight: 500;
+    }
+    .anime-menuContentHolder {
+        margin: 1px 5px 1px 10px;
+    }
+    .subGroupHeader {
+        font-size: 12pt;
+        font-weight: 300;
+    }
+    .subGroupContentHolder {
+        padding: 2px 15px;
+    }
+    .menuItem-name {
+        font-size: 11pt;
+        font-weight: 200;
+    }
+    .menuItem-subItems {
+        font-size: 10pt;
+        font-weight: 100;
+        padding: 2px 15px;
+    }
+    .menuLink:hover {
+        padding-left: 5px;
+    }
+
+    /* main content design */
+    .menuContentContainer {
+        margin: 0px 5px 0px 50px;
+    }
+    .menuContentContainer div {
+        margin-bottom: 15px;
+    }
+    .imageRow {
+        width: 100%;
+        min-height: 300px;
+
+        /* temp styles */
+        background-color: darkslategrey;
+    }
+
+}
