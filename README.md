@@ -140,6 +140,9 @@ Adeyanju Aliyat Olakanmi - Adeyanju Aliyat - olakanmiadeyanju71@gmail.com (produ
 Abiola Oladimeji - Bizzdimeji(FrontEnd) - bizzdimeji@gmail.com (Fullstack)
 Oyeniran Ruth Oluwakemi - Oluwakemi13 - Oyeniranoluwakemi13@gmail.com (Product Design)
 Atunde Goodness Joseph - Goody(Backend) - atundeg@gmail.com (Fullstack)
+Nwobu Kenechukwu - Kene(FrontEnd) - nwobukenechukwu@gmail.com (Fullstack)
+Achi Sughter - Achi Sughter Tooyosi (Frontend) - sughtera@gmail.com (Fullstack)
+Christiana Mabel Nyuma - Mabel(Frontend) - chrisbarbz17@gmail.com(Fullstack)
 Add other team members
 ```
 
