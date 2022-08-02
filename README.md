@@ -1,4 +1,4 @@
-# <p align='center'>Animation Library </p> 
+# <p align='center'>Animation Library </p>
 <p align ='center'>
   <img src="https://res.cloudinary.com/dc29czhf9/image/upload/v1659106833/animo_logo_zecrf3.png" width="200" height="100">
 </p>
@@ -73,7 +73,7 @@ python manage.py runserver
 ## Features
 NOTE: A majority of our features are provided for only authenticated users. Hence, you need to have registered and logged in to the web application to enjoy these features.
 
-- Interactive documentation showing various animation samples. 
+- Interactive documentation showing various animation samples.
 - View User(s) comment about our product (every user can enjoy this)
 - User interaction via posting comments (for only logged in users)
 - Animation library downloadable as zip file. (for only logged in users)
@@ -90,7 +90,7 @@ When you are referencing the code on our server. That is,when you want to embed 
     <title>page title</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <link rel="stylesheet" href="code_link_to_server" />
   </head>
   <body>
@@ -139,6 +139,7 @@ Olanrewaju Adefolake Mariam -Flekkies - flourishflekkie@gmail.com (Product desig
 Adeyanju Aliyat Olakanmi - Adeyanju Aliyat - olakanmiadeyanju71@gmail.com (product design)
 Abiola Oladimeji - Bizzdimeji(FrontEnd) - bizzdimeji@gmail.com (Fullstack)
 Oyeniran Ruth Oluwakemi - Oluwakemi13 - Oyeniranoluwakemi13@gmail.com (Product Design)
+Atunde Goodness Joseph - Goody(Backend) - atundeg@gmail.com (Fullstack)
 Add other team members
 ```
 
