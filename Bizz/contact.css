@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  /* height: auto; */
+  margin: auto;
+  /* justify-content:space-evenly; */
+  align-items: center;
+}
+
+.container1 {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.hero-img {
+  height: 583px;
+  width: 552px;
+}
+.container2 {
+  width: 50%;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  /* align-items: center; */
+  /* text-align: center; */
+}
+form {
+  /* padding: 100px; */
+  width: 100%;
+}
+
+.text1 {
+  /* Get Quick Help */
+  margin-bottom: 8px;
+
+  /* Display/Display Small */
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 52px;
+  /* Grey/800 */
+  color: #242324;
+}
+
+.text2 {
+  /* We’ve got you covered 24/7 */
+  font-family: "Raleway";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  color: #242324;
+}
+
+.form-heading {
+  text-align: center;
+}
+
+label {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #080808;
+}
+
+input {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+
+  /* Grey/300 */
+  color: #9f9f9f;
+  width: 100%;
+  /* margin: 20px; */
+  padding: 12px 20px;
+  margin: 4px 0 32px 0;
+  box-sizing: border-box;
+  border: 1px solid #5e5e5e;
+  border-radius: 8px;
+  /* transition: background 0.2s, border 0.2s; */
+}
+
+textarea {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  resize: none;
+  width: 100%;
+  margin: 10px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #5e5e5e;
+  border-radius: 8px;
+  color: #9f9f9f;
+}
+
+.main-form {
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 56px;
+  /* padding: 30px 0 30px 0; */
+}
+.center {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-button {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  /* identical to box height, or 120% */
+  align-items: center;
+  letter-spacing: 0.15px;
+  background-color: #1f2782;
+  color: #fefefe;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 20px 60px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 292px;
+  border-radius: 8px;
+  border: 1px solid #462255;
+  outline: none;
+}
+
+.icon {
+  width: 17.76px;
+  margin-left: 11px;
+}
+/* FAQ SECTION */
+.title {
+  font-family: "Raleway";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 52px;
+  text-align: left;
+  color: #242324;
+  text-align: center;
+  margin-top: 135px;
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.question button {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 15px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: #2b2b2b;
+  font-weight: 600;
+  border-bottom: 1px solid #1a216c;
+  cursor: pointer;
+}
+
+.question button span {
+  /* Headline/Headline Main */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  /* font-size: 28px; */
+  color: #2b2b2b;
+}
+.question button i {
+  transform: rotate(180deg);
+}
+
+.question p {
+  margin-top: 11px;
+  width: 690px;
+  /* height: 64px; */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+.d-arrow {
+  transition: transform 0.5s ease-in;
+  color: #2b2b2b;
+}
+
+/* TOGGLE */
+.question p.show {
+  max-height: 200px;
+  opacity: 1;
+  padding: 0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate {
+  transform: rotate(0.18deg);
+}
+/* FAQ SECTION ENDS */
