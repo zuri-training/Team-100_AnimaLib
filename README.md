@@ -124,8 +124,8 @@ When you have downloaded the animation library on your computer
 ## Contributors
 
 ```bash
-David Akwuru - Dayveed(BackEnd) - daakwuru@gmail.com (Fullstack)
 Tola - Tolac - (BackEnd) - omotola.coker.o@gmail.com (Fullstack)
+David Akwuru - Dayveed(BackEnd) - daakwuru@gmail.com (Fullstack)
 Fonyuy Videc Leinyuy - Videc(Frontend) - videcleinyuy@gmail.com (Fullstack)
 Okene Daniel - Okene Daniel(FrontEnd) - okenedaniel44@gmail.com (Fullstack)
 Abiola Oladimeji - Bizzdimeji(FrontEnd) - bizzdimeji@gmail.com (Fullstack)
