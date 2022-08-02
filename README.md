@@ -125,10 +125,16 @@ When you have downloaded the animation library on your computer
 
 ```bash
 David Akwuru - Dayveed(BackEnd) - daakwuru@gmail.com (Fullstack)
-Caleb Oderinde - Octa - oderindecaleb@gmail.com (Product Design)
 Tola - Tolac - (BackEnd) - omotola.coker.o@gmail.com (Fullstack)
 Fonyuy Videc Leinyuy - Videc(Frontend) - videcleinyuy@gmail.com (Fullstack)
 Okene Daniel - Okene Daniel(FrontEnd) - okenedaniel44@gmail.com (Fullstack)
+Abiola Oladimeji - Bizzdimeji(FrontEnd) - bizzdimeji@gmail.com (Fullstack)
+Atunde Goodness Joseph - Goody(Backend) - atundeg@gmail.com (Fullstack)
+Nwobu Kenechukwu - Kene(FrontEnd) - nwobukenechukwu@gmail.com (Fullstack)
+Achi Sughter - Achi Sughter Tooyosi (Frontend) - sughtera@gmail.com (Fullstack)
+Christiana Mabel Nyuma - Mabel(Frontend) - chrisbarbz17@gmail.com(Fullstack)
+
+Caleb Oderinde - Octa - oderindecaleb@gmail.com (Product Design)
 Hamzah Opemipo - Hamzah - ahmzar3@gmail.com (Product Design)
 Erica Osawaru - Erica - osawaruerica29@gmail.com (Product Design)
 Victor Emechebe - Rasta - victorasta21@gmail.com (Product Design)
@@ -137,12 +143,7 @@ Maryam Afolabi - Mimi96 - afolabimaryamoladoyin@gmail.com (Product Design)
 Uthman Akinsawe - awe80meimagery@gmail.com (Product Design)
 Olanrewaju Adefolake Mariam -Flekkies - flourishflekkie@gmail.com (Product design)
 Adeyanju Aliyat Olakanmi - Adeyanju Aliyat - olakanmiadeyanju71@gmail.com (product design)
-Abiola Oladimeji - Bizzdimeji(FrontEnd) - bizzdimeji@gmail.com (Fullstack)
 Oyeniran Ruth Oluwakemi - Oluwakemi13 - Oyeniranoluwakemi13@gmail.com (Product Design)
-Atunde Goodness Joseph - Goody(Backend) - atundeg@gmail.com (Fullstack)
-Nwobu Kenechukwu - Kene(FrontEnd) - nwobukenechukwu@gmail.com (Fullstack)
-Achi Sughter - Achi Sughter Tooyosi (Frontend) - sughtera@gmail.com (Fullstack)
-Christiana Mabel Nyuma - Mabel(Frontend) - chrisbarbz17@gmail.com(Fullstack)
 Add other team members
 ```
 
