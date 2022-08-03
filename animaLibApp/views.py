@@ -22,6 +22,13 @@ MESSAGE_TAGS = {
     cs.ERROR: 'danger'
 }
 
+# views to capture errors, just incase a user tries to access a page that does not exist.
+def error_404(request, exception):
+    return render(request, 'animaLibApp/error404.html', status=404)
+
+# view to handle error 500;
+def error_500(request, *args, **argv):
+    return render(request, 'animaLibApp/error500.html', status=500)
 
 
 def index(request):

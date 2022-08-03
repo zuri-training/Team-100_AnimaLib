@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% load static %}
+<!-- --------------------------------------------------------->
+{% load active_link_tags %}
+<!-- --------------------------------------------------------->
+{% block title %} Error 500 {% endblock %}
+<!-- ---------------------------------------------------------------------------- -->
+{% block content %}
+<div class="container-content">
+  <div class="server-container">
+    <div class="server-image"></div>
+    <div class="server-error">
+      <h1>OOPS!</h1>
+      <p>
+        Seems something went wrong. We are trying to fix the problem.<br />In
+        the meantime:
+      </p>
+      <a href="{% url 'index' %}"
+        ><img src="{% static 'images/refresh.png' %}" class="server-icon" />
+        Refresh the page.</a
+      ><br />
+      <a href="{% url 'index' %}"
+        ><img src="{% static 'images/arrowleft.png' %}" class="server-icon" />
+        Back to Home
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

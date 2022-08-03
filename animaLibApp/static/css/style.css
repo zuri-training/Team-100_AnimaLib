@@ -1,5 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap");
+
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+}
+main {
+  padding: 3em 0px;
+}
+.container-content {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ============= ERROR 404 STYLING =============================*/
+.error-container {
+  display: grid;
+  grid-template-columns: 42% 56%;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  padding: 4em 0px;
+}
+
+.error-message {
+}
+
+.error-image {
+  background-image: url("../images/error.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 78vh;
+  margin-left: 20px;
+}
+
+.error-message h1 {
+  line-height: 1.5em;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+}
+.error-message h1 span {
+  color: #9b1616;
+}
+.error-message p {
+  line-height: 1.5em;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  padding-right: 6em;
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
+}
+.error-message a {
+  text-decoration: none;
+}
+.error-message a:hover {
+  color: #fefefe;
+}
+/*========== ERROR 404 END =================================*/
+.btn-return {
+  background-color: #1f2782;
+  padding: 12px 40px;
+  height: 48px;
+  border-radius: 8px;
+  color: #fefefe;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  letter-spacing: 0.15px;
+}
+
+/*=============EROOR 500 =================*/
+.server-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  grid-gap: 20px;
+  padding: 4em 0px;
+}
+
+.server-image {
+  background-image: url("../images/error500.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 70vh;
+}
+
+.server-error {
+  background-color: #b9bdee;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.server-error h1 {
+  line-height: 1.5em;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-style: normal;
+  color: #4f59d5;
+  padding-top: 52px;
+  font-weight: 700;
+  font-size: 56px;
+}
+
+.server-error p {
+  line-height: 1.5em;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #121212;
+  padding: 1.4em 38px 0.5em 38px;
+}
+
+.server-error a {
+  text-decoration: none;
+  color: #121212;
+  padding: 0em 38px 0.5em 38px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.server-icon {
+  width: 17.92px;
+  height: 17.92px;
+}
+
+.server-error a i {
+  color: rgba(18, 18, 18, 0.7);
+}
+
+/*=============END ERROR 500 =================*/
+
+/* styling for mobile screen with maximum width of 395 */
+@media (min-width: 768px) {
+  .container-content {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-content {
+    width: 980px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-content {
+    width: 1190px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 0px;
+    text-align: center;
+  }
+  .error-message h1 {
+    line-height: 1.5em;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+  }
+  .error-message p {
+    font-size: 18px;
+    padding-right: 0em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    text-align: center;
+  }
+  .error-image {
+    height: 0vh;
+  }
+  .btn-return {
+  }
 }

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<!-- --------------------------------------------------------->
+{% load active_link_tags %}
+<!-- --------------------------------------------------------->
+{% block title %} Error 404 {% endblock %}
+<!-- ---------------------------------------------------------------------------- -->
+{% block content %}
+<div class="container-content">
+  <div class="error-container">
+    <div class="error-message">
+      <h1>Error <span>404</span> <br />Page Not Found!</h1>
+      <p>
+        Oops!, the page you are looking for no longer exists!. Please return to
+        the homepage.
+      </p>
+      <a href="{% url 'index' %}" class="btn-return">Back to Home</a>
+    </div>
+    <div class="error-image"></div>
+  </div>
+</div>
+{% endblock %}

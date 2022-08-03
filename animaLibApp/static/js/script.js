@@ -1,1 +1,1 @@
-alert("This is the JavaScript file");
+let awesome = 50;
