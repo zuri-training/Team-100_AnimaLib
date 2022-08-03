@@ -77,16 +77,16 @@ class Comment(models.Model):
     """Model for users comment on posts
     """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING)
     text = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['created_on']
 
     def __str__(self):
-        return '{} commented: {}'.format(self.user, self.text)
+        return '{} commented: {}'.format(self.author, self.text)
 
 
 

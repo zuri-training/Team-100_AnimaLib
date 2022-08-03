@@ -36,5 +36,5 @@ class CommentForm(forms.ModelForm):
     """Form for comments"""
     class Meta:
         model = Comment
-        fields = ('user', 'text')
+        fields = ('author', 'text')
 
