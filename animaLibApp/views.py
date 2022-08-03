@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
@@ -38,11 +38,11 @@ def log_in(request):
         # if the result is true, it means the user has been authenticated
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect(reverse('dashboard'))      
+            return HttpResponseRedirect(reverse('dashboard'))
         else:
             messages.add_message(request, cs.ERROR, 'Invalid username or password!')
-            return HttpResponseRedirect(reverse('login'))      
-                
+            return HttpResponseRedirect(reverse('login'))
+
     return render(request, 'animaLibApp/login.html', {'form': form})
 
 
@@ -61,7 +61,7 @@ def register(request):
             password = form.cleaned_data['password']
             confirm_password = form.cleaned_data['confirm_password']
             email = form.cleaned_data['email']
-                    
+
             if password != confirm_password:
                 messages.add_message(request, cs.ERROR, 'Passwords do not match, try again!')
                 return redirect('register')
@@ -70,14 +70,14 @@ def register(request):
                 # hash and save the password; immediately; we do not want to save the password in plain text.
                 user = newUser.objects.get(username = form.cleaned_data['username'])
                 user.set_password(password)
-                
+
                 user.save()
 
                 messages.add_message(request, messages.SUCCESS, 'Account was successfully created!')
                 return redirect('login')
-        
+
         return render(request, 'animaLibApp/register.html', {'form': form})
-    
+
     return render(request, 'animaLibApp/register.html', {'form': form})
 
 # this is the view for the contact page of the website
@@ -94,24 +94,24 @@ def contact(request):
         email = request.POST['email']
         subject = request.POST['subject']
         text = request.POST['message']
-        
+
         mail_content = {
             'name': user_name, 'sender': sender, 'subject': subject, 'message': text
         }
-        
+
         # render the email template to a string
         message = render_to_string('mailer/contact.html', mail_content)
         mes = EmailMultiAlternatives(f'contact: {subject}', '',sender, ["davidakwuruu@gmail.com"],
                                      connection = connection)
         mes.attach_alternative(message, "text/html")
-        
+
         if mes.send():
             messages.add_message(request, messages.SUCCESS, f'Thank you {user_name} for your message')
         else:
             messages.add_message(request, cs.ERROR, 'An error occured, please try again!')
         # close the connection
         connection.close()
-        
+
     return render(request, 'animaLibApp/contact.html', {'form': form})
 
 # defining the logout view
@@ -130,10 +130,35 @@ def download_library(request):
         with zipfile.ZipFile('animalibt100.zip', 'w') as zipF:
             for file in files:
                 zipF.write(os.path.join(real_path,file), basename(os.path.join(real_path,file)),compress_type = zipfile.ZIP_DEFLATED)
-        # download the files that was generated. 
+        # download the files that was generated.
         response = HttpResponse(open(os.path.join(BASE_DIR,"animalibt100.zip"), 'rb'), content_type='application/zip')
         response['Content-Disposition'] = 'attachment; filename=animalibt100.zip'
         return response
     else:
         messages.add_message(request, cs.ERROR, 'Please create an account to download the library!')
         return redirect('register')
+
+def documentation():
+    """
+    View for the documentation page
+    """
+    return render("animaLibApp/documentation.html")
+
+def post_comment(request):
+    post = get_object_or_404(Post)
+    comments = post.comments.filter(active=True)
+    new_comment = None
+
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+
+            new_comment = comment_form.save(commit=False)
+            new_comment.post = post
+            new_comment.save()
+    else:
+        comment_form = CommentForm()
+
+    data = {'post': post, 'comments': comments, 'new_comment': new_comment, 'comment_form': comment_form}
+
+    return render(request, 'comment.html', data)
