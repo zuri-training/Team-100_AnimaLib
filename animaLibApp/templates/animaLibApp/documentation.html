@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+<!-- --------------------------------------------------------->
+{% load active_link_tags %}
+<!-- --------------------------------------------------------->
+{% block title %} Docs Page {% endblock %}
+<!-- ---------------------------------------------------------------------------- -->
+{% block content %}
+<div class="container">
+	<div class="row">
+		{% for post in posts %}
+		<div class="col-md-8 card mb-4  mt-3 left  top">
+			<div class="card-body">
+			<h1>{{ post.title }}</h1>
+			<p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
+			<p class="card-text ">{{ post.text | safe }}</p>
+
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+	  <div class="col-md-8">
+		<h2 class="page-header">Comments</h2>
+		  <section class="comment-list">
+			{% if posts %}
+				{% for post in posts %}
+				<div>
+					<!-- Comment -->
+					<article id="comment" class="row">
+						<div class="col-md-2 col-sm-2 hidden-xs">
+							<figure class="thumbnail">
+							{% comment %} <img class="img-responsive" src="http://www.tangoflooring.ca/wp-content/uploads/2015/07/user-avatar-placeholder.png" /> {% endcomment %}
+							<figcaption class="text-center">{{ post.author }}</figcaption>
+							</figure>
+						</div>
+						<div class="col-md-10 col-sm-10">
+							<div class="panel panel-default arrow left">
+							<div class="panel-body">
+								<header class="text-left">
+								{% comment %} <div class="comment-user"><i class="fa fa-user"></i> That Guy</div> {% endcomment %}
+								<time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i>{{ post.published_date }}</time>
+								</header>
+								<div class="comment-post">
+								<p>
+									{{ post.text }}
+								</p>
+								</div>
+								<p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
+							</div>
+							</div>
+						</div>
+					</article>
+					<!-- Comment Reply -->
+					{% if post.comments %}
+						{% for comment in post.comments.all %}
+							<article id="comment_reply" class="row ml-5">
+								<div class="col-md-2 col-sm-2 col-md-offset-1 col-sm-offset-0 hidden-xs">
+									<figure class="thumbnail">
+									{% comment %} <img class="img-responsive" src="http://www.tangoflooring.ca/wp-content/uploads/2015/07/user-avatar-placeholder.png" /> {% endcomment %}
+									<figcaption class="text-center">{{ comment.author }}</figcaption>
+									</figure>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="panel panel-default arrow left">
+									<div class="panel-heading right">Reply</div>
+									<div class="panel-body">
+										<header class="text-left">
+										{% comment %} <div class="comment-user"><i class="fa fa-user"></i> That Guy</div> {% endcomment %}
+										<time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> {{comment.created_on}} </time>
+										</header>
+										<div class="comment-post">
+										<p>
+											{{ comment.text }}
+										</p>
+										</div>
+										{% comment %} <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p> {% endcomment %}
+									</div>
+									</div>
+								</div>
+							</article>
+						{% endfor %}
+					{% endif %}
+
+				</div>
+				{% endfor %}
+			{% endif %}
+
+		  </section>
+	  </div>
+	</div>
+  </div>
+
+
+{% endblock %}

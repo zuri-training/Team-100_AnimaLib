@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render, redirect
+from django.shortcuts import get_object_or_404, get_list_or_404, render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
@@ -138,11 +138,16 @@ def download_library(request):
         messages.add_message(request, cs.ERROR, 'Please create an account to download the library!')
         return redirect('register')
 
-def documentation():
+def documentation(request):
     """
     View for the documentation page
     """
-    return render("animaLibApp/documentation.html")
+
+    get_posts = get_list_or_404(Post.objects.all())
+    posts = get_posts
+    print(posts)
+    template_name = "animaLibApp/documentation.html"
+    return render(request, template_name, {'posts':posts})
 
 def post_comment(request):
     post = get_object_or_404(Post)
