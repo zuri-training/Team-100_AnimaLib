@@ -31,10 +31,41 @@ class contactForm(forms.Form):
     message = forms.CharField(max_length = 1000, label='Message',
                                        widget = forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Enter your message', 'rows': 4}))
 
-
 class CommentForm(forms.ModelForm):
-    """Form for comments"""
+    """For for posting comments"""
+
+    class Meta:
+        model = Post
+        fields = ('title', 'text')
+
+        widgets = {
+            'title': forms.TextInput(
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Title of Post'
+                }
+            ),
+            'text': forms.Textarea(
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Enter post body'
+                }
+            )
+        }
+
+class ReplyCommentForm(forms.ModelForm):
+    """Form for replying comments"""
+
     class Meta:
         model = Comment
-        fields = ('author', 'text')
+        fields = ('text',)
+
+        widgets = {
+            'text': forms.TextInput(
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Add Comments'
+                }
+            )
+        }
 
