@@ -1,14 +1,16 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %}
 <!-- --------------------------------------------------------->
 {% load active_link_tags %}
 <!-- --------------------------------------------------------->
 {% block title %} Home page {% endblock %}
 <!-- ---------------------------------------------------------------------------- -->
-{% block content %}
+{% block style %}
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+{% endblock %} {% block content %}
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-lg-4" style="margin-top: 30px">
-      <a href="{% url 'download' %}" class="btn btn-primary btn-xs">Download</a>
+      <a href="#" class="btn btn-primary btn-xs">Download</a>
     </div>
   </div>
 </div>
