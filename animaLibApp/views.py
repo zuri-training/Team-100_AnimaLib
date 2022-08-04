@@ -142,28 +142,54 @@ def documentation(request):
     """
     View for the documentation page
     """
+    template_name = "animaLibApp/documentation.html"
 
     get_posts = get_list_or_404(Post.objects.all())
     posts = get_posts
-    print(posts)
-    template_name = "animaLibApp/documentation.html"
-    return render(request, template_name, {'posts':posts})
+    # print(posts)
 
-def post_comment(request):
-    post = get_object_or_404(Post)
-    comments = post.comments.filter(active=True)
-    new_comment = None
+    if request.user.is_authenticated:
 
-    if request.method == 'POST':
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
+        if request.method == 'POST':
+            comment_form = CommentForm(data=request.POST)
+            if comment_form.is_valid():
 
-            new_comment = comment_form.save(commit=False)
-            new_comment.post = post
-            new_comment.save()
-    else:
-        comment_form = CommentForm()
+                comment_form = comment_form.save(commit=False)
+                comment_form.author = request.user
+                comment_form.created_date = timezone.now()
+                comment_form.save()
+        else:
+            comment_form = CommentForm
 
-    data = {'post': post, 'comments': comments, 'new_comment': new_comment, 'comment_form': comment_form}
+        data = {'posts':posts, 'comment_form': comment_form}
 
-    return render(request, 'comment.html', data)
+    return render(request, template_name, data)
+
+def post_comment(request, pk):
+    """Reply to a comment / post"""
+
+    if request.user.is_authenticated:
+        template_name = 'animaLibApp/comment_reply.html'
+        post = get_object_or_404(Post, pk=pk)
+        print(post); print()
+        comments = post.comments
+        print(comments)
+        new_reply = None
+
+        if request.method == 'POST':
+            reply_comment_form = ReplyCommentForm(data=request.POST)
+            if reply_comment_form.is_valid():
+
+                new_reply = reply_comment_form.save(commit=False)
+                new_reply.author = request.user
+                new_reply.post = post
+                new_reply.created_date = timezone.now()
+                new_reply.save()
+
+                return redirect('documentation')
+        else:
+            reply_comment_form = ReplyCommentForm
+
+        data = {'post': post, 'comments': comments, 'new_reply': new_reply, 'reply_comment_form': reply_comment_form}
+
+        return render(request, template_name, data)
