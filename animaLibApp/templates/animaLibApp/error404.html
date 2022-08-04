@@ -1,10 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %}
 <!-- --------------------------------------------------------->
 {% load active_link_tags %}
 <!-- --------------------------------------------------------->
 {% block title %} Error 404 {% endblock %}
 <!-- ---------------------------------------------------------------------------- -->
-{% block content %}
+{% block style %}
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+{% endblock %} {% block content %}
 <div class="container-content">
   <div class="error-container">
     <div class="error-message">

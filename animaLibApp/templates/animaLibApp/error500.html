@@ -4,7 +4,9 @@
 <!-- --------------------------------------------------------->
 {% block title %} Error 500 {% endblock %}
 <!-- ---------------------------------------------------------------------------- -->
-{% block content %}
+{% block style %}
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+{% endblock %} {% block content %}
 <div class="container-content">
   <div class="server-container">
     <div class="server-image"></div>
