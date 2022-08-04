@@ -387,7 +387,7 @@ main {
   padding: 0 120px;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 120px;
+  padding-bottom: 0px;
 }
 
 #lower-content-container section {

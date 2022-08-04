@@ -7,11 +7,283 @@
 {% block style %}
 <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 {% endblock %} {% block content %}
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-4" style="margin-top: 30px">
-      <a href="#" class="btn btn-primary btn-xs">Download</a>
+<!--HERO SECTION-->
+<div id="hero">
+  <div class="top-container">
+    <div class="item">
+      <h1 class="heading">
+        <span>Animo</span>, the Developers' <br />
+        go-to <span>Animations</span> <br />
+        Library.
+      </h1>
+      <p class="sub-heading">
+        The perfect animation library for developers <br />
+        and designers looking to maximise their <br />
+        productivity.
+      </p>
+      <p><a class="btn big-btn change-after-login" href="">Get Started</a></p>
+      <ul>
+        <li>Easy Intergration</li>
+        <li>Save History</li>
+        <li>Use anywhere</li>
+      </ul>
+    </div>
+    <div class="item">
+      <img src="{% static 'images/hero-preview.png' %}" alt="" class="banner" />
     </div>
   </div>
+  <!--SOCIAL PROOF-->
+  <div class="social_proof">
+    <div class="head">
+      <p>Trusted by developers from companies all over the world</p>
+    </div>
+    <div class="logos">
+      <img src="{% static 'images/Zuri.png' %}" alt="Zuri logo" />
+      <img src="{% static 'images/Disney+.png' %}" alt="Disney logo" />
+      <img src="{% static 'images/Netflix.png ' %}" alt="Netflix logo " />
+      <img src="{% static 'images/Amazon.png ' %}" alt="Amazon logo " />
+      <img
+        src="{% static 'images/I4G.png ' %}"
+        alt="Ingressive for Good logo "
+      />
+      <img
+        src="{% static 'images/Office.png ' %}"
+        alt="Microsoft office logo "
+      />
+      <img src="{% static 'images/Sony.png' %} " alt="Sony logo " />
+      <img src="{% static 'images/CocaCola.png' %}" alt="CocoCola logo " />
+      <img src="{% static 'images/Bitcoin.png' %}" alt="Bitcoin " />
+      <img src="{% static 'images/Barclays.png' %} " alt="Barclays logo " />
+      <img src="{% static 'images/Paypal.png' %} " alt="Paypal logo " />
+      <img src="{% static 'images/Meta.png' %} " alt="Meta logo " />
+    </div>
+  </div>
+</div>
+<!--PLATFORM FEATURES-->
+<div id="platform-features">
+  <div class="features-container">
+    <h1 class="title">Platform Features</h1>
+    <div class="flex-container">
+      <div class="flex-item">
+        <img src="{% static 'images/overview.png' %} " alt=" " />
+      </div>
+      <div class="flex-item">
+        <h3 class="flex-head">An overview of how it works</h3>
+        <p class="flex-sub">
+          A library of ready-to-use animation for your projects. <br />
+          Access to an interactive documentation of the animations <br />
+          and how the codes works.<br />
+        </p>
+        <span class="features-link"
+          ><a href="# ">Read Documentation &nbsp;> </a></span
+        >
+      </div>
+    </div>
+
+    <div class="flex-container rev-row">
+      <div class="flex-item">
+        <h3 class="flex-head">Save Now, Download Later</h3>
+        <p class="flex-sub">
+          Option to save data and ability to download later with just
+          <br />
+          one click.
+        </p>
+        <span class="features-link"><a href="# ">My Saves &nbsp;> </a></span>
+      </div>
+      <div class="flex-item">
+        <img src="{% static 'images/save.png' %} " alt=" " />
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        <img src="{% static 'images/preview.png' %} " alt=" " />
+      </div>
+      <div class="flex-item">
+        <h3 class="flex-head">
+          Preview animations before <br />implementation
+        </h3>
+        <p class="flex-sub">
+          Preview and test animations on our website for better <br />
+          understanding before importing or embedding the code.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="lower-content-container">
+  <section class="anima-sample">
+    <div class="description">
+      <h1 class="description-title">
+        Animations that bring<br />an interface to life
+      </h1>
+      <p class="description-content">
+        Explore our curated code-based library of free animations
+      </p>
+      <p><a class="btn small-btn" href=" ">Discover Animations</a></p>
+    </div>
+    <div class="owl-carousel anima-sample-card-container">
+      <div class="item anima-sample-card">
+        <i class="fa-thin fa-circle-info"></i>
+        <p class="anima-name">Move Up</p>
+      </div>
+      <div class="item anima-sample-card">
+        <i class="fa-thin fa-circle-info"></i>
+        <p class="anima-name">Move Up</p>
+      </div>
+      <div class="item anima-sample-card">
+        <i class="fa-thin fa-circle-info"></i>
+        <p class="anima-name">Move Up</p>
+      </div>
+      <div class="item anima-sample-card">
+        <i class="fa-thin fa-circle-info"></i>
+        <p class="anima-name">Move Up</p>
+      </div>
+      <div class="item anima-sample-card">
+        <i class="fa-thin fa-circle-info"></i>
+        <p class="anima-name">Move Up</p>
+      </div>
+      <div class="item anima-sample-card">
+        <i class="fa-thin fa-circle-info"></i>
+        <p class="anima-name">Move Up</p>
+      </div>
+    </div>
+  </section>
+  <section class="reviews">
+    <h2 class="description">What our Users think about our platform</h2>
+    <div class="review-card-container">
+      <div class="review-card">
+        <div class="reviewer">
+          <p class="img"></p>
+          <p class="name">
+            John Doe <span class="designation"> Apple Inc. </span>
+          </p>
+        </div>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          quae fuga error molestias nemo ipsam aliquam reprehenderit.
+          Aspernatur, quam beatae.
+        </p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <p class="img"></p>
+          <p class="name">
+            John Doe <span class="designation"> Apple Inc. </span>
+          </p>
+        </div>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          quae fuga error molestias nemo ipsam aliquam reprehenderit.
+          Aspernatur, quam beatae.
+        </p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <p class="img"></p>
+          <p class="name">
+            John Doe <span class="designation">Apple Inc.</span>
+          </p>
+        </div>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          quae fuga error molestias nemo ipsam aliquam reprehenderit.
+          Aspernatur, quam beatae.
+        </p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <p class="img"></p>
+          <p class="name">
+            John Doe <span class="designation"> Apple Inc. </span>
+          </p>
+        </div>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          quae fuga error molestias nemo ipsam aliquam reprehenderit.
+          Aspernatur, quam beatae.
+        </p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <p class="img"></p>
+          <p class="name">
+            John Doe <span class="designation"> Apple Inc. </span>
+          </p>
+        </div>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          quae fuga error molestias nemo ipsam aliquam reprehenderit.
+          Aspernatur, quam beatae.
+        </p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <p class="img"></p>
+          <p class="name">
+            John Doe <span class="designation"> Apple Inc. </span>
+          </p>
+        </div>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          quae fuga error molestias nemo ipsam aliquam reprehenderit.
+          Aspernatur, quam beatae.
+        </p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <p class="img"></p>
+          <p class="name">
+            John Doe <span class="designation"> Apple Inc. </span>
+          </p>
+        </div>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          quae fuga error molestias nemo ipsam aliquam reprehenderit.
+          Aspernatur, quam beatae.
+        </p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <p class="img"></p>
+          <p class="name">
+            John Doe <span class="designation"> Apple Inc. </span>
+          </p>
+        </div>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          quae fuga error molestias nemo ipsam aliquam reprehenderit.
+          Aspernatur, quam beatae.
+        </p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <p class="img"></p>
+          <p class="name">
+            John Doe <span class="designation"> Apple Inc. </span>
+          </p>
+        </div>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          quae fuga error molestias nemo ipsam aliquam reprehenderit.
+          Aspernatur, quam beatae.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="alt_option">
+    <div class="description">
+      <h1 class="description-title">
+        Simple, Interactive,<br />Effective and Innovative
+      </h1>
+      <p class="description-content">
+        The best tools that helps users enjoy better enjoyment
+      </p>
+      <p>
+        <a class="btn big-btn change-after-login" href=" ">Get Started</a>
+      </p>
+    </div>
+  </section>
 </div>
 {% endblock %}
