@@ -160,7 +160,7 @@ function showAnimeDetails(){
 $(document).ready(() => {
     loadAnimationsOnSideBar();
     showAnimeDetails();
-    getAnimations().then(animations => {
-        console.log(animations)
-    })
+    // getAnimations().then(animations => {
+    //     console.log(animations)
+    // })
 })
