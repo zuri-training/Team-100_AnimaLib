@@ -144,3 +144,10 @@ def download_library(request):
     else:
         messages.add_message(request, cs.ERROR, 'Please create an account to download the library!')
         return redirect('register')
+    
+def documentation(request):
+    return render(request,'animaLibApp/documentation.html')
+def introduction(request):
+    return render(request,'animaLibApp/introduction.html')
+def showAnimations(request):
+    return render(request,'animaLibApp/showAnimations.html')

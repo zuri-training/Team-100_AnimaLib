@@ -28,8 +28,8 @@
       src="https://kit.fontawesome.com/1e4daf36c1.js"
       crossorigin="anonymous"
     ></script>
-
     {% block style %} {% endblock %}
+    
   </head>
   <body>
     <header>
@@ -51,7 +51,7 @@
               <a href="{% url 'index' %}">Home</a>
             </li>
             <li id="doc" class="nav-list">
-              <a href="#">Documentation</a>
+              <a href="{% url 'documentation' %}">Documentation</a>
             </li>
             <li
               id="support"
