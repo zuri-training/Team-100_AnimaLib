@@ -1,0 +1,212 @@
+{% extends 'base.html' %} {% block content %}
+<div class="maincontentContainer container">
+  {% include 'common/sideNav.html' %}
+
+  <div class="menuContentContainer">
+    <!-- top row with documentation -->
+    <div class="documentationRow">
+      <!-- section content -->
+      <div class="section-content">
+        <!-- section content holder -->
+        <div class="section-contentHolder">
+          <div class="sectionHeaderHolder">
+            <span class="anime-mainHeader">Introduction</span>
+          </div>
+
+          <div class="sectionContentBody">
+            Welcome to Animo Library, we have a huge range of resources to help you
+            through your animation journey as a beginning developer.
+            This guide will give you all the information you need to navigate our
+            website and find out how to make use of all our services.
+            Please explore this page, and also the links at the side bar of this
+            screen to find out more about our library resources.
+          </div>
+        </div>
+      </div>
+     
+    </div>
+
+    <!-- row 3 Amino content -->
+    <div class="animeRow">
+      <!-- section content -->
+      <div class="section-content" id="overviewSection">
+        <!-- section content holder -->
+        <div class="section-contentHolder">
+          <div class="sectionHeaderHolder">
+            <span class="anime-contentHeader">Overview</span>
+          </div>
+
+          <div class="sectionContentBody">
+            Animations can enhance your app by adding movement and interactivity. By
+            using the animations from our Animo library,
+            you can download and add the effect to your own code on your local
+            machine
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <!-- row 3 Amino content -->
+    <div class="animeRow">
+      
+      <!-- the getStarted column -->
+      <div class="anime-sectionColumn">
+        <!-- section title -->
+        <div class="sectionTitle">
+          <span class="anime-sectionHeader" id="installationUsageSection">Installation and usage</span>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader" id="installationSection">Installation</span>
+            </div>
+
+            <div class="sectionContentBody">
+              <p>
+                To install your animation from Animo is easy and requires little to no
+                code experience. Our team understands that a lot of users
+                like platforms where they can code without interruptions and
+                distractions and this is exactly what Animo provides. Easy to use and understand.
+              </p>
+
+              <div>
+                <p>
+                  To install, simply :
+                  <ol>
+                    <li>Download the library</li>
+                    <li>Add the animo.css file to your folder (the same folder as your HTML file)</li>
+                    <li>copy and paste the code below into the head element of your HTML code</li>
+                  </ol>
+                </p>
+              </div>
+
+              <!-- code box -->
+              <div class="codebox">
+                <code>link href=”animo.css” rel=”stylesheet” type=”text/css”</code>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Usage</span>
+            </div>
+
+            <div class="sectionContentBody">
+              For each element to be animates, udate or add the class name required forthe specific
+              animation of your choice and then run your html code to view the animation.
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+
+            <div class="sectionHeaderHolder d-flex justify-content-between">
+              <span class="anime-sectionSubHeader" id="downloadSection">Download library</span>
+
+              <span>
+                <button class="anime-button">
+                  <span class="btn-icon"></span>
+                  <span>Download Library</span>
+                </button>
+              </span>
+
+            </div>
+
+            <div class="sectionContentBody">
+              <p>
+                Inorder to have full access to our library, you need to be an authenticated user. 
+                By clicking the register button on our page, you can sign up to become a member, login
+                and be able to make full use of all the codes. You can download and store the codes on your
+                local machine and play with the effects however you want.
+              </p>
+
+              <p>
+                You can also download the latest version of Animo from the GitHub releases or use a Animo CDN.
+              </p>
+
+              <div class="mb-3">
+                <div class="d-flex flex-column mb-3">
+                  <span>GitHub</span>
+                  <span>Latest：2022-07-29 15:47:38</span>
+                  <span>License：MIT License</span>
+                </div>
+
+                <div class="d-flex flex-column">
+                  <span>NPM</span>
+                  <span>Version：4.1.1</span>
+                  <span>Publish Time：2022-07-29 19:26:10</span>
+                  <span>Unpacked Size：272.58 kB</span>
+                </div>
+
+              </div>
+
+              <p>
+                For more details, you can watch the demo below.
+                You can also visit our support page for answers to 
+                frequently asked questions or reach our to us directly with any question you have.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader" id="demoection">Watch demo</span>
+            </div>
+
+            <div class="sectionContentBody">
+              <div class="mb-3">
+                Below is a visual representation of how the animation works. After
+                becoming a member or registered user of our platform and downloading the
+                library or importing
+                it into your code, and you select one of the animation classes and apply
+                it on your html element,(example move up), the element will move
+                upwards.
+              </div>
+
+              <div class="mb-2">
+                <video class="videoContent" width="100%" height="256" controls>
+                  <source src="demo.mp4" type="video/mp4" />
+                  <source src="demo.ogg" type="video/mp4" />
+                  Your browser does not support the video tag
+                </video>
+              </div>
+
+              <div style="text-align:end;">
+                <span>
+                  <a href="#">Example</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+      </div>
+      
+      
+      
+      
+      
+      
+    </div>
+
+    
+  
+  </div>
+</div>
+{% endblock %}
