@@ -112,8 +112,8 @@ EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
 AUTHENTICATION_BACKENDS = (
-        'django.contrib.auth.backends.ModelBackend',
-    )
+    'django.contrib.auth.backends.ModelBackend',
+)
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -139,7 +139,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
 
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -147,4 +146,3 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'animaLibApp.newUser'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-

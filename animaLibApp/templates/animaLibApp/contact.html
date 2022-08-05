@@ -1,0 +1,108 @@
+{% extends 'base.html' %} {% load static %}
+<!-- --------------------------------------------------------->
+{% load crispy_forms_tags %}
+
+{% load active_link_tags %}
+<!-- --------------------------------------------------------->
+{% block title %} Support us page {% endblock %}
+<!-- ---------------------------------------------------------------------------- -->
+{% block style %}
+{% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> {% endcomment %}
+
+<link href="{% static 'css/contact.css' %}" rel="stylesheet" />
+
+{% endblock %} {% block content %}
+<main>
+    <div class="container1">
+      <img class="hero-img" src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659297948/Illustration_PNG_pytsst.png" alt="" />
+    </div>
+
+    <div class="container2">
+      <div class="form-heading">
+        <p class="text1">Get Quick Help</p>
+        <p class="text2">We've got you covered</p>
+      </div>
+      <div class="main-form">
+        <form method="POST">
+          {% csrf_token %}
+          {% if messages %} {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+          {{ message}}
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+        {% endfor %} {% endif %} {% comment %}
+        -----------------------------------------------------------------
+        ------------------------------------------------------{% endcomment %}
+        {{ form | crispy }}
+          <div class="center">
+            <button class="form-button">
+              Send message<img src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659297949/Send_Message_PNG_vlffvf.png" class="icon" alt=""></button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <section>
+    <h1 class="title">Frequently Asked Questions</h1>
+
+    <div class="faq-container">
+      <div class="question">
+        <button>
+          <span>What is Animo?</span>
+          <i class="fa-solid fa-chevron-up d-arrow"></i>
+        </button>
+        <p>
+          Animo is an online beginner-friendly animation library, third-party, open-source repository that contains
+          pre-made animation files.
+        </p>
+      </div>
+
+      <div class="question">
+        <button>
+          <span>Do I have to pay?</span>
+          <i class="fa-solid fa-chevron-up d-arrow"></i>
+        </button>
+        <p>No, Animo is free to use across all of your projects
+        </p>
+      </div>
+
+      <div class="question">
+        <button>
+          <span>How do I embed the animations in my code?</span>
+          <i class="fa-solid fa-chevron-up d-arrow"></i>
+        </button>
+        <p>      
+By following the steps above, you can add animations to any element on any website where you have access to the source code. <br>
+1. Install or upload the Animo stylesheet to your file manager. <br>
+2. Link the Animo stylesheet in your web page(s) or template. <br>
+3. Add the proper class name to your element. <br>
+
+        </p>
+      </div>
+
+      <div class="question">
+        <button>
+          <span>How do I install the package manager?</span>
+          <i class="fa-solid fa-chevron-up d-arrow"></i>
+        </button>
+        <p>
+          Install with Node Package Manager (NPM)
+ or install with Yarn (this will only work with appropriate tooling like Webpack, Parcel, etc. If you are not using any tool for packing or bundling your code, you can simply use the Content Delivery Network (CDN) method
+   
+        </p>
+      </div>
+
+      <div class="question">
+        <button>
+          <span>Can I use the animation library in a commercial project?</span>
+          <i class="fa-solid fa-chevron-up d-arrow"></i>
+        </button>
+        <p>Yes, you can use the animation library in a commercial project.</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

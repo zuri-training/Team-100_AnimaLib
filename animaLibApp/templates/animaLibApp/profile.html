@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% load static %}
+<!-- --------------------------------------------------------->
+{% load active_link_tags %}
+<!-- --------------------------------------------------------->
+{% block title %} Profile page {% endblock %}
+<!-- ---------------------------------------------------------------------------- -->
+{% block style %}
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+{% endblock %} {% block content %}
+<div class="#">
+  <h1>This is the profile page for {{user.username}}</h1>
+</div>
+{% endblock content %}
