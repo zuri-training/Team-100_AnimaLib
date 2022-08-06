@@ -6,8 +6,8 @@ urlpatterns = [
     path('documentation/', documentation, name='documentation'),
     path('documentation/introduction/', introduction, name='introduction'),
     path('documentation/showAnimations/', showAnimations, name='showAnimations'),
-     path('support/', contact, name='support'),
-
+    path('support/', contact, name='support'),
+    path('about/', about_us, name='about'),
 
 
 
