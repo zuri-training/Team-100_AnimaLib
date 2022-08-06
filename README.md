@@ -1,4 +1,5 @@
-# <p align='center'>Animation Library </p> 
+# <p align='center'>Animation Library </p>
+
 <p align ='center'>
   <img src="https://res.cloudinary.com/dc29czhf9/image/upload/v1659106833/animo_logo_zecrf3.png" width="200" height="100">
 </p>
@@ -29,9 +30,11 @@ We converted both files (css and js) of the library to a zip file. The essence o
 
 To install the project to your local computer or server.
 Clone into a directory in your computer using:
+
 ```bash
 git clone https://github.com/zuri-training/anima_lib_team-100.git
 ```
+
 change directory to the project folder created after cloning.
 For window users use the command provided below.
 
@@ -40,6 +43,7 @@ For other Operating System Users, Kindly follow online documentation or guide on
 ```bash
 cd <directoryname>
 ```
+
 Creating a virtual environment (this is optional but advisable).
 
 For window users use the command below. If created successfully, activate the virtual environment.
@@ -48,7 +52,9 @@ For other Operating System Users, kindly follow online documentation or guide on
 ```bash
 virtualenv <virtualenvironmentname>
 ```
+
 Install the required packages, using:
+
 ```bash
 pip install -r requirements.txt
 
@@ -56,24 +62,30 @@ or
 
 pip3 install -r requirements.txt
 ```
+
 Run migrations to prepare the models or table to be added to the database, using:
+
 ```bash
 python manage.py makemigrations
 ```
+
 Migrate your tables to the database, using:
+
 ```bash
 python manage.py migrate
 ```
 
 Finally, you can run your server using:
+
 ```bash
 python manage.py runserver
 ```
 
 ## Features
+
 NOTE: A majority of our features are provided for only authenticated users. Hence, you need to have registered and logged in to the web application to enjoy these features.
 
-- Interactive documentation showing various animation samples. 
+- Interactive documentation showing various animation samples.
 - View User(s) comment about our product (every user can enjoy this)
 - User interaction via posting comments (for only logged in users)
 - Animation library downloadable as zip file. (for only logged in users)
@@ -90,7 +102,7 @@ When you are referencing the code on our server. That is,when you want to embed 
     <title>page title</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <link rel="stylesheet" href="code_link_to_server" />
   </head>
   <body>
@@ -124,10 +136,18 @@ When you have downloaded the animation library on your computer
 ## Contributors
 
 ```bash
-David Akwuru - Dayveed(BackEnd) - daakwuru@gmail.com (Fullstack)
-Caleb Oderinde - Octa - oderindecaleb@gmail.com (Product Design)
 Tola - Tolac - (BackEnd) - omotola.coker.o@gmail.com (Fullstack)
-Fonyuy Videc Leinyuy - Videc(frontend) - videcleinyuy@gmail.com (Fullstack)
+David Akwuru - Dayveed(BackEnd) - davidakwuruu@gmail.com (Fullstack)
+Fonyuy Videc Leinyuy - Videc(Frontend) - videcleinyuy@gmail.com (Fullstack)
+Okene Daniel - Okene Daniel(FrontEnd) - okenedaniel44@gmail.com (Fullstack)
+Abiola Oladimeji - Bizzdimeji(FrontEnd) - bizzdimeji@gmail.com (Fullstack)
+Atunde Goodness Joseph - Goody(Backend) - atundeg@gmail.com (Fullstack)
+Nwobu Kenechukwu - Kene(FrontEnd) - nwobukenechukwu@gmail.com (Fullstack)
+Achi Sughter - Achi Sughter Tooyosi (Frontend) - sughtera@gmail.com (Fullstack)
+Christiana Mabel Nyuma - Mabel(Frontend) - chrisbarbz17@gmail.com(Fullstack)
+Amadi A. Ikwechegh - TheArmstrong(BackEnd) - armst.amdi4@gmail.com (Fullstack)
+
+Caleb Oderinde - Octa - oderindecaleb@gmail.com (Product Design)
 Hamzah Opemipo - Hamzah - ahmzar3@gmail.com (Product Design)
 Erica Osawaru - Erica - osawaruerica29@gmail.com (Product Design)
 Victor Emechebe - Rasta - victorasta21@gmail.com (Product Design)
@@ -136,9 +156,7 @@ Maryam Afolabi - Mimi96 - afolabimaryamoladoyin@gmail.com (Product Design)
 Uthman Akinsawe - awe80meimagery@gmail.com (Product Design)
 Olanrewaju Adefolake Mariam -Flekkies - flourishflekkie@gmail.com (Product design)
 Adeyanju Aliyat Olakanmi - Adeyanju Aliyat - olakanmiadeyanju71@gmail.com (product design)
-Abiola Oladimeji - Bizzdimeji(FrontEnd) - bizzdimeji@gmail.com (Fullstack)
 Oyeniran Ruth Oluwakemi - Oluwakemi13 - Oyeniranoluwakemi13@gmail.com (Product Design)
-Add other team members
 ```
 
 ## License

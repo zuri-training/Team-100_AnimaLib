@@ -1,127 +1,291 @@
 {% extends 'base.html' %}
-<!-- --------------------------------------------------------->
-{% load active_link_tags %}
-<!-- --------------------------------------------------------->
-{% block title %} Docs Page {% endblock %}
-<!-- ---------------------------------------------------------------------------- -->
+{% load static %}
+{% block style %}
+<link href="{% static 'css/componentDesign.css' %}" rel="stylesheet" />
+<link href="{% static 'css/design.css' %}" rel="stylesheet" />
+<link href="{% static 'css/layout.css' %}" rel="stylesheet" />
+<link href="{% static 'css/animation.css' %}" rel="stylesheet" />
+{% endblock %}
+
 {% block content %}
-<div class="container">
-	<div class="row">
-		{% for post in posts %}
-		<div class="col-md-8 card mb-4  mt-3 left  top">
-			<div class="card-body">
-			<h1>{{ post.title }}</h1>
-			<p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
-			<p class="card-text ">{{ post.text | safe }}</p>
+<div class="maincontentContainer container">
+  {% include 'common/sideNav.html' %}
 
-			</div>
-		</div>
-		{% endfor %}
-	</div>
-</div>
+  <!-- menu content -->
+  <div class="menuContentContainer">
+    <!-- top row with documentation -->
+    <div class="documentationRow">
+      <!-- section content -->
+      <div class="section-content">
+        <!-- section content holder -->
+        <div class="section-contentHolder">
+          <div class="sectionHeaderHolder">
+            <span class="anime-mainHeader">Documentation</span>
+          </div>
 
+          <div class="sectionContentBody">
+            This is a detailed and comprehensive guide of how to use our
+            animation library.
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- image row -->
+    <div
+      class="imageRow d-flex align-items-end"
+      style="
+        background-image: url(https://res.cloudinary.com/dc2z15vip/image/upload/v1659546386/logo_111022_btupnf.png);
+        background-repeat: no-repeat;
+        background-size: 254px 136px;
+        background-position: center;
+      "
+    >
+      <!-- logo image content -->
+      <div class="logo-contentContainer">
+        <div class="logo-contentHeader">
+          <span class="logoHeader">Getting started with animation</span>
+        </div>
+        <div class="logoContentBody">
+          Learn more about Animo's features and get started by exploring a few
+          interactive examples
+        </div>
+      </div>
+    </div>
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-8">
-		<h2 class="page-header">Comments</h2>
-			<section class="comment-list">
-			{% if posts %}
-				{% for post in posts %}
-				<div>
-					<!-- Comment -->
-					<article id="comment" class="row">
-						<div class="col-md-2 col-sm-2 hidden-xs">
-							<figure class="thumbnail">
-							{% comment %} <img class="img-responsive" src="http://www.tangoflooring.ca/wp-content/uploads/2015/07/user-avatar-placeholder.png" /> {% endcomment %}
-							<figcaption class="text-center">{{ post.author }}</figcaption>
-							</figure>
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<div class="panel panel-default arrow left">
-							<div class="panel-body">
-								<header class="text-left">
-								{% comment %} <div class="comment-user"><i class="fa fa-user"></i> That Guy</div> {% endcomment %}
-								<time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i>
-									{% if post.published_date %}
-										{{ post.published_date | date }} at {{ post.published_date | time }}
-									{% else %}
-										<p>not yet published</p>
-									{% endif %}
-									</time>
-									<p><strong> {{ post.title }} </strong></p>
-								</header>
-								<div class="comment-post">
-								<p>
-									{{ post.text | linebreaksbr }}
-								</p>
-								</div>
-								<p class="text-right"><a href="{% url 'post_comment' post.pk %}" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
+    <!-- row 3 Amino content -->
+    <div class="animeRow">
+      <!-- section content -->
+      <div class="section-content">
+        <!-- section content holder -->
+        <div class="section-contentHolder">
+          <div class="sectionHeaderHolder">
+            <span class="anime-contentHeader">Animo</span>
+          </div>
 
-								{% if user == post.author %}
-									<a href="{% url 'post_update' post.pk %}">
-										<button type="button" class="btn btn-secondary"><i class="bi bi-pencil-square"></i></button>
-									</a>
+          <div class="sectionContentBody">
+            Animo Library is a third party open-source library that contains
+            pre-made animation files(codes). They are cross-browser animations
+            made for you to use in your projects.
+          </div>
+        </div>
+      </div>
+    </div>
 
-									<a href="{% url 'post_remove' post.pk %}">
-										<button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
-									</a>
-								{% endif %}
-							</div>
-							</div>
-						</div>
-					</article>
-					<!-- Comment Reply -->
-					{% if post.comments %}
-						{% for comment in post.comments.all %}
-							<article id="comment_reply" class="row ml-5">
-								<div class="col-md-2 col-sm-2 col-md-offset-1 col-sm-offset-0 hidden-xs">
-									<figure class="thumbnail">
-									{% comment %} <img class="img-responsive" src="http://www.tangoflooring.ca/wp-content/uploads/2015/07/user-avatar-placeholder.png" /> {% endcomment %}
-									<figcaption class="text-center">{{ comment.author }}</figcaption>
-									</figure>
-								</div>
-								<div class="col-md-9 col-sm-9">
-									<div class="panel panel-default arrow left">
-									<div class="panel-heading right">Reply</div>
-									<div class="panel-body">
-										<header class="text-left">
-										{% comment %} <div class="comment-user"><i class="fa fa-user"></i> That Guy</div> {% endcomment %}
-										<time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> {{ comment.created_on | date }} at {{ comment.created_on | time }} </time>
-										</header>
-										<div class="comment-post">
-										<p>
-											{{ comment.text | linebreaksbr }}
-										</p>
-										</div>
-										{% comment %} <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p> {% endcomment %}
-									</div>
-									</div>
-								</div>
-							</article>
-						{% endfor %}
-					{% endif %}
+    <!-- row 4 with two columns (Animation and getting started) -->
+    <div class="homeIntroRow">
+      <!-- the getStarted column -->
+      <div class="anime-sectionColumn" style="margin-right: 60px">
+        <!-- section title -->
+        <div class="sectionTitle">
+          <span class="anime-sectionHeader">Get Started</span>
+        </div>
 
-				</div>
-				{% endfor %}
-			{% endif %}
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Introduction</span>
+            </div>
 
-			</section>
-		</div>
-	</div>
-</div>
+            <div class="sectionContentBody">
+              This page provides all published technical documentation for the
+              Animo Library.
+            </div>
+          </div>
+        </div>
 
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Installation Guide</span>
+            </div>
 
-<div class='container'>
-	<div class="row">
-		<h3>Leave a comment</h3>
-		<form method="post" style="margin-top: 1.3em;">
-		{% csrf_token %}
-		{{ comment_form.as_p }}
-		<button type="submit" class="btn btn-primary  btn-lg">Submit</button>
-	</form>
-	</div>
+            <div class="sectionContentBody">
+              You can use this installation guide to follow the steps on how to
+              download and make use of the library.
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Examples</span>
+            </div>
+
+            <div class="sectionContentBody">Sample of the codes</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- the animation column -->
+      <div class="anime-sectionColumn">
+        <!-- section title -->
+        <div class="sectionTitle">
+          <span class="anime-sectionHeader">Animation</span>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Move up</span>
+            </div>
+
+            <div class="sectionContentBody">
+              This makes the element perform the move up action
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Move down</span>
+            </div>
+
+            <div class="sectionContentBody">
+              This makes the element perform the move down action
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Move left</span>
+            </div>
+
+            <div class="sectionContentBody">
+              This makes the element perform the move left action
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Move right</span>
+            </div>
+
+            <div class="sectionContentBody">
+              This makes the element perform the move right action
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Blink</span>
+            </div>
+
+            <div class="sectionContentBody">
+              This makes the element perform the blink action
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Bounce</span>
+            </div>
+
+            <div class="sectionContentBody">
+              This makes the element perform the bounce action
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Fade In</span>
+            </div>
+
+            <div class="sectionContentBody">
+              This adds the fade in effect to your web element
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Flip</span>
+            </div>
+
+            <div class="sectionContentBody">
+              This adds the effect to show the front and back of an element
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Swing</span>
+            </div>
+
+            <div class="sectionContentBody">
+              This adds the effect that causes an element to move back and forth
+              or from side to side while suspended or on an axis
+            </div>
+          </div>
+        </div>
+
+        <!-- section content -->
+        <div class="section-content">
+          <!-- section content holder -->
+          <div class="section-contentHolder">
+            <div class="sectionHeaderHolder">
+              <span class="anime-sectionSubHeader">Tada</span>
+            </div>
+
+            <div class="sectionContentBody">
+              This adds the effect to move an element from side to side
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: end">
+      <span>
+        <a href="#introduction">
+          <span> Introduction </span>
+
+          <span>
+            <i class="fa-solid fa-pencil"></i>
+          </span>
+        </a>
+      </span>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
+<!-- the footer row -->

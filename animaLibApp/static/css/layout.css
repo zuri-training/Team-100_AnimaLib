@@ -1,0 +1,52 @@
+/* fonts import here */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+/* mobile first design */
+
+/* layout for larger devices */
+@media (min-width: 992px) {
+  .maincontentContainer {
+    display: grid;
+
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+  }
+
+  .homeIntroRow {
+    display: grid;
+
+    grid-template-columns: 4fr 5fr;
+    grid-template-rows: 1fr;
+  }
+  /* logo content layout */
+
+  /* anime-menu layout */
+  .anime-menuContentHolder {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(autofit, minmax(5px, auto));
+  }
+  .menuItem-subItems {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(autofit, minmax(5px, auto));
+  }
+
+  /* anime examples layout */
+  .sliderContainer {
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+  }
+  .slideMoving {
+    display: flex;
+    flex-direction: row;
+  }
+  .sliderHandle {
+    display: flex;
+    align-items: center;
+  }
+}

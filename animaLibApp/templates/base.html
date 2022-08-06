@@ -11,86 +11,154 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-  </head>
-  <body>
-   <header>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 logo">
-                <a href="{% url 'index' %}">
-                    {% comment %} <img src="{% static 'img/logo.png' %}" alt="logo" /> {% endcomment %}
-                    Anima_lib_T100
-                </a>
-            </div>
-            <div class="col-md-5 center-navs">
-                <a href="{% url 'index' %}" class="{% active_link 'index' strict=True %}">Home</a>
-                <a href="{% url 'documentation' %}" class="{% active_link 'documentation' strict=True %}">Documentation</a>
-                <a href="{% url 'contact' %}" class="{% active_link 'contact' strict=True %}">Contact Us</a>
-
-            </div>
-            <div class="col-md-4 right-navs">
-                <a href="{% url 'login' %}" class="{% active_link 'login' strict=True %} btn">Login</a>
-                <a href="{% url 'register' %}" class="{% active_link 'register' strict=True %} btn">Register</a>
-
-            </div>
-
-        </div>
-    </div>
-    <header>
-    <main>{% block content %} {% endblock %}</main>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 logo">
-                    <a href="{% url 'index' %}">
-                        {% comment %} <img src="{% static 'img/logo.png' %}" alt="logo" /> {% endcomment %}
-                        Anima_lib_T100
-                    </a><br>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec euismod, nisl eget consectetur sagittis,
-                        nisl nunc egestas nisi, eu aliquet nunc nisl eget
-                        consectetur sagittis.
-                    </p>
-                </div>
-                <div class="col-md-4 center-navs">
-                    <p>Quick links</p>
-                    <a href="#">account</a>
-                    <a href="{% url 'contact' %}"> contact</a>
-                    <a href="{% url 'documentation' %}">documentation</a>
-                </div><div class="col-md-4 right-navs">
-                    <p>
-                        &copy; 2022 Anima_lib_T100. All rights reserved.
-                    </p>
-                </div>
-            </div>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      src="https://kit.fontawesome.com/1e4daf36c1.js"
       crossorigin="anonymous"
     ></script>
+    {% block style %} {% endblock %}
+
+  </head>
+  <body>
+    <header>
+      <div id="header-container">
+        <div class="header-item">
+          <a href="index.html"
+            ><img
+              id="header-logo"
+              src="{% static 'images/animo logo.png' %}"
+              alt="Our logo"
+          /></a>
+        </div>
+        <div class="header-item">
+          <ul id="navigation">
+            <li
+              id="home"
+              class="{% active_link 'index' strict=True %} nav-list"
+            >
+              <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li id="doc" class="nav-list">
+              <a href="{% url 'documentation' %}">Documentation</a>
+            </li>
+            <li
+              id="support"
+              class="{% active_link 'support' strict=True %} nav-list"
+            >
+              <a href="{% url 'support' %}">Support</a>
+            </li>
+            <input
+              class="search-bar hide-after-login"
+              type="search"
+              name="search-animation"
+              placeholder="Search for animations"
+            />
+          </ul>
+        </div>
+        <div class="header-item hide-after-login">
+          <ul class="entry">
+            <li id="login">
+              <a href="#">Login</a>
+            </li>
+            <li id="register" class="btn small-btn">
+              <a href="#">Register</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-item show-after-login">
+          <input
+            class="hide search-bar"
+            type="search"
+            name="search-animation"
+            placeholder="Search for animations"
+          />
+          <img
+            id="profile-img-nav-bar"
+            class="profile-img"
+            src="logo.png"
+            alt=""
+          />
+          <span><i id="profile-click" class="fa-thin fa-angle-down"></i></span>
+          <div id="show-after-profile-click" class="profile-dropdown">
+            <img
+              id="profile-img-drop-down"
+              class="profile-img"
+              src="logo.png"
+              alt=""
+            />
+            <p class="name">
+              John Doe <span class="v-profile">View profile</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    {% block content %} {% endblock %}
+    <footer>
+      <div class="footer-item-container">
+        <div class="footer-item">
+          <a href="index.html"
+            ><img
+              id="footer-logo"
+              class="logo"
+              src="{% static 'images/animo logo.png' %}"
+              alt="Our logo"
+          /></a>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item-title">Our Company</p>
+          <ul>
+            <li><a href="#" class="footer-links">About Us</a></li>
+            <li><a href="#" class="footer-links">Animation</a></li>
+            <li><a href="#" class="footer-links">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item-title">Documentation</p>
+          <ul>
+            <li><a href="#" class="footer-links">Get Started</a></li>
+            <li><a href="#" class="footer-links">Annimation Library</a></li>
+            <li><a href="#" class="footer-links">Installation Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item-title">Support</p>
+          <ul>
+            <li><a href="#" class="footer-links">FAQ</a></li>
+            <li><a href="#" class="footer-links">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item-title">Follow us</p>
+          <ul>
+            <li>
+              <i class="social-icon fa-brands fa-github"></i>
+              <a href="#" class="footer-links">Github</a>
+            </li>
+            <li>
+              <i class="social-icon fa-brands fa-youtube"></i
+              ><a href="#" class="footer-links">Youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p id="copyright">Copyright &copy; 2022 <span>Team 100</span></p>
+      <!-- End of Footer -->
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>
