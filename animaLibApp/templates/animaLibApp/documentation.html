@@ -43,14 +43,31 @@
 							<div class="panel-body">
 								<header class="text-left">
 								{% comment %} <div class="comment-user"><i class="fa fa-user"></i> That Guy</div> {% endcomment %}
-								<time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i>{{ post.published_date }}</time>
+								<time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i>
+									{% if post.published_date %}
+										{{ post.published_date | date }} at {{ post.published_date | time }}
+									{% else %}
+										<p>not yet published</p>
+									{% endif %}
+									</time>
+									<p><strong> {{ post.title }} </strong></p>
 								</header>
 								<div class="comment-post">
 								<p>
-									{{ post.text }}
+									{{ post.text | linebreaksbr }}
 								</p>
 								</div>
 								<p class="text-right"><a href="{% url 'post_comment' post.pk %}" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
+
+								{% if user == post.author %}
+									<a href="{% url 'post_update' post.pk %}">
+										<button type="button" class="btn btn-secondary"><i class="bi bi-pencil-square"></i></button>
+									</a>
+
+									<a href="{% url 'post_remove' post.pk %}">
+										<button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+									</a>
+								{% endif %}
 							</div>
 							</div>
 						</div>
@@ -71,11 +88,11 @@
 									<div class="panel-body">
 										<header class="text-left">
 										{% comment %} <div class="comment-user"><i class="fa fa-user"></i> That Guy</div> {% endcomment %}
-										<time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> {{comment.created_on}} </time>
+										<time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> {{ comment.created_on | date }} at {{ comment.created_on | time }} </time>
 										</header>
 										<div class="comment-post">
 										<p>
-											{{ comment.text }}
+											{{ comment.text | linebreaksbr }}
 										</p>
 										</div>
 										{% comment %} <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p> {% endcomment %}
@@ -96,11 +113,15 @@
 </div>
 
 
-<h3>Leave a comment</h3>
-<form method="post" style="margin-top: 1.3em;">
-  {% csrf_token %}
-  {{ comment_form.as_p }}
-  <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
-</form>
+<div class='container'>
+	<div class="row">
+		<h3>Leave a comment</h3>
+		<form method="post" style="margin-top: 1.3em;">
+		{% csrf_token %}
+		{{ comment_form.as_p }}
+		<button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+	</form>
+	</div>
+</div>
 
 {% endblock %}

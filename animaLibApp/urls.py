@@ -9,5 +9,7 @@ urlpatterns = [
     path('download', download_library, name='download'),
     path('contact', contact, name='contact'),
     path('documentation', documentation, name='documentation'),
-    path('post/<int:pk>/comment', post_comment, name='post_comment')
+    path('post/<int:pk>/comment', post_comment, name='post_comment'),
+    path('post/<int:pk>/edit', post_update, name='post_update'),
+    path('post/<int:pk>/delete', post_remove, name='post_remove'),
 ]

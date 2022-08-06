@@ -158,20 +158,27 @@ def documentation(request):
                 comment_form.author = request.user
                 comment_form.created_date = timezone.now()
                 comment_form.save()
+
+                return redirect('documentation')
         else:
             comment_form = CommentForm
 
-        data = {'posts':posts, 'comment_form': comment_form}
+    else:
+        comment_form = CommentForm
+
+    data = {'posts':posts, 'comment_form': comment_form}
 
     return render(request, template_name, data)
 
+# @login_required
 def post_comment(request, pk):
     """Reply to a comment / post"""
 
     if request.user.is_authenticated:
         template_name = 'animaLibApp/comment_reply.html'
         post = get_object_or_404(Post, pk=pk)
-        print(post); print()
+        post_title = post.title
+        print(post); print(post.title); print()
         comments = post.comments
         print(comments)
         new_reply = None
@@ -190,6 +197,46 @@ def post_comment(request, pk):
         else:
             reply_comment_form = ReplyCommentForm
 
-        data = {'post': post, 'comments': comments, 'new_reply': new_reply, 'reply_comment_form': reply_comment_form}
+        data = {'post': post, 'post_title': post_title, 'comments': comments, 'new_reply': new_reply, 'reply_comment_form': reply_comment_form}
+    else:
+        return HttpResponse("You must be logged in to comment")
 
-        return render(request, template_name, data)
+    return render(request, template_name, data)
+
+@login_required
+def post_update(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post_title = post.title
+    template_name = 'animaLibApp/edit_comment.html'
+
+
+    if request.user == post.author:
+        print("Authenticated user\n\n")
+        if request.method == 'POST':
+            edit_comment_form = EditCommentForm(data=request.POST)
+            if edit_comment_form.is_valid():
+
+                edit_comment_form = edit_comment_form.save(commit=False)
+                edit_comment_form.author = request.user
+                edit_comment_form.created_date = timezone.now()
+                edit_comment_form.save()
+
+                return redirect('documentation')
+        else:
+            edit_comment_form = EditCommentForm(data=request.POST)
+
+    else:
+        return HttpResponse("You are not allowed to edit someone else's post.")
+
+    data = {'edit_comment_form':edit_comment_form, 'post_title':post_title}
+
+    return render(request, template_name, data)
+
+@login_required
+def post_remove(request, pk):
+    comment = get_object_or_404(Post, pk=pk)
+
+    if request.user == comment.author:
+        comment.delete()
+
+    return redirect('documentation',)

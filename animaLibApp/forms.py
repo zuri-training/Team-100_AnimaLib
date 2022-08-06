@@ -69,3 +69,25 @@ class ReplyCommentForm(forms.ModelForm):
             )
         }
 
+class EditCommentForm(forms.ModelForm):
+    """Form for replying comments"""
+
+    class Meta:
+        model = Post
+        fields = ('title', 'text',)
+
+        widgets = {
+            'title': forms.TextInput(
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Title'
+                }
+            ),
+            'text': forms.TextInput(
+                attrs = {
+                    'class': 'form-control',
+                    'placeholder': 'Add Comments'
+                }
+            )
+        }
+
