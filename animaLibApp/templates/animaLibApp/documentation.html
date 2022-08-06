@@ -24,9 +24,9 @@
 
 <div class="container">
 	<div class="row">
-	  <div class="col-md-8">
+		<div class="col-md-8">
 		<h2 class="page-header">Comments</h2>
-		  <section class="comment-list">
+			<section class="comment-list">
 			{% if posts %}
 				{% for post in posts %}
 				<div>
@@ -50,7 +50,7 @@
 									{{ post.text }}
 								</p>
 								</div>
-								<p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
+								<p class="text-right"><a href="{% url 'post_comment' post.pk %}" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
 							</div>
 							</div>
 						</div>
@@ -90,10 +90,17 @@
 				{% endfor %}
 			{% endif %}
 
-		  </section>
-	  </div>
+			</section>
+		</div>
 	</div>
-  </div>
+</div>
 
+
+<h3>Leave a comment</h3>
+<form method="post" style="margin-top: 1.3em;">
+  {% csrf_token %}
+  {{ comment_form.as_p }}
+  <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+</form>
 
 {% endblock %}
