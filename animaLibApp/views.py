@@ -216,11 +216,12 @@ def post_update(request, pk):
     post_title = post.title
     template_name = 'animaLibApp/edit_comment.html'
 
+    post_data = {"title": post.title, "text": post.text}
 
     if request.user == post.author:
         print("Authenticated user\n\n")
         if request.method == 'POST':
-            edit_comment_form = EditCommentForm(data=request.POST)
+            edit_comment_form = EditCommentForm(data=request.POST, instance=post)
             if edit_comment_form.is_valid():
 
                 edit_comment_form = edit_comment_form.save(commit=False)
@@ -230,7 +231,7 @@ def post_update(request, pk):
 
                 return redirect('documentation')
         else:
-            edit_comment_form = EditCommentForm(data=request.POST)
+            edit_comment_form = EditCommentForm(initial=post_data, instance=post)
 
     else:
         return HttpResponse("You are not allowed to edit someone else's post.")
