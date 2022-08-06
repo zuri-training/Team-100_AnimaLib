@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Successful Message pop-up</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="pop-up" id="pop-up">
+      <img
+        src="PngItem_2306062.png"
+        id="vector"
+        onclick="closePopUp()"
+        alt="cross vector"
+      />
+      <img src="tick-circle.svg" class="success" alt="success icon" />
+      <div class="first">
+        <h2 class="big">Your message was successfully sent</h2>
+      </div>
+      <div class="second">
+        <p class="small">
+          Thank you for reaching out. You will get a response as soon as
+          possible. We look forward to serving you better!
+        </p>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

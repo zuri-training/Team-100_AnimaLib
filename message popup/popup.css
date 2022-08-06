@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&family=Raleway:wght@400;500&display=swap');
+
+.pop-up{
+    position: relative;
+    width: 52%;
+    height: 300px;
+    left: 325px;
+    top: 20%;
+/* Background/light */
+    background: #F8F8F8;
+/* Team */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+
+.close-popup {
+    display: none;
+}
+
+.success {
+    position: relative;
+    left: 40%;
+    right: 40%;
+    top: 8.33%;
+    bottom: 8.33%;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.big {
+
+    /* Title/Title Large */
+
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height, or 150% */
+
+    display: block;
+    text-align: center;
+
+    /* Black/High emphasis */
+
+    color: #121212;
+    margin-bottom: -10px;
+}
+
+.small {
+    /* Body/Body Main */
+    
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    /* or 160% */
+
+    display: block;
+    text-align: justify;
+    letter-spacing: 0.5px;
+
+    /* Black/High emphasis */
+
+    color: #121212;
+}
+
+.second {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+#vector {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    
+}
