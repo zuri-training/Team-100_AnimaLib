@@ -1,0 +1,163 @@
+{% extends 'base.html' %} {% load static %} {% block style %}
+<link href="{% static 'css/generator.css' %}" rel="stylesheet" />
+<link href="{% static 'css/componentDesign.css' %}" rel="stylesheet" />
+<link href="{% static 'css/design.css' %}" rel="stylesheet" />
+<link href="{% static 'css/layout.css' %}" rel="stylesheet" />
+<!-- <link href="{% static 'css/animation.css' %}" rel="stylesheet" /> -->
+{% endblock %} {% block content %}
+<div class="maincontentContainer container">
+  {% include 'common/sideNav.html' %}
+
+  <!-- menu content -->
+  <div class="menuContentContainer">
+
+    <body>
+      <div class="generatorpage">
+        <div class ="generatorheaders">
+          <h4>Animo</h4>
+          <h1>Animation Generator</h1>
+          <h3>Action</h3>
+        </div>
+      <!-- Create Animation Menu -->
+      <nav class="animationmenu">
+        <div class="animationgrp1">
+          <a href="#" class="moveupnav">Move up</a>
+          <a href="#" class="movedownnav">Move down</a>
+          <a href="#" class="moverightnav">Move right</a>
+          <a href="#" class="moveleftnav">Move left</a>
+          <a href="#" class="blinknav">Blink</a>
+        </div>
+        <div class="animationgrp2">
+          <a href="#" class="bouncenav">Bounce</a>
+          <a href="#" class="fadenav">Fade</a>
+          <a href="#" class="flipnav">Flip</a>
+          <a href="#" class="swingnav">Swing</a>
+          <a href="#" class="tadanav">Tada</a>
+        </div>
+      </nav>
+      <!-- Create wrapper for input, code editor and output area -->
+      <div class="container">
+        <!-- wrapper for input form and output area side by side -->
+        <div class="headers">
+          <div class="options">
+            <h2>Options</h2>
+          </div>
+          <div class="output">
+            <h2>Output</h2>
+          </div>
+        </div>
+        <div class="input-output">
+          <div class="inputvar">
+            <form name="codeinput" method="post">
+              <section>
+                <label for="name">Name</label>
+                <input id="name" type="text" value="" name="name" />
+
+                <label for="object">Object</label>
+                <select name="object" id="object">
+                  <option value="box">Box</option>
+                  <option value="ball">Ball</option>
+                </select>
+                <!-- <input id="object" type="text" value="" name="object" /> -->
+              </section>
+
+              <section class="wholeduration">
+                <div class="duration">
+                  <label for="duration">Duration</label>
+                  <input id="duration" type="number" value="" name="duration" />
+                </div>
+
+                <div class="secondswrapper">
+                  <!-- <label for="seconds">seconds</label> -->
+                  <select name="seconds" id="seconds">
+                    <option value="seconds">Seconds</option>
+                    <!-- <option  value="minutes" >Minutes</option> -->
+                  </select>
+                </div>
+              </section>
+
+              <section class="wholeduration">
+                <div class="delay">
+                  <label for="delay">Delay</label>
+                  <input id="delay" type="number" value="" name="delay" />
+                </div>
+
+                <div class="secondswrapper">
+                  <!-- <label for="seconds">seconds</label> -->
+                  <select name="seconds" id="seconds">
+                    <option value="seconds">Seconds</option>
+                    <!-- <option  value="minutes" >Minutes</option> -->
+                  </select>
+                </div>
+              </section>
+
+              <section>
+                <div>
+                <label for="iterationcount">Iteration count</label>
+                <input
+                  id="iterationcount"
+                  type="number"
+                  value=""
+                  name="iterationcount"
+                />
+            </div>
+                <div class ="infinitecontainer">
+                <input id="infinite" type="checkbox" value="" name="infinite"/>
+                <label for="infinite">Infinite iteration</label>
+            </div>
+              </section>
+            </form>
+          </div>
+          <div class="outputresult">
+            <iframe id="result"></iframe>
+          </div>
+        </div>
+        <!-- create button container -->
+        <div class="buttoncontainer">
+          <button class="generatebutton">Generate Code</button>
+        </div>
+        <!-- create code editor area -->
+        <div class="html-code">
+          <textarea></textarea>
+        </div>
+        <div class="save">
+        <p>Download<div><img src="{% static 'images/downloadicon.png' %}" width="25px" class ="downloadlogo"/></div></p>
+        <p>Save<div><img src="{% static 'images/saveicon.png' %}" width="25px" class ="savelogo"/></div></p>
+    </div>
+      </div>
+      <div class ="copywrite">
+        <h3>Animation Generator Documentation</h3>
+        <div class="keyframecopy">
+            <h4>@Keyframe</h4>
+            <p>Animo's generator utilizes @keyframes rules to specify the when the animation will happen and the magnitude of the change per time</p>
+        </div>
+        <div class="namecopy">
+            <h4>Name</h4>
+            <p>Animo's nomenclature uses a description of the expected motion. It stores your code of interest under the animation name so you can come back to it.</p>
+        </div>
+        <div class="objectcopy">
+            <h4>Object</h4>
+            <p>With Animo, your details are important therefore, Animo is built to give the effects that you desire to your elements and features no matter the shape or size</p>
+        </div>
+        <div class="durationcopy">
+            <h4>Duration</h4>
+            <p>Animo allows you to customize your choice animations without writing any code. You decide how long the duration of your animations should be </p>
+        </div>
+        <div class="delaycopy">
+            <h4>Delay</h4>
+        <p>Customize the time between each iteration to suit your brand</p>
+        </div>
+        
+        <div class="iterationcopy">
+            <h4>Iteration Count</h4>
+            <p>You can have your animation repeat as many times as you would like to deliver your features perfectly </p>
+        </div>
+    </div>
+    </div>
+    
+      <script src="script.js"></script>
+    </body>
+  </div>
+</div>
+
+{% endblock %}
