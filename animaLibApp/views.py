@@ -253,3 +253,5 @@ def introduction(request):
     return render(request,'animaLibApp/introduction.html')
 def showAnimations(request):
     return render(request,'animaLibApp/showAnimations.html')
+def about_us(request):
+    return render(request, 'animaLibApp/about.html')
