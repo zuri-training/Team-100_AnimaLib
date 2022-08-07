@@ -3,6 +3,10 @@
 
 /* Global styles */
 
+body {
+  background: #dad3dd;
+}
+
 /* mobile first design */
 .maincontentContainer {
   padding: 10px;
