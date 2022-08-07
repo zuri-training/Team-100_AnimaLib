@@ -2,15 +2,13 @@ from django import forms
 from .models import *
 
 class RegisterForm(forms.ModelForm):
-    confirm_password = forms.CharField(max_length = 100, label='Confirm Password', 
-                                       widget = forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Confirm your password'}))
     class Meta:
         model = newUser
-        fields = ['name', 'username', 'email', 'password', 'confirm_password']
-        widgets = {'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your name'}),
-                   'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your username'}),
-                   'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter your email'}),
-                   'password': forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Enter your password'}),
+        fields = ['username', 'email', 'password']
+        widgets = {
+                   'username': forms.TextInput(attrs={'class': 'form-control fname', 'placeholder': 'Jack Smith'}),
+                   'email': forms.EmailInput(attrs={'class': 'form-control eaddress', 'placeholder': 'jacksmith@gmail.com'}),
+                   'password': forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'}),
         }
        
 class LoginForm(forms.ModelForm):

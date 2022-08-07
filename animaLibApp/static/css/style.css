@@ -16,8 +16,12 @@
   --green: #1f2782;
   --black: #0c0c0c;
   --pink: #ea5a65;
-  --white: #ffffff;
+  --white: #f8f8f8;
   --max-width: 1440px;
+}
+
+body {
+  background-color: #f8f8f8;
 }
 
 .btn {
@@ -168,7 +172,6 @@ header {
 }
 
 .show-after-login {
-  display: none;
   align-items: center;
   justify-content: right;
   position: relative;
@@ -224,7 +227,7 @@ header {
 /* Content Styling */
 
 main {
-  background-color: var(--white);
+  background-color: #f8f8f8;
 }
 
 /* HERO STYLING */
@@ -239,9 +242,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 120px;
 }
 
 /* .item {

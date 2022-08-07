@@ -17,18 +17,23 @@
 {% endblock %} {% block content %}
   <section class="login-card">
       <div class="logo">
-      <img src="https://res.cloudinary.com/dc29czhf9/image/upload/v1659106833/animo_logo_zecrf3.png" width="200" height="100"/>
+      <img src="{% static 'images/animo logo.png' %}" width="150"/>
     </div>
       <h4>Login into your account</h4>
-      <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+      <p class="para-text">Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
 
       <div class="main-form">
-        <form>
+        <form method="POST">
+          {% csrf_token %}
+          {% if messages %} {% for message in messages %}
+            {{ message}}
+          {% endfor %} {% endif %}
           <div class="input-container" data-error="First Name cannot be empty">
             <label for="fname">Username</label><br />
             <input
               type="text"
               id="fname"
+              name = "fname"
               placeholder="Jack Smith"
               required
             /><br />
@@ -40,6 +45,7 @@
               type="password"
               id="password"
               placeholder="Password"
+              name = "password"
               required
             /><i class="bi bi-eye" id="togglePassword"></i><br />
           </div>
@@ -49,10 +55,8 @@
                 <div class="col d-flex justify-content-center">
                   <!-- Checkbox -->
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" id="characters" checked />
-                    <label class="form-check-label" for="characters"> Minimum of 8 characters </label><br>
-                    <input class="form-check-input" type="radio" id="characters" checked />
-                    <label class="form-check-label" for="characters"> Include Special Characters </label>
+                    <p class="form-text">Minimum of 8 characters</p>
+                    <p class="form-text">Include Special Characters</p>
                   </div>
                 </div>
   
@@ -67,9 +71,9 @@
               <div class="col d-flex justify-content-center">
                 <!-- Checkbox -->
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                  <input class="form-check-input" type="checkbox" value="" id="form2Example31" />
                   <label class="form-check-label" for="form2Example31"> Remember me </label>
-                    <a href="#!">Forgot password?</a>
+                    <a href="./forgotpword.html">Forgot password?</a>
                 </div>
               </div>
 

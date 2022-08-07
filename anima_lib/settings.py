@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
 import environ
+import cloudinary
+
 
 
 env = environ.Env(
@@ -11,7 +13,14 @@ env = environ.Env(
 BASE_DIR = Path(__file__).resolve().parent.parent
 environ.Env.read_env(os.path.join(BASE_DIR, 'env'))
 
-
+cloudinary.config(
+    cloud_name = env('CLOUD_NAME'),
+    api_key = env('API_KEY'),
+    api_secret = env('API_SECRET'),
+    secure = True
+)
+import cloudinary.uploader
+import cloudinary.api
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 # False if not in os.environ because of casting above
@@ -130,6 +139,8 @@ CLOUDINARY_STORAGE = {
     'API_KEY': env('API_KEY'),
     'API_SECRET': env('API_SECRET')
 }
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 

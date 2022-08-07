@@ -19,7 +19,8 @@ Array.from(navLists).forEach((navList) => {
     });
 });
 
-// code for authenticated header
+// code
+// for authenticated header
 login.addEventListener("click", function() {
     Array.from(hideAfterLogin).forEach(
         (element) => (element.style.display = "none")
@@ -30,43 +31,6 @@ login.addEventListener("click", function() {
     Array.from(changeAfterLogin).forEach(
         (element) => (element.innerHTML = "Read Documentation")
     );
-});
-
-// code for profile icon click
-downArrow.onmousedown = function() {
-    if (showAfterProfileClick.style.display == "none") {
-        showAfterProfileClick.style.display = "block";
-        downArrow.classList.remove("fa-angle-down");
-        downArrow.classList.add("fa-angle-up");
-    } else {
-        showAfterProfileClick.style.display = "none";
-        downArrow.classList.remove("fa-angle-up");
-        downArrow.classList.add("fa-angle-down");
-    }
-};
-
-profileImg.onmouseover = function() {
-    if (showAfterProfileClick.style.display == "none") {
-        showAfterProfileClick.style.display = "block";
-        downArrow.classList.remove("fa-angle-down");
-        downArrow.classList.add("fa-angle-up");
-    }
-    // else {
-    //     showAfterProfileClick.style.display = 'none';
-    //     downArrow.classList.remove('fa-angle-up')
-    //     downArrow.classList.add('fa-angle-down')
-    // };
-};
-
-window.addEventListener("mousedown", function(event) {
-    if (
-        event.target != showAfterProfileClick &&
-        event.target.parentNode != showAfterProfileClick
-    ) {
-        showAfterProfileClick.style.display = "none";
-        downArrow.classList.remove("fa-angle-up");
-        downArrow.classList.add("fa-angle-down");
-    }
 });
 
 // code for slider effect using owlcarousel

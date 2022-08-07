@@ -1,0 +1,212 @@
+main {
+  padding: 0px;
+}
+
+.profile-container {
+  width: 992px;
+  height: 780px;
+  margin: 120px auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #e0e1eb;
+}
+
+.profile-container p.profile {
+  padding-top: 48px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #121212;
+}
+
+.profile_little {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 32px;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 25% 55%;
+  grid-gap: 10px;
+  margin: 30px 0px;
+}
+
+.form-group .label p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 32px;
+  color: #121212;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+  width: 80%;
+  height: 40px;
+  padding: 5px;
+  background-color: inherit;
+  border-radius: 5px;
+  border: 2px solid #85868c;
+  outline: none;
+}
+
+#email_update,
+#password_update {
+  text-align: left;
+  width: 30%;
+  height: 40px;
+  padding: 0px;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.form-group input[type="text"]:focus {
+  border: 2px solid #85868c;
+}
+button:hover {
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 12px;
+  margin: 5px 10px 10px 0px;
+  width: 75px;
+  height: 36px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.cancel_button {
+  background-color: inherit;
+  color: #85868c;
+  border: 2px solid #85868c;
+}
+
+.update_button {
+  background-color: #1f2782;
+  border: 2px solid #1f2782;
+  color: #f8f8f8;
+}
+
+.save {
+  background-color: #1f2782;
+  color: #f8f8f8;
+  align-items: center;
+  padding: 8px 12px;
+  border: 2px solid #1f2782;
+  border-radius: 8px;
+  float: right;
+}
+
+#email_container_edit p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.form-group #username,
+.form-group #email {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #85868c;
+}
+
+#profile_img {
+  display: grid;
+  grid-template-columns: 20% 70%;
+  padding: 10px 0px;
+}
+
+#profile_img p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 4px;
+  color: rgba(18, 18, 18, 0.7);
+}
+.form-group .input_value #img {
+  border-radius: 36px;
+  width: 72px;
+  height: 72px;
+  border: 2px solid #85868c;
+}
+
+label {
+  display: inline-block;
+  padding: 0 0.5em;
+  text-align: right;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+#email_container_edit,
+#password_container_edit {
+  display: none;
+}
+
+/* Hide the file input using
+opacity */
+input[type="file"] {
+  margin-top: 10px;
+  position: absolute;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+input[type="file"] + label {
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  width: 120px;
+  margin: 10px 0px 0px 0px;
+  left: 0;
+  position: relative;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* Decorative */
+  color: #85868c;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #85868c;
+}
+input[type="file"] + label:hover {
+  background: #1f2782;
+  color: #f8f8f8;
+  border: 2px solid #1f2782;
+}

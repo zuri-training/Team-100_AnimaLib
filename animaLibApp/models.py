@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager, User
 from django.utils.translation import gettext_lazy as _
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class CustomAccountManager(BaseUserManager):
@@ -38,7 +39,7 @@ class newUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=254, unique=True)
     name = models.CharField(max_length=254, blank=True)
     # recently added.
-    user_image = models.ImageField(default='default.png', upload_to='user_profile')
+    user_image = CloudinaryField('image',blank=True)
     
     date_joined = models.DateTimeField(default=timezone.now)
     is_staff = models.BooleanField(default = False)

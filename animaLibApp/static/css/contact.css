@@ -175,11 +175,12 @@ textarea {
 .faq-container {
   max-width: 900px;
   margin: 0 auto;
+  background-color: #f8f8f8;
 }
 
 .question button {
   width: 100%;
-  background-color: white;
+  background-color: #f8f8f8;
   display: flex;
   justify-content: space-between;
   align-items: center;
