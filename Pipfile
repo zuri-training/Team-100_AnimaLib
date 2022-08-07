@@ -26,6 +26,7 @@ tzdata = "==2022.1"
 urllib3 = "==1.26.11"
 
 [dev-packages]
+autopep8 = "*"
 
 [requires]
 python_version = "3.10"
