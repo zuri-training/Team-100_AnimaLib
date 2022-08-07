@@ -22,6 +22,13 @@ MESSAGE_TAGS = {
     cs.ERROR: 'danger'
 }
 
+# views to capture errors, just incase a user tries to access a page that does not exist.
+def error_404(request, exception):
+    return render(request, 'animaLibApp/error404.html')
+
+# view to handle error 500;
+def error_500(request, *args, **argv):
+    return render(request, 'animaLibApp/error500.html', status=500)
 
 
 def index(request):
@@ -90,23 +97,23 @@ def contact(request):
 
     if request.method == 'POST':
         # get the form data
-        user_name = request.POST['name']
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
         email = request.POST['email']
-        subject = request.POST['subject']
-        text = request.POST['message']
+        message = request.POST['message']
         
         mail_content = {
-            'name': user_name, 'sender': sender, 'subject': subject, 'message': text
+            'name': first_name + ' ' + last_name, 'sender': email, 'message': message
         }
         
-        # render the email template to a string
+        # # render the email template to a string
         message = render_to_string('mailer/contact.html', mail_content)
-        mes = EmailMultiAlternatives(f'contact: {subject}', '',sender, ["davidakwuruu@gmail.com"],
+        mes = EmailMultiAlternatives(f'contact', '',sender, ["davidakwuruu@gmail.com"],
                                      connection = connection)
         mes.attach_alternative(message, "text/html")
         
         if mes.send():
-            messages.add_message(request, messages.SUCCESS, f'Thank you {user_name} for your message')
+            messages.add_message(request, messages.SUCCESS, f'Thank you {first_name} for your message')
         else:
             messages.add_message(request, cs.ERROR, 'An error occured, please try again!')
         # close the connection
@@ -137,3 +144,10 @@ def download_library(request):
     else:
         messages.add_message(request, cs.ERROR, 'Please create an account to download the library!')
         return redirect('register')
+    
+def documentation(request):
+    return render(request,'animaLibApp/documentation.html')
+def introduction(request):
+    return render(request,'animaLibApp/introduction.html')
+def showAnimations(request):
+    return render(request,'animaLibApp/showAnimations.html')

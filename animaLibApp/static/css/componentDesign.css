@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+.animeLink {
+  text-decoration: none;
+  color: black;
+  font-size: 11pt;
+}
+
+.animeSubLink {
+  text-decoration: none;
+  color: black;
+  font-size: 10pt;
+}
+.codebox {
+
+/* Surface/Elevation1 */
+
+    background: rgba(31, 39, 130, 0.05);
+    border-radius: 4px;
+    padding: 10px 0px  10px 10px;
+
+}
+.anime-button {
+    background: #1F2782;
+    color: #f8f8f8;
+    border-radius: 8px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.25px;
+    width: 120px;
+    height: 38px;
+    left: 605px;
+    top: 0px;
+}
+
+.videoContent{
+    background: #6B6B6B;
+    border-radius: 15px;
+}
