@@ -158,6 +158,7 @@ Olanrewaju Adefolake Mariam -Flekkies - flourishflekkie@gmail.com (Product desig
 Adeyanju Aliyat Olakanmi - Adeyanju Aliyat - olakanmiadeyanju71@gmail.com (product design)
 Oyeniran Ruth Oluwakemi - Oluwakemi13 - Oyeniranoluwakemi13@gmail.com (Product Design)
 Joseph-Uchea Jordan - Joseph-Uchea Jordan II - jcuchea@gmail.com (Product Design)
+Ayotomiwa Ajewole- DuoAce-ajewoletomiwa12@gmail.com (Product Design)
 ```
 
 ## License
