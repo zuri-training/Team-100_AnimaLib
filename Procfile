@@ -1,1 +1,1 @@
-web: gunicorn anima_lib.wsgi
+web: gunicorn anima_lib.wsgi 
