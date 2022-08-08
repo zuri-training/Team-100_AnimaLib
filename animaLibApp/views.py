@@ -249,6 +249,8 @@ def post_remove(request, pk):
 
     return redirect('documentation',)
 
+def documentation(request):
+    return render(request,'animaLibApp/documentation.html')
 def introduction(request):
     return render(request,'animaLibApp/introduction.html')
 def showAnimations(request):
