@@ -21,6 +21,15 @@
     width: 221px;
     height: 64px;
     padding: 12px, 40px, 12px, 40px;
+    border: none;
+}
+
+.generatebutton:hover{
+  background-color: rgba(21, 26, 87, 1);
+  cursor: pointer;
+}
+.generatebutton:active{
+  background-color: (31, 39, 130, 0.4);
 }
   /* .generatorpage{
     margin-top: 176px;
@@ -54,42 +63,57 @@
     /* background-color: rgba(85, 85, 85, 1); */
   }
 
-  .moveupnav,.movedownnav, .moverightnav, .moveleftnav, .bouncenav, .fadenav, .flipnav, .swingnav{
-    border-right: 1px solid rgba(85, 85, 85, 1);
-    margin: 0px;
-    padding: 8px;
-  }
-
-  .blinknav, .tadanav{
-    margin: 0px;
-    padding: 8px;
-  }
-  
   .animationgrp1{
-    width: 470px;
+    width: 455px;
     border-radius: 8px;
     margin-bottom: 16px;
-    /* background-color: rgba(85, 85, 85, 1); */
     background-color: rgba(31, 39, 130, 0.05);
     padding: 8px;
     color: rgba(85, 85, 85, 1);
-  }
-
-  .animationgrp1:active{
-    background-color: hsba(236, 63%, 84%, 1);
-
+    text-decoration: none;
   }
 
   .animationgrp2{
     width: 318px;
     border-radius: 8px;
     margin-bottom: 40px;
-    /* background-color: rgba(85, 85, 85, 1); */
     background-color: rgba(31, 39, 130, 0.05);
     padding: 8px;
     color: rgba(85, 85, 85, 1);
+    text-decoration: none;
   }
 
+  .animationgrp1 a, .animationgrp2 a{
+    color: rgba(85, 85, 85, 1);
+    text-decoration: none;
+    margin-left: 0px;
+    margin-right:0;
+  }
+
+  .animationgrp1 a:hover, .animationgrp2 a:hover{
+    text-decoration: underline;
+    text-decoration-color: rgba(31, 39, 130, 1);
+    color: hsba(0, 0%, 97%, 1);
+  }
+
+  .animationgrp1 a:active, .animationgrp2 a:active{
+    background-color: hsba(236, 63%, 84%, 1);
+    color: hsba(0, 0%, 97%, 1);
+  }
+
+  .moveupnav,.movedownnav, .moverightnav, .moveleftnav, .bouncenav, .fadenav, .flipnav, .swingnav{
+    border-right: 1px solid rgba(85, 85, 85, 1);
+    margin: 0px;
+    padding: 8px;
+    text-decoration: none;
+  }
+
+  .blinknav, .tadanav{
+    margin: 0px;
+    padding: 8px;
+    text-decoration: none;
+  }
+  
    .container{
     width: 917px;
     display: flex;

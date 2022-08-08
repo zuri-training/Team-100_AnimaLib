@@ -11,13 +11,13 @@
   <!-- menu content -->
   <div class="menuContentContainer">
 
-    <body>
-      <div class="generatorpage">
-        <div class ="generatorheaders">
-          <h4>Animo</h4>
-          <h1>Animation Generator</h1>
-          <h3>Action</h3>
-        </div>
+
+    <div class="generatorpage">
+      <div class="generatorheaders">
+        <h4>Animo</h4>
+        <h1>Animation Generator</h1>
+        <h3>Action</h3>
+      </div>
       <!-- Create Animation Menu -->
       <nav class="animationmenu">
         <div class="animationgrp1">
@@ -93,18 +93,13 @@
 
               <section>
                 <div>
-                <label for="iterationcount">Iteration count</label>
-                <input
-                  id="iterationcount"
-                  type="number"
-                  value=""
-                  name="iterationcount"
-                />
-            </div>
-                <div class ="infinitecontainer">
-                <input id="infinite" type="checkbox" value="" name="infinite"/>
-                <label for="infinite">Infinite iteration</label>
-            </div>
+                  <label for="iterationcount">Iteration count</label>
+                  <input id="iterationcount" type="number" value="" name="iterationcount" />
+                </div>
+                <div class="infinitecontainer">
+                  <input id="infinite" type="checkbox" value="" name="infinite" />
+                  <label for="infinite">Infinite iteration</label>
+                </div>
               </section>
             </form>
           </div>
@@ -121,42 +116,51 @@
           <textarea></textarea>
         </div>
         <div class="save">
-        <p>Download<div><img src="{% static 'images/downloadicon.png' %}" width="25px" class ="downloadlogo"/></div></p>
-        <p>Save<div><img src="{% static 'images/saveicon.png' %}" width="25px" class ="savelogo"/></div></p>
-    </div>
+          <p>Download
+          <div><img src="{% static 'images/downloadicon.png' %}" width="25px" class="downloadlogo" /></div>
+          </p>
+          <p>Save
+          <div><img src="{% static 'images/saveicon.png' %}" width="25px" class="savelogo" /></div>
+          </p>
+        </div>
       </div>
-      <div class ="copywrite">
+      <div class="copywrite">
         <h3>Animation Generator Documentation</h3>
         <div class="keyframecopy">
-            <h4>@Keyframe</h4>
-            <p>Animo's generator utilizes @keyframes rules to specify the when the animation will happen and the magnitude of the change per time</p>
+          <h4>@Keyframe</h4>
+          <p>Animo's generator utilizes @keyframes rules to specify the when the animation will happen and the
+            magnitude of the change per time</p>
         </div>
         <div class="namecopy">
-            <h4>Name</h4>
-            <p>Animo's nomenclature uses a description of the expected motion. It stores your code of interest under the animation name so you can come back to it.</p>
+          <h4>Name</h4>
+          <p>Animo's nomenclature uses a description of the expected motion. It stores your code of interest under the
+            animation name so you can come back to it.</p>
         </div>
         <div class="objectcopy">
-            <h4>Object</h4>
-            <p>With Animo, your details are important therefore, Animo is built to give the effects that you desire to your elements and features no matter the shape or size</p>
+          <h4>Object</h4>
+          <p>With Animo, your details are important therefore, Animo is built to give the effects that you desire to
+            your elements and features no matter the shape or size</p>
         </div>
         <div class="durationcopy">
-            <h4>Duration</h4>
-            <p>Animo allows you to customize your choice animations without writing any code. You decide how long the duration of your animations should be </p>
+          <h4>Duration</h4>
+          <p>Animo allows you to customize your choice animations without writing any code. You decide how long the
+            duration of your animations should be </p>
         </div>
         <div class="delaycopy">
-            <h4>Delay</h4>
-        <p>Customize the time between each iteration to suit your brand</p>
+          <h4>Delay</h4>
+          <p>With Animo you can customize the time between each iteration to suit your brand</p>
         </div>
-        
+
         <div class="iterationcopy">
-            <h4>Iteration Count</h4>
-            <p>You can have your animation repeat as many times as you would like to deliver your features perfectly </p>
+          <h4>Iteration Count</h4>
+          <p>You can have your animation repeat as many times as you would like to deliver your features perfectly
+          </p>
         </div>
+      </div>
     </div>
-    </div>
-    
-      <script src="script.js"></script>
-    </body>
+
+    <script src="script.js"></script>
+
   </div>
 </div>
 

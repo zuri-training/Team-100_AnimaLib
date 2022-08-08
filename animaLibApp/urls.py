@@ -15,7 +15,10 @@ urlpatterns = [
 
     path('generator/', generator, name='generator'),
     path('support/', contact, name='support'),
+    path('about/', about_us, name='about'),
+
     path('post/<int:pk>/comment', post_comment, name='post_comment'),
     path('post/<int:pk>/edit', post_update, name='post_update'),
     path('post/<int:pk>/delete', post_remove, name='post_remove'),
+
 ]
