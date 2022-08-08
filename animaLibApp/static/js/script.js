@@ -1,7 +1,6 @@
 //alert("This is the JavaScript file");
 // template animation object
-const animationObj = [
-    {
+const animationObj = [{
         id: 1,
         name: "Move Up",
         styleCode: "moveup",
@@ -80,37 +79,37 @@ const animationObj = [
         description: "You can make the text or button or whatever element you want to style with the tada effect using this animation class",
         dateCreated: "10-10-2022 11:20:22",
         lastUpdated: "10-10-2022 11:20:22",
-    }
+    },
 ];
 
-async function getAnimations(){
+async function getAnimations() {
     return animationObj;
 }
 
-function loadAnimationsOnSideBar(){
+function loadAnimationsOnSideBar() {
     let animeList = ``;
 
-    getAnimations().then(animations => {
-        if(animations && animations.length){
-            animations.forEach(val => {
+    getAnimations().then((animations) => {
+        if (animations && animations.length) {
+            animations.forEach((val) => {
                 animeList += `<!-- items -->
                             <span class="menu_II_Item">
                                 <a href="#" class="animeLink menuLink">${val.name}</a>
                             </span>`;
-            })
+            });
         }
 
-        $("#anime-menuList").html(animeList)
-    }) 
+        $("#anime-menuList").html(animeList);
+    });
 }
 
-function showAnimeDetails(){
+function showAnimeDetails() {
     let detailsStr = ``;
 
-    getAnimations().then(animations => {
-        if(animations && animations.length){
-            animations.forEach(val => {
-               detailsStr += `<!-- Animation content 1 -->
+    getAnimations().then((animations) => {
+        if (animations && animations.length) {
+            animations.forEach((val) => {
+                detailsStr += `<!-- Animation content 1 -->
                             <div class="animeRow">
                                 <!-- Animation content -->
                                 <div class="animationContent">
@@ -147,14 +146,13 @@ function showAnimeDetails(){
                                     </div>
                                     </div>
                                 </div>
-                            </div>`; 
-            })
-            
+                            </div>`;
+            });
         }
 
         // set the details on the page
         $("#anime-animationDetails").html(detailsStr);
-    })
+    });
 }
 
 $(document).ready(() => {
@@ -163,7 +161,7 @@ $(document).ready(() => {
     // getAnimations().then(animations => {
     //     console.log(animations)
     // })
-})
+});
 let navLists = document.getElementsByClassName("nav-list");
 let login = document.getElementById("login");
 let hideAfterLogin = document.getElementsByClassName("hide-after-login");
@@ -271,7 +269,6 @@ buttons.forEach((button) => {
         icon.classList.toggle("rotate");
     });
 });
-<<<<<<< HEAD
 
 const togglePassword = document.querySelector("#togglePassword");
 
@@ -285,5 +282,3 @@ togglePassword.addEventListener("click", () => {
 
     this.classList.toggle("bi-eye");
 });
-=======
->>>>>>> fc8ccf2283ef7056d0b70f2253cfa6f4be974385

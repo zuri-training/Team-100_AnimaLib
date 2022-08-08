@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
 /* mobile first design */
-
+.maincontentContainer {
+  margin: 80px 20px 80px 20px;
+}
 /* layout for larger devices */
 @media (min-width: 992px) {
   .maincontentContainer {

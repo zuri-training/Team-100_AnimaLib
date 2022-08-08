@@ -107,10 +107,10 @@ def contact(request):
     form = contactForm()
     sender = settings.EMAIL_HOST_USER
     # open connection
-    connection = get_connection()
-    connection.open()
 
     if request.method == 'POST':
+        connection = get_connection()
+        connection.open()
         # get the form data
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']

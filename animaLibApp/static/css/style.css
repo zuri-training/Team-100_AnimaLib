@@ -494,7 +494,6 @@ section .description .btn {
 footer {
   background-color: rgba(31, 39, 130, 0.08);
   padding-top: 100px;
-  margin-top: 150px;
 }
 
 .footer-item-container {

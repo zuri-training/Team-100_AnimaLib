@@ -10,14 +10,30 @@ body {
   background-color: #f8f8f8;
 }
 
+.main_box {
+  background-size: 150px, 150px, 300px, 300px;
+  background-image: url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813476/login_left_blobs_k8yobf.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813477/login_right_blobs_cy94zh.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813480/bottom_left_blobs_zkbchn.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813480/bottom_right_blobs_bepgpl.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 10% 50%, 90% 50%, bottom left, bottom right;
+  width: 100%;
+}
+
+.section {
+  padding-top: 121px;
+  padding-bottom: 121px;
+}
+
 .login-card {
   border-radius: 16px;
   background: #edeef2;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   /* text-align: center; */
+  margin: 0px auto;
   height: 800px;
   width: 592px;
-  margin: 112px auto;
   padding-top: 1px;
 }
 
@@ -36,6 +52,7 @@ h4 {
   display: flex;
   justify-content: center;
   margin-top: 72px;
+  margin-bottom: 16px;
 }
 
 .form-check-label {

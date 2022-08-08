@@ -15,15 +15,17 @@
 <link href="{% static 'css/login.css' %}" rel="stylesheet" />
 
 {% endblock %} {% block content %}
+<div class="main_box">
+<div class="section">
   <section class="login-card">
       <div class="logo">
-      <img src="{% static 'images/animo logo.png' %}" width="150"/>
+      <img src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659815158/logo_1_vsfmjo.png" width="140" height="39"/>
     </div>
       <h4>Login into your account</h4>
-      <p class="para-text">Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
+      <p class="para-text">Don't have an account? <a href="register.html">Sign Up</a></p>
 
       <div class="main-form">
-        <form method="POST">
+    <form method="POST">
           {% csrf_token %}
           {% if messages %} {% for message in messages %}
             {{ message}}
@@ -85,5 +87,7 @@
         </form>
         
       </div>
-  </section>
+    </section>
+  </div>
+  </div>
 {% endblock %}
