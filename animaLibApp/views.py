@@ -91,7 +91,7 @@ def register(request):
                 # hash and save the password; immediately; we do not want to save the password in plain text.
                 user = newUser.objects.get(username = form.cleaned_data['username'])
                 user.set_password(password)
-                user.user_image = "null.png"
+                # user.user_image = "null.png"
                     
                 user.save()
 
@@ -249,11 +249,13 @@ def profile(request):
     #get the username
     username = request.user.username
     email_address = request.user.email
-    image = request.user.user_image.url
+    image = request.user.user_image
     # get the end of the file at this point. 
-    new_image = image.rsplit('/', 1)[-1]
-    if new_image == "null.png":
+    #new_image = image.rsplit('/', 1)[-1]
+    if not image:
         image = "https://res.cloudinary.com/dc29czhf9/image/upload/v1659818233/media/default2_zxexum.png"
+    else:
+        image = image.url
         
     profile ={"username": username, "email": email_address, "image":image}
     

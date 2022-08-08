@@ -69,18 +69,27 @@
         </div>
         {% if user.is_authenticated %}
         <div class="header-item show-after-login">
+          {% if user.user_image %}
           <img
             id="profile-img-nav-bar"
             class="profile-img"
-            src="{% static 'images/logo.png' %}"
+            src="{{user.user_image.url}}"
             alt=""
           />
+          {% else %}
+          <img
+            id="profile-img-nav-bar"
+            class="profile-img"
+            src="https://res.cloudinary.com/dc29czhf9/image/upload/v1659818233/media/default2_zxexum.png"
+            alt=""
+          />
+          {% endif %}
           <span><i id="profile-click" class="fa-thin fa-angle-down"></i></span>
           <div id="show-after-profile-click" class="profile-dropdown">
             <img
               id="profile-img-drop-down"
               class="profile-img"
-              src="logo.png"
+              src="{{user.user_image.url}}"
               alt=""
             />
             <a href="{% url 'profile' %}" class="name">
