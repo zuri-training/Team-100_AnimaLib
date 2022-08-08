@@ -615,3 +615,7 @@ footer {
     font-size: 15px;
   }
 }
+
+#comment_reply {
+  margin-left: 20%;
+}

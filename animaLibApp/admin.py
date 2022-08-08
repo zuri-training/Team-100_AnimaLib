@@ -15,9 +15,9 @@ class UserAdminConfig(UserAdmin):
     fieldsets = (
         (None, {'fields': ('username', 'email')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser',)}),
-        ('Personal',{'fields': ('name','user_image','date_joined', 'last_login',)}),    
+        ('Personal',{'fields': ('name','user_image','date_joined', 'last_login',)}),
     )
-    
+
     # These are the fields we want displayed on the admin page whenever we want to create a new user.
     add_fieldsets = (
         (None, {
@@ -26,4 +26,7 @@ class UserAdminConfig(UserAdmin):
         ),
     )
 
-admin.site.register(newUser, UserAdminConfig)
+register = admin.site.register
+
+register(newUser, UserAdminConfig)
+register(Post); register(Comment)

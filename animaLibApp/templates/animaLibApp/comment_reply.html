@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<!-- --------------------------------------------------------->
+{% load active_link_tags %}
+<!-- --------------------------------------------------------->
+{% block title %} Docs Page {% endblock %}
+<!-- ---------------------------------------------------------------------------- -->
+{% block content %}
+<div class="container">
+  <div class="row">
+    <h3>Comment on post: {{ post_title }}</h3>
+    <form method="post" style="margin-top: 1.3em">
+      {% csrf_token %} {{ reply_comment_form.as_p }}
+      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </form>
+  </div>
+  <div>{% endblock %}</div>
+</div>

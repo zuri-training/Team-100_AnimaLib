@@ -22,7 +22,21 @@
           and designers looking to maximise their <br />
           productivity.
         </p>
-        <p><a class="btn big-btn change-after-login" href="">Get Started</a></p>
+        <p>
+          {% if user.is_authenticated %}
+
+          <a class="btn big-btn change-after-login" href="{% url 'download' %}"
+            >Download Library</a
+          >
+          {% else %}
+          <a
+            class="btn big-btn change-after-login"
+            href="{% url 'documentation' %}"
+            >Get Started</a
+          >
+
+          {% endif %}
+        </p>
         <ul>
           <li>Easy Intergration</li>
           <li>Save History</li>
@@ -282,7 +296,18 @@
           The best tools that helps users enjoy better enjoyment
         </p>
         <p>
-          <a class="btn big-btn change-after-login" href=" ">Get Started</a>
+          {% if user.is_authenticated %}
+
+          <a class="btn big-btn change-after-login" href="{% url 'download' %}"
+            >Download Library</a
+          >
+          {% else %}
+          <a
+            class="btn big-btn change-after-login"
+            href="{% url 'documentation' %}"
+            >Get Started</a
+          >
+          {% endif %}
         </p>
       </div>
     </section>

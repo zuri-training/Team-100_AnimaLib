@@ -29,7 +29,6 @@
       src="https://kit.fontawesome.com/1e4daf36c1.js"
       crossorigin="anonymous"
     ></script>
-
     {% block style %} {% endblock %}
   </head>
   <body>
@@ -52,7 +51,7 @@
               <a href="{% url 'index' %}">Home</a>
             </li>
             <li id="doc" class="nav-list">
-              <a href="#">Documentation</a>
+              <a href="{% url 'documentation' %}">Documentation</a>
             </li>
             <li
               id="support"
@@ -84,7 +83,7 @@
               src="logo.png"
               alt=""
             />
-            <a href="#" class="name">
+            <a href="{% url 'profile' %}" class="name">
               John Doe <span class="v-profile">View profile</span>
             </a>
             <a href="{% url 'logout' %}"> logout</a>
@@ -119,7 +118,13 @@
         <div class="footer-item">
           <p class="footer-item-title">Our Company</p>
           <ul>
-            <li><a href="#" class="footer-links">About Us</a></li>
+            <li>
+              <a
+                href="{% url  'about' %}"
+                class="{% active_link 'support' strict=True %} footer-links"
+                >About Us</a
+              >
+            </li>
             <li><a href="#" class="footer-links">Animation</a></li>
             <li><a href="#" class="footer-links">Testimonials</a></li>
           </ul>
