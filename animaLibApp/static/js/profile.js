@@ -4,8 +4,14 @@ $("[type=file]").on("change", function() {
     var dflt = $(this).attr("placeholder");
     if ($(this).val() != "") {
         $(this).next().text(file);
+        $("#save").removeClass("disabled");
+        $("#save").addClass("save");
+        $("#save").prop("disabled", false);
     } else {
         $(this).next().text(dflt);
+        $("#save").removeClass("save");
+        $("#save").addClass("disabled");
+        $("#save").prop("disabled", true);
     }
 });
 
@@ -41,4 +47,17 @@ $("#password_container_edit").on("click", ".cancel_button", function(e) {
 $("#password_container_edit").on("click", ".update_button", function(e) {
     e.preventDefault();
     $("#password").prop("readonly", true);
+});
+
+// check if any field has a value
+$("#email, #password").on("keyup change", function(e) {
+    if ($(this).val() != "") {
+        $("#save").removeClass("disabled");
+        $("#save").addClass("save");
+        $("#save").prop("disabled", false);
+    } else {
+        $("#save").removeClass("save");
+        $("#save").addClass("disabled");
+        $("#save").prop("disabled", true);
+    }
 });

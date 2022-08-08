@@ -185,17 +185,6 @@ Array.from(navLists).forEach((navList) => {
 
 // code
 // for authenticated header
-login.addEventListener("click", function() {
-    Array.from(hideAfterLogin).forEach(
-        (element) => (element.style.display = "none")
-    );
-    Array.from(showAfterLogin).forEach(
-        (element) => (element.style.display = "flex")
-    );
-    Array.from(changeAfterLogin).forEach(
-        (element) => (element.innerHTML = "Read Documentation")
-    );
-});
 
 // code for slider effect using owlcarousel
 $(".owl-carousel").owlCarousel({

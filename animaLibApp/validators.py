@@ -1,4 +1,6 @@
 # validates if the user_password matches our requirement.
+import re
+
 # The requirement include being atleast 8 character long and must have atleast one special character.
 def validate(user_password) -> bool:
     special_characters = "'!@#$%^&*()-+?_=,<>/"

@@ -10,7 +10,6 @@ from django.contrib.messages import constants as cs
 from django.contrib.auth import authenticate, login, logout
 from pathlib import Path
 import os
-import re
 from .forms import *
 from os.path import basename
 import cloudinary.uploader
@@ -40,8 +39,16 @@ def index(request):
     return render(request, 'animaLibApp/index.html')
 
 # This is a view for the login page of the website.
+
+def forgotpassword(request):
+    if request.user.is_authenticated:
+        return redirect('index')
+    return render(request, 'animaLibApp/forgotpword.html')
+
 def log_in(request):
     form = LoginForm()
+    if request.user.is_authenticated:
+        return redirect('index')
     if request.method == 'POST':
         # get the username
         username = request.POST.get('fname', '')
@@ -70,7 +77,8 @@ def log_in(request):
 def register(request):
     form = RegisterForm()
     special_characters = "'!@#$%^&*()-+?_=,<>/"
-
+    if request.user.is_authenticated:
+        return redirect('index')
     # if the user has submitted the form, then we need to process the data.
     if request.method == 'POST':
         form = RegisterForm(request.POST)
@@ -164,16 +172,18 @@ def download_library(request):
 def profile(request):
     
     if request.method == "POST":
-        picture = request.FILES['picture']
+        picture = request.FILES.get('picture', None)
         email = request.POST.get('email', None)
         password = request.POST.get('password', None)
         username = request.POST.get('username', None)
         username = username.replace('@', '')
         get_user = newUser.objects.get(username=username)
+        print(picture)
         
-        
+        if picture is None:
+            picture = ''
         # if the image has been uploaded, just check once if it's above the size we've specified.
-        if check(picture) is False and picture != '':
+        elif check(picture) is False and picture != '':
             messages.add_message(request, cs.ERROR, 'image should not be more than 2MB')
             return redirect('profile')
         

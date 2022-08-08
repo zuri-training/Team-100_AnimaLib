@@ -8,7 +8,7 @@ class RegisterForm(forms.ModelForm):
         widgets = {
                    'username': forms.TextInput(attrs={'class': 'form-control fname', 'placeholder': 'Jack Smith'}),
                    'email': forms.EmailInput(attrs={'class': 'form-control eaddress', 'placeholder': 'jacksmith@gmail.com'}),
-                   'password': forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'}),
+                   'password': forms.PasswordInput(attrs={'class': 'form-control bi bi-eye', 'placeholder': 'Password', 'id': 'togglePassword'}),
         }
 
 class LoginForm(forms.ModelForm):

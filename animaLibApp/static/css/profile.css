@@ -106,6 +106,15 @@ input[type="submit"] {
   color: #f8f8f8;
 }
 
+.disabled {
+  background-color: inherit;
+  color: #85868c;
+  align-items: center;
+  padding: 8px 12px;
+  border: 2px solid #85868c;
+  border-radius: 8px;
+  float: right;
+}
 .save {
   background-color: #1f2782;
   color: #f8f8f8;
