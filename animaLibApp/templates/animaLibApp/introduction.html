@@ -124,7 +124,7 @@
 
               <span>
                 <button class="anime-button">
-                  <span class="mr-1">Download Library</span>
+                  <a href="{% url 'download' %}"><span class="mr-1">Download Library</span></a>
                   <span class="btn-icon">
                     <i class="fa-solid fa-arrow-down"></i>
                   </span>
@@ -200,7 +200,7 @@
                 
               <div style="text-align:end;">
                 <span>
-                  <a href="../showAnimations">
+                  <a href="{% url 'showAnimations' %}">
                   <span>Animations</span>
                   <span>
                     <i class="fa-solid fa-arrow-right"></i>
@@ -212,7 +212,7 @@
 
               <div style="text-align:left;">
                 <span>
-                  <a href="../GetStarted">
+                  <a href="{% url 'documentation' %}">
                   <span>Get Started</span>
                   <span>
                     <i class="fa-solid fa-arrow-left"></i>
