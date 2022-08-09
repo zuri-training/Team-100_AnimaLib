@@ -157,10 +157,10 @@ function showAnimeDetails() {
     })
 }
 
- function showMainContent(sliderId) {
+function showMainContent(sliderId) {
     // Get the selected slider 
     const selectedSlider = $(`#slider${sliderId}`);
-    
+
     const selectedMain = $(`#slideMain${sliderId}`);
 
     // add the main content to the slider container
@@ -172,8 +172,8 @@ function showAnimeDetails() {
     selectedMain.slideToggle("slow")
     console.log("I was clicked")
 
-   
- }
+
+}
 
 $(document).ready(() => {
     loadAnimationsOnSideBar();
@@ -205,13 +205,22 @@ let sortByText = document.getElementById('sort-text')
 let searchBar = document.getElementById('search-input')
 let searchText = document.getElementById('filter')
 
-// code for active state
-Array.from(navLists).forEach(navList => {
-    navList.addEventListener('click', function() {
-        Array.from(navLists).forEach(nav => nav.classList.remove('active'));
-        this.classList.add('active');
+// // code for active state
+// Array.from(navLists).forEach(navList => {
+//     navList.addEventListener('click', function() {
+//         Array.from(navLists).forEach(nav => nav.classList.remove('active'));
+//         this.classList.add('active');
 
-    });
+//     });
+// });
+
+
+// code for authenticated header
+login.addEventListener('click', function() {
+    Array.from(hideAfterLogin).forEach(element => element.style.display = 'none');
+    Array.from(showAfterLogin).forEach(element => element.style.display = 'flex');
+    Array.from(changeAfterLogin).forEach(element => element.innerHTML = 'Read Documentation');
+
 });
 
 
@@ -228,20 +237,17 @@ login.addEventListener('click', function() {
 window.addEventListener('click', function(event) {
     if (supportDropDown.style.display == "none") {
         if (event.target == supportNav) {
+            supportNav.children[0].style.transform = "rotateZ(180deg)";
             supportDropDown.style.display = "block";
-            downArrow.classList.remove('fa-angle-down')
-            downArrow.classList.add('fa-angle-up')
         }
     } else {
         if (event.target == supportNav) {
             supportDropDown.style.display = "none";
-            downArrow.classList.remove('fa-angle-up')
-            downArrow.classList.add('fa-angle-down')
+            supportNav.children[0].style.transform = "rotateZ(0deg)";
             Array.from(navLists)[2].classList.remove('active')
         } else if (event.target != supportNav && event.target != supportNav.parentNode != supportNav) {
             supportDropDown.style.display = "none";
-            downArrow.classList.remove('fa-angle-up')
-            downArrow.classList.add('fa-angle-down')
+            supportNav.children[0].style.transform = "rotateZ(0deg)";
             Array.from(navLists)[2].classList.remove('active')
         }
     }
@@ -251,19 +257,17 @@ window.addEventListener('click', function(event) {
 window.addEventListener('click', function(event) {
     if (showAfterProfileClick.style.display == "none") {
         if (event.target == downArrow || event.target == profileImg) {
+            downArrow.style.transform = "rotateZ(180deg)"
             showAfterProfileClick.style.display = 'block';
-            downArrow.classList.remove('fa-angle-down')
-            downArrow.classList.add('fa-angle-up')
         }
     } else {
         if (event.target == downArrow || event.target == profileImg) {
             showAfterProfileClick.style.display = 'none';
-            downArrow.classList.remove('fa-angle-up')
-            downArrow.classList.add('fa-angle-down')
+            downArrow.style.transform = "rotateZ(0deg)"
         } else if (event.target != showAfterProfileClick && event.target.parentNode != showAfterProfileClick) {
             showAfterProfileClick.style.display = 'none';
-            downArrow.classList.remove('fa-angle-up')
-            downArrow.classList.add('fa-angle-down')
+            downArrow.style.transform = "rotateZ(0deg)"
+
         }
     }
 })
@@ -273,18 +277,12 @@ window.addEventListener('click', function(event) {
     if (sortDropDown.style.display == "none") {
         if (event.target == sortBy || event.target == sortByText) {
             sortDropDown.style.display = "block";
-            downArrow.classList.remove('fa-angle-down')
-            downArrow.classList.add('fa-angle-up')
         }
     } else {
         if (event.target == sortBy || event.target == sortByText) {
             sortDropDown.style.display = "none";
-            downArrow.classList.remove('fa-angle-up')
-            downArrow.classList.add('fa-angle-down')
         } else if (event.target != sortBy && event.target != sortBy.parentNode != sortBy) {
             sortDropDown.style.display = "none";
-            downArrow.classList.remove('fa-angle-up')
-            downArrow.classList.add('fa-angle-down')
         }
     }
 })
@@ -342,7 +340,6 @@ $(window).scroll(function() {
         $("header").removeClass("scroll");
     }
 });
-
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
