@@ -718,4 +718,10 @@ footer {
     }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 600px) {}
+=======
+#comment_reply {
+  margin-left: 20%;
+}
+>>>>>>> 7209edc39e675cb2d247167ec65ea870d0e9ee84
