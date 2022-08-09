@@ -120,31 +120,32 @@ function showAnimeDetails(){
                         
                                 <!-- Display area -->
                                 <div class="anime-displayarea">
-                                    <div class="sliderContainer">
-                                    <!-- main slide content -->
-                                    <div class="slideMain">
+                                    <div class="sliderContainer d-flex" >
+                                        <div class="slideMain" id="slideMain${val.id}" style="display:none"> 
                                         <!-- content for main slider here -->
-                                    </div>
-                                    <div class="slideMoving">
-                                        <!-- slider handle -->
-                                        <div class="sliderHandle">
-                                        <!-- the handle icon -->
-                                        <span>|</span>
                                         </div>
-                        
-                                        <!-- slider content -->
-                                        <div class="slidingContent">
-                                            <div class="slider_innerBox d-flex justify-content-center
-                                             align-items-center">
-                                                <div class="container">
-                                                    <div class="${val.styleCode}
-                                                     shadow-sm bg-danger text-white
-                                                     p-2">${val.name}</div>
+                                       
+
+                                        <div class="slideMoving" id="slide${val.id}">
+                                            <!-- slider handle -->
+                                            <div class="sliderHandle" onclick="showMainContent(${val.id})">
+                                                <!-- the handle icon -->
+                                                <span>|</span>
+                                            </div>
+                            
+                                            <!-- slider content -->
+                                            <div class="slidingContent">
+                                                <div class="slider_innerBox d-flex justify-content-center
+                                                    align-items-center">
+                                                    <div class="container">
+                                                        <div class="${val.styleCode}
+                                                            shadow-sm bg-danger text-white
+                                                            p-2">${val.name}</div>
+                                                    </div>
+                                                    
                                                 </div>
-                                                
                                             </div>
                                         </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>`; 
@@ -156,6 +157,24 @@ function showAnimeDetails(){
         $("#anime-animationDetails").html(detailsStr);
     })
 }
+
+ function showMainContent(sliderId) {
+    // Get the selected slider 
+    const selectedSlider = $(`#slider${sliderId}`);
+    
+    const selectedMain = $(`#slideMain${sliderId}`);
+
+    // add the main content to the slider container
+    const mainContent = ` <!-- main slide content -->
+                        <div class="slideMain"> 
+                            <!-- content for main slider here -->
+                        </div>`;
+    selectedSlider.after(mainContent)
+    selectedMain.slideToggle("slow")
+    console.log("I was clicked")
+
+   
+ }
 
 $(document).ready(() => {
     loadAnimationsOnSideBar();

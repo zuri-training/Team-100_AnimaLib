@@ -10,6 +10,7 @@ body {
 /* mobile first design */
 .maincontentContainer {
   padding: 10px;
+  margin-top: 40px;
   min-height: 80vh;
   font-family: "Raleway", sans-serif;
 }
@@ -27,8 +28,15 @@ body {
   }
 
   .anime-menuHeader {
-    font-size: 15pt;
+    color: #1F2782;
+    font-style: normal;
     font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+
+    
+
   }
   .anime-menuContentHolder {
     margin: 1px 5px 1px 10px;
@@ -136,11 +144,13 @@ body {
   }
   .slideMain {
     height: 100%;
+    width: 70%;
     padding: 20px;
     overflow: auto;
   }
   .slideMoving {
     height: 100%;
+    width: 100%;
     border-radius: 7px;
 
     background-color: whitesmoke;
@@ -160,12 +170,12 @@ body {
   }
   .slider_innerBox {
     height: 100%;
-    width: 100%;
+    width: 50%;
     overflow: auto;
 
-    padding: 20px;
+    padding: 20px; 
 
-    background-color: silver;
+    background-color: #59C3C3;
   }
 
   /* Design for headers */
