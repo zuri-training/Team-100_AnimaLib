@@ -647,7 +647,8 @@ footer {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 32px;
+    display: flex;
+    align-content: center;
 }
 .exploresection{
     margin-right: 352px;
