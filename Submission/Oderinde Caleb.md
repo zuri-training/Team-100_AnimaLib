@@ -1,4 +1,5 @@
 ## [Team Repository Link](https://github.com/zuri-training/Team-100_AnimaLib)
+
 ## [Team Link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
 
 # Issues Worked on and solutions
@@ -8,6 +9,7 @@
 ### Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/58
 
 ### Solution link: 
+
 [High Fidelity design 1 Authenticated user](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2808%3A33547)
 
 [High Fidelity design 2 Authenticated user]( https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2808%3A33675)
@@ -24,19 +26,15 @@
 
 ### Solution link: [Style guide](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=0%3A1)
 
-## Issue Title: Develop the password recovery success page
-
-### Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/54
-
-### Solution link:  
-
 
 ## Issue Title: Brainstorm on ideas
 
 ### Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/16
 
 ### Solution link: 
+
 [Brainstorming](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2880%3A27332)
+
 [Idea matrix](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2730%3A47674)
               
               
@@ -47,13 +45,19 @@
 
 ### Solution link: 
 Unauthenticated users
+
 [Get started](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A81283)
+
 [Introduction](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3207%3A21520)
+
 [Animation](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A81918)
                
 Authenticated users
+
 [Get started](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3222%3A21729)
+
 [Introduction](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A82379)
+
 [Animation](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A82149)
 
 
@@ -63,14 +67,21 @@ Authenticated users
 ### Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/15
 
 ### Solution link: 
+
 Unauthenticated users
+
 [Get started](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A17241)
+
 [Introduction](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A17554)
+
 [Animation](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A17330)
                
 Authenticated users
+
 [Get started](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A26483)
+
 [Introduction](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A26796)
+
 [Animation](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A26572)
 
 ## Issue Title: Construct an overall site map for the product
@@ -93,6 +104,9 @@ Authenticated users
 ### Issue link:https://github.com/zuri-training/Team-100_AnimaLib/issues/26
 
 ### Solution link: 
+
 [Documentation page 1](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A24704)
+
 [Documentation page 2](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A24881)
+
 [Documentation page 3](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A24774)
