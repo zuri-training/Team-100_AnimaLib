@@ -1,3 +1,11 @@
+## Below is our Team Link
+
+[Team Link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
+
+## Below is our Team Repository Link
+
+[Team Repo Link](https://github.com/zuri-training/Team-100_AnimaLib)
+
 # Issues worked on, assigned to me and their solutions
 
 ## Issue Title:Design the page that will display "animation search
