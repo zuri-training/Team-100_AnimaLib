@@ -4,6 +4,8 @@
 
 [Develop the animation not found for animation search page #57](https://github.com/zuri-training/Team-100_AnimaLib/issues/57)
 
+[Develop the animation search page #56](https://github.com/zuri-training/Team-100_AnimaLib/issues/56)
+
 ### Branch on Github
 [OkeneDaniel](https://github.com/zuri-training/Team-100_AnimaLib/tree/OkeneDaniel)
 
