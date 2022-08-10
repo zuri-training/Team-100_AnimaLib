@@ -40,3 +40,7 @@ Developed the Register, login, logout, contact, download views with some validat
 ### Branch on Github
 [Dayveed](https://github.com/zuri-training/Team-100_AnimaLib/tree/Dayveed)
 
+[Team Repo Link](https://github.com/zuri-training/Team-100_AnimaLib)
+
+[Team_link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
+
