@@ -4,167 +4,117 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{% block title %}{% endblock %}</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-/>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <script
-      src="https://kit.fontawesome.com/1e4daf36c1.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/1e4daf36c1.js" crossorigin="anonymous"></script>
     {% block style %} {% endblock %}
 
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <div id="header-container">
-        <div class="header-item">
-          <a href="index.html"
-            ><img
-              id="header-logo"
-              src="{% static 'images/animo logo.png' %}"
-              alt="Our logo"
-          /></a>
+        <div id="header-container">
+            <div class="header-item">
+                <a href="{% url 'index' %}"><img id="header-logo" src="{% static 'images/header-logo.png' %}" alt="Our logo"></a>
+            </div>
+            <div class="header-item">
+                <ul id="navigation">
+                    <li id="home" class="{% active_link 'index' strict=True %} nav-list">
+                        <a href="{% url 'index' %}">Home</a></li>
+                    <li id="doc" class="{% active_link 'documentation' strict=True %} nav-list">
+                        <a href="{% url 'documentation' %}">Documentation</a>
+                    </li>
+                    <li class="{% active_link 'support' strict=True %} nav-list">
+                        <span id="support"> Support <img  class='dropdown-icon' src="{% static 'images/dropdown-black.png' %}"/> </span>
+                        <div id="support-dropdown">
+                            <p><a class="support-link">About Us</a></p>
+                            <p><a class="support-link">Contact Us</a></p>
+                        </div>
+                    </li>
+                    <input id="search-input" class="search-bar hide-after-login" type="search" name="search-animation" maxlength="10" placeholder="Search for animations">
+                </ul>
+            </div>
+            <div class="header-item hide-after-login">
+                <ul class="entry">
+                    <li id="login">
+                        <a href="#">Login</a></li>
+                    <li id="register" class="btn small-btn">
+                        <a href="#">Register</a></li>
+                </ul>
+            </div>
+            <div class="header-item show-after-login">
+                <input id="search-input" class="hide search-bar" type="search" name="search-animation" maxlength="10" placeholder="Search for animations">
+                <img id="profile-img-nav-bar" class='profile-img' src="{% static 'images/m mckinney.png' %}" alt="">
+                <span><img id="profile-click" class='dropdown-icon' src="{% static 'images/dropdown-black.png' %}"/></span>
+                <div id='profile-dropdown'>
+                    <img id="profile-img-drop-down" class='profile-img ' src="{% static 'images/m mckinney.png' %}" alt="">
+                    <p class="name">John Doe <a class="v-profile">View profile</a>
+                    </p>
+                    <div style="clear: both;" class="clearfloat"></div>
+                    <p class="my-saves"><img src="" alt=""><i class="fa-thin fa-bookmark"></i><a>My Saves</a></p>
+                    <p class="log-out"><a>Log Out</a></p>
+                </div>
+            </div>
+
         </div>
-        <div class="header-item">
-          <ul id="navigation">
-            <li
-              id="home"
-              class="{% active_link 'index' strict=True %} nav-list"
-            >
-              <a href="{% url 'index' %}">Home</a>
-            </li>
-            <li id="doc" class="nav-list">
-              <a href="{% url 'documentation' %}">Documentation</a>
-            </li>
-            <li
-              id="support"
-              class="{% active_link 'support' strict=True %} nav-list"
-            >
-              <a href="{% url 'support' %}">Support</a>
-            </li>
-            <input
-              class="search-bar hide-after-login"
-              type="search"
-              name="search-animation"
-              placeholder="Search for animations"
-            />
-          </ul>
-        </div>
-        <div class="header-item hide-after-login">
-          <ul class="entry">
-            <li id="login">
-              <a href="#">Login</a>
-            </li>
-            <li id="register" class="btn small-btn">
-              <a href="#">Register</a>
-            </li>
-          </ul>
-        </div>
-        <div class="header-item show-after-login">
-          <input
-            class="hide search-bar"
-            type="search"
-            name="search-animation"
-            placeholder="Search for animations"
-          />
-          <img
-            id="profile-img-nav-bar"
-            class="profile-img"
-            src="logo.png"
-            alt=""
-          />
-          <span><i id="profile-click" class="fa-thin fa-angle-down"></i></span>
-          <div id="show-after-profile-click" class="profile-dropdown">
-            <img
-              id="profile-img-drop-down"
-              class="profile-img"
-              src="logo.png"
-              alt=""
-            />
-            <p class="name">
-              John Doe <span class="v-profile">View profile</span>
-            </p>
-          </div>
-        </div>
-      </div>
     </header>
-    {% block content %} {% endblock %}
+    <main>
+        {% block content %} {% endblock %}
+
+    </main>
     <footer>
-      <div class="footer-item-container">
-        <div class="footer-item">
-          <a href="index.html"
-            ><img
-              id="footer-logo"
-              class="logo"
-              src="{% static 'images/animo logo.png' %}"
-              alt="Our logo"
-          /></a>
+        <div class="footer-item-container">
+            <div class="footer-item">
+                <a href="{% url 'index' %}"><img id="footer-logo" class="logo" src="{% static 'images/footer-logo.png' %}" alt="Our logo"></a>
+            </div>
+            <div class="footer-item">
+                <p class="footer-item-title">Animo</p>
+                <ul>
+                    <li><a href="#" class="footer-links">Features</a></li>
+                    <li><a href="#" class="footer-links">Animation</a></li>
+                    <li><a href="#" class="footer-links">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <p class="footer-item-title">Documentation</p>
+                <ul>
+                    <li><a href="#" class="footer-links">Get Started</a></li>
+                    <li><a href="#" class="footer-links">Annimation Library</a></li>
+                    <li><a href="#" class="footer-links">Installation Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <p class="footer-item-title">Support</p>
+                <ul>
+                    <li><a href="{% url 'about' %}" class="footer-links">About Us</a></li>
+                    <li><a href="#" class="footer-links">FAQ</a></li>
+                    <li><a href="#" class="footer-links">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <p class="footer-item-title">Follow us</p>
+                <ul>
+                    <li> <i class="social-icon fa-brands fa-github"></i> <a href="#" class="footer-links">Github</a></li>
+                    <li><i class=" social-icon fa-brands fa-youtube"></i><a href="#" class="footer-links">Youtube</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-item">
-          <p class="footer-item-title">Our Company</p>
-          <ul>
-            <li><a href="{% url  'about' %}" class="footer-links">About Us</a></li>
-            <li><a href="#" class="footer-links">Animation</a></li>
-            <li><a href="#" class="footer-links">Testimonials</a></li>
-          </ul>
-        </div>
-        <div class="footer-item">
-          <p class="footer-item-title">Documentation</p>
-          <ul>
-            <li><a href="#" class="footer-links">Get Started</a></li>
-            <li><a href="#" class="footer-links">Annimation Library</a></li>
-            <li><a href="#" class="footer-links">Installation Guide</a></li>
-          </ul>
-        </div>
-        <div class="footer-item">
-          <p class="footer-item-title">Support</p>
-          <ul>
-            <li><a href="#" class="footer-links">FAQ</a></li>
-            <li><a href="#" class="footer-links">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-item">
-          <p class="footer-item-title">Follow us</p>
-          <ul>
-            <li>
-              <i class="social-icon fa-brands fa-github"></i>
-              <a href="#" class="footer-links">Github</a>
-            </li>
-            <li>
-              <i class="social-icon fa-brands fa-youtube"></i
-              ><a href="#" class="footer-links">Youtube</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <p id="copyright">Copyright &copy; 2022 <span>Team 100</span></p>
-      <!-- End of Footer -->
+        <p id="copyright">Copyright &copy; 2022 <span>Team 100</span></p>
+        <!-- End of Footer -->
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
-  </body>
+</body>
+
 </html>

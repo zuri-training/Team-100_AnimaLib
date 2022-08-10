@@ -1,7 +1,6 @@
 //alert("This is the JavaScript file");
 // template animation object
-const animationObj = [
-    {
+const animationObj = [{
         id: 1,
         name: "Move Up",
         styleCode: "moveup",
@@ -83,15 +82,15 @@ const animationObj = [
     }
 ];
 
-async function getAnimations(){
+async function getAnimations() {
     return animationObj;
 }
 
-function loadAnimationsOnSideBar(){
+function loadAnimationsOnSideBar() {
     let animeList = ``;
 
     getAnimations().then(animations => {
-        if(animations && animations.length){
+        if (animations && animations.length) {
             animations.forEach(val => {
                 animeList += `<!-- items -->
                             <span class="menu_II_Item">
@@ -101,16 +100,16 @@ function loadAnimationsOnSideBar(){
         }
 
         $("#anime-menuList").html(animeList)
-    }) 
+    })
 }
 
-function showAnimeDetails(){
+function showAnimeDetails() {
     let detailsStr = ``;
 
     getAnimations().then(animations => {
-        if(animations && animations.length){
+        if (animations && animations.length) {
             animations.forEach(val => {
-               detailsStr += `<!-- Animation content 1 -->
+                detailsStr += `<!-- Animation content 1 -->
                             <div class="animeRow">
                                 <!-- Animation content -->
                                 <div class="animationContent">
@@ -148,9 +147,9 @@ function showAnimeDetails(){
                                         </div>
                                     </div>
                                 </div>
-                            </div>`; 
+                            </div>`;
             })
-            
+
         }
 
         // set the details on the page
@@ -158,10 +157,10 @@ function showAnimeDetails(){
     })
 }
 
- function showMainContent(sliderId) {
+function showMainContent(sliderId) {
     // Get the selected slider 
     const selectedSlider = $(`#slider${sliderId}`);
-    
+
     const selectedMain = $(`#slideMain${sliderId}`);
 
     // add the main content to the slider container
@@ -173,8 +172,8 @@ function showAnimeDetails(){
     selectedMain.slideToggle("slow")
     console.log("I was clicked")
 
-   
- }
+
+}
 
 $(document).ready(() => {
     loadAnimationsOnSideBar();
@@ -183,82 +182,133 @@ $(document).ready(() => {
     //     console.log(animations)
     // })
 })
-let navLists = document.getElementsByClassName("nav-list");
-let login = document.getElementById("login");
-let hideAfterLogin = document.getElementsByClassName("hide-after-login");
-let showAfterLogin = document.getElementsByClassName("show-after-login");
-let changeAfterLogin = document.getElementsByClassName("change-after-login");
-let showAfterProfileClick = document.getElementById("show-after-profile-click");
-let downArrow = document.getElementById("profile-click");
-let downIcon = document.getElementsByClassName("drop-icon");
-let faqToggles = document.getElementsByClassName("toggle");
-let faqContent = document.getElementsByClassName("faq-answer");
-let faqBody = document.getElementsByClassName("faq");
-let profileImg = document.getElementById("profile-img-nav-bar");
 
-// code for active state
-Array.from(navLists).forEach((navList) => {
-    navList.addEventListener("click", function() {
-        Array.from(navLists).forEach((nav) => nav.classList.remove("active"));
-        this.classList.add("active");
+let navLists = document.getElementsByClassName('nav-list')
+let login = document.getElementById("login")
+let hideAfterLogin = document.getElementsByClassName('hide-after-login')
+let showAfterLogin = document.getElementsByClassName('show-after-login')
+let changeAfterLogin = document.getElementsByClassName('change-after-login')
+let showAfterProfileClick = document.getElementById('profile-dropdown')
+let downArrow = document.getElementById('profile-click')
+let downIcon = document.getElementsByClassName('drop-icon')
+let faqToggles = document.getElementsByClassName('toggle')
+let faqContent = document.getElementsByClassName('faq-answer')
+let faqBody = document.getElementsByClassName('faq')
+let profileImg = document.getElementById('profile-img-nav-bar')
+let supportNav = document.getElementById('support')
+let supportDropDown = document.getElementById('support-dropdown')
+let searchInput = document.getElementById('search-input')
+let sortBy = document.getElementById('sort-by')
+let sortDropDown = document.getElementById('sort-dropdown')
+let sortByNewText = document.getElementsByClassName('sort-link')
+let sortByText = document.getElementById('sort-text')
+let searchBar = document.getElementById('search-input')
+let searchText = document.getElementById('filter')
+
+// // code for active state
+// Array.from(navLists).forEach(navList => {
+//     navList.addEventListener('click', function() {
+//         Array.from(navLists).forEach(nav => nav.classList.remove('active'));
+//         this.classList.add('active');
+
+//     });
+// });
+
+
+// code for authenticated header
+login.addEventListener('click', function() {
+    Array.from(hideAfterLogin).forEach(element => element.style.display = 'none');
+    Array.from(showAfterLogin).forEach(element => element.style.display = 'flex');
+    Array.from(changeAfterLogin).forEach(element => element.innerHTML = 'Read Documentation');
+
+});
+
+
+// code for authenticated header
+login.addEventListener('click', function() {
+    Array.from(hideAfterLogin).forEach(element => element.style.display = 'none');
+    Array.from(showAfterLogin).forEach(element => element.style.display = 'flex');
+    Array.from(changeAfterLogin).forEach(element => element.innerHTML = 'Read Documentation');
+
+});
+
+
+// code for support page drop down
+window.addEventListener('click', function(event) {
+    if (supportDropDown.style.display == "none") {
+        if (event.target == supportNav) {
+            supportNav.children[0].style.transform = "rotateZ(180deg)";
+            supportDropDown.style.display = "block";
+        }
+    } else {
+        if (event.target == supportNav) {
+            supportDropDown.style.display = "none";
+            supportNav.children[0].style.transform = "rotateZ(0deg)";
+            Array.from(navLists)[2].classList.remove('active')
+        } else if (event.target != supportNav && event.target != supportNav.parentNode != supportNav) {
+            supportDropDown.style.display = "none";
+            supportNav.children[0].style.transform = "rotateZ(0deg)";
+            Array.from(navLists)[2].classList.remove('active')
+        }
+    }
+})
+
+// code for profile drop down
+window.addEventListener('click', function(event) {
+    if (showAfterProfileClick.style.display == "none") {
+        if (event.target == downArrow || event.target == profileImg) {
+            downArrow.style.transform = "rotateZ(180deg)"
+            showAfterProfileClick.style.display = 'block';
+        }
+    } else {
+        if (event.target == downArrow || event.target == profileImg) {
+            showAfterProfileClick.style.display = 'none';
+            downArrow.style.transform = "rotateZ(0deg)"
+        } else if (event.target != showAfterProfileClick && event.target.parentNode != showAfterProfileClick) {
+            showAfterProfileClick.style.display = 'none';
+            downArrow.style.transform = "rotateZ(0deg)"
+
+        }
+    }
+})
+
+// code for sort by drop down
+window.addEventListener('click', function(event) {
+    if (sortDropDown.style.display == "none") {
+        if (event.target == sortBy || event.target == sortByText) {
+            sortDropDown.style.display = "block";
+        }
+    } else {
+        if (event.target == sortBy || event.target == sortByText) {
+            sortDropDown.style.display = "none";
+        } else if (event.target != sortBy && event.target != sortBy.parentNode != sortBy) {
+            sortDropDown.style.display = "none";
+        }
+    }
+})
+
+
+// code for sort by change
+Array.from(sortByNewText).forEach(NewSort => {
+    NewSort.addEventListener('click', function() {
+        sortByText.innerHTML = NewSort.innerHTML
     });
 });
 
-// code for authenticated header
-login.addEventListener("click", function() {
-    Array.from(hideAfterLogin).forEach(
-        (element) => (element.style.display = "none")
-    );
-    Array.from(showAfterLogin).forEach(
-        (element) => (element.style.display = "flex")
-    );
-    Array.from(changeAfterLogin).forEach(
-        (element) => (element.innerHTML = "Read Documentation")
-    );
-});
-
-// code for profile icon click
-downArrow.onmousedown = function() {
-    if (showAfterProfileClick.style.display == "none") {
-        showAfterProfileClick.style.display = "block";
-        downArrow.classList.remove("fa-angle-down");
-        downArrow.classList.add("fa-angle-up");
-    } else {
-        showAfterProfileClick.style.display = "none";
-        downArrow.classList.remove("fa-angle-up");
-        downArrow.classList.add("fa-angle-down");
-    }
-};
-
-profileImg.onmouseover = function() {
-    if (showAfterProfileClick.style.display == "none") {
-        showAfterProfileClick.style.display = "block";
-        downArrow.classList.remove("fa-angle-down");
-        downArrow.classList.add("fa-angle-up");
-    }
-    // else {
-    //     showAfterProfileClick.style.display = 'none';
-    //     downArrow.classList.remove('fa-angle-up')
-    //     downArrow.classList.add('fa-angle-down')
-    // };
-};
-
-window.addEventListener("mousedown", function(event) {
-    if (
-        event.target != showAfterProfileClick &&
-        event.target.parentNode != showAfterProfileClick
-    ) {
-        showAfterProfileClick.style.display = "none";
-        downArrow.classList.remove("fa-angle-up");
-        downArrow.classList.add("fa-angle-down");
-    }
+// code for search result display
+searchBar.style.backgroundImage.addEventListener('click', function() {
+    searchBar.style.backgroundImage.src = ''
+})
+searchBar.addEventListener('keyup', function() {
+    var filter = searchBar.value
+    searchText.innerHTML = filter
 });
 
 // code for slider effect using owlcarousel
-$(".owl-carousel").owlCarousel({
+$('.owl-carousel').owlCarousel({
     center: true,
     items: 1,
-    margin: 10,
+    margin: 0,
     loop: true,
     dots: true,
     mouseDrag: false,
@@ -267,52 +317,30 @@ $(".owl-carousel").owlCarousel({
     autoplayHoverPause: true,
     responsive: {
         0: {
-            items: 1,
+            items: 1
         },
-        700: {
-            items: 2,
-        },
-        850: {
-            items: 2.8,
+        830: {
+            items: 2
         },
         1000: {
-            items: 3.2,
+            items: 2.5
         },
         1200: {
-            items: 3.5,
+            items: 2.8
         },
-    },
+        1400: {
+            items: 3.3
+        }
+    }
 });
 
-// Code for FAQ Accordion
-for (let i = 0; i < faqToggles.length; i++) {
-    faqToggles[i].addEventListener("click", () => {
-        if (parseInt(faqContent[i].style.height) != faqContent[i].scrollHeight) {
-            faqContent[i].style.height = faqContent[i].scrollHeight + "px";
-            downIcon[i].classList.remove("fa-angle-down");
-            downIcon[i].classList.add("fa-angle-up");
-        } else {
-            faqContent[i].style.height = "0px";
-            downIcon[i].classList.remove("fa-angle-up");
-            downIcon[i].classList.add("fa-angle-down");
-        }
-        for (let j = 0; j < faqContent.length; j++) {
-            if (j !== i) {
-                faqContent[j].style.height = "0px";
-                downIcon[j].classList.remove("fa-angle-up");
-                downIcon[j].classList.add("fa-angle-down");
-            }
-        }
-    });
-}
-
-window.addEventListener("mouseup", function(event) {
-    for (let k = 0; k < faqBody.length; k++) {
-        if (event.target != faqBody[k] && event.target.parentNode != faqBody[k]) {
-            faqContent[k].style.height = "0px";
-            downIcon[k].classList.remove("fa-angle-up");
-            downIcon[k].classList.add("fa-angle-down");
-        }
+// code for drop shadow to header on scroll
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll > 0) {
+        $("header").addClass("scroll");
+    } else {
+        $("header").removeClass("scroll");
     }
 });
 
