@@ -1,4 +1,4 @@
-**Issues worked on, assigned to me and their solutions**
+**##Issues worked on, assigned to me and their solutions**
 
 **Issue Title:Design the page that will display "animation search"**
 
@@ -16,7 +16,7 @@
 
 **Issue Title:Design the page that will display "animation search not found"**
 
-**Issue link:https://github.com/zuri-training/Team-100_AnimaLib/issues/45
+**Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/45
 
 **Solution Link:**
 
@@ -46,7 +46,7 @@
 
 **Issue Title:Brainstorm on ideas
 
-**Issue link:https://github.com/zuri-training/Team-100_AnimaLib/issues/16
+**##Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/16
 
 **Solution Link:**
 
