@@ -6,6 +6,7 @@
 
 **Solution links;** 
 [User Story](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A62896)
+
 [User Persona](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2880%3A29147)
 
 
@@ -22,6 +23,7 @@
 
 **Solution links;**
 [Flow for Unauthenticated Users](https://www.figma.com/proto/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A29511&viewport=704%2C167%2C0.02&scaling=scale-down&starting-point-node-id=2712%3A88887&show-proto-sidebar=1)
+
 [Flow for Authenticated Users](https://www.figma.com/proto/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A29511&viewport=704%2C167%2C0.02&scaling=scale-down&starting-point-node-id=2712%3A87770&show-proto-sidebar=1)
 
 
@@ -31,6 +33,7 @@
 
 **Solution links;** 
 [Button Styles](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=146%3A2364)
+
 [Desktop Grid Layout](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3524%3A19408)
 
 
@@ -40,6 +43,7 @@
 
 **Solution links;**
 [Brainstorming session ideas](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2880%3A27332)
+
 [Idea Matrix](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2730%3A47674)
 
 
@@ -49,8 +53,11 @@
 
 **Solution links;**
 [Wireframe / Landing Page - Unauthenticated](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A25466)
+
 [Wireframe / Landing Page - Authenticated](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A25336)
+
 [Wireframe / About Us Page - Unauthenticated](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A25597)
+
 [Wireframe / About Us Page - Authenticated](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A25723)
 
 
@@ -67,6 +74,7 @@
 
 **Solution links;**
 [Lo-Fi / Landing Page - Unauthenticated Users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A17964)
+
 [Lo-Fi / Landing Page - Authenticated Users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A18188)
 
 
@@ -76,6 +84,7 @@
 
 **Solution links;**
 [Hi-Fi / Landing Page - Unauthenticated Users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A88887)
+
 [Hi-Fi Landing Page - Authenticated Users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A87770)
 
 
@@ -85,6 +94,7 @@
 
 **Solution links;** 
 [Lo-Fi / About Us Page - Unauthenticated Users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A18424)
+
 [Lo-Fi / About Us Page - Authenticated Users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A18549)
 
 
@@ -94,4 +104,5 @@
 
 **Solution links;**
 [Hi-Fi / About Us Page - Unauthenticated Users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A92752)
+
 [Hi-Fi / About Us Page - Authenticated Users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A18549)
