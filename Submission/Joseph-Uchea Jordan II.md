@@ -1,4 +1,4 @@
-## [Team Repositoy link](https://github.com/zuri-training/Team-100_AnimaLib)
+## [Team Repository link](https://github.com/zuri-training/Team-100_AnimaLib)
 
 ## [Team Link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
 
