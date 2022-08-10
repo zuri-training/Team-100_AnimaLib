@@ -15,6 +15,6 @@ issue link: #23: https://github.com/zuri-training/Team-100_AnimaLib/issues/23
 solution link:https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3370%3A19423
 solution link:https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3405%3A19425
 issue title 5:Review and publish screener survey' interview and survey questions for user research
-issue link:
-solution link:
+issue link:#27: https://github.com/zuri-training/Team-100_AnimaLib/issues/27
+solution link:https://docs.google.com/document/d/139jnUvUZV3XcdpIgCxjvh4JVmwbO5p1NQdizOal7qf0/edit?usp=sharing
 
