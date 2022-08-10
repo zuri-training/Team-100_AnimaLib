@@ -19,7 +19,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -35,7 +34,7 @@
     <header>
       <div id="header-container">
         <div class="header-item">
-          <a href="{% url 'index' %}"
+          <a href="index.html"
             ><img
               id="header-logo"
               src="{% static 'images/animo logo.png' %}"
@@ -67,52 +66,45 @@
             />
           </ul>
         </div>
-        {% if user.is_authenticated %}
+        <div class="header-item hide-after-login">
+          <ul class="entry">
+            <li id="login">
+              <a href="#">Login</a>
+            </li>
+            <li id="register" class="btn small-btn">
+              <a href="#">Register</a>
+            </li>
+          </ul>
+        </div>
         <div class="header-item show-after-login">
-          {% if user.user_image %}
+          <input
+            class="hide search-bar"
+            type="search"
+            name="search-animation"
+            placeholder="Search for animations"
+          />
           <img
             id="profile-img-nav-bar"
             class="profile-img"
-            src="{{user.user_image.url}}"
+            src="logo.png"
             alt=""
           />
-          {% else %}
-          <img
-            id="profile-img-nav-bar"
-            class="profile-img"
-            src="https://res.cloudinary.com/dc29czhf9/image/upload/v1659818233/media/default2_zxexum.png"
-            alt=""
-          />
-          {% endif %}
           <span><i id="profile-click" class="fa-thin fa-angle-down"></i></span>
           <div id="show-after-profile-click" class="profile-dropdown">
             <img
               id="profile-img-drop-down"
               class="profile-img"
-              src="{{user.user_image.url}}"
+              src="logo.png"
               alt=""
             />
-            <a href="{% url 'profile' %}" class="name">
+            <p class="name">
               John Doe <span class="v-profile">View profile</span>
-            </a>
-            <a href="{% url 'logout' %}"> logout</a>
+            </p>
           </div>
         </div>
-        {% else %}
-        <div class="header-item hide-after-login">
-          <ul class="entry">
-            <li id="login">
-              <a href="{% url 'login' %}">Login</a>
-            </li>
-            <li id="register" class="btn small-btn">
-              <a href="{% url 'register' %}">Register</a>
-            </li>
-          </ul>
-        </div>
-        {% endif %}
       </div>
     </header>
-    {% block content %} {% endblock %}
+    <main>{% block content %} {% endblock %}</main>
     <footer>
       <div class="footer-item-container">
         <div class="footer-item">
@@ -128,11 +120,7 @@
           <p class="footer-item-title">Our Company</p>
           <ul>
             <li>
-              <a
-                href="{% url  'about' %}"
-                class="{% active_link 'support' strict=True %} footer-links"
-                >About Us</a
-              >
+              <a href="{% url  'about' %}" class="footer-links">About Us</a>
             </li>
             <li><a href="#" class="footer-links">Animation</a></li>
             <li><a href="#" class="footer-links">Testimonials</a></li>

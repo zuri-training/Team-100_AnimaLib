@@ -3,16 +3,15 @@ from .views import *
 
 urlpatterns = [
     path('', index, name='index'),
-    path('signin/',log_in, name='login'),
-    path('logout/', log_out, name='logout'),
-    path('forgotpassword/', forgotpassword, name='forgotpassword'),
-
-    path('signup/', register, name='register'),
+    path("login/", log_in, name='login'),
+    path('register/', register, name='register'),
+    path('logout/', logout, name='logout'),
     path('download/', download_library, name='download'),
     path('contact/', contact, name='contact'),
     path('documentation/', documentation, name='documentation'),
     path('documentation/introduction/', introduction, name='introduction'),
-    path('documentation/showAnimations/', showAnimations, name='showAnimations'),
+    path('documentation/showAnimations/',
+         showAnimations, name='showAnimations'),
     path('support/', contact, name='support'),
     path('profile/', profile, name='profile'),
     path('about/', about_us, name='about'),

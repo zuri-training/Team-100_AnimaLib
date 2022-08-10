@@ -37,7 +37,13 @@
   }
 
   /* anime examples layout */
-  .sliderContainer {
+  .sliderContainerLayout{
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .activeSlideContainer {
     display: grid;
 
     grid-template-rows: 1fr;

@@ -1,218 +1,221 @@
 /* fonts import here */
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
 /* Global styles */
 
+<<<<<<< HEAD
 /* mobile first design */
 .maincontentContainer {
   padding: 10px;
   min-height: 80vh;
   font-family: "Raleway", sans-serif;
   margin: 80px 20px 80px 20px !important;
+=======
+body {
+    background: #dad3dd;
+>>>>>>> ede9a529aca27640ce56ff803f4baa864407fecc
 }
 
+
+/* mobile first design */
+
+.maincontentContainer {
+    padding: 10px;
+    margin-top: 40px;
+    min-height: 80vh;
+    font-family: "Raleway", sans-serif;
+}
+
+
 /* layout for larger devices */
+
 @media (min-width: 992px) {
-  .pageSideBar {
-    margin: 0px 10px 0px 5px;
-  }
-
-  /* anime-menu design */
-  .activeLink {
-    color: rgb(250, 87, 0);
-    padding-left: 10px;
-  }
-
-  .anime-menuHeader {
-    font-size: 15pt;
-    font-weight: 500;
-  }
-  .anime-menuContentHolder {
-    margin: 1px 5px 1px 10px;
-  }
-  .subGroupHeader {
-    font-size: 12pt;
-    font-weight: 300;
-  }
-  .subGroupContentHolder {
-    padding: 2px 15px;
-  }
-  .menuItem-name {
-    font-size: 11pt;
-    font-weight: 200;
-  }
-  .menuItem-subItems {
-    font-size: 10pt;
-    font-weight: 100;
-    padding: 2px 15px;
-  }
-  .menuLink:hover {
-    padding-left: 5px;
-  }
-
-  /* main content design */
-  .menuContentContainer {
-    margin: 0px 5px 0px 50px;
-  }
-  .menuContentContainer {
-    margin-bottom: 15px;
-  }
-
-  /* logo image style */
-  .imageRow {
-    width: 792px;
-    height: 496px;
-    left: 426px;
-    top: 314px;
-    margin-bottom: 40px;
-    /* temp styles */
-    background: #4f59d5;
-    border-radius: 15px;
-  }
-
-  .logo-contentContainer {
-    color: #ffffff;
-    padding: 30px;
-    margin: 0px 300px 20px 5px;
-  }
-  .logoHeader {
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
-  }
-  .logoContentBody {
-    color: rgba(248, 248, 248, 0.7);
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    /* or 125% */
-
-    letter-spacing: 0.1px;
-  }
-
-  /* animation examples designs */
-  .animeRow {
-    margin-bottom: 20px;
-  }
-  .anime-displayarea {
-    margin: 10px 150px;
-    padding: 5px;
-
-    height: 300px;
-  }
-  .outerContainer {
-    width: 100%;
-    height: 100%;
-
-    padding: 50px 150px;
-    border-radius: 7px;
-
-    background-color: slategray;
-  }
-  .innerBox {
-    height: 100%;
-    overflow: auto;
-
-    background-color: whitesmoke;
-
-    padding: 20px;
-  }
-
-  /* slide design */
-  .sliderContainer {
-    width: 100%;
-    height: 100%;
-
-    border-radius: 7px;
-    background-color: slategray;
-    padding: 1px;
-  }
-  .slideMain {
-    height: 100%;
-    padding: 20px;
-    overflow: auto;
-  }
-  .slideMoving {
-    height: 100%;
-    border-radius: 7px;
-
-    background-color: whitesmoke;
-  }
-  .sliderHandle {
-    background-color: rgb(22, 22, 22);
-    height: 100%;
-    color: white;
-    padding: 2px;
-    cursor: pointer;
-  }
-  .slidingContent {
-    width: 100%;
-    height: 100%;
-
-    padding: 70px;
-  }
-  .slider_innerBox {
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-
-    padding: 20px;
-
-    background-color: silver;
-  }
-
-  /* Design for headers */
-  .anime-mainHeader {
-    color: #1f2782;
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 84px;
-  }
-  .anime-contentHeader {
-    font-family: "Raleway";
-    color: #121212;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 48px;
-  }
-  .anime-sectionHeader {
-    font-family: "Raleway";
-    color: #121212;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
-  }
-  .anime-sectionSubHeader {
-    font-family: "Raleway";
-    color: #404040;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  /*  animation sections */
-
-  .section-content {
-    margin: 1px 1px 8px 1px;
-  }
-  .sectionHeaderHolder {
-    margin-bottom: 5px;
-  }
-  .sectionContentBody {
-    font-family: "Raleway";
-    color: rgba(18, 18, 18, 0.7);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-  }
+    .pageSideBar {
+        margin: 0px 10px 0px 5px;
+    }
+    /* anime-menu design */
+    .activeLink {
+        color: rgb(250, 87, 0);
+        padding-left: 10px;
+    }
+    .anime-menuHeader {
+        color: #1F2782;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+    }
+    .anime-menuContentHolder {
+        margin: 1px 5px 1px 10px;
+    }
+    .subGroupHeader {
+        font-size: 12pt;
+        font-weight: 300;
+    }
+    .subGroupContentHolder {
+        padding: 2px 15px;
+    }
+    .menuItem-name {
+        font-size: 11pt;
+        font-weight: 200;
+    }
+    .menuItem-subItems {
+        font-size: 10pt;
+        font-weight: 100;
+        padding: 2px 15px;
+    }
+    .menuLink:hover {
+        padding-left: 5px;
+    }
+    /* main content design */
+    .menuContentContainer {
+        margin: 0px 5px 0px 50px;
+    }
+    .menuContentContainer {
+        margin-bottom: 15px;
+    }
+    /* logo image style */
+    .imageRow {
+        width: 792px;
+        height: 496px;
+        left: 426px;
+        top: 314px;
+        margin-bottom: 40px;
+        /* temp styles */
+        background: #4f59d5;
+        border-radius: 15px;
+    }
+    .logo-contentContainer {
+        color: #ffffff;
+        padding: 30px;
+        margin: 0px 300px 20px 5px;
+    }
+    .logoHeader {
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .logoContentBody {
+        color: rgba(248, 248, 248, 0.7);
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        /* or 125% */
+        letter-spacing: 0.1px;
+    }
+    /* animation examples designs */
+    .animeRow {
+        margin-bottom: 20px;
+    }
+    .anime-displayarea {
+        margin: 10px 150px;
+        padding: 5px;
+        height: 300px;
+    }
+    .outerContainer {
+        width: 100%;
+        height: 100%;
+        padding: 50px 150px;
+        border-radius: 7px;
+        background-color: slategray;
+    }
+    .innerBox {
+        height: 100%;
+        overflow: auto;
+        background-color: whitesmoke;
+        padding: 20px;
+    }
+    /* slide design */
+    .sliderContainer {
+        width: 100%;
+        height: 100%;
+        border-radius: 7px;
+        background-color: slategray;
+        padding: 1px;
+    }
+    .slideMain {
+        height: 100%;
+        width: 70%;
+        padding: 20px;
+        overflow: auto;
+    }
+    .slideMoving {
+        height: 100%;
+        width: 100%;
+        border-radius: 7px;
+        background-color: whitesmoke;
+    }
+    .sliderHandle {
+        background-color: rgb(22, 22, 22);
+        height: 100%;
+        color: white;
+        padding: 2px;
+        cursor: pointer;
+    }
+    .slidingContent {
+        width: 100%;
+        height: 100%;
+        padding: 70px;
+    }
+    .slider_innerBox {
+        height: 100%;
+        width: 50%;
+        overflow: auto;
+        padding: 20px;
+        background-color: #59C3C3;
+    }
+    /* Design for headers */
+    .anime-mainHeader {
+        color: #1f2782;
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 84px;
+    }
+    .anime-contentHeader {
+        font-family: "Raleway";
+        color: #121212;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 48px;
+    }
+    .anime-sectionHeader {
+        font-family: "Raleway";
+        color: #121212;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .anime-sectionSubHeader {
+        font-family: "Raleway";
+        color: #404040;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    /*  animation sections */
+    .section-content {
+        margin: 1px 1px 8px 1px;
+    }
+    .sectionHeaderHolder {
+        margin-bottom: 5px;
+    }
+    .sectionContentBody {
+        font-family: "Raleway";
+        color: rgba(18, 18, 18, 0.7);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
