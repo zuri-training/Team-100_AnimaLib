@@ -618,7 +618,7 @@ footer {
 /* Main content styling */
 
 .content-holder{
-    padding-left: 132px;
+    padding-left: 47px;
     margin-top: 61px;
     justify-content: center;
     align-content: center;
@@ -659,9 +659,9 @@ footer {
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 1000px;
     height: 400px;
-    padding-right: 14px;
+    padding-right: 750px;
 }
 
 .exploresection{
