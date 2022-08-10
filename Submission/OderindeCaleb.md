@@ -6,8 +6,11 @@
 
 ### Solution link: 
 [High Fidelity design 1 Authenticated user](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2808%3A33547)
+
 [High Fidelity design 2 Authenticated user]( https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2808%3A33675)
+
 [Low Fidelity design 1 Authenticated user](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A21226)
+
 [Low Fidelity design 2 Authenticated user](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A21088)
                
             
