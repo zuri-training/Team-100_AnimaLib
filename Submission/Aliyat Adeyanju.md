@@ -14,3 +14,7 @@ issue title 4:Design an high Fidelity support page for users to contact us as re
 issue link: #23: https://github.com/zuri-training/Team-100_AnimaLib/issues/23
 solution link:https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3370%3A19423
 solution link:https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3405%3A19425
+issue title 5:Review and publish screener survey' interview and survey questions for user research
+issue link:
+solution link:
+
