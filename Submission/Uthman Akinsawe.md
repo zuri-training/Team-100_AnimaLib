@@ -1,6 +1,6 @@
 # [Team Link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
 # [Team Repository Link](https://github.com/zuri-training/Team-100_AnimaLib)
-# [Fifma File Link](https://www.figma.com/file/geVVxVXdwWMVx8BOCfASZV/Team-100_AnimaLib.?node-id=2712%3A29511)
+# [Figma File Link](https://www.figma.com/file/geVVxVXdwWMVx8BOCfASZV/Team-100_AnimaLib.?node-id=2712%3A29511)
 
 
 # ISSUES I DIRECTLY WORKED ON AND THE SOLUTIONS I CAME UP WITH
