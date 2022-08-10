@@ -2,7 +2,7 @@
 
 ## - [1] Issue Title: Conduct user research to aid the development of the product
 
-**Issue link**: #83 
+**Issue link**: [#83](https://github.com/zuri-training/Team-100_AnimaLib/issues/83)
 
 **Solution links;** 
 
@@ -13,7 +13,7 @@
 
 ## - [2] Issue Title: Construct overall site map for the product
 
-**Issue link:** #85 
+**Issue link:** [#85](https://github.com/zuri-training/Team-100_AnimaLib/issues/85) 
 
 **Solution link:** 
 
@@ -22,7 +22,7 @@
 
 ## - [3] Issue Title: Design the interactions for all the pages of the high-fidelity design
 
-**Issue link:** #68 
+**Issue link:** [#68](https://github.com/zuri-training/Team-100_AnimaLib/issues/68)
 
 **Solution links;**
 
@@ -33,7 +33,7 @@
 
 ## - [4] Issue Title: Create a Style guide consisting of Colour, Typography, Spacing, Alerts/notification, Buttons and input field
 
-**Issue link:** #25 
+**Issue link:** [#25](https://github.com/zuri-training/Team-100_AnimaLib/issues/25)
 
 **Solution links;** 
 
@@ -44,7 +44,7 @@
 
 ## - [5] Issue Title: Brainstorm on ideas
 
-**Issue link:** #16 
+**Issue link:** [#16](https://github.com/zuri-training/Team-100_AnimaLib/issues/16)
 
 **Solution links;**
 
@@ -55,7 +55,7 @@
 
 ## - [6] Issue Title: Design the Wireframes and sketches (for all designers)
 
-**Issue link:** #26 
+**Issue link:** [#26](https://github.com/zuri-training/Team-100_AnimaLib/issues/26)
 
 **Solution links;**
 
@@ -70,7 +70,7 @@
 
 ## - [7] Issue Title: Design the page that will prompt unauthenticated users to Register/Login
 
-**Issue link:** #73 
+**Issue link:** [#73](https://github.com/zuri-training/Team-100_AnimaLib/issues/73)
 
 **Solution link:** 
 
@@ -79,7 +79,7 @@
 
 ## - [8] Issue Title: Design the Landing page in low fidelity
 
-**Issue link:** #20 
+**Issue link:** [#20](https://github.com/zuri-training/Team-100_AnimaLib/issues/20)
 
 **Solution links;**
 
@@ -90,7 +90,7 @@
 
 ## - [9] Issue Title: Design the Website's Landing page. High fidelity version
 
-**Issue link:** #19 
+**Issue link:** [#19](https://github.com/zuri-training/Team-100_AnimaLib/issues/19)
 
 **Solution links;**
 
@@ -101,7 +101,7 @@
 
 ## - [10] Issue Title: Design the About us page in low fidelity
 
-**Issue link:** #18 
+**Issue link:** [#18](https://github.com/zuri-training/Team-100_AnimaLib/issues/18)
 
 **Solution links;** 
 
@@ -112,7 +112,7 @@
 
 ## - [11] Issue Title: Design the About us page in high fidelity
 
-**Issue link** #17 
+**Issue link** [#17](https://github.com/zuri-training/Team-100_AnimaLib/issues/17)
 
 **Solution links;**
 
