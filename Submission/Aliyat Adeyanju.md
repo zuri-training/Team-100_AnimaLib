@@ -28,7 +28,8 @@ issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/23
 
 solution link: [High Fidelity support page for unauthenticated users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3370%3A19423)
 
-solution link:https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3405%3A19425
+solution link:[High Fidelity support page for authenticated users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3405%3A19425)
+
 
 issue title 5:Review and publish screener survey' interview and survey questions for user research
 
