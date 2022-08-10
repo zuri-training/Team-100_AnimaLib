@@ -1,6 +1,6 @@
-[Team Repositoy link](https://github.com/zuri-training/Team-100_AnimaLib)
+## [Team Repositoy link](https://github.com/zuri-training/Team-100_AnimaLib)
 
-[Team Link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
+## [Team Link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
 
 
 ## During the course of this project phase, I was assigned the following tasks :
