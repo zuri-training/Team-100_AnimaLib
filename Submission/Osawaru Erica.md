@@ -61,3 +61,6 @@
 
 19. [Link to finished site map](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2730%3A47580)
 
+## Team_100 Repo Link
+
+[Repo link](https://github.com/zuri-training/Team-100_AnimaLib)
