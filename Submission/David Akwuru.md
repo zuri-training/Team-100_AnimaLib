@@ -25,9 +25,13 @@ Developed the Register, login, logout, contact, download views with some validat
 [Backend - Views: Register, login, contact, zip & download, and Logout](https://github.com/zuri-training/Team-100_AnimaLib/issues/33)
 
 > Register views allows the user to register. I created a modelform for this. It is stored in forms.py file. (Done)
+
 > Login views allows registered users to login. (Done)
+
 > contact views allows users to contact us. Admin of the systems are able to get mails. (Done)
+
 > download view allows only aunthenticated users to download the library. The view converts the files to zip file. (Done)
+
 > logout view allows only logged in users to logout. (Done)
 
 
