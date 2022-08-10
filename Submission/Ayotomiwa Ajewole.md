@@ -20,4 +20,4 @@
 ### [High fidelity Design for Support Page for Unauthenticated Users ](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3370%3A19423)
 ## Issue Title: Design the Wireframes and sketches
 ### Issue Link: [#26](https://github.com/zuri-training/Team-100_AnimaLib/issues/26)
-### Issue Solution Link [Support Page Wireframe](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3405%3A19426)
+### Issue Solution Link: [Support Page Wireframe](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3405%3A19426)
