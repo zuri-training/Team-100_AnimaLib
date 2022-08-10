@@ -1,4 +1,4 @@
-**##Issues worked on, assigned to me and their solutions**
+**## Issues worked on, assigned to me and their solutions**
 
 **Issue Title:Design the page that will display "animation search"**
 
@@ -30,7 +30,7 @@
 
 **Issue Title:Design several pages for user profile in high fidelity
 
-**Issue link:https://github.com/zuri-training/Team-100_AnimaLib/issues/40
+**Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/40
 
 **Solution Link:**
 
@@ -38,7 +38,7 @@
 
 **Issue Title:Design several pages for user profile in low fidelity
 
-**Issue link:https://github.com/zuri-training/Team-100_AnimaLib/issues/39
+**Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/39
 
 **Solution Link:**
 
@@ -46,7 +46,7 @@
 
 **Issue Title:Brainstorm on ideas
 
-**##Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/16
+**Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/16
 
 **Solution Link:**
 
@@ -56,7 +56,7 @@
 
 **Issue Title:Design the Wireframes and sketches (for all designers)
 
-**Issue link:https://github.com/zuri-training/Team-100_AnimaLib/issues/26
+**Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/26
 
 **Solution Link:**
 
