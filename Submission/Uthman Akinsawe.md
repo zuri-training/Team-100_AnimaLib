@@ -2,7 +2,7 @@
 
 ## - [1] Issue Title: Conduct user research to aid the development of the product
 
-**Issue link**:#83 
+**Issue link**: #83 
 
 **Solution links;** 
 
@@ -15,7 +15,8 @@
 
 **Issue link:** #85 
 
-**Solution link:**
+**Solution link:** 
+
 [Site Map](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2730%3A47580)
 
 
@@ -72,6 +73,7 @@
 **Issue link:** #73 
 
 **Solution link:** 
+
 [Registration Prompt for Unauthenticated Users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2849%3A31210)
 
 
