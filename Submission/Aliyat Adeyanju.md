@@ -26,7 +26,7 @@ issue title 4:Design an high Fidelity support page for users to contact us as re
 
 issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/23
 
-solution link:https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3370%3A19423
+solution link: [High Fidelity support page for unauthenticated users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3370%3A19423)
 
 solution link:https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3405%3A19425
 
