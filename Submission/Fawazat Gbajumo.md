@@ -1,3 +1,9 @@
+## This is our Team Link
+[Team_Link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
+
+## This is our Team Repository Link
+[Team Repo Link](https://github.com/zuri-training/Team-100_AnimaLib)
+
 # Issues worked on, assigned to me and their solutions
 
 ## Issue Title: Brainstorm on ideas
@@ -91,3 +97,12 @@
 ### Solution Link:
 [Finalised Site Map](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2730%3A47580)
 
+
+## Issue Title: Design the interactions for all the pages of the high-fidelity design
+
+### Issue Link: [#68](https://github.com/zuri-training/Team-100_AnimaLib/issues/68)
+
+### Solution Link:
+[Hi-Fi prototype flow showing how unauthenticated users interact with our site for the developers to code](https://www.figma.com/proto/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A29511&viewport=704%2C167%2C0.02&scaling=scale-down&starting-point-node-id=2712%3A88887&show-proto-sidebar=1)
+
+[Hi-Fi prototype flow showing how authenticated users interact with our site for the developers to build](https://www.figma.com/proto/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A29511&viewport=704%2C167%2C0.02&scaling=scale-down&starting-point-node-id=2712%3A87770&show-proto-sidebar=1)
