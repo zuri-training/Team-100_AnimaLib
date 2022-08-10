@@ -1,8 +1,8 @@
 ## During the course of this project phase, I was assigned the following tasks :
-1. [Design the page that will display "Password change successful" #46**](https://github.com/zuri-training/Team-100_AnimaLib/issues/46)
-2. [Design a Register/Log in page #21**](https://github.com/zuri-training/Team-100_AnimaLib/issues/21)
-3. [Design a Register/Sign page in low fidelity #22** ](https://github.com/zuri-training/Team-100_AnimaLib/issues/22)
-4. [Brainstorm on ideas #16**](https://github.com/zuri-training/Team-100_AnimaLib/issues/16)
+1. [Design the page that will display Password change successful #46](https://github.com/zuri-training/Team-100_AnimaLib/issues/46)
+2. [Design a Register/Log in page #21](https://github.com/zuri-training/Team-100_AnimaLib/issues/21)
+3. [Design a Register/Sign page in low fidelity #22 ](https://github.com/zuri-training/Team-100_AnimaLib/issues/22)
+4. [Brainstorm on ideas #16](https://github.com/zuri-training/Team-100_AnimaLib/issues/16)
 
 
 ## Here are the solutions to my assigned tasks:
