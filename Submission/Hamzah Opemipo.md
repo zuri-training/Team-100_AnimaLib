@@ -1,4 +1,4 @@
-During the course of this project phase, I was assigned the following tasks :
+## During the course of this project phase, I was assigned the following tasks :
 
   -Brainstorm on ideas https://github.com/zuri-training/Team-100_AnimaLib/issues/16
 
@@ -8,7 +8,7 @@ During the course of this project phase, I was assigned the following tasks :
 
   -Produce high fidelity designs of the user profile pages Design several pages for User profile in high fidelity  https://github.com/zuri-training/Team-100_AnimaLib/issues/40
 
-Solutions to the tasks I was assigned to :
+## Solutions to the tasks I was assigned to :
 
   -During the brainstorming session, I drew a [Rough user flow sletch](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3593%3A19426) which was a guide in designing the [User flow](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A63197)
 
@@ -17,4 +17,9 @@ Solutions to the tasks I was assigned to :
   -Went ahead to turn all the pages created in the wireframe to [Low Fidelity Designs](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3585%3A19428)
 
   -Then designed the [High fidelity designs](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3585%3A19426).
+  
+  ## Project Team Link
+[Team_Link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
 
+## Project Team Repository Link
+[Team Repo Link](https://github.com/zuri-training/Team-100_AnimaLib)
