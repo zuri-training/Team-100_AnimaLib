@@ -626,6 +626,11 @@ footer {
 }
 .saves-title2{
     padding-left: 263px;
+    padding-left: 263px;
+    Font: Raleway;
+    font-weight: 700;
+    Size: 20px;
+    Line-height: 24px;
 }
 
 .picholder{
@@ -673,7 +678,7 @@ footer {
 
 .text1{
     border: none;
-    color: #FEFEFE;
+    color: #D5D5D5;
     background-color: #1F2782;
     font-family: 'Raleway';
     font-style: normal;
@@ -691,15 +696,16 @@ footer {
 }
 
 .pencilicon1{
-    width: 16px;
-    height: 16px;
+    width: 13px;
+    height: 13px;
+    margin-left: 8px;
+    margin-bottom: 8px;
 }
 .editpiclink{
-    background-color:#D5D5D5;
-    border: 2px solid #D5D5D5;
+     background-color:#D5D5D5;
     text-align: center;
     align-content: center;
-    border-radius: 0px;
+    border-radius: 8px;
     width: 101px;
     height: 36px;
     display: flex;
@@ -711,6 +717,7 @@ footer {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
+    color: #D5D5D5;
     font-size: 14px;
     line-height: 20px;
     border-radius: 0px;
@@ -718,4 +725,12 @@ footer {
     border: 0px;
     text-align: center;
     align-content: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+.edit1{
+    margin-top: 10px;
+    height: 8px;
+    width: 8px;
 }
