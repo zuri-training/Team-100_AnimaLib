@@ -9,6 +9,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
 }
 
  :root {
@@ -87,7 +88,7 @@ header.scroll {
 
 #header-container {
     max-width: var(--max-width);
-    padding: 0px 6.5%;
+    padding: 0px 4%;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -138,13 +139,13 @@ header.scroll {
 
 .search-bar {
     background: transparent url('../images/search-icon\ .png') no-repeat 5px center;
-    background-size: 25px;
+    background-size: 23px;
     outline: 0px;
     color: var(--header-black);
     font-weight: 400;
     font-size: 13px;
-    padding: 10px 15px;
-    padding-left: 35px;
+    padding: 10px 5px;
+    padding-left: 32px;
     margin-left: 48px;
     border: 1.8px solid var(--header-black);
     border-radius: 5px;
@@ -450,6 +451,8 @@ main {
     margin: 0 auto;
     position: relative;
     padding-bottom: 120px;
+    position: relative;
+    z-index: 1;
 }
 
 #lower-content-container section {
@@ -597,6 +600,12 @@ section .description .btn {
     box-shadow: 0px -90px 120px var(--white);
 }
 
+.vector-illustration img {
+    position: absolute;
+    width: 100% !important;
+    bottom: -150px;
+}
+
 
 /* Footer styling */
 
@@ -665,24 +674,27 @@ footer {
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     /* Header Styling */
-    /* #header-container {
-        padding: 0px 50px;
+    #header-container {
+        padding: 0px 3%;
     }
     #navigation li {
-        font-size: 16px;
+        font-size: 17px;
         margin-left: 30px;
     }
     .search-bar {
-        padding: 10px 20px;
+        padding-left: 30px;
         margin-left: 30px;
+    }
+    #header-logo {
+        width: 130px;
     }
     .entry li {
         font-size: 16px;
     }
     .entry #login {
-        margin: 0px 30px;
+        margin: 0px 28px;
     }
     #navigation li.active a {
         padding-bottom: 26.8px;
@@ -694,6 +706,8 @@ footer {
         font-size: 13px;
     }
 }
+
+@media screen and (max-width: 1100px) {}
 
 @media screen and (max-width: 900px) {
     /* Header Styling */
@@ -716,11 +730,11 @@ footer {
     }
     #navigation li.active a {
         padding-bottom: 26.8px;
-    } */
+    }
     .anima-sample {
         padding: 0 5%;
         text-align: center;
-    }
+    } */
 }
 
 
