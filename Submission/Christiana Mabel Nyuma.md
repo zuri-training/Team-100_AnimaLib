@@ -11,6 +11,6 @@ https://github.com/zuri-training/Team-100_AnimaLib/commit/d0b6f07344a58d5a7d0e85
 
 
 # team github link
+https://github.com/orgs/zuri-training/teams/team-100_animalib
 
 
-https://github.com/zuri-training/Team-100_AnimaLib/blob/Submission/Submission/Christiana%20Mabel%20Nyuma.md
