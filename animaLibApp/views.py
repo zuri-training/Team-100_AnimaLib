@@ -125,14 +125,16 @@ def contact(request):
         email = request.POST['email']
         message = request.POST['message']
 
-        mail_content = {
-            'name': first_name + ' ' + last_name, 'sender': email, 'message': message
-        }
+        # mail_content = {
+        #     'name': first_name + ' ' + last_name, 'sender': email, 'message': message
+        # }
 
         # # render the email template to a string
+
         message = render_to_string('mailer/contact.html', mail_content)
-        mes = EmailMultiAlternatives(f'contact', '',sender, ["davidakwuruu@gmail.com"],
+        mes = EmailMultiAlternatives(f'contact','',sender, ["davidakwuruu@gmail.com"],
                                      connection = connection)
+    
         mes.attach_alternative(message, "text/html")
 
         if mes.send():
