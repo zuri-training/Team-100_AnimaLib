@@ -1,4 +1,5 @@
 **Issues worked on, assigned to me and their solutions**
+
 Issue Title:Design the page that will display "animation search"
 Issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/49
 Solution Link:
