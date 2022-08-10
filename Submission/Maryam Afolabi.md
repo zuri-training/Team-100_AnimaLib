@@ -6,6 +6,10 @@
 
 [Team Repo Link](https://github.com/zuri-training/Team-100_AnimaLib)
 
+## Below is our Figma Link
+
+[Figma Link](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2712%3A29511)
+
 # Issues worked on, assigned to me and their solutions
 
 ## Issue Title:Design the page that will display "animation search
