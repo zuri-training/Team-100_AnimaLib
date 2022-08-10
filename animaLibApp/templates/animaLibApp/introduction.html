@@ -1,4 +1,12 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link href="{% static 'css/componentDesign.css' %}" rel="stylesheet" />
+<link href="{% static 'css/design.css' %}" rel="stylesheet" />
+<link href="{% static 'css/layout.css' %}" rel="stylesheet" />
+<link href="{% static 'css/animation.css' %}" rel="stylesheet" />
+{% endblock %}
+ {% block content %}
 <div class="maincontentContainer container">
   {% include 'common/sideNav.html' %}
 
@@ -116,8 +124,10 @@
 
               <span>
                 <button class="anime-button">
-                  <span class="btn-icon"></span>
-                  <span>Download Library</span>
+                  <a href="{% url 'download' %}"><span class="mr-1">Download Library</span></a>
+                  <span class="btn-icon">
+                    <i class="fa-solid fa-arrow-down"></i>
+                  </span>
                 </button>
               </span>
 
@@ -165,7 +175,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader" id="demoection">Watch demo</span>
+              <span class="anime-sectionSubHeader" id="demoSection">Watch demo</span>
             </div>
 
             <div class="sectionContentBody">
@@ -185,10 +195,30 @@
                   Your browser does not support the video tag
                 </video>
               </div>
+  
 
+                
               <div style="text-align:end;">
                 <span>
-                  <a href="#">Example</a>
+                  <a href="{% url 'showAnimations' %}">
+                  <span>Animations</span>
+                  <span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>  
+                
+                </a>
+                </span>
+              </div>
+
+              <div style="text-align:left;">
+                <span>
+                  <a href="{% url 'documentation' %}">
+                  <span>Get Started</span>
+                  <span>
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </span>  
+                
+                </a>
                 </span>
               </div>
             </div>
