@@ -4,7 +4,7 @@ issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/48
 
 solution link: https://www.figma.com/file/j1drbvRXQLsqEpHG3DfsbP/changes-successfully-saved-page?node-id=0%3A1
 
-solution link: https://www.figma.com/file/j1drbvRXQLsqEpHG3DfsbP/changes-successfully-saved-page?node-id=0%3A1
+
 
 Issue title 2: Design a low Fidelity for support page
 
