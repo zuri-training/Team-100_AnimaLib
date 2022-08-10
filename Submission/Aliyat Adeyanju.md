@@ -1,5 +1,0 @@
-https://github.com/zuri-training/Team-100_AnimaLib/issues/23
-https://github.com/zuri-training/Team-100_AnimaLib/issues/48
-https://github.com/zuri-training/Team-100_AnimaLib/issues/24
-https://github.com/zuri-training/Team-100_AnimaLib/issues/26
-https://github.com/zuri-training/Team-100_AnimaLib/issues/27
