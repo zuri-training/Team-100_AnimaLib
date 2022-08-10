@@ -4,6 +4,9 @@
 ## This is our Team Repository Link
 [Team Repo Link](https://github.com/zuri-training/Team-100_AnimaLib)
 
+## This is Fawazah Github Link
+[Fawazah](https://github.com/Fawazah)
+
 # Issues worked on, assigned to me and their solutions
 
 ## Issue Title: Brainstorm on ideas
