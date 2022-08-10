@@ -10,9 +10,9 @@ Issue title 2: Design a low Fidelity for support page
 
 issu link: https://github.com/zuri-training/Team-100_AnimaLib/issues/24
 
-solution link:https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3367%3A19422
+solution link:[Low Fidelity for unauthenticated users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3367%3A19422)
 
-solution link:https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3405%3A19424
+solution link:[Low Fidelity for authenticated users](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=3405%3A19424)
 
 issue title 3: Design wireframes and sketches
 
