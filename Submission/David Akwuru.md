@@ -6,11 +6,13 @@ Brainstorming on ideas on how to best develop the system to suite user (beginner
 [Brainstorm on ideas](https://github.com/zuri-training/Team-100_AnimaLib/issues/16)
 
 
-## Backend Setup - Developed a custom User model, with adjusted fields. For Example using Cloudinary to store user's image.
+## Backend Setup - 
+
+Developed a custom User model, with adjusted fields. For Example using Cloudinary to store user's image.
+
 [Backend - Django setup and Models](https://github.com/zuri-training/Team-100_AnimaLib/issues/32)
 > Done!
 
-## Backend Setup
 Developed the index view that renders the landing page html for both aunthenticated and unaunticated users.
 
 [Render index view and profile view](https://github.com/zuri-training/Team-100_AnimaLib/issues/36)
