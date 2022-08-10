@@ -1,3 +1,8 @@
+[Team Repositoy link](https://github.com/zuri-training/Team-100_AnimaLib)
+
+[Team Link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
+
+
 ## During the course of this project phase, I was assigned the following tasks :
 1. [Design the page that will display Password change successful #46](https://github.com/zuri-training/Team-100_AnimaLib/issues/46)
 2. [Design a Register/Log in page #21](https://github.com/zuri-training/Team-100_AnimaLib/issues/21)
