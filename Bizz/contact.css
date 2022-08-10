@@ -41,7 +41,7 @@ form {
   width: 100%;
 }
 
-.text1 {
+.text2 {
   /* Get Quick Help */
   margin-bottom: 8px;
 
@@ -55,7 +55,7 @@ form {
   color: #242324;
 }
 
-.text2 {
+.text3 {
   /* We’ve got you covered 24/7 */
   font-family: "Raleway";
   font-size: 20px;
