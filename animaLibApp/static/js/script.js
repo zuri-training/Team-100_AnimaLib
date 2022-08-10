@@ -296,6 +296,9 @@ Array.from(sortByNewText).forEach(NewSort => {
 });
 
 // code for search result display
+searchBar.style.backgroundImage.addEventListener('click', function() {
+    searchBar.style.backgroundImage.src = ''
+})
 searchBar.addEventListener('keyup', function() {
     var filter = searchBar.value
     searchText.innerHTML = filter

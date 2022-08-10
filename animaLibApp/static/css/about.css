@@ -1,5 +1,10 @@
 /* Content Styling */
 
+main {
+    margin-top: 80px;
+    padding-top: 0px;
+}
+
 .description {
     font-size: 20px;
     line-height: 36px;

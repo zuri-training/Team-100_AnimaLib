@@ -41,7 +41,7 @@
                             <p><a class="support-link">Contact Us</a></p>
                         </div>
                     </li>
-                    <input id="search-input" class="search-bar hide-after-login" type="search" name="search-animation" placeholder="Search for animations">
+                    <input id="search-input" class="search-bar hide-after-login" type="search" name="search-animation" maxlength="10" placeholder="Search for animations">
                 </ul>
             </div>
             <div class="header-item hide-after-login">
@@ -53,7 +53,7 @@
                 </ul>
             </div>
             <div class="header-item show-after-login">
-                <input id="search-input" class="hide search-bar" type="search" name="search-animation" placeholder="Search for animations">
+                <input id="search-input" class="hide search-bar" type="search" name="search-animation" maxlength="10" placeholder="Search for animations">
                 <img id="profile-img-nav-bar" class='profile-img' src="{% static 'images/m mckinney.png' %}" alt="">
                 <span><img id="profile-click" class='dropdown-icon' src="{% static 'images/dropdown-black.png' %}"/></span>
                 <div id='profile-dropdown'>
