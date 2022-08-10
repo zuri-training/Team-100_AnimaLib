@@ -1,10 +1,10 @@
 I was assigned to the following issues
 
-    [Construction of the product's sitemap](https://github.com/zuri-training/Team-100_AnimaLib/issues/85)
-    [Design the page where users can easily generate their own custom animations](https://github.com/zuri-training/Team-100_AnimaLib/issues/58)
-    [Design the Documentation page where the user gets to access the library, read the documentation in low fidelity](https://github.com/zuri-training/Team-100_AnimaLib/issues/15)
-    [Design the Documentation page where the user gets to access the library, read the documentation in high fidelity](https://github.com/zuri-training/Team-100_AnimaLib/issues/14))
-   [Design the Wireframes and sketches for Documentation page](https://github.com/zuri-training/Team-100_AnimaLib/issues/26))
+   1. [Construction of the product's sitemap](https://github.com/zuri-training/Team-100_AnimaLib/issues/85)
+   2. [Design the page where users can easily generate their own custom animations](https://github.com/zuri-training/Team-100_AnimaLib/issues/58)
+   3. [Design the Documentation page where the user gets to access the library, read the documentation in low fidelity](https://github.com/zuri-training/Team-100_AnimaLib/issues/15)
+   4. [Design the Documentation page where the user gets to access the library, read the documentation in high fidelity](https://github.com/zuri-training/Team-100_AnimaLib/issues/14))
+  5. [Design the Wireframes and sketches for Documentation page](https://github.com/zuri-training/Team-100_AnimaLib/issues/26))
 
 The solutions I provided to the assigned tasks
 
