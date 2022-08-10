@@ -37,3 +37,5 @@ issue link:https://github.com/zuri-training/Team-100_AnimaLib/issues/27
 
 solution link:https://docs.google.com/document/d/139jnUvUZV3XcdpIgCxjvh4JVmwbO5p1NQdizOal7qf0/edit?usp=sharing
 
+solution link: worked on the survey questions](https://docs.google.com/document/d/139jnUvUZV3XcdpIgCxjvh4JVmwbO5p1NQdizOal7qf0/edit?usp=sharing)
+
