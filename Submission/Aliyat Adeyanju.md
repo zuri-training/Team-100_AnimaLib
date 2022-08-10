@@ -18,9 +18,9 @@ issue title 3: Design wireframes and sketches
 
 issue link: https://github.com/zuri-training/Team-100_AnimaLib/issues/26
 
-solution link:https://www.figma.com/file/j1drbvRXQLsqEpHG3DfsbP/changes-successfully-saved-page?node-id=0%3A1
+solution link: [Wireframe for save changes successful](https://www.figma.com/file/j1drbvRXQLsqEpHG3DfsbP/changes-successfully-saved-page?node-id=0%3A1)
 
-solution link:https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A25974
+solution link: [Wireframe for support page](https://www.figma.com/file/VLaolzmNxT8lx7uBMsYVMz/Team-100_AnimaLib?node-id=2882%3A25974)
 
 issue title 4:Design an high Fidelity support page for users to contact us as regards problems or inquiries not answered on the website
 
