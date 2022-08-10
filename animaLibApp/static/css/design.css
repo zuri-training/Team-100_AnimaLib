@@ -5,7 +5,19 @@
 /* Global styles */
 
 body {
+<<<<<<< HEAD
     background: #dad3dd;
+=======
+  background: #dad3dd;
+}
+
+/* mobile first design */
+.maincontentContainer {
+  padding: 10px;
+  margin-top: 40px;
+  min-height: 80vh;
+  font-family: "Raleway", sans-serif;
+>>>>>>> 4c590965fafda9403263845f16970f1e7012ddc9
 }
 
 

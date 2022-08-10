@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+anima_lib/__pycache__/__init__.cpython-310.pyc
+anima_lib/__pycache__/settings.cpython-310.pyc
+anima_lib/__pycache__/urls.cpython-310.pyc
+anima_lib/__pycache__/wsgi.cpython-310.pyc
+animaLibApp/__pycache__/__init__.cpython-310.pyc
+animaLibApp/__pycache__/admin.cpython-310.pyc
+animaLibApp/__pycache__/apps.cpython-310.pyc
+.gitignore
+animaLibApp/__pycache__/models.cpython-310.pyc
+animaLibApp/__pycache__/urls.cpython-310.pyc
+animaLibApp/__pycache__/views.cpython-310.pyc
+animaLibApp/__pycache__/views.cpython-310.pyc
+animaLibApp/migrations/__pycache__/__init__.cpython-310.pyc
+.gitignore
