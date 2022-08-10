@@ -1,3 +1,6 @@
+## [Team Repository Link](https://github.com/zuri-training/Team-100_AnimaLib)
+## [Team Link](https://github.com/orgs/zuri-training/teams/team-100_animalib)
+
 # Issues Worked on and solutions
 
 ## Issue Title: Design the page where the users can easily generate their own custom animations
