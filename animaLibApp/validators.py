@@ -10,6 +10,8 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.views import View
 from django.shortcuts import redirect
 from .utils import token_generator
+from .utils2 import *
+
 import uuid
 
 
@@ -77,7 +79,7 @@ def check(get_image) -> bool:
     return True
 
 
-def send_forgot_email(request, user, user_email, user_name):
+def send_forgot_mail(request, user, user_email, user_name):
     
     sender = settings.EMAIL_HOST_USER
     connection = get_connection()

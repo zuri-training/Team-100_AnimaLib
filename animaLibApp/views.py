@@ -21,6 +21,8 @@ import zipfile
 # validator functions
 from .validators import *
 from .utils import *
+from .utils2 import *
+
 
 # get the base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,8 +43,7 @@ def error_500(request, *args, **argv):
 def index(request):
     return render(request, 'animaLibApp/index.html')
 
-# This is a view for the login page of the website.
-
+# This is the view for forget password.
 def forgotpassword(request):
     if request.user.is_authenticated:
         return redirect('index')
@@ -62,11 +63,13 @@ def forgotpassword(request):
                     messages.add_message(request, messages.ERROR, 'An error occured while sending the reset email, please contact the admin. Also make sure your email is correct')
                     return redirect('forgotpassword')            
     except Exception as e:
+        print(e)
         messages.add_message(request, messages.ERROR, 'An error occured, please try again!')
         return redirect('forgotpassword')
                           
     return render(request, 'animaLibApp/forgotpword.html')
 
+# this is the view for user login.
 def log_in(request):
     form = LoginForm()
     if request.user.is_authenticated:
@@ -306,7 +309,7 @@ def profile(request):
     
     return render(request, 'animaLibApp/profile_page.html', profile)
 
-
+# this is the view for documentation
 def documentation(request):
     """
     View for the documentation page
@@ -467,7 +470,7 @@ def password_reset(request, uidb64, token):
     return render(request, 'animaLibApp/changepassword.html')
 
 
-def success(self, request):
+def success(request):
     if not request.session.get('password_reset', False):
         return redirect('login')
     request.session['password_reset'] = False
