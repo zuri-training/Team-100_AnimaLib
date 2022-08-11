@@ -90,5 +90,14 @@ class Comment(models.Model):
     def __str__(self):
         return '{} commented: {}'.format(self.author, self.text)
 
+class Like(models.Model):
+    """Model for users to like posts
+    """
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='likes')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    state = models.BooleanField(default=True)
+
+    def __str__(self):
+        return '{} likes: {}'.format(self.user, self.post)
 
 
