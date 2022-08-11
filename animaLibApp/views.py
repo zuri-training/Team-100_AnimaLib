@@ -9,6 +9,8 @@ from django.contrib import messages
 from django.contrib.messages import constants as cs
 from django.contrib.auth import authenticate, login, logout
 from pathlib import Path
+from django.utils.encoding import force_bytes, force_str  
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode  
 import os
 from .forms import *
 from os.path import basename
@@ -18,6 +20,7 @@ from .models import *
 import zipfile
 # validator functions
 from .validators import *
+from .utils import *
 
 # get the base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +46,25 @@ def index(request):
 def forgotpassword(request):
     if request.user.is_authenticated:
         return redirect('index')
+    try:
+        if request.method == 'POST':
+            email_address = request.POST.get('email','')
+            user = newUser.objects.filter(email=email_address).first()
+            if user is None:
+                messages.add_message(request, messages.ERROR, 'Username does not Exist!, register or try again!')
+                return redirect('forgotpassword')
+            else:
+                username = user.username
+                if send_forgot_mail(request, user, email_address, username):
+                    messages.add_message(request, messages.SUCCESS, 'A reset email has been sent to your account')
+                    return redirect('login')
+                else:
+                    messages.add_message(request, messages.ERROR, 'An error occured while sending the reset email, please contact the admin. Also make sure your email is correct')
+                    return redirect('forgotpassword')            
+    except Exception as e:
+        messages.add_message(request, messages.ERROR, 'An error occured, please try again!')
+        return redirect('forgotpassword')
+                          
     return render(request, 'animaLibApp/forgotpword.html')
 
 def log_in(request):
@@ -54,6 +76,14 @@ def log_in(request):
         username = request.POST.get('fname', '')
         # get the password.
         password = request.POST.get('password', '')
+        
+        get_user = newUser.objects.filter(username=username).first()
+        print(get_user.username is not None) 
+        
+        if get_user.username is not None:
+            if get_user.is_active == False:
+                messages.add_message(request, cs.ERROR, 'Your account is not verified, please verify your account by clicking on the link in the email we sent you.')
+                return redirect('login')
         # authenticate the user now.
         user = authenticate(request, username=username, password=password)
         # if the result is not None, then the user is authenticated
@@ -99,11 +129,15 @@ def register(request):
                 # hash and save the password; immediately; we do not want to save the password in plain text.
                 user = newUser.objects.get(username = form.cleaned_data['username'])
                 user.set_password(password)
+                user.is_active = False
                 # user.user_image = "null.png"
-                    
                 user.save()
-
+                # send an email to the user to verify their account.
                 messages.add_message(request, messages.SUCCESS, 'Account was successfully created!')
+                if send_verification_email(request, user, email, user):
+                    messages.add_message(request, messages.SUCCESS, 'A verification email has been sent to your account')
+                else:
+                    messages.add_message(request, messages.ERROR, 'An error occured while sending the verification email, please contact the admin. Also make sure your email is correct')
                 return redirect('login')
 
         return render(request, 'animaLibApp/register.html', {'form': form})
@@ -125,11 +159,11 @@ def contact(request):
         email = request.POST['email']
         message = request.POST['message']
 
-        # mail_content = {
-        #     'name': first_name + ' ' + last_name, 'sender': email, 'message': message
-        # }
+        mail_content = {
+            'name': first_name + ' ' + last_name, 'sender': email, 'message': message
+        }
 
-        # # render the email template to a string
+        # render the email template to a string
 
         message = render_to_string('mailer/contact.html', mail_content)
         mes = EmailMultiAlternatives(f'contact','',sender, ["davidakwuruu@gmail.com"],
@@ -172,7 +206,6 @@ def download_library(request):
 # for the profile page of the website
 @login_required(login_url='/signin')
 def profile(request):
-    
     if request.method == "POST":
         picture = request.FILES.get('picture', None)
         email = request.POST.get('email', None)
@@ -388,3 +421,55 @@ def showAnimations(request):
 
 def about_us(request):
     return render(request, 'animaLibApp/about.html')
+
+# verification view
+def verification(request, uidb64, token):
+    User = newUser()  
+    try:  
+        uid = force_str(urlsafe_base64_decode(uidb64))  
+        user = newUser.objects.get(pk=uid)  
+    except(TypeError, ValueError, OverflowError, User.DoesNotExist):  
+        user = None  
+    if user is not None and token_generator.check_token(user, token):  
+        user.is_active = True  
+        user.save() 
+        messages.add_message(request, messages.SUCCESS, "Your account has been verified. You can now login.") 
+        return redirect('login') 
+    else:  
+        messages.add_message(request, messages.SUCCESS, "verification link is invalid.") 
+        return redirect('login')
+    
+def password_reset(request, uidb64, token):
+    User = newUser()
+    try:
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        user = newUser.objects.get(pk=uid)
+    except(TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+    
+    if user is None:
+        return redirect('login')
+    else:
+        if request.method == 'POST':
+            password = request.POST.get('password','')
+            if user is not None and email_reset_generator.check_token(user, token):  
+                user.set_password(password)  
+                user.save(update_fields=['password']) 
+                request.session['password_reset'] = True
+                return redirect('success') 
+            else:  
+                messages.add_message(request, messages.SUCCESS, "reset link is invalid.") 
+                return redirect('login')
+        else:
+            return render(request, 'animaLibApp/changepassword.html')
+                     
+                     
+    return render(request, 'animaLibApp/changepassword.html')
+
+
+def success(self, request):
+    if not request.session.get('password_reset', False):
+        return redirect('login')
+    request.session['password_reset'] = False
+    return render(request, 'animaLibApp/success.html')       
+    

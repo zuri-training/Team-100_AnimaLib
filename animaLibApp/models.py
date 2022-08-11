@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager, User
 from django.utils.translation import gettext_lazy as _
 from cloudinary.models import CloudinaryField
+import uuid
 
 from django.conf import settings
 
@@ -37,6 +38,7 @@ class CustomAccountManager(BaseUserManager):
 # we are creating a custom user model that will be used to create a user account
 # and will be used to authenticate the user
 class newUser(AbstractBaseUser, PermissionsMixin):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(_('email address'), max_length=254, unique=True)
     username = models.CharField(max_length=254, unique=True)
     name = models.CharField(max_length=254, blank=True)

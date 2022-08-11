@@ -79,25 +79,6 @@ label {
   color: #080808;
 }
 
-input {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.5px;
-
-  /* Grey/300 */
-  color: #9f9f9f;
-  width: 100%;
-  /* margin: 20px; */
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 1px solid #5e5e5e;
-  border-radius: 8px;
-  /* transition: background 0.2s, border 0.2s; */
-}
-
 textarea {
   font-family: "Raleway";
   font-style: normal;
@@ -123,8 +104,22 @@ textarea {
   /* padding: 30px 0 30px 0; */
 }
 
-.main-form input {
+.main-form form input {
   margin: 4px 0px 32px 0px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  /* Grey/300 */
+  color: #9f9f9f;
+  width: 100%;
+  /* margin: 20px; */
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #5e5e5e;
+  border-radius: 8px;
 }
 .center {
   margin-top: 32px;

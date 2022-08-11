@@ -1,0 +1,47 @@
+{% extends 'baselogin.html' %} {% load static %}
+<!-- --------------------------------------------------------->
+{% load crispy_forms_tags %} {% load active_link_tags %}
+<!-- --------------------------------------------------------->
+{% block title %} Password Successful {% endblock %}
+<!-- ---------------------------------------------------------------------------- -->
+{% block style %} {% comment %}
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+{% endcomment %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+/>
+<link href="{% static 'css/successful.css' %}" rel="stylesheet" />
+
+{% endblock %} {% block content %}
+<section class="login-card">
+  <div class="logo">
+    <img
+      src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659815158/logo_1_vsfmjo.png"
+      width="140"
+      height="39"
+    />
+  </div>
+  <div class="mark-icon">
+    <img
+      src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813475/password_success_pknd46.png"
+      width="140"
+      height="148"
+    />
+  </div>
+  <h4>Password changed</h4>
+  <div class="paragraph">
+    <p style="text-align: center" class="para-text">
+      Well done! Your password has been changed. Proceed to log in.
+    </p>
+  </div>
+  <div class="center">
+    <a href="login.html"><button class="form-button">Log in</button></a>
+  </div>
+</section>
+{% endblock %}
