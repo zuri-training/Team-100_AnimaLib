@@ -151,31 +151,7 @@ def documentation(request):
     """
     template_name = "animaLibApp/documentation.html"
 
-    get_posts = get_list_or_404(Post.objects.all())
-    posts = get_posts
-    # print(posts)
-
-    if request.user.is_authenticated:
-
-        if request.method == 'POST':
-            comment_form = CommentForm(data=request.POST)
-            if comment_form.is_valid():
-
-                comment_form = comment_form.save(commit=False)
-                comment_form.author = request.user
-                comment_form.created_date = timezone.now()
-                comment_form.save()
-
-                return redirect('documentation')
-        else:
-            comment_form = CommentForm
-
-    else:
-        comment_form = CommentForm
-
-    data = {'posts':posts, 'comment_form': comment_form}
-
-    return render(request, template_name, data)
+    return render(request, template_name)
 
 # @login_required
 def post_comment(request, pk):
@@ -253,7 +229,35 @@ def documentation(request):
     return render(request,'animaLibApp/documentation.html')
 def introduction(request):
     return render(request,'animaLibApp/introduction.html')
+
 def showAnimations(request):
-    return render(request,'animaLibApp/showAnimations.html')
+    template_name = "animaLibApp/showAnimations.html"
+
+    get_posts = get_list_or_404(Post.objects.all())
+    posts = get_posts
+    # print(posts)
+
+    if request.user.is_authenticated:
+
+        if request.method == 'POST':
+            comment_form = CommentForm(data=request.POST)
+            if comment_form.is_valid():
+
+                comment_form = comment_form.save(commit=False)
+                comment_form.author = request.user
+                comment_form.created_date = timezone.now()
+                comment_form.save()
+
+                return redirect('showAnimations')
+        else:
+            comment_form = CommentForm
+
+    else:
+        comment_form = CommentForm
+
+    data = {'posts':posts, 'comment_form': comment_form}
+
+    return render(request, template_name, data)
+
 def about_us(request):
     return render(request, 'animaLibApp/about.html')
