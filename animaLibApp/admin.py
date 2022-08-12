@@ -30,3 +30,6 @@ register = admin.site.register
 
 register(newUser, UserAdminConfig)
 register(Post); register(Comment)
+register(Like)
+register(saved_animation)
+register(animations)
