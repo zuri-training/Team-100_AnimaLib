@@ -244,9 +244,13 @@ def showAnimations(request):
             if comment_form.is_valid():
                 print("form is validated")
                 comment_form = comment_form.save(commit=False)
+                print("comment form")
                 comment_form.author = request.user
+                print("comment.author", comment_form.author)
                 comment_form.created_date = timezone.now()
+                print("created date", comment_form.created_date)
                 comment_form.save()
+                print('saved')
 
                 return redirect('showAnimations')
         else:
