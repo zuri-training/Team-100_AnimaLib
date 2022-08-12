@@ -2,200 +2,271 @@
 <!-- --------------------------------------------------------->
 {% load active_link_tags %}
 <!-- --------------------------------------------------------->
-{% block title %} Home page {% endblock %}
+{% block title %} About us {% endblock %}
 <!-- ---------------------------------------------------------------------------- -->
 {% block style %}
 <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 <link href="{% static 'css/about.css' %}" rel="stylesheet" />
 {% endblock %} {% block content %}
 <main>
-    <section id="about-us">
-        <div class="about-us-container">
-            <h1 class="title">About Us</h1>
+  <section id="about-us">
+    <div class="about-us-container">
+      <h1 class="title">About Us</h1>
+      <p class="description">
+        We build products for Developers. Especially those who just transitioned
+        into the field.
+      </p>
+    </div>
+  </section>
+  <section id="goal-mission">
+    <div class="goal-mission-container">
+      <div class="flex-container">
+        <div class="flex-item">
+          <h1 class="title">Our Goal</h1>
+          <p class="description">
+            To provide Developers easy and free access to useful resources that
+            increases their productivity and also make their creativity blossom,
+            while maximimsing their time efficiently.
+          </p>
+        </div>
+        <div class="flex-item">
+          <img src="{% static 'images/our goal.png' %}" alt="" />
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="flex-item">
+          <h1 class="title">Our Mission</h1>
+          <p class="description">
+            To become the go-to source for Developers looking to get industry
+            standard and efficient resources for their products.
+          </p>
+        </div>
+        <div class="flex-item">
+          <img src="{% static 'images/our mission.png' %}" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="belief">
+    <div class="belief-container">
+      <h1 class="title">Our Belief</h1>
+      <div class="belief-flex-container">
+        <div class="belief-flex-item">
+          <div class="belief-icon-container">
+            <img
+              class="belief-icon"
+              src="{% static 'images/easy.png' %}"
+              alt=""
+            />
+          </div>
+          <div class="belief-content">
+            <p class="belief-title">Easy</p>
             <p class="description">
-                We build products for Developers. Especially those who just transitioned into the field.
+              Building and Deploying should be as easy as a single tap.
             </p>
+          </div>
         </div>
-    </section>
-    <section id="goal-mission">
-        <div class="goal-mission-container">
-            <div class="flex-container">
-                <div class="flex-item">
-                    <h1 class="title">Our Goal</h1>
-                    <p class="description">
-                        To provide Developers easy and free access to useful resources that increases their productivity and also make their creativity blossom, while maximimsing their time efficiently.
-                    </p>
-                </div>
-                <div class="flex-item">
-                    <img src="{% static 'images/our goal.png' %}" alt="">
-                </div>
-            </div>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <h1 class="title">Our Mission</h1>
-                    <p class="description">
-                        To become the go-to source for Developers looking to get industry standard and efficient resources for their products.
-                    </p>
-                </div>
-                <div class="flex-item">
-                    <img src="{% static 'images/our mission.png' %}" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="belief">
-        <div class="belief-container">
-            <h1 class="title">
-                Our Belief
-            </h1>
-            <div class="belief-flex-container">
-                <div class="belief-flex-item">
-                    <div class="belief-icon-container">
-                        <img class="belief-icon" src="{% static 'images/easy.png' %}" alt="">
-                    </div>
-                    <div class="belief-content">
-                        <p class="belief-title">Easy</p>
-                        <p class="description">
-                            Building and Deploying should be as easy as a single tap.
-                        </p>
-                    </div>
-                </div>
-                <div class="belief-flex-item">
-                    <div class="belief-icon-container">
-                        <img class="belief-icon" src="{% static 'images/accessibility_new.png' %}" alt="Accessibility">
-                    </div>
-                    <div class="belief-content">
-                        <p class="belief-title">Accessibility</p>
-                        <p class="description">
-                            Making User Experience the core of design enables all.
-                        </p>
-                    </div>
-                </div>
-                <div class="belief-flex-item">
-                    <div class="belief-icon-container">
-                        <img class="belief-icon" src="{% static 'images/universal.png' %}" alt="">
-                    </div>
-                    <div class="belief-content">
-                        <p class="belief-title">Universal</p>
-                        <p class="description">
-                            To connect all, design systems should be of one standard.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="meet-the-team">
-        <div class="meet-the-team-container">
-            <h1 class="title">Meet the Team</h1>
-            <p class="description">We’re a team of young Developers and Designers looking to use our collective skillsets to create a better and inclusive Tech Ecosystem for beginners. </p>
-            <div class="team-member-cards-container">
-                <div class="team-member">
-                    <img src="{% static 'images/david.png' %}" alt="">
-                    <p class="name">David Akwuru <span class="role">Full Stack Developer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/aliyat.png' %} " alt="">
-                    <p class="name">Adeyanju Aliyat <span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/ayotomiwa.png' %} " alt="">
-                    <p class="name">Ajewole Ayotomiwa <span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/goodness.png' %} " alt="">
-                    <p class="name">Goodness Atunde<span class="role">Full Stack Developer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/Joseph.png' %} " alt="">
-                    <p class="name">Joseph-Uchea Jordan II<span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/Victor.png' %} " alt="">
-                    <p class="name">Victor Emechebe <span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/Sughter.png' %} " alt="">
-                    <p class="name">Achi Sughter Tooyosi <span class="role">Full Stack Developer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/Hamzah.png' %}" alt="">
-                    <p class="name">Opemipo Hamzah <span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/Kene.png' %} " alt="">
-                    <p class="name">Kene Kingsley Nwobu <span class="role">Full Stack Developer
-                    </span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/erica.png' %}" alt="">
-                    <p class="name">Erica Osawaru <span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/Abiola.png' %} " alt="">
-                    <p class="name">Oladimeji Abiola<span class="role">Full Stack Developer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/daniel.png' %} " alt="">
-                    <p class="name">Okene Daniel <span class="role">Full Stack Developer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/mabel.png' %} " alt="">
-                    <p class="name">Mabel Nyuma <span class="role">Full Stack Developer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/maryam.png' %} " alt="">
-                    <p class="name">Maryam Afolabi<span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/fawazat.png' %} " alt="">
-                    <p class="name">Fawazat Gbajumo <span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/tola.png' %}" alt="">
-                    <p class="name">Omotola Coker <span class="role">Full Stack Developer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/kemi.png' %} " alt="">
-                    <p class="name">Oluwakemi Oyeniran <span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/uthman.png' %} " alt="">
-                    <p class="name">Uthman Akinsawe<span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/folake.png' %} " alt="">
-                    <p class="name">Olanrewaju Adefolake <span class="role">Product Designer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/armstrong.png' %} " alt="">
-                    <p class="name">Amadi Armstrong <span class="role">Full Stack Developer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/videc.png' %}" alt="">
-                    <p class="name">Fonyuy Videc <span class="role">Full Stack Developer</span></p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/Caleb.png' %} " alt="">
-                    <p class="name">Caleb Oderinde<span class="role">Product Designer</span></p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <section id="our-sponsors">
-        <div class="our-sponsors-container">
-            <h1 class="title">
-                Our Sponsors
-            </h1>
+        <div class="belief-flex-item">
+          <div class="belief-icon-container">
+            <img
+              class="belief-icon"
+              src="{% static 'images/accessibility_new.png' %}"
+              alt="Accessibility"
+            />
+          </div>
+          <div class="belief-content">
+            <p class="belief-title">Accessibility</p>
             <p class="description">
-                Our Incredible Sponsors, <a class='sponsors-link' href="">Ingressive for Good</a> and <a class='sponsors-link' href=""> Zuri </a>both are organizations that seek to formally train African Tech Talents in need. Ingressive for Good provides
-                schorlarships to Ivy-Leagues of Africa to these talents. Zuri helps companies build remote teams quickly and cost-effectively.
+              Making User Experience the core of design enables all.
             </p>
-            <div class="sponsors-logo">
-                <img class='i4g-logo' src="{% static 'images/ingressive for food.png' %}" alt="I4G logo">
-                <img class='zuri-logo' src="{% static 'images/zuri.png' %}" alt="Zuri logo">
-            </div>
+          </div>
         </div>
-    </section>
-{% endblock %}
+        <div class="belief-flex-item">
+          <div class="belief-icon-container">
+            <img
+              class="belief-icon"
+              src="{% static 'images/universal.png' %}"
+              alt=""
+            />
+          </div>
+          <div class="belief-content">
+            <p class="belief-title">Universal</p>
+            <p class="description">
+              To connect all, design systems should be of one standard.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="meet-the-team">
+    <div class="meet-the-team-container">
+      <h1 class="title">Meet the Team</h1>
+      <p class="description">
+        We’re a team of young Developers and Designers looking to use our
+        collective skillsets to create a better and inclusive Tech Ecosystem for
+        beginners.
+      </p>
+      <div class="team-member-cards-container">
+        <div class="team-member">
+          <img src="{% static 'images/david.png' %}" alt="" />
+          <p class="name">
+            David Akwuru <span class="role">Full Stack Developer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/aliyat.png' %} " alt="" />
+          <p class="name">
+            Adeyanju Aliyat <span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/ayotomiwa.png' %} " alt="" />
+          <p class="name">
+            Ajewole Ayotomiwa <span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/goodness.png' %} " alt="" />
+          <p class="name">
+            Goodness Atunde<span class="role">Full Stack Developer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/Joseph.png' %} " alt="" />
+          <p class="name">
+            Joseph-Uchea Jordan II<span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/Victor.png' %} " alt="" />
+          <p class="name">
+            Victor Emechebe <span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/Sughter.png' %} " alt="" />
+          <p class="name">
+            Achi Sughter Tooyosi <span class="role">Full Stack Developer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/Hamzah.png' %}" alt="" />
+          <p class="name">
+            Opemipo Hamzah <span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/Kene.png' %} " alt="" />
+          <p class="name">
+            Kene Kingsley Nwobu <span class="role">Full Stack Developer </span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/erica.png' %}" alt="" />
+          <p class="name">
+            Erica Osawaru <span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/Abiola.png' %} " alt="" />
+          <p class="name">
+            Oladimeji Abiola<span class="role">Full Stack Developer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/daniel.png' %} " alt="" />
+          <p class="name">
+            Okene Daniel <span class="role">Full Stack Developer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/mabel.png' %} " alt="" />
+          <p class="name">
+            Mabel Nyuma <span class="role">Full Stack Developer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/maryam.png' %} " alt="" />
+          <p class="name">
+            Maryam Afolabi<span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/fawazat.png' %} " alt="" />
+          <p class="name">
+            Fawazat Gbajumo <span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/tola.png' %}" alt="" />
+          <p class="name">
+            Omotola Coker <span class="role">Full Stack Developer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/kemi.png' %} " alt="" />
+          <p class="name">
+            Oluwakemi Oyeniran <span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/uthman.png' %} " alt="" />
+          <p class="name">
+            Uthman Akinsawe<span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/folake.png' %} " alt="" />
+          <p class="name">
+            Olanrewaju Adefolake <span class="role">Product Designer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/armstrong.png' %} " alt="" />
+          <p class="name">
+            Amadi Armstrong <span class="role">Full Stack Developer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/videc.png' %}" alt="" />
+          <p class="name">
+            Fonyuy Videc <span class="role">Full Stack Developer</span>
+          </p>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'images/Caleb.png' %} " alt="" />
+          <p class="name">
+            Caleb Oderinde<span class="role">Product Designer</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="our-sponsors">
+    <div class="our-sponsors-container">
+      <h1 class="title">Our Sponsors</h1>
+      <p class="description">
+        Our Incredible Sponsors,
+        <a class="sponsors-link" href="">Ingressive for Good</a> and
+        <a class="sponsors-link" href=""> Zuri </a>both are organizations that
+        seek to formally train African Tech Talents in need. Ingressive for Good
+        provides schorlarships to Ivy-Leagues of Africa to these talents. Zuri
+        helps companies build remote teams quickly and cost-effectively.
+      </p>
+      <div class="sponsors-logo">
+        <img
+          class="i4g-logo"
+          src="{% static 'images/ingressive for food.png' %}"
+          alt="I4G logo"
+        />
+        <img
+          class="zuri-logo"
+          src="{% static 'images/zuri.png' %}"
+          alt="Zuri logo"
+        />
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+</main>

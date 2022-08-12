@@ -1,8 +1,10 @@
 /* Content Styling */
 
 main {
-    margin-top: 80px;
     padding-top: 0px;
+    margin-top: 80px;
+    background-color: var(--white);
+
 }
 
 .description {
@@ -28,7 +30,6 @@ main {
     color: white;
     max-width: 1440px;
     margin: 0 auto;
-    text-align: center;
     padding: 114px 7%;
 }
 
@@ -73,9 +74,17 @@ main {
     width: 100%;
 }
 
+@media (max-width: 900px) {
+    .flex-container {
+        margin: 5% 7%;
+        flex-direction: column-reverse;
+    }
+}
+
 #belief {
     background-color: rgba(31, 39, 130, 0.05);
 }
+
 
 .belief-container {
     max-width: 1440px;
@@ -104,7 +113,7 @@ main {
     padding: 13px;
     justify-content: center;
     align-content: center;
-    margin: 0 auto;
+    margin: 15px auto;
 }
 
 .belief-flex-item .belief-icon-container .belief-icon {
@@ -184,6 +193,11 @@ main {
     margin: 0 auto;
 }
 
+.sponsors-link {
+    color: #3FAEAE;
+    background-color: transparent;
+    text-decoration: none;
+}
 .sponsors-logo {
     display: flex;
     flex-wrap: wrap;
@@ -194,6 +208,7 @@ main {
 
 .sponsors-logo img {
     padding: 0 50px;
+    margin-bottom: 20px;
 }
 
 .sponsors-logo img.i4g-logo {

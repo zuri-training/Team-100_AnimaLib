@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -7,71 +7,104 @@
 }
 
 body {
-  background: #dad3dd;
+  background-color: #f8f8f8;
+}
+
+.main_box {
+  background-size: 150px, 150px, 300px, 300px;
+  background-image: url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813476/login_left_blobs_k8yobf.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813477/login_right_blobs_cy94zh.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813480/bottom_left_blobs_zkbchn.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813480/bottom_right_blobs_bepgpl.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 10% 50%, 90% 50%, bottom left, bottom right;
+  width: 100%;
+}
+
+.section {
+  padding-top: 121px;
+  padding-bottom: 121px;
 }
 
 .login-card {
   border-radius: 16px;
-  background-color: #f8f8f8;
-  box-shadow: 0px 4px 14px 2px #a55ec34d;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+  background: #edeef2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   /* text-align: center; */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0px auto;
   height: 800px;
   width: 592px;
+  padding-top: 1px;
 }
 
 h4 {
-  margin-top: 0px;
+  margin-bottom: 4px;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
   line-height: 48px;
   text-align: center;
-  color: #000000;
+  color: #2b2b2b;
 }
 
 .logo {
   display: flex;
   justify-content: center;
   margin-top: 72px;
+  margin-bottom: 16px;
 }
 
 .form-check-label {
-  margin-right: 200px;
-  width: 100%;
+  margin-right: 180px;
 }
 
-p {
+.para-text {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.15px;
-  color: #0c0c0c;
   text-align: center;
+  color: rgba(18, 18, 18, 0.7);
 }
 
-input {
+a {
+  text-decoration: none;
+  color: #1a216c;
+}
+
+label {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  color: #080808;
+}
+
+.main-form input {
   /* width: 80%; */
   padding: 12px 20px;
   margin-top: 8px;
   /* margin: 8px 0 0px 0; */
-  box-sizing: border-box;
-  /* width: 432px; */
-  width: 100%;
+  width: 432px;
+  /* width: 100%; */
   height: 48px;
   left: 80px;
   top: 236px;
+  background: rgba(31, 39, 130, 0.05);
   border: 1px solid #5e5e5e;
   border-radius: 8px;
   color: #9f9f9f;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
   /* transition: background 0.2s, border 0.2s; */
 }
 
@@ -84,11 +117,31 @@ input {
   text-align: center;
   display: inline-block;
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
 }
-input.form-check-input {
+
+.radio-check .form-check a {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: #1a216c;
+}
+
+.radio-check .form-check .form-check-label {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  color: #121212b2;
+}
+
+.radio-check .form-check .form-check-input {
   width: 12px;
   height: 12px;
+  margin-right: 10px;
   border: 2px solid rgba(122, 122, 122, 0.8);
   border-radius: 2px;
 }
@@ -110,17 +163,31 @@ form i {
   color: #808080;
 }
 
+.form-text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+
+  /* identical to box height, or 109% */
+  display: flex;
+  align-items: center;
+
+  /* Grey/500 */
+  color: #5e5e5e;
+}
+
 .center {
-  margin-top: 20px;
+  margin-top: 17px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .form-button {
-  background-color: #462255;
+  background-color: #1f2782;
   color: white;
   text-decoration: none;
-  font-weight: 700;
   margin: 4px 2px;
   font-size: 20px;
   cursor: pointer;
@@ -129,5 +196,15 @@ form i {
   outline: none;
   height: 48px;
   width: 432px;
-  padding: 12px, 40px, 12px, 40px;
+  /* padding: 12px, 40px, 12px, 40px; */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.15px;
+  padding: 12px 40px;
+  gap: 8px;
 }
