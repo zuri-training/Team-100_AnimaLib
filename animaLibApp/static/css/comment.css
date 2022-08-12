@@ -54,6 +54,10 @@
   line-height: 48px;
 }
 .subcontainer1 {
+  display: flex;
+  flex-direction: column;
+  min-height: 20vh;
+  overflow-y: auto;
   width: 100%;
   height: 120px;
 
@@ -66,7 +70,7 @@
   font-size: 16px;
   line-height: 24px;
   margin-left: 110px;
-  text-align: left;
+  word-wrap: break-word;
 }
 
 .subcontainer2 {
@@ -104,6 +108,9 @@
 .subcontainer3 {
   display: flex;
   width: 100%;
+  background-color: #fcfcfc;
+ border-bottom-left-radius: 15px;
+ border-bottom-right-radius: 15px;
 }
 
 .subcontainer3text {
