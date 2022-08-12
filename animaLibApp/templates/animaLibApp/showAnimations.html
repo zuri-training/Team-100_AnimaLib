@@ -104,23 +104,17 @@
 
       <div class="commentcontainer2 sidebyside ">
         <div class="commicon comm sidebysidebox "></div>
-        <div class=" ">
-          <input type="text" class="container2 searchbox sidebysidebox move2" placeholder="Add a comment">
-
-        </div>
-        <button class=" sendbutton sidebysidebox move1">Send</button>
-        <!-- <div class="sidebysidebox">
-          <div class="sidebysidebox">
-
-          </div>
-        </div> -->
+        <form method="post">
+          {% csrf_token %}
+          {{ comment_form.as_p }}
+          <button class=" sendbutton sidebysidebox move1">Send</button>
+        </form>
       </div>
     </div>
 
 
   </div>
 </div>
-
 
 
 <script></script>

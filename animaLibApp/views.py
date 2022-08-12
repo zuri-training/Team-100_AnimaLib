@@ -233,16 +233,16 @@ def introduction(request):
 def showAnimations(request):
     template_name = "animaLibApp/showAnimations.html"
 
-    get_posts = get_list_or_404(Post.objects.all())
-    posts = get_posts
-    # print(posts)
+    posts = get_list_or_404(Post.objects.all())
+    posts.reverse()
+    # print(type(posts))
 
     if request.user.is_authenticated:
-
+        print("authenticated")
         if request.method == 'POST':
             comment_form = CommentForm(data=request.POST)
             if comment_form.is_valid():
-
+                print("form is validated")
                 comment_form = comment_form.save(commit=False)
                 comment_form.author = request.user
                 comment_form.created_date = timezone.now()
@@ -251,7 +251,6 @@ def showAnimations(request):
                 return redirect('showAnimations')
         else:
             comment_form = CommentForm
-
     else:
         comment_form = CommentForm
 
