@@ -165,6 +165,11 @@ input[type="submit"] {
   border: 2px solid #85868c;
 }
 
+.form-group .input_value #img img {
+  width: 100%;
+  padding: 10px;
+}
+
 label {
   display: inline-block;
   padding: 0 0.5em;

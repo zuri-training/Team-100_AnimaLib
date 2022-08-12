@@ -104,7 +104,7 @@ class Like(models.Model):
 # models to have the names of the animations.
 # This excludes the codes.    
 class animations(models.Model):
-    animation_id = models.IntegerField(primary_key=True, default=uuid.uuid4, editable=False)
+    animation_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255, blank=False)
     styleCode = models.CharField(max_length = 255, blank=False)
     description = models.TextField(blank=False)

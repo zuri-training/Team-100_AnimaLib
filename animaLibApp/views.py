@@ -474,5 +474,18 @@ def success(request):
     if not request.session.get('password_reset', False):
         return redirect('login')
     request.session['password_reset'] = False
-    return render(request, 'animaLibApp/success.html')       
+    return render(request, 'animaLibApp/success.html')  
+
+# accessing the mysaves page.
+@login_required(login_url='/signin')
+def mysaves(request):
+    # get the mysaves model.
+    get_user = request.user
+    # count if there are any saved animations for this user.
+    get_all = saved_animation.objects.filter(user=get_user).count()
+    if get_all == 0:
+        return render(request,'animaLibApp/mysave1.html', {'get_all': get_all})
+    else:
+        return render(request, 'animaLibApp/mysave2.html',{'get_all': get_all})
+    
     

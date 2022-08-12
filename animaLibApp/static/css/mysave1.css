@@ -1,0 +1,128 @@
+/* Main content styling */
+
+.content-holder {
+  width: 80%;
+  margin: 170px auto !important;
+}
+.saves-title2 {
+  padding-left: 263px;
+  font: Raleway;
+  font-weight: 700;
+  size: 20px;
+  line-height: 24px;
+}
+
+.picholder {
+  margin-top: 41px;
+  margin-bottom: 20px;
+  width: 72px;
+  height: 72px;
+  border-radius: 36px;
+  background-color: #d5d5d5;
+  border: 2px solid #d5d5d5;
+}
+.picholder img {
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+}
+
+.profilepicname {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  display: flex;
+  align-content: center;
+}
+.omega {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  height: 400px;
+  padding-right: 750px;
+}
+
+.exploresection {
+  margin-right: 352px;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+}
+.exploresection p {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(18, 18, 18, 0.5);
+}
+.section2 {
+  display: flex;
+  padding-left: 370px;
+  margin-bottom: 131px;
+  text-align: center;
+  justify-content: center;
+  margin-top: -300px;
+}
+
+.text1 {
+  border: none;
+  color: #d5d5d5;
+  background-color: #1f2782;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  margin-top: 16px;
+  background-color: #1f2782;
+  justify-content: center;
+  gap: 8px;
+  width: 195px;
+  height: 48px;
+  right: 45%;
+}
+
+.pencilicon1 {
+  width: 13px;
+  height: 13px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+.editpiclink {
+  background-color: #d5d5d5;
+  text-align: center;
+  align-content: center;
+  border-radius: 8px;
+  height: 36px;
+  display: flex;
+  width: 40%;
+  margin-top: 12px;
+}
+.edit23 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  color: #d5d5d5;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 0px;
+  opacity: 0px;
+  border: 0px;
+  text-align: center;
+  align-content: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 90%;
+}
+.edit1 {
+  margin-top: 10px;
+  height: 8px;
+  width: 10%;
+}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% load static %}
+<!-- --------------------------------------------------------->
+{% load active_link_tags %}
+<!-- --------------------------------------------------------->
+{% block title %} mysave page {% endblock %}
+<!-- ---------------------------------------------------------------------------- -->
+{% block style %}
+<link href="{% static 'css/mysave1.css' %}" rel="stylesheet" /> {% endblock %}
+{% block content %}
+<div class="content-holder">
+  <div class="saves-title2">
+    <p>My Saves {{get_all}}</p>
+  </div>
+  <div class="omega">
+    <div class="picholder">
+      <img src="{{user.user_image.url}}" alt="Profile Picture" />
+    </div>
+    <div class="profilepicname">
+      <p>{{user.username | capfirst}}</p>
+    </div>
+    <div class="editpiclink">
+      <div class="edit1">
+        <img
+          class="pencilicon1"
+          src="https://i.postimg.cc/mDsq7pHK/Pencil.png"
+          alt="edit icon"
+        />
+      </div>
+      <div class="edit23">
+        <a
+          href="{% url 'profile' %}"
+          style="
+            border: none;
+            color: black;
+            opacity: none;
+            background-color: #d5d5d5;
+          "
+        >
+          Edit Profile
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section2">
+    <div class="exploresection">
+      <p>Your saved animations would show here</p>
+      <a href="{% url 'showAnimations' %}" style="cursor: pointer"
+        ><button class="text1" style="cursor: pointer">
+          Explore Animation
+        </button></a
+      >
+    </div>
+  </div>
+</div>
+
+{% endblock %}
