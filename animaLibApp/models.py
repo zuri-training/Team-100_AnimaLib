@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager, User
 from django.utils.translation import gettext_lazy as _
+from cloudinary.models import CloudinaryField
+import uuid
 
 from django.conf import settings
 
@@ -36,12 +38,12 @@ class CustomAccountManager(BaseUserManager):
 # we are creating a custom user model that will be used to create a user account
 # and will be used to authenticate the user
 class newUser(AbstractBaseUser, PermissionsMixin):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(_('email address'), max_length=254, unique=True)
     username = models.CharField(max_length=254, unique=True)
     name = models.CharField(max_length=254, blank=True)
     # recently added.
-    user_image = models.ImageField(default='default.png', upload_to='user_profile')
-
+    user_image = CloudinaryField('image',blank=True)
     date_joined = models.DateTimeField(default=timezone.now)
     is_staff = models.BooleanField(default = False)
     is_active = models.BooleanField(default = True)
@@ -88,5 +90,14 @@ class Comment(models.Model):
     def __str__(self):
         return '{} commented: {}'.format(self.author, self.text)
 
+class Like(models.Model):
+    """Model for users to like posts
+    """
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='likes')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    state = models.BooleanField(default=True)
+
+    def __str__(self):
+        return '{} likes: {}'.format(self.user, self.post)
 
 
