@@ -439,7 +439,7 @@ def verification(request, uidb64, token):
         messages.add_message(request, messages.SUCCESS, "Your account has been verified. You can now login.") 
         return redirect('login') 
     else:  
-        messages.add_message(request, messages.SUCCESS, "verification link is invalid.") 
+        messages.add_message(request, messages.SUCCESS, "you are already verified.") 
         return redirect('login')
     
 def password_reset(request, uidb64, token):
@@ -461,7 +461,7 @@ def password_reset(request, uidb64, token):
                 request.session['password_reset'] = True
                 return redirect('success') 
             else:  
-                messages.add_message(request, messages.SUCCESS, "reset link is invalid.") 
+                messages.add_message(request, messages.SUCCESS, "you've already used this reset link.") 
                 return redirect('login')
         else:
             return render(request, 'animaLibApp/changepassword.html')
