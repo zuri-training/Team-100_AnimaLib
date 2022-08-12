@@ -19,10 +19,12 @@
   
 **Merged developer's push to the main (production branch) by:**
 Requesting updates, reviews, and conflict resolutions before merging
+Omotola's activity / merge history: https://github.com/zuri-training/Team-100_AnimaLib/commits?author=Tola-C
 Team_100 branches: https://github.com/zuri-training/Team-100_AnimaLib/branches
 
 **Develop Code generator page:** The code generator page will be:
   -Taking in user css style inputs 
   -Generating the animation visually (using CSS for animations and Javascript DOM events)
   -Also generating the basic code structure for the user to see (using Javascript DOM)
-  Omotola's branch: https://github.com/zuri-training/Team-100_AnimaLib/tree/tolac
+  Omotola's branch old: https://github.com/zuri-training/Team-100_AnimaLib/tree/tolac
+  Omotola's new branch: https://github.com/zuri-training/Team-100_AnimaLib/tree/tolacnew
