@@ -24,6 +24,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/pop.css' %}" />
     <script
       src="https://kit.fontawesome.com/1e4daf36c1.js"
       crossorigin="anonymous"
@@ -65,8 +66,18 @@
                 />
               </span>
               <div id="support-dropdown">
-                <p><a class="support-link">About Us</a></p>
-                <p><a class="support-link">Contact Us</a></p>
+                <p>
+                  <a
+                    href="{% url 'about' %}"
+                    class="{% active_link 'support' strict=True %} support-link"
+                    >About Us</a
+                  >
+                </p>
+                <p>
+                  <a href="{% url 'support' %}" class="support-link"
+                    >Contact Us</a
+                  >
+                </p>
               </div>
             </li>
             <input
@@ -126,7 +137,7 @@
             <div style="clear: both" class="clearfloat"></div>
             <p class="my-saves">
               <img src="" alt="" /><i class="fa-thin fa-bookmark"></i
-              ><a>My Saves</a>
+              ><a href="#">My Saves</a>
             </p>
             <p class="log-out"><a href="{% url 'logout' %}">Log Out</a></p>
           </div>
@@ -138,7 +149,7 @@
               <a href="{% url 'login' %}">Login</a>
             </li>
             <li id="register" class="btn small-btn">
-              <a href="#">Register</a>
+              <a href="{% url 'register' %}">Register</a>
             </li>
           </ul>
         </div>
@@ -160,17 +171,41 @@
         <div class="footer-item">
           <p class="footer-item-title">Animo</p>
           <ul>
-            <li><a href="#" class="footer-links">Features</a></li>
-            <li><a href="#" class="footer-links">Animation</a></li>
-            <li><a href="#" class="footer-links">Testimonials</a></li>
+            <li>
+              <a href="{% url 'index' %}#platform-features" class="footer-links"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'showAnimations' %}" class="footer-links"
+                >Animation</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'index' %}#reviews" class="footer-links"
+                >Testimonials</a
+              >
+            </li>
           </ul>
         </div>
         <div class="footer-item">
           <p class="footer-item-title">Documentation</p>
           <ul>
-            <li><a href="#" class="footer-links">Get Started</a></li>
-            <li><a href="#" class="footer-links">Annimation Library</a></li>
-            <li><a href="#" class="footer-links">Installation Guide</a></li>
+            <li>
+              <a href="{% url 'documentation' %}" class="footer-links"
+                >Get Started</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'showAnimations' %}" class="footer-links"
+                >Animation Library</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'introduction' %}" class="footer-links"
+                >Installation Guide</a
+              >
+            </li>
           </ul>
         </div>
         <div class="footer-item">
@@ -179,8 +214,14 @@
             <li>
               <a href="{% url 'about' %}" class="footer-links">About Us</a>
             </li>
-            <li><a href="#" class="footer-links">FAQ</a></li>
-            <li><a href="#" class="footer-links">Contact Us</a></li>
+            <li>
+              <a href="{% url 'contact' %}#question" class="footer-links"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'support' %}" class="footer-links">Contact Us</a>
+            </li>
           </ul>
         </div>
         <div class="footer-item">
