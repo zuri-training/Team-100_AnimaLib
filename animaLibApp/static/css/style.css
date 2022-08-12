@@ -11,10 +11,6 @@
   font-family: "Raleway", sans-serif;
 }
 
-body {
-  background-color: #f8f8f8;
-}
-
 :root {
   --light-blue: rgba(31, 39, 130, 0.11);
   --mid-blue: #1f2782;
@@ -27,6 +23,9 @@ body {
   --max-width: 1440px;
 }
 
+body {
+  background-color: var(--white);
+}
 .btn {
   background-color: var(--mid-blue);
   border-radius: 8px;
@@ -223,6 +222,7 @@ header.scroll {
 }
 
 .show-after-login {
+  display: flex;
   align-items: center;
   justify-content: right;
   position: relative;
@@ -236,25 +236,20 @@ header.scroll {
   margin-left: 50px;
 }
 
-.profile-click {
-  color: black;
-  margin-left: 8px;
-}
-
-#show-after-profile-click {
+#profile-dropdown {
   display: none;
   position: absolute;
   top: 70px;
   right: 0;
   padding: 15px;
-  width: 247px;
-  height: 140px;
-  background-color: rgba(31, 39, 130, 0.11);
-  border-radius: 0px 0px 8px 8px;
-  z-index: 1;
+  width: 239px;
+  height: 208px;
+  background-color: var(--white);
+  box-shadow: 0px 2px 8px rgba(10, 9, 9, 0.12);
+  border-radius: 8px;
 }
 
-#show-after-profile-click .profile-img {
+#profile-dropdown .profile-img {
   float: left;
   width: 50px;
   height: 50px;
@@ -263,16 +258,27 @@ header.scroll {
   border-radius: 50%;
 }
 
-#show-after-profile-click .name {
+#profile-dropdown .name {
   font-weight: 500;
   font-size: 18px;
 }
 
-#show-after-profile-click .v-profile {
+#profile-dropdown .v-profile {
   margin-top: 8px;
   font-size: 14px;
   display: block;
   font-weight: 400;
+  cursor: pointer;
+}
+
+#profile-dropdown .my-saves,
+#profile-dropdown .log-out {
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+#profile-dropdown .log-out {
+  color: var(--light-green);
 }
 
 /* Content Styling */

@@ -211,6 +211,32 @@ let searchText = document.getElementById("filter");
 //     });
 // });
 
+// code for authenticated header
+// login.addEventListener("click", function() {
+//     Array.from(hideAfterLogin).forEach(
+//         (element) => (element.style.display = "none")
+//     );
+//     Array.from(showAfterLogin).forEach(
+//         (element) => (element.style.display = "flex")
+//     );
+//     Array.from(changeAfterLogin).forEach(
+//         (element) => (element.innerHTML = "Read Documentation")
+//     );
+// });
+
+// // code for authenticated header
+// login.addEventListener("click", function() {
+//     Array.from(hideAfterLogin).forEach(
+//         (element) => (element.style.display = "none")
+//     );
+//     Array.from(showAfterLogin).forEach(
+//         (element) => (element.style.display = "flex")
+//     );
+//     Array.from(changeAfterLogin).forEach(
+//         (element) => (element.innerHTML = "Read Documentation")
+//     );
+// });
+
 // code for support page drop down
 window.addEventListener("click", function(event) {
     if (supportDropDown.style.display == "none") {
@@ -279,6 +305,15 @@ Array.from(sortByNewText).forEach((NewSort) => {
         sortByText.innerHTML = NewSort.innerHTML;
     });
 });
+
+// // code for search result display
+// searchBar.style.backgroundImage.addEventListener("click", function() {
+//     searchBar.style.backgroundImage.src = "";
+// });
+// searchBar.addEventListener("keyup", function() {
+//     var filter = searchBar.value;
+//     searchText.innerHTML = filter;
+// });
 
 // code for slider effect using owlcarousel
 $(".owl-carousel").owlCarousel({

@@ -56,7 +56,7 @@
             >
               <a href="{% url 'documentation' %}">Documentation</a>
             </li>
-            <li class="#">
+            <li class="{% active_link 'support' strict=True %} nav-list">
               <span id="support">
                 Support
                 <img
@@ -65,18 +65,8 @@
                 />
               </span>
               <div id="support-dropdown">
-                <p>
-                  <a
-                    href="{% url 'about' %}"
-                    class="{% active_link 'support' strict=True %} nav-list support-link"
-                    >About Us</a
-                  >
-                </p>
-                <p>
-                  <a href="{% url 'support' %}" class="support-link"
-                    >Contact Us</a
-                  >
-                </p>
+                <p><a class="support-link">About Us</a></p>
+                <p><a class="support-link">Contact Us</a></p>
               </div>
             </li>
             <input
@@ -90,26 +80,15 @@
           </ul>
         </div>
         {% if user.is_authenticated %}
+
         <div class="header-item show-after-login">
           {% if user.user_image %}
           <img
-            id="profile-img-drop-down"
+            id="profile-img-nav-bar"
             class="profile-img"
-            src="{{user.user_image.url}}"
+            src="{{ user.user_image.url }}"
             alt=""
           />
-          <p class="name">
-            {{user.username}}
-            <a href="{% url 'profile' %}" class="v-profile">View profile</a>
-          </p>
-          <div style="clear: both" class="clearfloat"></div>
-          <p class="my-saves">
-            <img src="#" class="profile-img" alt="" /><i
-              class="fa-thin fa-bookmark"
-            ></i
-            ><a href="#">My Saves</a>
-          </p>
-          <p class="log-out"><a href="{% url 'logout' %}">Log Out</a></p>
           {% else %}
           <img
             id="profile-img-nav-bar"
@@ -118,18 +97,38 @@
             alt=""
           />
           {% endif %}
-          <span><i id="profile-click" class="fa-thin fa-angle-down"></i></span>
-          <div id="show-after-profile-click" class="profile-dropdown">
+          <span
+            ><img
+              id="profile-click"
+              class="dropdown-icon"
+              src="{% static 'images/dropdown-black.png' %}"
+          /></span>
+          <div id="profile-dropdown">
+            {% if user.user_image %}
             <img
-              id="profile-img-drop-down"
+              id="profile-img-nav-bar"
               class="profile-img"
-              src="{{user.user_image.url}}"
+              src="{{ user.user_image.url }}"
               alt=""
             />
-            <a href="{% url 'profile' %}" class="name">
-              {{user.username}} <span class="v-profile">View profile</span>
-            </a>
-            <a href="{% url 'logout' %}"> logout</a>
+            {% else %}
+            <img
+              id="profile-img-nav-bar"
+              class="profile-img"
+              src="https://res.cloudinary.com/dc29czhf9/image/upload/v1659818233/media/default2_zxexum.png"
+              alt=""
+            />
+            {% endif %}
+            <p class="name">
+              {{user.username}}
+              <a href="{% url 'profile' %}" class="v-profile">View profile</a>
+            </p>
+            <div style="clear: both" class="clearfloat"></div>
+            <p class="my-saves">
+              <img src="" alt="" /><i class="fa-thin fa-bookmark"></i
+              ><a>My Saves</a>
+            </p>
+            <p class="log-out"><a href="{% url 'logout' %}">Log Out</a></p>
           </div>
         </div>
         {% else %}
@@ -139,7 +138,7 @@
               <a href="{% url 'login' %}">Login</a>
             </li>
             <li id="register" class="btn small-btn">
-              <a href="{% url 'register' %}">Register</a>
+              <a href="#">Register</a>
             </li>
           </ul>
         </div>
@@ -178,11 +177,7 @@
           <p class="footer-item-title">Support</p>
           <ul>
             <li>
-              <a
-                href="{% url 'about' %}"
-                class="{% active_link 'support' strict=True %} nav-list footer-links"
-                >About Us</a
-              >
+              <a href="{% url 'about' %}" class="footer-links">About Us</a>
             </li>
             <li><a href="#" class="footer-links">FAQ</a></li>
             <li><a href="#" class="footer-links">Contact Us</a></li>
@@ -207,13 +202,7 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <{% block scripts %} {% endblock %} {% if user.is_authenticated %}
-
-    <script src="{% static 'js/uscript.js' %}"></script>
-    {% else %}
-    <script src="{% static 'js/script.js' %}">
-      </>
-          {% endif %} src="{% static 'js/script.js' %}">
-    </script>
+    {% block scripts %} {% endblock %}
+    <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>
