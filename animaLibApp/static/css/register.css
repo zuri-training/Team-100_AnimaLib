@@ -8,19 +8,22 @@
 
 body {
   background: #f8f8f8;
-  background-size: 300px, 300px, 150px, 150px;
+}
+.main_box {
+  background-size: 300px, 300px, 300px, 300px;
   background-image: url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659648858/register_shape_1_zgzltn.png"),
     url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659648868/register_shape_2_p16knh.png"),
     url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659821605/register_left_blob_wpe5cx.png"),
     url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659821604/register_right_blob_y01hfn.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top left, 30% 100%, bottom left, bottom right;
+  width: 100%;
 }
 
 section {
   width: 90%;
-  margin-top: 121px;
-  margin-bottom: 121px;
+  padding-top: 121px;
+  padding-bottom: 121px;
   display: flex;
   justify-content: center;
 }

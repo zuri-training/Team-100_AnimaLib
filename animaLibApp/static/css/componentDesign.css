@@ -17,6 +17,7 @@
   background: rgba(31, 39, 130, 0.05);
   border-radius: 4px;
   padding: 10px 0px 10px 10px;
+<<<<<<< HEAD
 }
 
 .customise-button {
@@ -37,16 +38,22 @@
   gap: 8px;
   width: 204px;
   height: 48px;
+=======
+>>>>>>> 28602e4d1849e33bf671a307d69ecb9e25cc3c19
 }
 .anime-button {
   background: #1f2782;
   color: #f8f8f8;
+<<<<<<< HEAD
   cursor: pointer;
   border: none;
+=======
+>>>>>>> 28602e4d1849e33bf671a307d69ecb9e25cc3c19
   border-radius: 8px;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +63,14 @@
   gap: 8px;
   width: 204px;
   height: 48px;
+=======
+  font-size: 12px;
+  letter-spacing: 0.25px;
+  width: 120px;
+  height: 38px;
+  left: 605px;
+  top: 0px;
+>>>>>>> 28602e4d1849e33bf671a307d69ecb9e25cc3c19
 }
 
 .videoContent {

@@ -22,7 +22,7 @@ class UserAdminConfig(UserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('username', 'email', 'name','user_image','password1', 'password2', 'is_staff', 'is_superuser', 'is_active'),}
+            'fields': ('id', 'username', 'email', 'name','user_image','password1', 'password2', 'is_staff', 'is_superuser', 'is_active'),}
         ),
     )
 
@@ -30,3 +30,6 @@ register = admin.site.register
 
 register(newUser, UserAdminConfig)
 register(Post); register(Comment)
+register(Like)
+register(saved_animation)
+register(animations)
