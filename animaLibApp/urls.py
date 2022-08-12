@@ -3,10 +3,11 @@ from .views import *
 
 urlpatterns = [
     path('', index, name='index'),
-    path('signin/',log_in, name='login'),
+    path('signin/', log_in, name='login'),
     path('logout/', log_out, name='logout'),
     path('forgotpassword/', forgotpassword, name='forgotpassword'),
-    path('resetpassword/<uidb64>/<token>/', password_reset, name='resetpassword'),
+    path('resetpassword/<uidb64>/<token>/',
+         password_reset, name='resetpassword'),
     path('success/', success, name='success'),
 
     path('signup/', register, name='register'),
@@ -14,7 +15,8 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('documentation/', documentation, name='documentation'),
     path('documentation/introduction/', introduction, name='introduction'),
-    path('documentation/showAnimations/', showAnimations, name='showAnimations'),
+    path('documentation/showAnimations/',
+         showAnimations, name='showAnimations'),
     path('support/', contact, name='support'),
     path('profile/', profile, name='profile'),
     path('about/', about_us, name='about'),
@@ -22,4 +24,5 @@ urlpatterns = [
     path('post/<int:pk>/edit', post_update, name='post_update'),
     path('post/<int:pk>/delete', post_remove, name='post_remove'),
     path('activate/<uidb64>/<token>/', verification, name='activate'),
+    path('generator/', generator, name='generator'),
 ]

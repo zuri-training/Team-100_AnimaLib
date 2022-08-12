@@ -2,7 +2,7 @@
 <link href="{% static 'css/componentDesign.css' %}" rel="stylesheet" />
 <link href="{% static 'css/design.css' %}" rel="stylesheet" />
 <link href="{% static 'css/layout.css' %}" rel="stylesheet" />
-<link href="{% static 'css/animation.css' %}" rel="stylesheet" />
+<link href="{% static 'css/animation.css'%" rel="stylesheet" />
 <link href="{% static 'css/generator.css' %}" rel="stylesheet" />
 {% endblock %} {% block content %}
 <div class="maincontentContainer container">
@@ -18,7 +18,7 @@
                 <div class="section-contentHolder">
                     <div class="sectionHeaderHolder">
                         <!-- To insert generator page, insert animo and Animation generation header divs here, delete span -->
-                        <span class="anime-mainHeader">
+                        <span>
                             <div class="generatorheaders">
                                 <h4>Animo</h4>
                                 <h1>Animation Generator</h1>
@@ -42,122 +42,10 @@
         background-repeat: no-repeat;
         background-size: 254px 136px;
         background-position: center; -->
-        ">
         <!-- logo image content...... -->
-        <div class="logo-contentContainer">
-            <!-- For code generator insert div containing form, headers(options and output), up to hiddencode div here  -->
-            <div class="generatorpage">
-                <!-- Create Animation Menu -->
-                <!-- <nav class="animationmenu"> -->
-                <div class="animationgrp1">
-                    <button type="button" class="moveupnav" id="navup">Move up</button>
-                    <button type="button" class="movedownnav" id="navdown">Move down</button>
-                    <button type="button" class="moverightnav">Move right</button>
-                    <button type="button" class="moveleftnav">Move left</button>
-                    <button type="button" class="blinknav">Blink</button>
-                </div>
-                <div class="animationgrp2">
-                    <button type="button" class="bouncenav">Bounce</button>
-                    <button type="button" class="fadenav">Fade</button>
-                    <button type="button" class="flipnav">Flip</button>
-                    <button type="button" class="swingnav">Swing</button>
-                    <button type="button" class="tadanav">Tada</button>
-                </div>
-                <!-- </nav> -->
-                <!-- Create wrapper for input, code editor and output area -->
-                <div class="optionsoutputcontainer">
-                    <!-- wrapper for input form and output area side by side -->
-                    <div class="optionsoutputheaders">
-                        <div class="options">
-                            <h2>Options</h2>
-                        </div>
-                        <div class="output">
-                            <h2>Output</h2>
-                        </div>
-                    </div>
-                    <div class="input-output">
-                        <div class="inputvar">
-                            <form name="codeinput" method="post">
-                                <section>
-                                    <label for="name">Name</label>
-                                    <input id="namefield" type="text" value="My custom animation" name="name"
-                                        placeholder="Example: My Bounce" />
-
-                                    <label for="object">Object</label>
-                                    <select name="object" id="objectfield">
-                                        <option value="box">Box</option>
-                                        <!-- <option value="ball">Ball</option> -->
-                                    </select>
-                                    <!-- <input id="object" type="text" value="" name="object" /> -->
-                                </section>
-
-                                <section class="wholeduration">
-                                    <div class="duration">
-                                        <label for="duration">Duration</label>
-                                        <input id="durationfield" type="number" value="2" name="duration" />
-                                    </div>
-
-                                    <div class="secondswrapper">
-                                        <!-- <label for="seconds">seconds</label> -->
-                                        <select name="seconds" id="seconds">
-                                            <option value="seconds">Seconds</option>
-                                            <!-- <option  value="minutes" >Minutes</option> -->
-                                        </select>
-                                    </div>
-                                </section>
-
-                                <section class="wholeduration">
-                                    <div class="delay">
-                                        <label for="delay">Delay</label>
-                                        <input id="delayfield" type="number" value="0" name="delay" />
-                                    </div>
-
-                                    <div class="secondswrapper">
-                                        <!-- <label for="seconds">seconds</label> -->
-                                        <select name="seconds" id="seconds">
-                                            <option value="seconds">Seconds</option>
-                                            <!-- <option  value="minutes" >Minutes</option> -->
-                                        </select>
-                                    </div>
-                                </section>
-
-                                <section>
-                                    <div>
-                                        <label for="iterationcount">Iteration count</label>
-                                        <input id="iterationcountfield" type="number" value="2" name="iterationcount" />
-                                    </div>
-                                    <div class="infinitecontainer">
-                                        <input class="infinite" id="infinite" checked="checked" type="checkbox" value=""
-                                            name="infinite" />
-                                        <label for="infinite">Infinite iteration</label>
-                                    </div>
-                                </section>
-                            </form>
-                        </div>
-                        <div class="outputresult">
-                            <div class="result" id="animatedobject"></div>
-                        </div>
-                    </div>
-                    <!-- create button container -->
-                    <div class="buttoncontainer">
-                        <button class="generatebutton">Generate Code</button>
-                    </div>
-                    <!-- create code editor area -->
-                    <div class="html-code" id="html-code">
-                        <div class="hiddencode" id="hiddencode"></div>
-                        <div class="save" id="save">
-                            <p>Download
-                            <div><img src="downloadicon.png" width="25px" class="downloadlogo" /></div>
-                            </p>
-                            <p>Save
-                            <div><img src="saveicon.png" width="25px" class="savelogo" /></div>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <!-- <div class="logo-contentContainer"> -->
+        <!-- For code generator insert div containing form, headers(options and output), up to hiddencode div here  -->
+        <!-- </div> -->
 
         <!-- row 3 Amino content -->
         <div class="animeRow">
@@ -165,10 +53,122 @@
             <div class="section-content">
                 <!-- section content holder -->
                 <div class="section-contentHolder">
-                    <div class="sectionHeaderHolder">
+                    <!-- <div class="sectionHeaderHolder">
                         <span class="anime-contentHeader">Animo</span>
-                    </div>
+                    </div> -->
                     <!-- Insert animation generator copy inside this section contentbody div -->
+                    <div class="generatorpage">
+                        <!-- Create Animation Menu -->
+                        <!-- <nav class="animationmenu"> -->
+                        <div class="animationgrp1">
+                            <button type="button" class="moveupnav" id="navup">Move up</button>
+                            <button type="button" class="movedownnav" id="navdown">Move down</button>
+                            <button type="button" class="moverightnav">Move right</button>
+                            <button type="button" class="moveleftnav">Move left</button>
+                            <button type="button" class="blinknav">Blink</button>
+                        </div>
+                        <div class="animationgrp2">
+                            <button type="button" class="bouncenav">Bounce</button>
+                            <button type="button" class="fadenav">Fade</button>
+                            <button type="button" class="flipnav">Flip</button>
+                            <button type="button" class="swingnav">Swing</button>
+                            <button type="button" class="tadanav">Tada</button>
+                        </div>
+                        <!-- </nav> -->
+                        <!-- Create wrapper for input, code editor and output area -->
+                        <div class="optionsoutputcontainer">
+                            <!-- wrapper for input form and output area side by side -->
+                            <div class="optionsoutputheaders">
+                                <div class="options">
+                                    <h2>Options</h2>
+                                </div>
+                                <div class="output">
+                                    <h2>Output</h2>
+                                </div>
+                            </div>
+                            <div class="input-output">
+                                <div class="inputvar">
+                                    <form name="codeinput" method="post">
+                                        <section>
+                                            <label for="name">Name</label>
+                                            <input id="namefield" type="text" value="My custom animation" name="name"
+                                                placeholder="Example: My Bounce" />
+
+                                            <label for="object">Object</label>
+                                            <select name="object" id="objectfield">
+                                                <option value="box">Box</option>
+                                                <!-- <option value="ball">Ball</option> -->
+                                            </select>
+                                            <!-- <input id="object" type="text" value="" name="object" /> -->
+                                        </section>
+
+                                        <section class="wholeduration">
+                                            <div class="duration">
+                                                <label for="duration">Duration</label>
+                                                <input id="durationfield" type="number" value="2" name="duration" />
+                                            </div>
+
+                                            <div class="secondswrapper">
+                                                <!-- <label for="seconds">seconds</label> -->
+                                                <select name="seconds" id="seconds">
+                                                    <option value="seconds">Seconds</option>
+                                                    <!-- <option  value="minutes" >Minutes</option> -->
+                                                </select>
+                                            </div>
+                                        </section>
+
+                                        <section class="wholeduration">
+                                            <div class="delay">
+                                                <label for="delay">Delay</label>
+                                                <input id="delayfield" type="number" value="0" name="delay" />
+                                            </div>
+
+                                            <div class="secondswrapper">
+                                                <!-- <label for="seconds">seconds</label> -->
+                                                <select name="seconds" id="seconds">
+                                                    <option value="seconds">Seconds</option>
+                                                    <!-- <option  value="minutes" >Minutes</option> -->
+                                                </select>
+                                            </div>
+                                        </section>
+
+                                        <section>
+                                            <div>
+                                                <label for="iterationcount">Iteration count</label>
+                                                <input id="iterationcountfield" type="number" value="2"
+                                                    name="iterationcount" />
+                                            </div>
+                                            <div class="infinitecontainer">
+                                                <input class="infinite" id="infinite" checked="checked" type="checkbox"
+                                                    value="" name="infinite" />
+                                                <label for="infinite">Infinite iteration</label>
+                                            </div>
+                                        </section>
+                                    </form>
+                                </div>
+                                <div class="outputresult">
+                                    <div class="result" id="animatedobject"></div>
+                                </div>
+                            </div>
+                            <!-- create button container -->
+                            <div class="buttoncontainer">
+                                <button class="generatebutton">Generate Code</button>
+                            </div>
+                            <!-- create code editor area -->
+                            <div class="html-code" id="html-code">
+                                <div class="hiddencode" id="hiddencode"></div>
+                                <div class="save" id="save">
+                                    <p>Download
+                                    <div><img src="downloadicon.png" width="25px" class="downloadlogo" /></div>
+                                    </p>
+                                    <p>Save
+                                    <div><img src="saveicon.png" width="25px" class="savelogo" /></div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                     <div class="sectionContentBody">
                         <div class="copywrite">
                             <h3>Animation Generator Documentation</h3>
@@ -411,3 +411,4 @@
     </div>
 </div>
 <script src="{% static 'js/generator.js' %}"></script>
+{% endblock %}
