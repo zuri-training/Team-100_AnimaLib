@@ -110,7 +110,9 @@ function showAnimeDetails() {
         if (animations && animations.length) {
             animations.forEach(val => {
                 detailsStr += `<!-- Animation content 1 -->
-                            <div class="animeRow">
+                            <div class="animeRow" style="
+                            display: flex;
+                            flex-direction: column;">
                                 <!-- Animation content -->
                                 <div class="animationContent">
                                     <h4>${val.name}</h4>
@@ -118,8 +120,8 @@ function showAnimeDetails() {
                                 </div>
                         
                                 <!-- Display area -->
-                                <div class="anime-displayarea">
-                                    <div class="sliderContainer d-flex" >
+                                <div class="anime-displayarea" style="margin: 0px 0px; margin-top: 16px; width: 792px;">
+                                    <div class="sliderContainer" style="margin-left: 0px;" >
                                         <div class="slideMain" id="slideMain${val.id}" style="display:none"> 
                                         <!-- content for main slider here -->
                                         </div>
@@ -147,6 +149,35 @@ function showAnimeDetails() {
                                         </div>
                                     </div>
                                 </div>
+
+                                <div
+                                class="customise d-flex justify-content-between"
+                                style="
+                                  display: flex;
+                                  justify-content: space-between;
+                                  align-items: center;
+                                "
+                              >
+                                <span class="d-flex justify-content-end">
+                                  <button class="customise-button">
+                                    <span class="download-text">Customise animation</span>
+                                  </button>
+                                </span>
+                        
+                                <div class="customise-icon">
+                                  <img
+                                    src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660273140/thumbs_up_icon_wfjv7f.jpg"
+                                    width="32px"
+                                    alt=""
+                                  />
+                                  <img
+                                    src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660273141/Thumbs_down_icon_mzpdco.jpg"
+                                    width="32px"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                                
                             </div>`;
             })
 
