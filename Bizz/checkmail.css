@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8f8f8;
+  background-size: 130px, 130px, 150px, 150px;
+  background-image: url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813476/login_left_blobs_k8yobf.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813477/login_right_blobs_cy94zh.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813480/bottom_left_blobs_zkbchn.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813480/bottom_right_blobs_bepgpl.png");
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 10% -60%, 90% -60%, 0% 520px, 100% 520px;
+}
+
+.login-card {
+  border-radius: 16px;
+  background: #edeef2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* text-align: center; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 592px;
+  height: 520px;
+}
+
+h4 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 72px;
+  margin-bottom: 16px;
+}
+
+.form-check-label {
+  margin-right: 200px;
+  width: 100%;
+}
+
+.para-text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #121212;
+  margin-top: 16px;
+  width: 416px;
+}
+
+.bottom-text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  text-align: center;
+  color: #121212;
+}
+
+a {
+  text-decoration: none;
+  color: #1a216c;
+}
+
+.paragraph {
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* justify-content: center; */
+  /* padding: 30px 0 0px 0; */
+}
+
+.center {
+  margin-top: 24px;
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-button {
+  background-color: #1f2782;
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  height: 48px;
+  width: 432px;
+  /* padding: 12px, 40px, 12px, 40px; */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.15px;
+  padding: 12px 40px;
+  gap: 8px;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 24px;
+}
+.back-button i {
+  color: #292d32;
+  margin-right: 8px;
+}
+.back-button a {
+  text-decoration: none;
+  color: #121212;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #f8f8f8;
+    background-image: none;
+  }
+  .login-card {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 600px;
+    width: 400px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .bottom-text {
+    font-size: 16px;
+  }
+
+  input {
+    width: 300px;
+    /* width: 100%; */
+    height: 48px;
+  }
+
+  .form-button {
+    width: 300px;
+    /* width: 90%; */
+    height: 48px;
+  }
+
+  .form-check-label {
+    margin-right: 75px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: #f8f8f8;
+    background-image: none;
+  }
+
+  .login-card {
+    border-radius: 16px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 600px;
+    width: 292px;
+  }
+
+  input {
+    width: 232px;
+    /* width: 100%; */
+    height: 48px;
+  }
+
+  .bottom-text {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .para-text {
+    font-size: 14px;
+  }
+
+  .form-check-label {
+    margin-right: 80px;
+  }
+
+  .main-form {
+    /* display: flex; */
+    margin-left: 0px;
+  }
+
+  .form-button {
+    width: 232px;
+    /* width: 90%; */
+    height: 48px;
+  }
+
+  .form-check-label {
+    margin-right: 20px;
+  }
+}
