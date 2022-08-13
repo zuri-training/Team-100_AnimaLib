@@ -89,3 +89,22 @@
   height: 90%;
   margin: 0 auto;
 }
+.link22 {
+  color: #157a6e;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+}
+a {
+  color: #157a6e;
+}
+.previous_box {
+  text-align: left;
+}
+.pages {
+  text-align: center;
+}
+
+.next_box {
+  text-align: right;
+}

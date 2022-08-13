@@ -9,7 +9,7 @@
 {% block content %}
 <div class="savetitle3" style="margin-top: 170px;">
                 <div class="mysavestitle1">
-                    <p>My Saves 5</p>
+                    <p>My Saves {{get_all}}</p>
                 </div>
                 <div class="searchicon2">
                     <input id="search-input" class="hide search-bar" type="search" name="search-animation" maxlength="10" placeholder="Search Saves">
@@ -18,52 +18,38 @@
     <div class="content-holder2">
             <div class="omega">
                 <div class="picholder">
-                    <img src="" alt="Profile Picture">
+                    <img src="{{user.user_image.url}}" alt="Profile Picture">
                 </div>
                 <div class="profilepicname">
-                    <p>Mimi Rastamzah</p>
+                    <p>{{user.username | capfirst}}</p>
                 </div>
                 <div class="editpiclink">
                     <div class="edit1"><img class="pencilicon1" src="https://i.postimg.cc/mDsq7pHK/Pencil.png" alt="edit icon"></div>
-                    <div class="edit23"><button style="border: none; color: black; opacity: none; background-color: #D5D5D5;">Edit Profile</button></div>
+                    <div class="edit23">
+                      <a href="{% url 'profile' %}" style="cursor:pointer"><button style="cursor:pointer;border: none; color: black; opacity: none; background-color: #D5D5D5;">Edit Profile</button></a></div>
                 </div>
             </div>
 
             <div class="bigbox1">
+              {% if anims %}
+                {% for anim in all_animations %}
                     <div class="bigbox2">
                       <div class="line1"></div>
                       <div class="smallbox12">
                         <div class="imgicon">
-                          <p class="subtitle1">Bounce</p>
+                          <p class="subtitle1">{{anim.animation.name | upper}}</p>
                           <button style='border: none; background-color: rgba(31, 39, 130, 0);;'; type="button"> <img style="background-color: none; width: 24px; height: 24px; align-content: space-between;" src="https://i.postimg.cc/tCGBc87M/close-icon-my-saves-page.png" alt="Escape"></button>
                         </div>
-                        <p class="view1">View in Documentation</p>
+                        <p class="view1"><a href='#'>View in Documentation</a></p>
                       </div>
                     </div>
-                  <div class="bigbox2">
-                      <div class="line1"></div>
-                      <div class="smallbox12">
-                        <div class="imgicon">
-                          <p class="subtitle1">FADE IN</p>
-                          <button style='border: none; background-color: rgba(31, 39, 130, 0);;'; type="button"> <img style="background-color: none; width: 24px; height: 24px; align-content: space-between;" src="https://i.postimg.cc/tCGBc87M/close-icon-my-saves-page.png" alt="Escape"></button>
-                        </div>
-                        <p class="view1">View in Documentation</p>
-                      </div>
-                    </div>
-                  <div class="bigbox2">
-                    <div class="line1"></div>
-                    <div class="smallbox12">
-                        <div class="imgicon">
-                          <p class="subtitle1">FADE OUT</p>
-                          <button style='border: none; background-color: rgba(31, 39, 130, 0);;'; type="button"> <img style="background-color: none; width: 24px; height: 24px; align-content: space-between;" src="https://i.postimg.cc/tCGBc87M/close-icon-my-saves-page.png" alt="Escape"></button>
-                        </div>
-                        <p class="view1">View in Documentation</p>
-                      </div>
-                    </div>
+                {% endfor %} {% endif %}
+                   {% if all_animations.has_next %}
                     <div class="link22">
-                    <a href="#">View All</a>
+                    <a href="{% url 'allsave' %}">View All</a>
                     <img style="height: 13px; width: 16.83px;" src="https://i.postimg.cc/T1hBX8Gn/arrow-right.jpg" alt="Arrow Left">
                     </div>
+                    {% endif %}
             </div>
         </div>
     </div>

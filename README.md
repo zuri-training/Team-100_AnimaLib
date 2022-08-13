@@ -1,7 +1,7 @@
 # <p align='center'>Animation Library </p>
 
 <p align ='center'>
-  <img src="https://res.cloudinary.com/dc29czhf9/image/upload/v1659106833/animo_logo_zecrf3.png" width="200" height="100">
+  <img src="https://res.cloudinary.com/dc29czhf9/image/upload/v1660175087/image/logo_tohji9.png" width="200" height="100">
 </p>
 This project provides an easy to use guide to developers, precisely beginners, on how to add animations to the several elements on their webpage(s). In essence, we try to avoid the hassle of a developer trying to think critically on how they can create or add animations to their webpage.
 

@@ -6,6 +6,7 @@ main {
   width: 992px;
   height: 780px;
   margin: 120px auto;
+  margin-top: 30px;
   padding-left: 40px;
   padding-right: 40px;
   background-color: #e0e1eb;
@@ -45,6 +46,25 @@ main {
   color: #121212;
 }
 
+.back_btn a {
+  text-decoration: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #3faeae;
+  padding: 0px 170px 0px 120px;
+}
+
+a {
+  color: #3faeae;
+}
+
+.back_btn {
+  margin: 100px 100px 0px 80px;
+}
+
 .form-group input[type="text"],
 .form-group input[type="password"],
 .form-group input[type="email"] {
@@ -55,6 +75,9 @@ main {
   border-radius: 5px;
   border: 2px solid #85868c;
   outline: none;
+}
+.form-group input[type="password"] {
+  margin: 10px auto;
 }
 
 #email_update,
@@ -71,6 +94,10 @@ main {
   font-weight: 500;
   font-size: 14px;
   line-height: 32px;
+}
+
+#password_update {
+  margin-top: -5px;
 }
 
 .form-group input[type="text"]:focus {
@@ -141,6 +168,10 @@ input[type="submit"] {
   font-size: 14px;
   line-height: 16px;
   color: #85868c;
+  margin: 5px auto;
+}
+.form-group #email {
+  margin: 10px auto;
 }
 
 #profile_img {
@@ -167,7 +198,8 @@ input[type="submit"] {
 
 .form-group .input_value #img img {
   width: 100%;
-  padding: 10px;
+  height: 100%;
+  padding: 4px;
 }
 
 label {

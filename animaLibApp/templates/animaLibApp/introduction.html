@@ -7,6 +7,24 @@
 <link href="{% static 'css/animation.css' %}" rel="stylesheet" />
 {% endblock %}
  {% block content %}
+ {% if messages %} 
+          <div class='showpop'>
+          <div class="showpopup">
+                        <div class="close_icon">&times</div>
+
+                  <div class="popup_content">
+          {% for message in messages %}
+            <p>{{ message}}</p>
+
+          {% endfor %}   
+          <center><a href="{% url 'register' %}" class="close_btn_register">Register</a></center>
+              <p>Already have and account? <a href="{% url 'login' %}">Log in</a></p>
+            </div>
+            
+                </div>
+                
+          </div>
+          {% endif %}
 <div class="maincontentContainer container">
   {% include 'common/sideNav.html' %}
 
@@ -125,7 +143,7 @@
 
               <span class="d-flex justify-content-end">
                 <button class="anime-button" style="margin-left: 404px;">
-                  <span class="download-text">Download Library</span>
+                  <a href="{% url 'download' %}" class="download-text">Download Library</a>
                   <span class="btn-icon"
                     ><img
                       src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660245112/received_a4oula.png"
@@ -212,7 +230,7 @@
               justify-content: center;"
             >
               <span>
-                <a href="./Introduction.html" style="color: #328B8B;">
+                <a href="{% url 'introduction' %}" style="color: #328B8B;">
                   <span>
                     <img
                       src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660220326/arrow-left_kof3hb.jpg"
@@ -231,7 +249,7 @@
             class="intro-button d-flex"
           >
             <span>
-              <a href="./Introduction.html" style="color: #328B8B;">
+              <a href="{% url 'showAnimations' %}" style="color: #328B8B;">
                 <span> Animations</span>
   
                 <span>
