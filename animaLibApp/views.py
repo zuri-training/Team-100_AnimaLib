@@ -372,34 +372,6 @@ def documentation(request):
 	template_name = "animaLibApp/documentation.html"
 
 	return render(request, template_name)
-	# fetch all the records from the Post table if the table is not empty.
-	if Post.objects.all().count() > 0:
-		get_posts = get_list_or_404(Post.objects.all())
-		posts = get_posts
-	else:
-		posts = {}
-
-	if request.user.is_authenticated:
-
-		if request.method == 'POST':
-			comment_form = CommentForm(data=request.POST)
-			if comment_form.is_valid():
-
-				comment_form = comment_form.save(commit=False)
-				comment_form.author = request.user
-				comment_form.created_date = timezone.now()
-				comment_form.save()
-
-				return redirect('documentation')
-		else:
-			comment_form = CommentForm
-
-	else:
-		comment_form = CommentForm
-
-	data = {'posts': posts, 'comment_form': comment_form}
-
-	return render(request, template_name, data)
 
 # @login_required
 
@@ -488,10 +460,12 @@ def introduction(request):
 
 def showAnimations(request):
 	template_name = "animaLibApp/showAnimations.html"
+	posts = None
 
-	posts = get_list_or_404(Post.objects.all())
-	posts.reverse()
-	# print(type(posts))
+	if Post.objects.all().count() > 0:
+		posts = get_list_or_404(Post.objects.all())
+		posts.reverse()
+		# print(type(posts))
 
 	if request.user.is_authenticated:
 		print("authenticated")
@@ -517,7 +491,6 @@ def showAnimations(request):
 	data = {'posts':posts, 'comment_form': comment_form}
 
 	return render(request, template_name, data)
-	return render(request, 'animaLibApp/introduction.html')
 
 
 def about_us(request):

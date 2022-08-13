@@ -63,7 +63,7 @@
         <div class="container1">
           <div class="">
             <div class="subcontainer2">
-              <div class="icon">{{ post.user_image.url }}</div>
+              <img src="{{ post.author.user_image.url }}" class="icon">
 
               <div class="subcontainer2text">{{ post.published_date | date }} at {{ post.published_date | time }}</div>
 
