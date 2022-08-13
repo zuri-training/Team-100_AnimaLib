@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail, get_connection, EmailMultiAlternatives
 from django.conf import settings
+from django.core.paginator import Paginator
 from django.template.loader import render_to_string
 from django.contrib import messages
 from django.contrib.messages import constants as cs
@@ -80,10 +81,9 @@ def log_in(request):
         # get the password.
         password = request.POST.get('password', '')
         
-        get_user = newUser.objects.filter(username=username).first()
-        print(get_user.username is not None) 
-        
-        if get_user.username is not None:
+        count_user = newUser.objects.filter(username=username).count()
+        if count_user > 0:
+            get_user = newUser.objects.filter(username=username).first()
             if get_user.is_active == False:
                 messages.add_message(request, cs.ERROR, 'Your account is not verified, please verify your account by clicking on the link in the email we sent you.')
                 return redirect('login')
@@ -136,11 +136,10 @@ def register(request):
                 # user.user_image = "null.png"
                 user.save()
                 # send an email to the user to verify their account.
-                messages.add_message(request, messages.SUCCESS, 'Account was successfully created!')
                 if send_verification_email(request, user, email, user):
-                    messages.add_message(request, messages.SUCCESS, 'A verification email has been sent to your account')
+                    messages.add_message(request, messages.SUCCESS, 'Account was successfully created, and a verification email has been sent to your account')
                 else:
-                    messages.add_message(request, messages.ERROR, 'An error occured while sending the verification email, please contact the admin. Also make sure your email is correct')
+                    messages.add_message(request, messages.ERROR, 'Account was successfully created!, but an error occured while sending the verification email, please contact the admin. Also make sure your email is correct')
                 return redirect('login')
 
         return render(request, 'animaLibApp/register.html', {'form': form})
@@ -203,8 +202,8 @@ def download_library(request):
         response['Content-Disposition'] = 'attachment; filename=animalibt100.zip'
         return response
     else:
-        messages.add_message(request, cs.ERROR, 'Please create an account to download the library!')
-        return redirect('register')
+        response = messages.add_message(request, cs.ERROR, 'you must be registered to download the library')
+        return response
   
 # for the profile page of the website
 @login_required(login_url='/signin')
@@ -486,6 +485,45 @@ def mysaves(request):
     if get_all == 0:
         return render(request,'animaLibApp/mysave1.html', {'get_all': get_all})
     else:
-        return render(request, 'animaLibApp/mysave2.html',{'get_all': get_all})
+        get_all_animations = saved_animation.objects.filter(user=get_user)
+        all_saved_ani = saved_animation.objects.filter(user=get_user)
+        # we want to load the first page.
+        page = request.GET.get('page', 1)
+        paginator = Paginator(get_all_animations, 3)
+        
+        try:
+            get_all_animations = paginator.page(page)
+        except PageNotAnInteger:
+            get_all_animations = paginator.page(1)
+        except EmptyPage:
+            get_all_animations = paginator.page(paginator.num_pages)
+            
+        return render(request, 'animaLibApp/mysave2.html',{'get_all': get_all, 'all_animations': get_all_animations,
+                                                           'anims':all_saved_ani})
+    
+    
+@login_required(login_url='/signin')
+def allsave(request):
+    get_user = request.user
+    get_all = saved_animation.objects.filter(user=get_user).count()
+    if get_all == 0:
+        return redirect('mysaves')
+    else:
+        get_all_animations = saved_animation.objects.filter(user=get_user)
+        all_saved_ani = saved_animation.objects.filter(user=get_user)
+        # we want to load the first page.
+        page = request.GET.get('page', 1)
+        # show five animations per page.
+        paginator = Paginator(get_all_animations, 5)   
+        try:
+            get_all_animations = paginator.page(page)
+        except PageNotAnInteger:
+            get_all_animations = paginator.page(1)
+        except EmptyPage:
+            get_all_animations = paginator.page(paginator.num_pages)
+            
+        return render(request, 'animaLibApp/mysaves.html',{'get_all': get_all, 'all_animations': get_all_animations,
+                                                           'anims':all_saved_ani})
+        
     
     

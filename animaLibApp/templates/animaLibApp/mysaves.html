@@ -10,13 +10,15 @@
 <div class="saves-title" style="margin-top: 170px">
   <p>My Saves</p>
 </div>
+
 <div class="bigbox1" style="margin-bottom: 170px">
   <div class="biggerbox1">
+    {% if anims %} {% for anim in all_animations %}
     <div class="bigbox2">
       <div class="line1"></div>
       <div class="smallbox12">
         <div class="imgicon">
-          <p class="subtitle1">Bounce</p>
+          <p class="subtitle1">{{anim.animation.name | upper}}</p>
           <button
             style="border: none; background-color: rgba(31, 39, 130, 0)"
             ;
@@ -34,133 +36,22 @@
             />
           </button>
         </div>
-        <p class="view1">View in Documentation</p>
+        <p class="view1"><a href="#">View in Documentation</a></p>
       </div>
     </div>
-    <div class="bigbox2">
-      <div class="line1"></div>
-      <div class="smallbox12">
-        <div class="imgicon">
-          <p class="subtitle1">Bounce</p>
-          <button
-            style="border: none; background-color: rgba(31, 39, 130, 0)"
-            ;
-            type="button"
-          >
-            <img
-              style="
-                background-color: none;
-                width: 24px;
-                height: 24px;
-                align-content: space-between;
-              "
-              src="https://i.postimg.cc/tCGBc87M/close-icon-my-saves-page.png"
-              alt="Escape"
-            />
-          </button>
-        </div>
-        <p class="view1">View in Documentation</p>
-      </div>
-    </div>
-    <div class="bigbox2">
-      <div class="line1"></div>
-      <div class="smallbox12">
-        <div class="imgicon">
-          <p class="subtitle1">Bounce</p>
-          <button
-            style="border: none; background-color: rgba(31, 39, 130, 0)"
-            ;
-            type="button"
-          >
-            <img
-              style="
-                background-color: none;
-                width: 24px;
-                height: 24px;
-                align-content: space-between;
-              "
-              src="https://i.postimg.cc/tCGBc87M/close-icon-my-saves-page.png"
-              alt="Escape"
-            />
-          </button>
-        </div>
-        <p class="view1">View in Documentation</p>
-      </div>
-    </div>
-    <div class="bigbox2">
-      <div class="line1"></div>
-      <div class="smallbox12">
-        <div class="imgicon">
-          <p class="subtitle1">Bounce</p>
-          <button
-            style="border: none; background-color: rgba(31, 39, 130, 0)"
-            ;
-            type="button"
-          >
-            <img
-              style="
-                background-color: none;
-                width: 24px;
-                height: 24px;
-                align-content: space-between;
-              "
-              src="https://i.postimg.cc/tCGBc87M/close-icon-my-saves-page.png"
-              alt="Escape"
-            />
-          </button>
-        </div>
-        <p class="view1">View in Documentation</p>
-      </div>
-    </div>
-    <div class="bigbox2">
-      <div class="line1"></div>
-      <div class="smallbox12">
-        <div class="imgicon">
-          <p class="subtitle1">Bounce</p>
-          <button
-            style="border: none; background-color: rgba(31, 39, 130, 0)"
-            ;
-            type="button"
-          >
-            <img
-              style="
-                background-color: none;
-                width: 24px;
-                height: 24px;
-                align-content: space-between;
-              "
-              src="https://i.postimg.cc/tCGBc87M/close-icon-my-saves-page.png"
-              alt="Escape"
-            />
-          </button>
-        </div>
-        <p class="view1">View in Documentation</p>
-      </div>
-    </div>
-    <div class="bigbox2">
-      <div class="line1"></div>
-      <div class="smallbox12">
-        <div class="imgicon">
-          <p class="subtitle1">Bounce</p>
-          <button
-            style="border: none; background-color: rgba(31, 39, 130, 0)"
-            ;
-            type="button"
-          >
-            <img
-              style="
-                background-color: none;
-                width: 24px;
-                height: 24px;
-                align-content: space-between;
-              "
-              src="https://i.postimg.cc/tCGBc87M/close-icon-my-saves-page.png"
-              alt="Escape"
-            />
-          </button>
-        </div>
-        <p class="view1">View in Documentation</p>
-      </div>
+    {% endfor %} {% endif %}
+    <br />
+    <div class="link22">
+      {% if all_animations.has_previous %}
+      <a href="?page={{ all_animations.previous_page_number }}">Previously</a>
+      {% endif %}
+      <span>
+        page {{ all_animations.number }} of
+        <span> {{all_animations.paginator.num_pages }} pages</span>
+      </span>
+      {% if all_animations.has_next %}
+      <a href="?page={{ all_animations.next_page_number }}">Next</a>
+      {% endif %}
     </div>
   </div>
 </div>

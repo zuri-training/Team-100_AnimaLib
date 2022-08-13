@@ -9,7 +9,7 @@ urlpatterns = [
     path('resetpassword/<uidb64>/<token>/', password_reset, name='resetpassword'),
     path('success/', success, name='success'),
     path('mysaves/',mysaves, name='mysaves'),
-
+    path('allsave', allsave, name='allsave'),
     path('signup/', register, name='register'),
     path('download/', download_library, name='download'),
     path('contact/', contact, name='contact'),
