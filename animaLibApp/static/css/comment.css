@@ -35,8 +35,7 @@
   width: 878px;
   height: 813px;
   display: absolute;
-  position: absolute;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   
 }
@@ -75,6 +74,7 @@
   line-height: 24px;
   margin-left: 110px;
   word-wrap: break-word;
+  text-align: left;
 }
 
 .subcontainer2 {
@@ -90,10 +90,6 @@
   background-color: blue;
   border-radius: 30px;
   margin-left: 20px;
-}
-
-.note{
-
 }
 
 .subcontainer2text {
