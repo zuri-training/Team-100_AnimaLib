@@ -4,7 +4,7 @@
     <div class="anime-menuGroup">
       <!-- the menu header -->
       <div class="anime-menuHeader">
-        <span>Get Started</span>
+        <span> <a href="{% url 'documentation' %}">Get Started</a></span>
       </div>
 
       <!-- menu content -->
@@ -15,8 +15,8 @@
           <div class="subGroupHeader">
             <span>
               <a href="{% url 'introduction' %}" class="animeLink menuLink"
-                >Introduction</a>
-              
+                >Introduction</a
+              >
             </span>
           </div>
 
@@ -27,7 +27,7 @@
               <!-- menu item name -->
               <span class="menuItem-name">
                 <a
-                  href="../introduction#overviewSection"
+                  href="{% url 'introduction' %}#overviewSection"
                   class="animeLink menuLink"
                   >Overview</a
                 >
@@ -41,7 +41,7 @@
               <!-- menu item name -->
               <span class="menuItem-name">
                 <a
-                  href="../introduction#installationUsageSection"
+                  href="{% url 'introduction' %}#installationUsageSection"
                   class="animeLink"
                   >Installation and Usage</a
                 >
@@ -51,7 +51,7 @@
               <div class="menuItem-subItems">
                 <span>
                   <a
-                    href="../introduction#installationSection"
+                    href="{% url 'introduction' %}#installationSection"
                     class="animeSubLink menuLink"
                     >Installation</a
                   >
@@ -59,7 +59,7 @@
 
                 <span>
                   <a
-                    href="../introduction#downloadSection"
+                    href="{% url 'introduction' %}#downloadSection"
                     class="animeSubLink menuLink"
                     >Download</a
                   >
@@ -67,7 +67,7 @@
 
                 <span>
                   <a
-                    href="introduction#demoSection"
+                    href="{% url 'introduction' %}#demoSection"
                     class="animeSubLink menuLink"
                     >Demo</a
                   >
@@ -83,7 +83,7 @@
           <!-- subGroupHeader -->
           <div class="subGroupHeader">
             <span>
-              <a href="../showAnimations" class="animeLink menuLink"
+              <a href="{% url 'showAnimations' %}" class="animeLink menuLink"
                 >Animations Library</a
               >
             </span>
@@ -115,4 +115,7 @@
       <div class="anime-menuContentHolder" id="anime-menuList"></div>
     </div>
   </div>
+  <span>
+    <a href="{% url 'generator' %}" class="animeSubLink menuLink">Generator</a>
+  </span>
 </div>

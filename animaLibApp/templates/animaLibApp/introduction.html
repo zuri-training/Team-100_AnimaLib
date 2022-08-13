@@ -2,15 +2,33 @@
 {% load static %}
 {% block style %}
 <link href="{% static 'css/componentDesign.css' %}" rel="stylesheet" />
-<link href="{% static 'css/design.css' %}" rel="stylesheet" />
+<link href="{% static 'css/introduction.css' %}" rel="stylesheet" />
 <link href="{% static 'css/layout.css' %}" rel="stylesheet" />
 <link href="{% static 'css/animation.css' %}" rel="stylesheet" />
 {% endblock %}
  {% block content %}
+ {% if messages %} 
+          <div class='showpop'>
+          <div class="showpopup">
+                        <div class="close_icon">&times</div>
+
+                  <div class="popup_content">
+          {% for message in messages %}
+            <p>{{ message}}</p>
+
+          {% endfor %}   
+          <center><a href="{% url 'register' %}" class="close_btn_register">Register</a></center>
+              <p>Already have and account? <a href="{% url 'login' %}">Log in</a></p>
+            </div>
+            
+                </div>
+                
+          </div>
+          {% endif %}
 <div class="maincontentContainer container">
   {% include 'common/sideNav.html' %}
 
-  <div class="menuContentContainer">
+  <div class="menuContentContainer" style="margin-top: 86px; margin-left: 126px;" >
     <!-- top row with documentation -->
     <div class="documentationRow">
       <!-- section content -->
@@ -37,10 +55,10 @@
     <!-- row 3 Amino content -->
     <div class="animeRow">
       <!-- section content -->
-      <div class="section-content" id="overviewSection">
+      <div class="section-content">
         <!-- section content holder -->
         <div class="section-contentHolder">
-          <div class="sectionHeaderHolder">
+          <div class="sectionTitle">
             <span class="anime-contentHeader">Overview</span>
           </div>
 
@@ -61,15 +79,16 @@
       <div class="anime-sectionColumn">
         <!-- section title -->
         <div class="sectionTitle">
-          <span class="anime-sectionHeader" id="installationUsageSection">Installation and usage</span>
+          <span class="anime-sectionHeader">Installation and usage</span>
         </div>
 
         <!-- section content -->
         <div class="section-content">
           <!-- section content holder -->
           <div class="section-contentHolder">
-            <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader" id="installationSection">Installation</span>
+            <div class="sectionHeaderHolder" style="
+            margin-top: 16px;">
+              <span class="anime-sectionSubHeader">Installation</span>
             </div>
 
             <div class="sectionContentBody">
@@ -93,14 +112,14 @@
 
               <!-- code box -->
               <div class="codebox">
-                <code>link href=”animo.css” rel=”stylesheet” type=”text/css”</code>
+                <code><<span style="color: #4F59D5;">link</span> <span style="color: #BA1A1A;">href</span>=<span style="color: #266868;">”animo.css”</span> <span style="color: #BA1A1A;">rel</span>=<span style="color: #266868;">”stylesheet”</span> <span style="color: #BA1A1A;">type</span>=<span style="color: #266868;">”text/css”</span>></code>
               </div>
             </div>
           </div>
         </div>
 
         <!-- section content -->
-        <div class="section-content">
+        <div class="section-content2">
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
@@ -108,26 +127,29 @@
             </div>
 
             <div class="sectionContentBody">
-              For each element to be animates, udate or add the class name required forthe specific
+              For each element to be animates, udate or add the class name required for the specific
               animation of your choice and then run your html code to view the animation.
             </div>
           </div>
         </div>
 
         <!-- section content -->
-        <div class="section-content">
+        <div class="section-content3">
           <!-- section content holder -->
           <div class="section-contentHolder">
 
-            <div class="sectionHeaderHolder d-flex justify-content-between">
-              <span class="anime-sectionSubHeader" id="downloadSection">Download library</span>
+            <div class="sectionHeaderHolder2 d-flex justify-content-between">
+              <span class="anime-sectionSubHeader">Download library</span>
 
-              <span>
-                <button class="anime-button">
-                  <span class="mr-1">Download Library</span>
-                  <span class="btn-icon">
-                    <i class="fa-solid fa-arrow-down"></i>
-                  </span>
+              <span class="d-flex justify-content-end">
+                <button class="anime-button" style="margin-left: 404px;">
+                  <a href="{% url 'download' %}" class="download-text">Download Library</a>
+                  <span class="btn-icon"
+                    ><img
+                      src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660245112/received_a4oula.png"
+                      alt=""
+                      width="20"
+                  /></span>
                 </button>
               </span>
 
@@ -135,13 +157,13 @@
 
             <div class="sectionContentBody">
               <p>
-                Inorder to have full access to our library, you need to be an authenticated user. 
+                In order to have full access to our library, you need to be an authenticated user. 
                 By clicking the register button on our page, you can sign up to become a member, login
                 and be able to make full use of all the codes. You can download and store the codes on your
                 local machine and play with the effects however you want.
               </p>
 
-              <p>
+              <p style="margin-top: 32px; margin-bottom: 16px;">
                 You can also download the latest version of Animo from the GitHub releases or use a Animo CDN.
               </p>
 
@@ -161,7 +183,7 @@
 
               </div>
 
-              <p>
+              <p style="margin-top: 32px;">
                 For more details, you can watch the demo below.
                 You can also visit our support page for answers to 
                 frequently asked questions or reach our to us directly with any question you have.
@@ -171,11 +193,11 @@
         </div>
 
         <!-- section content -->
-        <div class="section-content">
+        <div class="section-content4">
           <!-- section content holder -->
           <div class="section-contentHolder">
-            <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader" id="demoSection">Watch demo</span>
+            <div class="sectionHeaderHolder4">
+              <span class="anime-sectionSubHeader">Watch demo</span>
             </div>
 
             <div class="sectionContentBody">
@@ -189,38 +211,58 @@
               </div>
 
               <div class="mb-2">
-                <video class="videoContent" width="100%" height="256" controls>
-                  <source src="demo.mp4" type="video/mp4" />
-                  <source src="demo.ogg" type="video/mp4" />
+                <video class="videoContent" width="100%" height="350" controls>
+                  <source src="video.mp4" type="video/mp4" />
+                  <source src="video.mp4" type="video/mp4" />
                   Your browser does not support the video tag
                 </video>
+                <!-- <iframe width="100%" height="350" src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
+      </iframe> -->
               </div>
+
+              <div class="link-buttons d-flex justify-content-between">
+              <div class="link-texts">
+              <!-- animation link -->
+              <div
+              class="intro-button d-flex"
+              style="display: flex;
+              align-items: center;
+              justify-content: center;"
+            >
+              <span>
+                <a href="{% url 'introduction' %}" style="color: #328B8B;">
+                  <span>
+                    <img
+                      src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660220326/arrow-left_kof3hb.jpg"
+                      width="24px"
+                    />
+                  </span>
+                  <span> Get started</span>
+    
+                  
+                </a>
+              </span>
+            </div>
+
+            <!-- animation link -->
+            <div
+            class="intro-button d-flex"
+          >
+            <span>
+              <a href="{% url 'showAnimations' %}" style="color: #328B8B;">
+                <span> Animations</span>
   
-
-                
-              <div style="text-align:end;">
                 <span>
-                  <a href="../showAnimations">
-                  <span>Animations</span>
-                  <span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </span>  
-                
-                </a>
+                  <img
+                    src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660220328/arrow-right_vu83jq.jpg"
+                    width="24px"
+                  />
                 </span>
-              </div>
-
-              <div style="text-align:left;">
-                <span>
-                  <a href="../GetStarted">
-                  <span>Get Started</span>
-                  <span>
-                    <i class="fa-solid fa-arrow-left"></i>
-                  </span>  
-                
-                </a>
-                </span>
-              </div>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
             </div>
           </div>
         </div>
