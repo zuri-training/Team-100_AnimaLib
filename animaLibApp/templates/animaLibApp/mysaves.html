@@ -42,16 +42,29 @@
     {% endfor %} {% endif %}
     <br />
     <div class="link22">
-      {% if all_animations.has_previous %}
-      <a href="?page={{ all_animations.previous_page_number }}">Previously</a>
-      {% endif %}
-      <span>
-        page {{ all_animations.number }} of
-        <span> {{all_animations.paginator.num_pages }} pages</span>
-      </span>
-      {% if all_animations.has_next %}
-      <a href="?page={{ all_animations.next_page_number }}">Next</a>
-      {% endif %}
+      <div class="previous_box">
+        {% if all_animations.has_previous %}
+        <a
+          href="?page={{ all_animations.previous_page_number }}"
+          class="previous"
+          >Previously
+        </a>
+        {% endif %}
+      </div>
+
+      <div class="pages">
+        <span>
+          page {{ all_animations.number }} of
+          <span> {{all_animations.paginator.num_pages }} pages</span>
+        </span>
+      </div>
+      <div class="next_box">
+        {% if all_animations.has_next %}
+        <a href="?page={{ all_animations.next_page_number }}" class="next">
+          Next</a
+        >
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>

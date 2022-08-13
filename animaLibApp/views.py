@@ -514,7 +514,7 @@ def allsave(request):
         # we want to load the first page.
         page = request.GET.get('page', 1)
         # show five animations per page.
-        paginator = Paginator(get_all_animations, 5)   
+        paginator = Paginator(get_all_animations, 2)   
         try:
             get_all_animations = paginator.page(page)
         except PageNotAnInteger:

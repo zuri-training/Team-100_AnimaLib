@@ -90,10 +90,21 @@
   margin: 0 auto;
 }
 .link22 {
-  margin-top: 23px;
-  float: left;
   color: #157a6e;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
 }
 a {
   color: #157a6e;
+}
+.previous_box {
+  text-align: left;
+}
+.pages {
+  text-align: center;
+}
+
+.next_box {
+  text-align: right;
 }
