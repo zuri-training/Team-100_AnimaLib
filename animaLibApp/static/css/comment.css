@@ -34,6 +34,10 @@
 .commentcontainer11 {
   width: 878px;
   height: 813px;
+  display: absolute;
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
   
 }
 .commentcontainer2 {
@@ -76,6 +80,8 @@
 .subcontainer2 {
   display: flex;
   align-items: center;
+  height: 80px;
+  margin-top: 20px;
 }
 
 .icon {
