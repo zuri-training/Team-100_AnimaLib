@@ -4,7 +4,8 @@
     <div class="anime-menuGroup">
       <!-- the menu header -->
       <div class="anime-menuHeader">
-        <span>Get Started</span>
+        <span>
+          <a href="{% url 'documentation' %}">Get Started</a></span>
       </div>
 
       <!-- menu content -->
@@ -83,7 +84,7 @@
           <!-- subGroupHeader -->
           <div class="subGroupHeader">
             <span>
-              <a href="../showAnimations" class="animeLink menuLink"
+              <a href="{% url 'showAnimations' %}" class="animeLink menuLink"
                 >Animations Library</a
               >
             </span>

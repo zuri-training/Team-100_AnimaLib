@@ -8,49 +8,45 @@
   {% include 'common/sideNav.html' %}
 
   <!-- menu content -->
-  <div class="menuContentContainer">
+  <div class="menuContentContainer" style="margin-top: 86px;">
     <!-- top row with animations -->
     <div class="documentationRow">
       <!-- section content -->
       <div class="section-content">
         <!-- section content holder -->
         <div class="section-contentHolder">
-          <div class="sectionHeaderHolder d-flex justify-content-between align-items-baseline">
+          <div class="sectionHeaderHolder d-flex justify-content-between" style="display: flex;
+          align-items: center;">
             <span class="anime-mainHeader">Animation</span>
 
-            <span>
+            <span class="d-flex justify-content-end">
               <button class="anime-button">
-                <span class="mr-1">Download Library</span>
-                <span class="btn-icon">
-                  <i class="fa-solid fa-arrow-down"></i>
-                </span>
+                <span class="download-text">Download Library</span>
+                <span class="btn-icon"
+                  ><img
+                    src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660245112/received_a4oula.png"
+                    alt=""
+                    width="20"
+                /></span>
               </button>
             </span>
           </div>
 
           <div class="sectionContentBody">
-
             <p>
-              The following animations are supplied in the library. Click on the name
-              of the animation to learn more about their main usage scenarios, how to
-              define them and to see an example of the animation
-            </p>
-      
-            <p>
-              Here are some of the animations we have in our Animo library, click on
-              any one to view the source code or watch how it is being displayed.
+              The following animations are supplied in the library. Click on the
+              name of the animation to learn more about their main usage
+              scenarios, how to define them and to see an example of the
+              animation
             </p>
           </div>
         </div>
       </div>
-     
     </div>
 
     <div id="anime-animationDetails"></div>
   </div>
 </div>
-
-
 
 <script></script>
 {% endblock %}
