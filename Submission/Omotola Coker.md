@@ -26,5 +26,6 @@ Team_100 branches: https://github.com/zuri-training/Team-100_AnimaLib/branches
   -Taking in user css style inputs 
   -Generating the animation visually (using CSS for animations and Javascript DOM events)
   -Also generating the basic code structure for the user to see (using Javascript DOM)
-  Omotola's branch old: https://github.com/zuri-training/Team-100_AnimaLib/tree/tolac
-  Omotola's new branch: https://github.com/zuri-training/Team-100_AnimaLib/compare/main...newtolac
+  
+  Omotola's new branch: https://github.com/zuri-training/Team-100_AnimaLib/tree/codegenerator
+  Omotola's old branches: https://github.com/zuri-training/Team-100_AnimaLib/tree/tolac , https://github.com/zuri-training/Team-100_AnimaLib/tree/newtolac
