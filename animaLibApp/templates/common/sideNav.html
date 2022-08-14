@@ -1,121 +1,127 @@
-<div class="pageSideBar">
-  <div style="border-right: 1px solid #cccccc">
-    <!-- a menu group -->
-    <div class="anime-menuGroup">
-      <!-- the menu header -->
-      <div class="anime-menuHeader">
-        <span> <a href="{% url 'documentation' %}">Get Started</a></span>
-      </div>
+<div class="container">
+  <div class="aside">
+    <a href="{% url 'documentation' %}" class="header"><img
+        src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660250667/home_ms97bm.png" width="20px" />Get
+      Started</a></span><br>
+    <span class="">
+      <a href="{% url 'showAnimations' %}" class="intro">Introduction</a>
 
-      <!-- menu content -->
-      <div class="anime-menuContentHolder">
-        <!-- menu sub group -->
-        <div class="anime-menuSubGroup">
-          <!-- subGroupHeader (introduction sub group) -->
-          <div class="subGroupHeader">
-            <span>
-              <a href="{% url 'introduction' %}" class="animeLink menuLink"
-                >Introduction</a
-              >
-            </span>
-          </div>
+    </span><br>
+    <ul>
+      <li><a href="../introduction#overviewSection" class="">Overview</a></li>
+      <li><a href="../introduction#installationUsageSection" class="">Installation</a></li>
+      <li><a href="../introduction#installationUsageSection" class="">Usage</a></li>
+      <li><a href="../introduction#downloadSection" class="">Download</a></li>
+      <li><a href="introduction#demoSection" class="">Demo</a></li>
+    </ul>
 
-          <!-- sub group content -->
-          <div class="subGroupContentHolder">
-            <!-- menu item -->
-            <div class="menuItem">
-              <!-- menu item name -->
-              <span class="menuItem-name">
-                <a
-                  href="{% url 'introduction' %}#overviewSection"
-                  class="animeLink menuLink"
-                  >Overview</a
-                >
-              </span>
+    <a href="" class="header"><img
+        src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660250667/3dcube_Animations_icon_cmgmbt.png"
+        width="20px" />Animations</a></span><br>
 
-              <!-- menu item sub item if any -->
-            </div>
+    <ul>
+      <li><a href="" class="">Move up</a></li>
+      <li><a href="../introduction#installationUsageSection" class="">Move down</a></li>
+      <li><a href="../introduction#installationUsageSection" class="">Move right</a></li>
+      <li><a href="../introduction#downloadSection" class="">Move left</a></li>
+      <li><a href="introduction#demoSection" class="">Blink</a></li>
+      <li><a href="introduction#demoSection" class="">Bounce</a></li>
+      <li><a href="introduction#demoSection" class="">Fade</a></li>
+      <li><a href="introduction#demoSection" class="">Flip</a></li>
+      <li><a href="introduction#demoSection" class="">Swing</a></li>
+      <li><a href="introduction#demoSection" class="">Tada</a></li>
+    </ul>
 
-            <!-- menu items (has sub items) -->
-            <div class="menuItem">
-              <!-- menu item name -->
-              <span class="menuItem-name">
-                <a
-                  href="{% url 'introduction' %}#installationUsageSection"
-                  class="animeLink"
-                  >Installation and Usage</a
-                >
-              </span>
+    <a href="" class="header"><img
+        src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660250668/box-2_Generator_icon_d60wqa.png"
+        width="20px" />Generator</a></span><br>
 
-              <!-- menu item sub item if any -->
-              <div class="menuItem-subItems">
-                <span>
-                  <a
-                    href="{% url 'introduction' %}#installationSection"
-                    class="animeSubLink menuLink"
-                    >Installation</a
-                  >
-                </span>
-
-                <span>
-                  <a
-                    href="{% url 'introduction' %}#downloadSection"
-                    class="animeSubLink menuLink"
-                    >Download</a
-                  >
-                </span>
-
-                <span>
-                  <a
-                    href="{% url 'introduction' %}#demoSection"
-                    class="animeSubLink menuLink"
-                    >Demo</a
-                  >
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end menu sub group -->
-
-        <!-- menu sub group (Examples sub group) -->
-        <div class="anime-menuSubGroup">
-          <!-- subGroupHeader -->
-          <div class="subGroupHeader">
-            <span>
-              <a href="{% url 'showAnimations' %}" class="animeLink menuLink"
-                >Animations Library</a
-              >
-            </span>
-          </div>
-
-          <!-- sub group content (no content now) -->
-          <div class="subGroupContentHolder">
-            <!-- menu item -->
-            <div class="menuItem">
-              <!-- menu item name -->
-              <span class="menuItem-name"> </span>
-
-              <!-- menu item sub item if any -->
-            </div>
-          </div>
-        </div>
-        <!-- end menu sub group -->
-      </div>
-    </div>
-
-    <!-- a menu group -->
-    <div class="anime-menuGroup">
-      <!-- the menu header -->
-      <div class="amime-menuHeader">
-        <span>Animations</span>
-      </div>
-
-      <!-- menu content -->
-      <div class="anime-menuContentHolder" id="anime-menuList"></div>
-    </div>
   </div>
-  <span>
-    <a href="{% url 'generator' %}" class="animeSubLink menuLink">Generator</a>
-  </span>
 </div>
+
+<style>
+  .container {
+    margin-top: 60px;
+    margin-left: 30px;
+    margin-right: 300px;
+    bottom: 524px;
+    /* margin-bottom: 300px; */
+  }
+
+  .aside {
+    /* background: #CCCCCC;; */
+    padding: 10px;
+    width: 200px;
+    z-index: 10;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    position: fixed;
+    height: 100%;
+    padding: 0px 8px;
+    /* bottom: 524px; */
+    border-right: 1px solid #C0C0C0;
+    /* position: absolute; */
+    /* right: 50%; */
+
+  }
+
+  .aside .intro {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+    color: #121212;
+    margin-left: 30px;
+  }
+
+  .aside ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .aside ul li {
+    color: white;
+    margin: .3em 0;
+  }
+
+  .aside ul li a {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.5px;
+    color: #2B2B2B;
+    margin-left: 36px;
+  }
+
+  .header {
+    width: 131px;
+    height: 36px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #121212;
+  }
+
+  .header img {
+    margin-right: 8px;
+  }
+
+  .fixed{
+    position:fixed;
+    top:0;
+    right:0;
+}
+
+.bottom{
+    top:auto;
+    bottom:0;
+    position:absolute;
+}
+</style>

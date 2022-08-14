@@ -169,6 +169,7 @@ function showAnimeDetails() {
                                     src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660273140/thumbs_up_icon_wfjv7f.jpg"
                                     width="32px"
                                     alt=""
+                                    style="margin-right: 32px;"
                                   />
                                   <img
                                     src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660273141/Thumbs_down_icon_mzpdco.jpg"
