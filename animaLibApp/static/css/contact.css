@@ -235,3 +235,148 @@ textarea {
   transform: rotate(0.18deg);
 }
 /* FAQ SECTION ENDS */
+
+@media screen and (max-width: 1000px) {
+
+  main {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+  }
+  .container1 {
+    width: 70%;
+  }
+  .hero-img {
+    height: 483px;
+    width: 452px;
+  }
+
+  .container2 {
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 890px) {
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+  .container1 {
+    margin-top: 50px;
+    width: 60%;
+  }
+  .hero-img {
+    height: 483px;
+    width: 452px;
+  }
+
+  .container2 {
+    width: 70%;
+}
+}
+
+@media screen and (max-width: 650px) {
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+  .container1 {
+    margin-top: 50px;
+    width: 50%;
+  }
+
+  .hero-img {
+    height: 383px;
+    width: 352px;
+  }
+
+  .question button {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+  .container1 {
+    margin-top: 50px;
+    width: 60%;
+  }
+
+  .hero-img {
+    height: 383px;
+    width: 352px;
+  }
+
+  .question button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+
+  .container1 {
+    margin-top: 50px;
+    width: 50%;
+  }
+
+  .hero-img {
+    height:283px;
+    width: 252px;
+  }
+
+  .question button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 422px) {
+
+  .container1 {
+    margin-top: 50px;
+    width: 60%;
+  }
+
+  .question button {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .text2 {
+    font-size: 32px;
+  }
+  
+  .text3 {
+    font-size: 18px;
+  }
+
+  label {
+    line-height: 20px;
+  }
+  .form-button{
+    font-size: 16px;
+    padding: 20px 40px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 260px;
+  }
+}
