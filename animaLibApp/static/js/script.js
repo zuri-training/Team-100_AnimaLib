@@ -454,7 +454,7 @@ window.addEventListener("resize", function() {
     width = document.body.clientWidth;
     if (width < 907) {
         for (var i = 0; i < reviewsCard.length; i++) {
-            if (i >= 4) {
+            if (i >= 3) {
                 reviewsCard[i].style.display = "none"
             }
         }
