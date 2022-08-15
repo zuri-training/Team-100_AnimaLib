@@ -1,0 +1,424 @@
+{% extends 'base.html' %} {% load static %} {% block style %}
+<link href="{% static 'css/componentDesign.css' %}" rel="stylesheet" />
+<link href="{% static 'css/design.css' %}" rel="stylesheet" />
+<link href="{% static 'css/layout.css' %}" rel="stylesheet" />
+<link href="{% static 'css/animation.css' %}" rel="stylesheet" />
+<link href="{% static 'css/generator.css' %}" rel="stylesheet" />
+{% endblock %} {% block content %}
+<div class="maincontentContainer container">
+    {% include 'common/sideNav.html' %}
+
+    <!-- menu content -->
+    <div class="menuContentContainer">
+        <!-- top row with documentation -->
+        <div class="documentationRow">
+            <!-- section content -->
+            <div class="section-content">
+                <!-- section content holder -->
+                <div class="section-contentHolder">
+                    <div class="sectionHeaderHolder">
+                        <!-- To insert generator page, insert animo and Animation generation header divs here, delete span -->
+                        <span>
+                            <div class="generatorheaders">
+                                <h4>Animo</h4>
+                                <h1>Animation Generator</h1>
+                            </div>
+                        </span>
+                    </div>
+
+                    <div class="sectionContentBody">
+                        <!-- To insert generator page, insert Action header here, delete this text -->
+                        <div class="generatorheaders">
+                            <h3>Action</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- image row : consider removing this div-->
+        <!-- <div class="imageRow d-flex align-items-end" style="
+        background-image: url(https://res.cloudinary.com/dc2z15vip/image/upload/v1659546386/logo_111022_btupnf.png);
+        background-repeat: no-repeat;
+        background-size: 254px 136px;
+        background-position: center; -->
+        <!-- logo image content...... -->
+        <!-- <div class="logo-contentContainer"> -->
+        <!-- For code generator insert div containing form, headers(options and output), up to hiddencode div here  -->
+        <!-- </div> -->
+
+        <!-- row 3 Amino content -->
+        <div class="animeRow">
+            <!-- section content -->
+            <div class="section-content">
+                <!-- section content holder -->
+                <div class="section-contentHolder">
+                    <!-- <div class="sectionHeaderHolder">
+                        <span class="anime-contentHeader">Animo</span>
+                    </div> -->
+                    <!-- Insert animation generator copy inside this section contentbody div -->
+                    <div class="generatorpage">
+                        <!-- Create Animation Menu -->
+                        <!-- <nav class="animationmenu"> -->
+                        <div class="animationgrp1">
+                            <button type="button" class="moveupnav" id="navup">Move up</button>
+                            <button type="button" class="movedownnav" id="navdown">Move down</button>
+                            <button type="button" class="moverightnav">Move right</button>
+                            <button type="button" class="moveleftnav">Move left</button>
+                            <button type="button" class="blinknav">Blink</button>
+                        </div>
+                        <div class="animationgrp2">
+                            <button type="button" class="bouncenav">Bounce</button>
+                            <button type="button" class="fadenav">Fade</button>
+                            <button type="button" class="flipnav">Flip</button>
+                            <button type="button" class="swingnav">Swing</button>
+                            <button type="button" class="tadanav">Tada</button>
+                        </div>
+                        <!-- </nav> -->
+                        <!-- Create wrapper for input, code editor and output area -->
+                        <div class="optionsoutputcontainer">
+                            <!-- wrapper for input form and output area side by side -->
+                            <div class="optionsoutputheaders">
+                                <div class="options">
+                                    <h2>Options</h2>
+                                </div>
+                                <div class="output">
+                                    <h2>Output</h2>
+                                </div>
+                            </div>
+                            <div class="input-output">
+                                <div class="inputvar">
+                                    <form name="codeinput" method="post">
+                                        <section>
+                                            <label for="name">Name</label>
+                                            <input id="namefield" type="text" value="My custom animation" name="name"
+                                                placeholder="Example: My Bounce" />
+
+                                            <label for="object">Object</label>
+                                            <select name="object" id="objectfield">
+                                                <option value=" box">Box</option>
+                                                <option value="ball">Ball</option>
+                                            </select>
+                                            <!-- <input id="object" type="text" value="" name="object" /> -->
+                                        </section>
+
+                                        <section class="wholeduration">
+                                            <div class="duration">
+                                                <label for="duration">Duration</label>
+                                                <input id="durationfield" type="number" value="2" name="duration"
+                                                    min="1" />
+                                            </div>
+
+                                            <div class="secondswrapper">
+                                                <!-- <label for="seconds">seconds</label> -->
+                                                <select name="seconds" id="seconds">
+                                                    <option value="seconds">Seconds</option>
+                                                    <!-- <option  value="minutes" >Minutes</option> -->
+                                                </select>
+                                            </div>
+                                        </section>
+
+                                        <section class="wholeduration">
+                                            <div class="delay">
+                                                <label for="delay">Delay</label>
+                                                <input id="delayfield" type="number" value="0" name="delay" min="1" />
+                                            </div>
+
+                                            <div class="secondswrapper">
+                                                <!-- <label for="seconds">seconds</label> -->
+                                                <select name="seconds" id="seconds">
+                                                    <option value="seconds">Seconds</option>
+                                                    <!-- <option  value="minutes" >Minutes</option> -->
+                                                </select>
+                                            </div>
+                                        </section>
+                                        <input type="hidden" name="action" id="action_name" />
+                                        <section>
+                                            <div>
+                                                <label for="iterationcount">Iteration count</label>
+                                                <input id="iterationcountfield" type="number" value="2"
+                                                    name="iterationcount" min="1" />
+                                            </div>
+                                            <div class="infinitecontainer">
+                                                <input class="infinite" id="infinite" checked="checked" type="checkbox"
+                                                    value="" name="infinite" />
+                                                <label for="infinite">Infinite iteration</label>
+                                            </div>
+                                        </section>
+                                    </form>
+                                </div>
+                                <div class="outputresult">
+                                    <div class="result" id="animatedobject"></div>
+                                </div>
+                            </div>
+                            <!-- create button container -->
+                            <div class="buttoncontainer">
+                                <button class="generatebutton">Generate Code</button>
+                            </div>
+                            <!-- create code editor area -->
+                            <div class="html-code" id="html-code">
+                                <div class="hiddencode" id="hiddencode"></div>
+                                <div class="save" id="save">
+                                    <p id="download">Download
+                                    <div><img src="{% static 'images/downloadicon.png' %}" width="25px"
+                                            class="downloadlogo" />
+                                    </div>
+                                    </p>
+                                    <p id="savelogo">Save
+                                    <div><img src="{% static 'images/saveicon.png' %}" width="25px" class="savelogo" />
+                                    </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="sectionContentBody">
+                        <div class="copywrite">
+                            <h3>Animation Generator Documentation</h3>
+                            <div class="keyframecopy">
+                                <h4>@Keyframe</h4>
+                                <p>Animo's generator utilizes @keyframes rules to specify the when the animation
+                                    will happen and the
+                                    magnitude of the change per time</p>
+                            </div>
+                            <div class="namecopy">
+                                <h4>Name</h4>
+                                <p>Animo's nomenclature uses a description of the expected motion. It stores your
+                                    code of interest
+                                    under
+                                    the
+                                    animation name so you can come back to it.</p>
+                            </div>
+                            <div class="objectcopy">
+                                <h4>Object</h4>
+                                <p>With Animo, your details are important therefore, Animo is built to give the
+                                    effects that you
+                                    desire
+                                    to
+                                    your elements and features no matter the shape or size</p>
+                            </div>
+                            <div class="durationcopy">
+                                <h4>Duration</h4>
+                                <p>Animo allows you to customize your choice animations without writing any code.
+                                    You decide how
+                                    long
+                                    the
+                                    duration of your animations should be
+                                </p>
+                            </div>
+                            <div class="delaycopy">
+                                <h4>Delay</h4>
+                                <p>With Animo you can customize the time between each iteration to suit your brand
+                                </p>
+                            </div>
+
+                            <div class="iterationcopy">
+                                <h4>Iteration Count</h4>
+                                <p>You can have your animation repeat as many times as you would like to deliver
+                                    your features
+                                    perfectly
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+
+    <!-- Add this disclaimer for media query -->
+
+    <div class="disclaimer">
+        <p class="disclaimer"><strong>Please switch to a wider screen (1000px or more) to view this page.</strong></p>
+        <p class="disclaimer"><strong>Thank you</strong></p>
+    </div>
+    <!-- This container was left over once I cut it's content to paste in mabel's containers -->
+    <!-- <div class="wholepage">
+    </div> -->
+
+    <!-- Add hidden div with Css code required to display the animation -->
+    <div class=animationstxt style="display:none;">
+        <!-- Css code required to achieve this animation -->
+        <p class="moveupcode" style="display:none;">
+
+            .moveup{
+            animation: moveup 2s infinite;
+            }
+
+            @keyframes moveup {
+            0%, 100% {transform: translateY(0);}
+            10%, 30%, 50%, 70%, 90% {transform: translateY(-50px);}
+            }
+        </p>
+
+
+        <p class="tadacode" style="display:none;">
+
+            .tada{
+            animation: tada 2s infinite;
+            }
+            @keyframes tada {
+            0% {transform: scale(1);}
+            10%, 20% {transform: scale(0.8) rotate(-3deg);}
+            30% {transform: scale(1.3) rotate(3deg);}
+            40% {transform: scale(1.2) rotate(3deg);}
+            50% {transform: scale(1) rotate(-3deg)}
+            60% {transform: scale(1.3) rotate(-3deg);}
+            70% {transform: scale(1.2) rotate(3deg);}
+            60% {transform: scale(1.3) rotate(3deg);}
+            70% {transform: scale(1.2) rotate(-3deg);}
+            100% {transform: scale(1) rotate(0);}
+            }
+        </p>
+
+        <p class="fadecode" style="display:none;">
+
+            .fade{
+            animation: fadeIn 2s infinite;
+            }
+
+            @keyframes fadeIn {
+            0% {opacity: 0;}
+            10% {opacity: 0.1;}
+            20% {opacity: 0.2;}
+            30% {opacity: 0.3;}
+            40% {opacity: 0.4;}
+            50% {opacity: 0.5;}
+            60% {opacity: 0.6;}
+            70% {opacity: 0.7;}
+            80% {opacity: 0.8;}
+            90% {opacity: 0.9;}
+            100% {opacity: 1;}
+            }
+        </p>
+
+        <p class="bouncecode" style="display:none;">
+            .bounce{
+            animation: bounce 2s infinite;
+            }
+            @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-50px);}
+            60% {transform: translateY(-30px);}
+            }
+        </p>
+
+        <p class="moveleftcode" style="display:none;">
+            .moveleft{
+            animation: moveright 2s infinite;
+            }
+
+            @keyframes moveleft {
+            0%, 100% {transform: translateX(0);}
+            10%, 30%, 50%, 70%, 90% {transform: translateX(50px);}
+
+            }
+
+        </p>
+
+        <p class="blinkcode" style="display:none;">
+
+            .blink{
+            animation: blink 2s infinite;
+            }
+
+            @keyframes blink {
+            0%, 100% {
+            opacity: 1;
+            }
+            25%, 75% {
+            opacity: 0;
+            }
+            }
+        </p>
+
+        <p class="moverightcode" style="display:none;">
+            .moveright{
+            animation: moveleft 2s infinite;
+            }
+
+            @keyframes moveright {
+            0%, 100% {transform: translateX(0);}
+            10%, 30%, 50%, 70%, 90% {transform: translateX(-50px);}
+
+            }
+        </p>
+
+        <p class="movedowncode" style="display:none;">
+            .movedown{
+            animation: movedown 2s infinite;
+            }
+
+            @keyframes movedown {
+            0%, 100% {transform: translateY(0);}
+            10%, 30%, 50%, 70%, 90% {transform: translateY(50px);}
+            }
+        </p>
+
+        <p class="flipcode" style="display:none;">
+
+            .flip{
+            animation: flip 2s infinite;
+            }
+
+            @keyframes flip {
+            0% {
+            transform: perspective(400px) rotateY(0);
+            animation-timing-function: ease-out;
+            }
+            40% {
+            transform: perspective(400px) translateZ(150px) rotateY(170deg);
+            animation-timing-function: ease-out;
+            }
+            50% {
+            transform: perspective(400px) translateZ(150px) rotateY(190deg);
+            animation-timing-function: ease-out;
+            }
+            80% {
+            transform: perspective(400px) rotateY(360) scale(.95);
+            animation-timing-function: ease-out;
+            }
+            100% {
+            transform: perspective(400px) scale(1);
+            animation-timing-function: ease-out;
+            }
+            }
+        </p>
+
+        <p class="swingcode" style="display:none;">
+
+            .swing{
+            animation: swing 2s infinite;
+            }
+
+            @keyframes swing {
+            20% {
+            transform: rotate(15deg);
+            }
+
+            40% {
+            transform: rotate(-10deg);
+            }
+
+            60% {
+            transform: rotate(5deg);
+            }
+
+            80% {
+            transform: rotate(-5deg);
+            }
+
+            100% {
+            transform: rotate(0deg);
+            }
+            }
+        </p>
+    </div>
+</div>
+{% block scripts %}
+<script src="{% static 'js/generator.js' %}"></script> {% endblock %}
+
+{% endblock %}

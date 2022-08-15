@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% load static %} {% block style %}
 <link href="{% static 'css/componentDesign.css' %}" rel="stylesheet" />
-<link href="{% static 'css/design.css' %}" rel="stylesheet" />
+<link href="{% static 'css/documentation.css' %}" rel="stylesheet" />
 <link href="{% static 'css/layout.css' %}" rel="stylesheet" />
 <link href="{% static 'css/animation.css' %}" rel="stylesheet" />
 {% endblock %} {% block content %}
@@ -8,7 +8,7 @@
   {% include 'common/sideNav.html' %}
 
   <!-- menu content -->
-  <div class="menuContentContainer">
+  <div class="menuContentContainer" style="margin-top: 86px;">
     <!-- top row with documentation -->
     <div class="documentationRow">
       <!-- section content -->
@@ -19,14 +19,13 @@
             <span class="anime-mainHeader">Documentation</span>
           </div>
 
-          <div class="sectionContentBody">
+          <div class="sectionContentBody1">
             This is a detailed and comprehensive guide of how to use our
             animation library.
           </div>
         </div>
       </div>
     </div>
-
     <!-- image row -->
     <div
       class="imageRow d-flex align-items-end"
@@ -34,12 +33,12 @@
         background-image: url(https://res.cloudinary.com/dc2z15vip/image/upload/v1659546386/logo_111022_btupnf.png);
         background-repeat: no-repeat;
         background-size: 254px 136px;
-        background-position: center;
+        background-position: 269px 136px;
       "
     >
       <!-- logo image content -->
-      <div class="logo-contentContainer">
-        <div class="logo-contentHeader">
+      <div class="logo-contentContainer" style="margin-top: 24px">
+        <div class="logo-contentHeader" style="margin-top: 350px">
           <span class="logoHeader">Getting started with animation</span>
         </div>
         <div class="logoContentBody">
@@ -50,6 +49,7 @@
     </div>
 
     <!-- row 3 Amino content -->
+
     <div class="animeRow">
       <!-- section content -->
       <div class="section-content">
@@ -59,7 +59,7 @@
             <span class="anime-contentHeader">Animo</span>
           </div>
 
-          <div class="sectionContentBody">
+          <div class="sectionContentBody2">
             Animo Library is a third party open-source library that contains
             pre-made animation files(codes). They are cross-browser animations
             made for you to use in your projects.
@@ -85,7 +85,7 @@
               <span class="anime-sectionSubHeader">Introduction</span>
             </div>
 
-            <div class="sectionContentBody">
+            <div class="sectionContentBody3">
               This page provides all published technical documentation for the
               Animo Library.
             </div>
@@ -100,7 +100,7 @@
               <span class="anime-sectionSubHeader">Installation Guide</span>
             </div>
 
-            <div class="sectionContentBody">
+            <div class="sectionContentBody3">
               You can use this installation guide to follow the steps on how to
               download and make use of the library.
             </div>
@@ -108,23 +108,23 @@
         </div>
 
         <!-- section content -->
-        <div class="section-content">
-          <!-- section content holder -->
-          <div class="section-contentHolder">
+        <!-- <div class="section-content" style="margin-top: 38px"> -->
+        <!-- section content holder -->
+        <!-- <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
               <span class="anime-sectionSubHeader">Examples</span>
             </div>
 
-            <div class="sectionContentBody">Sample of the codes</div>
+            <div class="sectionContentBody4">Sample of the codes</div>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <!-- the animation column -->
       <div class="anime-sectionColumn">
         <!-- section title -->
         <div class="sectionTitle">
-          <span class="anime-sectionHeader">Animation</span>
+          <span class="anime-sectionHeader">Animations</span>
         </div>
 
         <!-- section content -->
@@ -132,7 +132,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader">Move up</span>
+              <span class="anime-sectionSubHeader2">Move up</span>
             </div>
 
             <div class="sectionContentBody">
@@ -146,7 +146,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader">Move down</span>
+              <span class="anime-sectionSubHeader2">Move down</span>
             </div>
 
             <div class="sectionContentBody">
@@ -160,7 +160,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader">Move left</span>
+              <span class="anime-sectionSubHeader2">Move left</span>
             </div>
 
             <div class="sectionContentBody">
@@ -174,7 +174,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader">Move right</span>
+              <span class="anime-sectionSubHeader2">Move right</span>
             </div>
 
             <div class="sectionContentBody">
@@ -188,7 +188,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader">Blink</span>
+              <span class="anime-sectionSubHeader2">Blink</span>
             </div>
 
             <div class="sectionContentBody">
@@ -202,7 +202,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader">Bounce</span>
+              <span class="anime-sectionSubHeader2">Bounce</span>
             </div>
 
             <div class="sectionContentBody">
@@ -216,7 +216,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader">Fade In</span>
+              <span class="anime-sectionSubHeader2">Fade In</span>
             </div>
 
             <div class="sectionContentBody">
@@ -230,7 +230,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader">Flip</span>
+              <span class="anime-sectionSubHeader2">Flip</span>
             </div>
 
             <div class="sectionContentBody">
@@ -244,7 +244,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader">Swing</span>
+              <span class="anime-sectionSubHeader2">Swing</span>
             </div>
 
             <div class="sectionContentBody">
@@ -259,7 +259,7 @@
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder">
-              <span class="anime-sectionSubHeader">Tada</span>
+              <span class="anime-sectionSubHeader2">Tada</span>
             </div>
 
             <div class="sectionContentBody">
@@ -269,13 +269,20 @@
         </div>
       </div>
     </div>
-    <div style="text-align: end">
+    <div
+      class="intro-button d-flex justify-content-end"
+      style="text-align: end; width: 1000px"
+    >
       <span>
-        <a href="../introduction">
-          <span> Introduction </span>
+        <a href="./Introduction.html">
+          <span> Introduction</span>
 
           <span>
-            <i class="fa-solid fa-arrow-right"></i>
+            <img
+              src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660220328/arrow-right_vu83jq.jpg"
+              width="24px"
+              alt=""
+            />
           </span>
         </a>
       </span>

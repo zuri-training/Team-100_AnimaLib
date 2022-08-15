@@ -110,44 +110,74 @@ function showAnimeDetails() {
         if (animations && animations.length) {
             animations.forEach((val) => {
                 detailsStr += `<!-- Animation content 1 -->
-                        <div class="animeRow">
-                            <!-- Animation content -->
-                            <div class="animationContent">
-                                <h4>${val.name}</h4>
-                                <p>${val.description}</p>
-                            </div>
-                    
-                            <!-- Display area -->
-                            <div class="anime-displayarea">
-                                <div class="sliderContainer d-flex" >
-                                    <div class="slideMain" id="slideMain${val.id}" style="display:none"> 
-                                    <!-- content for main slider here -->
-                                    </div>
-                                   
-
-                                    <div class="slideMoving" id="slide${val.id}">
-                                        <!-- slider handle -->
-                                        <div class="sliderHandle" onclick="showMainContent(${val.id})">
-                                            <!-- the handle icon -->
-                                            <span>|</span>
-                                        </div>
+                            <div class="animeRow" style="
+                            display: flex;
+                            flex-direction: column;">
+                                <!-- Animation content -->
+                                <div class="animationContent">
+                                    <h4>${val.name}</h4>
+                                    <p>${val.description}</p>
+                                </div>
                         
-                                        <!-- slider content -->
-                                        <div class="slidingContent">
-                                            <div class="slider_innerBox d-flex justify-content-center
-                                                align-items-center">
-                                                <div class="container">
-                                                    <div class="${val.styleCode}
-                                                        shadow-sm bg-danger text-white
-                                                        p-2">${val.name}</div>
+                                <!-- Display area -->
+                                <div class="anime-displayarea" style="margin: 0px 0px; margin-top: 16px; width: 792px;">
+                                    <div class="sliderContainer" style="margin-left: 0px;" >
+                                        <div class="slideMain" id="slideMain${val.id}" style="display:none"> 
+                                        <!-- content for main slider here -->
+                                        </div>
+                                       
+                                        <div class="slideMoving" id="slide${val.id}">
+                                            <!-- slider handle -->
+                                            <div class="sliderHandle" onclick="showMainContent(${val.id})">
+                                                <!-- the handle icon -->
+                                                <span>|</span>
+                                            </div>
+                            
+                                            <!-- slider content -->
+                                            <div class="slidingContent">
+                                                <div class="slider_innerBox d-flex justify-content-center
+                                                    align-items-center">
+                                                    <div class="container">
+                                                        <div class="${val.styleCode}
+                                                            shadow-sm bg-danger text-white
+                                                            p-2">${val.name}</div>
+                                                    </div>
+                                                    
                                                 </div>
-                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>`;
+                                <div
+                                class="customise d-flex justify-content-between"
+                                style="
+                                  display: flex;
+                                  justify-content: space-between;
+                                  align-items: center;
+                                "
+                              >
+                                <span class="d-flex justify-content-end">
+                                  <button class="customise-button">
+                                    <span class="download-text">Customise animation</span>
+                                  </button>
+                                </span>
+                        
+                                <div class="customise-icon">
+                                  <img
+                                    src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660273140/thumbs_up_icon_wfjv7f.jpg"
+                                    width="32px"
+                                    alt=""
+                                    style="margin-right: 32px;"
+                                  />
+                                  <img
+                                    src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660273141/Thumbs_down_icon_mzpdco.jpg"
+                                    width="32px"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                                
+                            </div>`;
             });
         }
 
