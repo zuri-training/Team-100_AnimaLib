@@ -59,6 +59,7 @@
     <div id="anime-animationDetails"></div>
 
 
+    {% if user.is_authenticated %}
     <section id="comment-section">
       <h2 id="comments">Comments</h2>
       {% for post in posts %}
@@ -93,70 +94,16 @@
       </section>
       {% endfor %}
     </section>
-    {% comment %}
-    <div class="commentcontainer11">
-      <h2 id="comments" class="title">Comments</h2>
-      {% for post in posts %}
-      <div class="commentcontainer2">
 
-        <div class="container1">
-          <div class="">
-            <div class="subcontainer2">
-              <img src="{{ post.author.user_image.url }}" class="icon">
-
-              <div class="subcontainer2text">{{ post.published_date | humanize }}</div>
-
-              <span class=" alignright">
-                 <img src="../../static/images/Reply icon.jpg"
-                 width="20"
-                 height="20"
-                 alt="reply"> reply</span>
-            </div>
-          </div>
-          <div class="subcontainer1">
-            <div class="subcontainer1text">
-              {{ post.text | linebreaksbr }}
-            </div>
-          </div>
-
-          <div class="subcontainer3">
-            <div class="sidebyside dis">
-              <div class=" sidebysidebox ">
-                <div class="subcontainer3share sidebysidebox">
-                    <img src="../../static/images/share-2.svg" alt="share"
-                    width="30"
-                    height="30"
-                    class="sidebysidebox"
-                    />
-                    share</div>
-              </div>
-              <div class="sidebysidebox subcontainer3like">
-              <img
-              src="../../static/images/heart.svg"
-                alt="like icon"
-                width="30"
-                height="30"
-                class="sidebysidebox"
-              />
-              like</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    {% endcomment %}
-
-
-      {% if user.is_authenticated %}
-      <div class="commentcontainer2 sidebyside ">
-        <div class="commicon comm sidebysidebox "></div>
-        <form method="post" id="comment-form">
-          {% csrf_token %}
-          {{ comment_form.as_p }}
-          <button type="submit" class=" sendbutton sidebysidebox move1">Send</button>
-        </form>
-      </div>
-      {% endif %}
+    <div class="commentcontainer2 sidebyside ">
+      <div class="commicon comm sidebysidebox "></div>
+      <form method="post" id="comment-form">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <button type="submit" class=" sendbutton sidebysidebox move1">Send</button>
+      </form>
+    </div>
+    {% endif %}
 
 
   </div>
