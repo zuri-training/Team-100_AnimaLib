@@ -747,3 +747,148 @@ footer {
     height: 8px;
     width: 10%;
 }
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px){
+  .omega{
+    padding-left: 10px;
+    margin-top: 20px;
+    
+  }
+  .saves-title2{
+    padding-left: 220px; 
+  }
+  .section2{
+    margin-bottom: 1000px;
+    align-content:center;
+    padding-left: 300px;
+  
+  }
+  .content-holder{
+    padding: 4%;
+  }
+  .profilepicname{
+    margin-top: 29px;
+  }
+  .omega{
+    margin-top: 0px;
+  }
+  }
+  
+  @media screen and (max-width: 425px){
+  .omega{
+    padding-left: 10px;
+    margin-top: 50px;
+  }
+  .saves-title2{
+    padding-left: 230px; 
+  }
+  .section2{
+    margin-top: -100px;
+    align-content:center;
+    padding-left: 600px;
+    
+  }
+  .content-holder{
+    padding: 4%;
+    display: flex;
+    
+  }
+  }
+
+  @media screen and (max-width: 414px){
+  .omega{
+    padding-left: 25px;
+    margin-left: 55px;
+    
+  }
+  .saves-title2{
+    padding-left: 150px; 
+  }
+  .section2{
+    margin-top:-100px;
+    align-content:center;
+    padding-left:353px;
+  }
+  .content-holder{
+    padding: 4%;
+    display:flex;
+    flex-direction:column;
+  }
+  .editpiclink{
+    width:110px;
+  }
+  }
+  @media screen and (max-width: 393px){
+  .omega{
+    padding-left: 10px;
+    margin-top: 50px;
+    
+  }
+  .saves-title2{
+    padding-left: 140px; 
+  }
+  .section2{
+    margin-top: -100px;
+    align-content:center;
+    padding-left: 360px;
+  }
+  .content-holder{
+    padding: 4%;
+  }
+  }
+  @media screen and (max-width: 390px){
+  .omega{
+    padding-left: 10px;
+    margin-top: 50px;
+    
+  }
+  .saves-title2{
+    padding-left: 140px; 
+  }
+  .section2{
+    margin-top: -100px;
+    align-content:center;
+    padding-left: 360px;
+  }
+  .content-holder{
+    padding: 4%;
+  }
+  }
+  @media screen and (max-width: 375px){
+  .omega{
+    padding-left: 25px;
+    margin-left: 46px;
+    
+  }
+  .saves-title2{
+    padding-left: 130px; 
+  }
+  .section2{
+    margin-top:-100px;
+    align-content:center;
+    padding-left:356px;
+  }
+  .content-holder{
+    padding: 4%;
+    display:flex;
+    flex-direction:column;
+  }
+  }
+  @media screen and (max-width: 360px){
+  .omega{
+    padding-left: 0px;
+    margin-top: 50px;
+    
+  }
+  .saves-title2{
+    padding-left: 130px; 
+  }
+  .section2{
+    margin-top: -100px;
+    align-content:center;
+    padding-left: 340px;
+  }
+  .content-holder{
+    padding: 4%;
+  }
+  }
