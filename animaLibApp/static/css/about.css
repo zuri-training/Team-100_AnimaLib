@@ -4,7 +4,6 @@ main {
     padding-top: 0px;
     margin-top: 80px;
     background-color: var(--white);
-
 }
 
 .description {
@@ -46,45 +45,33 @@ main {
 .goal-mission-container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 110px 5% 70px 5%;
+    padding: 110px 4% 70px 4%;
     ;
 }
 
 .goal-mission-container .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center
 }
 
 .goal-mission-container .flex-container .flex-item {
     flex-basis: 50%;
-    padding: 50px;
+    padding: 0 35px;
 }
 
-.goal-mission-container .flex-container:nth-child(2) .flex-item:nth-child(1) {
-    order: 2;
-}
-
-.goal-mission-container .flex-container:nth-child(2) .flex-item:nth-child(2) {
-    order: 1;
+.goal-mission-container .flex-container.reverse {
+    flex-direction: row-reverse;
 }
 
 .goal-mission-container .flex-container .flex-item img {
     width: 100%;
 }
 
-@media (max-width: 900px) {
-    .flex-container {
-        margin: 5% 7%;
-        flex-direction: column-reverse;
-    }
-}
-
 #belief {
     background-color: rgba(31, 39, 130, 0.05);
 }
-
 
 .belief-container {
     max-width: 1440px;
@@ -198,6 +185,7 @@ main {
     background-color: transparent;
     text-decoration: none;
 }
+
 .sponsors-logo {
     display: flex;
     flex-wrap: wrap;
@@ -208,7 +196,7 @@ main {
 
 .sponsors-logo img {
     padding: 0 50px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .sponsors-logo img.i4g-logo {
@@ -217,4 +205,46 @@ main {
 
 .sponsors-logo img.zuri-logo {
     width: 396px;
+}
+
+@media screen and (min-width: 1400px) {
+    .goal-mission-container {
+        padding: 110px 90px 70px 90px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .goal-mission-container .flex-container {
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .goal-mission-container .flex-container.reverse {
+        flex-direction: column-reverse;
+    }
+    .goal-mission-container .flex-container .title {
+        font-size: 32px;
+        margin: 18px 0px;
+    }
+    .goal-mission-container .flex-container .description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .sponsors-logo img.i4g-logo {
+        width: 300px;
+    }
+    .sponsors-logo img.zuri-logo {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .goal-mission-container {
+        padding: 110px 3% 70px 3%;
+    }
+    .goal-mission-container .flex-container .description {
+        font-size: 16px;
+        line-height: 28px;
+    }
 }

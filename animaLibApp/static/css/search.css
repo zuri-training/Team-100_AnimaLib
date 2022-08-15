@@ -4,11 +4,15 @@ main {
     background-color: var(--white);
 }
 
-.search-container {
+#search-container {
+    background-color: var(--white);
+    display: none;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 120px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .search-top-container {
@@ -72,7 +76,7 @@ main {
     max-width: var(--max-width);
     padding: 60px 6% 270px 6%;
     margin: 0 auto;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     /* justify-content: center; */
     align-items: center;
@@ -81,12 +85,12 @@ main {
 .anima-display-container {
     margin: 12px;
     width: 282px;
-    height: 230px;
+    height: 260px;
 }
 
 .anima-display {
     width: 282px;
-    height: 192px;
+    height: 230px;
     background-color: var(--light-blue);
     border-radius: 8px;
     justify-content: center;
@@ -100,8 +104,8 @@ main {
     width: 96px;
     height: 96px;
     left: 93px;
-    top: 48px;
-    background-color: rgba(31, 39, 130, 0.14);
+    top: 60px;
+    background-color: var(--dark-green);
     border-radius: 8px;
 }
 
@@ -119,8 +123,13 @@ main {
     color: var(--text-black);
 }
 
+.lower-container .react-icon {
+    width: 20px;
+    margin-left: 10px;
+}
+
 #animation-not-found {
-    display: block;
+    display: none;
     max-width: var(--max-width);
     padding: 100px 5% 270px 5%;
     margin: 0 auto;
@@ -130,7 +139,7 @@ main {
 }
 
 #animation-not-found img {
-    max-width: 500px;
+    width: 40%;
     margin: 0 auto;
 }
 
