@@ -208,3 +208,98 @@ form i {
   padding: 12px 40px;
   gap: 8px;
 }
+
+@media screen and (max-width: 500px) {
+  .main_box {
+    background-color: #f8f8f8;
+    background-image: none;
+  }
+
+  .login-card {
+    border-radius: 16px;
+    background: #edeef2;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    /* display: inline-block; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* flex-direction: column; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 292px;
+  }
+
+  input {
+    width: 232px;
+    /* width: 100%; */
+    height: 48px;
+  }
+
+  /* .input-container {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+  } */
+  h4 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .para-text {
+    font-size: 14px;
+  }
+
+  .form-check-label {
+    margin-right: 80px;
+  }
+
+  .main-form {
+    /* display: flex; */
+    margin-left: 0px;
+    /* justify-content: center;
+    align-items: center; */
+    /* margin: 0 auto; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  .form-button {
+    width: 232px;
+    /* width: 90%; */
+    height: 48px;
+  }
+
+  .form-check-label {
+    margin-right: 20px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .login-card {
+    margin-top: 112px;
+    margin-bottom: 112px;
+    height: 600px;
+    width: 400px;
+  }
+
+  input {
+    width: 300px;
+    /* width: 100%; */
+    height: 48px;
+  }
+
+  .form-button {
+    width: 300px;
+    /* width: 90%; */
+    height: 48px;
+  }
+
+  .form-check-label {
+    margin-right: 75px;
+  }
+}
+

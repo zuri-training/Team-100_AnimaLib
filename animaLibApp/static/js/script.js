@@ -1,85 +1,85 @@
 //alert("This is the JavaScript file");
 // template animation object
 const animationObj = [{
-        id: 1,
-        name: "Move Up",
-        styleCode: "moveup",
-        description: "You can make the text or button or whatever element you want to style move up with this animation class",
-        dateCreated: "10-10-2022 11:20:22",
-        lastUpdated: "10-10-2022 11:20:22",
-    },
-    {
-        id: 2,
-        name: "Move Down",
-        styleCode: "movedown",
-        description: "You can make the text or button or whatever element you want to style move up with this animation class",
-        dateCreated: "10-10-2022 11:20:22",
-        lastUpdated: "10-10-2022 11:20:22",
-    },
-    {
-        id: 3,
-        name: "Move Right",
-        styleCode: "moveright",
-        description: "You can make the text or button or whatever element you want to style move right with this animation class",
-        dateCreated: "10-10-2022 11:20:22",
-        lastUpdated: "10-10-2022 11:20:22",
-    },
-    {
-        id: 4,
-        name: "Move Left",
-        styleCode: "moveleft",
-        description: "You can make the text or button or whatever element you want to style move left with this animation class",
-        dateCreated: "10-10-2022 11:20:22",
-        lastUpdated: "10-10-2022 11:20:22",
-    },
-    {
-        id: 5,
-        name: "Blink",
-        styleCode: "blink",
-        description: "You can make the text or button or whatever element you want to style with the blink using this animation class",
-        dateCreated: "10-10-2022 11:20:22",
-        lastUpdated: "10-10-2022 11:20:22",
-    },
-    {
-        id: 6,
-        name: "Bounce",
-        styleCode: "bounce",
-        description: "You can make the text or button or whatever element you want to style with the bounce effect using this animation class",
-        dateCreated: "10-10-2022 11:20:22",
-        lastUpdated: "10-10-2022 11:20:22",
-    },
-    {
-        id: 7,
-        name: "Fade In",
-        styleCode: "fadeIn",
-        description: "You can make the text or button or whatever element you want to style with the Fade In effect, using this animation class",
-        dateCreated: "10-10-2022 11:20:22",
-        lastUpdated: "10-10-2022 11:20:22",
-    },
-    {
-        id: 8,
-        name: "Flip",
-        styleCode: "flip",
-        description: "You can make the text or button or whatever element you want to style with the flip effect using this animation class",
-        dateCreated: "10-10-2022 11:20:22",
-        lastUpdated: "10-10-2022 11:20:22",
-    },
-    {
-        id: 9,
-        name: "Swing",
-        styleCode: "swing",
-        description: "You can make the text or button or whatever element you want to style with the swing effect using animation class",
-        dateCreated: "10-10-2022 11:20:22",
-        lastUpdated: "10-10-2022 11:20:22",
-    },
-    {
-        id: 10,
-        name: "Tada",
-        styleCode: "tada",
-        description: "You can make the text or button or whatever element you want to style with the tada effect using this animation class",
-        dateCreated: "10-10-2022 11:20:22",
-        lastUpdated: "10-10-2022 11:20:22",
-    },
+    id: 1,
+    name: "Move Up",
+    styleCode: "moveup",
+    description: "You can make the text or button or whatever element you want to style move up with this animation class",
+    dateCreated: "10-10-2022 11:20:22",
+    lastUpdated: "10-10-2022 11:20:22",
+},
+{
+    id: 2,
+    name: "Move Down",
+    styleCode: "movedown",
+    description: "You can make the text or button or whatever element you want to style move up with this animation class",
+    dateCreated: "10-10-2022 11:20:22",
+    lastUpdated: "10-10-2022 11:20:22",
+},
+{
+    id: 3,
+    name: "Move Right",
+    styleCode: "moveright",
+    description: "You can make the text or button or whatever element you want to style move right with this animation class",
+    dateCreated: "10-10-2022 11:20:22",
+    lastUpdated: "10-10-2022 11:20:22",
+},
+{
+    id: 4,
+    name: "Move Left",
+    styleCode: "moveleft",
+    description: "You can make the text or button or whatever element you want to style move left with this animation class",
+    dateCreated: "10-10-2022 11:20:22",
+    lastUpdated: "10-10-2022 11:20:22",
+},
+{
+    id: 5,
+    name: "Blink",
+    styleCode: "blink",
+    description: "You can make the text or button or whatever element you want to style with the blink using this animation class",
+    dateCreated: "10-10-2022 11:20:22",
+    lastUpdated: "10-10-2022 11:20:22",
+},
+{
+    id: 6,
+    name: "Bounce",
+    styleCode: "bounce",
+    description: "You can make the text or button or whatever element you want to style with the bounce effect using this animation class",
+    dateCreated: "10-10-2022 11:20:22",
+    lastUpdated: "10-10-2022 11:20:22",
+},
+{
+    id: 7,
+    name: "Fade In",
+    styleCode: "fadeIn",
+    description: "You can make the text or button or whatever element you want to style with the Fade In effect, using this animation class",
+    dateCreated: "10-10-2022 11:20:22",
+    lastUpdated: "10-10-2022 11:20:22",
+},
+{
+    id: 8,
+    name: "Flip",
+    styleCode: "flip",
+    description: "You can make the text or button or whatever element you want to style with the flip effect using this animation class",
+    dateCreated: "10-10-2022 11:20:22",
+    lastUpdated: "10-10-2022 11:20:22",
+},
+{
+    id: 9,
+    name: "Swing",
+    styleCode: "swing",
+    description: "You can make the text or button or whatever element you want to style with the swing effect using animation class",
+    dateCreated: "10-10-2022 11:20:22",
+    lastUpdated: "10-10-2022 11:20:22",
+},
+{
+    id: 10,
+    name: "Tada",
+    styleCode: "tada",
+    description: "You can make the text or button or whatever element you want to style with the tada effect using this animation class",
+    dateCreated: "10-10-2022 11:20:22",
+    lastUpdated: "10-10-2022 11:20:22",
+},
 ];
 
 async function getAnimations() {
@@ -270,7 +270,7 @@ let searchText = document.getElementById("filter");
 // });
 
 // code for support page drop down
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
     if (supportDropDown.style.display == "none") {
         if (event.target == supportNav) {
             supportNav.children[0].style.transform = "rotateZ(180deg)";
@@ -293,7 +293,7 @@ window.addEventListener("click", function(event) {
 });
 
 // code for profile drop down
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
     if (showAfterProfileClick.style.display == "none") {
         if (event.target == downArrow || event.target == profileImg) {
             downArrow.style.transform = "rotateZ(180deg)";
@@ -314,7 +314,7 @@ window.addEventListener("click", function(event) {
 });
 
 // code for sort by drop down
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
     if (sortDropDown.style.display == "none") {
         if (event.target == sortBy || event.target == sortByText) {
             sortDropDown.style.display = "block";
@@ -333,7 +333,7 @@ window.addEventListener("click", function(event) {
 
 // code for sort by change
 Array.from(sortByNewText).forEach((NewSort) => {
-    NewSort.addEventListener("click", function() {
+    NewSort.addEventListener("click", function () {
         sortByText.innerHTML = NewSort.innerHTML;
     });
 });
@@ -378,7 +378,7 @@ $(".owl-carousel").owlCarousel({
 });
 
 // code for drop shadow to header on scroll
-$(window).scroll(function() {
+$(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if (scroll > 0) {
         $("header").addClass("scroll");
