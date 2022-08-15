@@ -35,21 +35,19 @@ class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'text')
+        fields = ('text',)
 
         widgets = {
-            'title': forms.TextInput(
+            'text': forms.TextInput(
                 attrs = {
-                    'class': 'form-control',
-                    'placeholder': 'Title of Post'
-                }
-            ),
-            'text': forms.Textarea(
-                attrs = {
-                    'class': 'form-control',
-                    'placeholder': 'Enter post body'
+                    'class': 'container2 searchbox sidebysidebox move2 form-control',
+                    'placeholder': 'Add a comment'
                 }
             )
+        }
+
+        labels = {
+            'text':''
         }
 
 class ReplyCommentForm(forms.ModelForm):
@@ -62,8 +60,8 @@ class ReplyCommentForm(forms.ModelForm):
         widgets = {
             'text': forms.TextInput(
                 attrs = {
-                    'class': 'form-control',
-                    'placeholder': 'Add Comments'
+                    'class': 'container2 searchbox sidebysidebox move2 form-control',
+                    'placeholder': 'Reply to comment'
                 }
             )
         }
@@ -73,20 +71,16 @@ class EditCommentForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'text',)
+        fields = ('text',)
 
         widgets = {
-            'title': forms.TextInput(
-                attrs = {
-                    'class': 'form-control',
-                    'placeholder': 'Title'
-                }
-            ),
             'text': forms.TextInput(
                 attrs = {
-                    'class': 'form-control',
-                    'placeholder': 'Add Comments'
+                    'class': 'container2 searchbox sidebysidebox move2 form-control',
+                    'placeholder': 'Edit comment'
                 }
             )
         }
+
+
 
