@@ -63,9 +63,10 @@
     let delayField = document.getElementById("delayfield");
     // let iterationField = document.getElementById("delayfield");
     let iterationCountField = document.getElementById("iterationcountfield");
+    let objectField = document.getElementById("objectfield");
   
 
-    // Define click event for generatecode button
+    // Define click event for generatecode button to display
     generateButton.addEventListener('click', () => {
         if (hiddenCodeContainer.style.display === 'none') {
             hiddenCodeContainer.style.display = "block";
@@ -74,26 +75,100 @@
         }
       })
 
-
-
-
-   //   The toggle of the button color and the animation will be achieved using 2 functions for one click of the button
-   // For Move up: Create functions to execute at the click of move up button
-   // define the function for taking in user defined css attributes
-   
-
-    
-
+// Define the functions that will be called on the click event for each animation button
     function upColorToggle(){
+        // This function sets the background color and text color of the moveup button 
+        moveDownNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveRightNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveLeftNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveBlinkNavButton.style.color = "rgba(85, 85, 85, 1)";
+        bounceNavButton.style.color = "rgba(85, 85, 85, 1)";
+        fadeNavButton.style.color = "rgba(85, 85, 85, 1)";
+        flipNavButton.style.color = "rgba(85, 85, 85, 1)";
+        swingNavButton.style.color = "rgba(85, 85, 85, 1)";
+        tadaNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveDownNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveRightNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveLeftNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveBlinkNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        bounceNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        fadeNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        flipNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        swingNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        tadaNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
         if (moveUpNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
-            moveUpNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)";
+            moveUpNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)",
+            moveUpNavButton.style.color = "white";
         } else{ 
-            moveUpNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+            
         }
     }
+    
     function upAnimateSample(){
+        // This functions changes the class name, takes in the user input from the form and updates the animation 
+        animatedObject.className="";
+        animatedObject.classList.add("result");
         hiddenCodeContainer.style.display = 'none';
-        animatedObject.classList.toggle("moveup");
+        animatedObject.classList.add("moveup");
+        animatedObject.style.animationDuration = durationField.value;
+        animatedObject.style.animationDelay = delayField.value;
+        if (infiniteUpdate.checked){
+            iterationAttribute = "infinite";
+        } else{
+            iterationAttribute = iterationCountField.value;
+        }
+        animatedObject.style.animationIterationCount = iterationAttribute;
+        // This section displays the basic css code for the default animation settings 
+        hiddenCode.innerHTML ="";
+        hiddenCode.innerHTML = moveUpCode.innerHTML;
+        // This part adds in the user's custom parameters below the basic css structure with the default input
+        userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
+        hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
+    }    
+    // This part sets up the click event for the move up button using event listener 
+    moveUpNavButton.addEventListener("click", () => {
+        // This asseses the user's object choice and sets the border radius accordingly
+        if (objectField.value === 'ball') {
+            animatedObject.style.borderRadius = "50%";
+        } else if (objectField.value = 'box'){   
+            animatedObject.style.borderRadius = "0px";
+        }
+        upColorToggle();
+        upAnimateSample();
+    });  
+
+// For Move down: Follows the same structure as commented in detail in the move up section
+    function downColorToggle(){
+        moveUpNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveRightNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveLeftNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveBlinkNavButton.style.color = "rgba(85, 85, 85, 1)";
+        bounceNavButton.style.color = "rgba(85, 85, 85, 1)";
+        fadeNavButton.style.color = "rgba(85, 85, 85, 1)";
+        flipNavButton.style.color = "rgba(85, 85, 85, 1)";
+        swingNavButton.style.color = "rgba(85, 85, 85, 1)";
+        tadaNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveUpNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveRightNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveLeftNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveBlinkNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        bounceNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        fadeNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        flipNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        swingNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        tadaNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        if (moveDownNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
+            moveDownNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)", 
+            moveDownNavButton.style.color = "white";
+        } else{ 
+           
+        }
+    }
+    function downAnimateSample(){
+        animatedObject.className="";
+        animatedObject.classList.add("result");
+        hiddenCodeContainer.style.display = 'none';
+        animatedObject.classList.toggle("movedown");
         animatedObject.style.animationDuration = durationField.value;
         animatedObject.style.animationDelay = delayField.value;
         if (infiniteUpdate.checked){
@@ -103,322 +178,499 @@
         }
         animatedObject.style.animationIterationCount = iterationAttribute;
         hiddenCode.innerHTML ="";
-        hiddenCode.innerHTML = moveUpCode.innerHTML;
-        userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
-        hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
-    }    
-    // For Move up: Set on click event using Event listener 
-    moveUpNavButton.addEventListener("click", () => {
-        upColorToggle();
-        upAnimateSample();
-    console.log(infiniteUpdate.checked)
-    console.log(nameField.value)
-    console.log(durationField.value)
-    console.log(delayField.value)
-    console.log(iterationCountField.value)
-    console.log(iterationAttribute)
-    console.log(hiddenCode.innerHTML)
-    });  
-
-
-// For Move down: Create functions to execute at the click of move down button
-    function downColorToggle(){
-        if (moveDownNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
-            moveDownNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)";
-        } else{ 
-            moveDownNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
-        }
-    }
-    function downAnimateSample(){
-        hiddenCodeContainer.style.display = 'none';
-        hiddenCode.innerHTML ="";
-        animatedObject.classList.toggle("movedown");
         hiddenCode.innerHTML = moveDownCode.innerHTML;
-        if (infiniteUpdate.checked){
-            iterationAttribute = "infinite";
-        } else{
-            iterationAttribute = iterationField.value;
-        }
         let userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
         hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
+       
+    }   
 
-        animatedObject.style.animationDuration = durationField.value;
-        animatedObject.style.animationDelay = delayField.value;
-        animatedObject.style.animationIterationCount = iterationAttribute;
-    }  
 // For Move down: Set on click event using Event listener  
     moveDownNavButton.addEventListener("click", () => {
+        if (objectField.value === 'ball') {
+            animatedObject.style.borderRadius = "50%";
+        } else if (objectField.value = 'box'){   
+            animatedObject.style.borderRadius = "0px";
+        }
         downColorToggle();
         downAnimateSample();
     });
 
 
- // For Move right: Create functions to execute at the click of move right button
+ // For Move right: Follows the same structure as commented in detail in the move up section
  function rightColorToggle(){
-    if (moveRightNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
-        moveRightNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)";
-    } else{ 
+        moveUpNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveDownNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveLeftNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveBlinkNavButton.style.color = "rgba(85, 85, 85, 1)";
+        bounceNavButton.style.color = "rgba(85, 85, 85, 1)";
+        fadeNavButton.style.color = "rgba(85, 85, 85, 1)";
+        flipNavButton.style.color = "rgba(85, 85, 85, 1)";
+        swingNavButton.style.color = "rgba(85, 85, 85, 1)";
+        tadaNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveUpNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveDownNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
         moveRightNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveLeftNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveBlinkNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        bounceNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        fadeNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        flipNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        swingNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        tadaNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+    if (moveRightNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
+        moveRightNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)",
+        moveRightNavButton.style.color = "white";
+    } else{ 
+       
     }
 }
 function rightAnimateSample(){
+        animatedObject.className="";
+        animatedObject.classList.add("result");
         hiddenCodeContainer.style.display = 'none';
-        hiddenCode.innerHTML ="";
-        animatedObject.classList.toggle("moveright");
-        hiddenCode.innerHTML = moveRightCode.innerHTML;
+        // use move left class here because theres a mistake on the css that mixes up left with right and I don't want to touch Mabels files since its working for her documentation page 
+        animatedObject.classList.toggle("moveleft"); 
+        animatedObject.style.animationDuration = durationField.value;
+        animatedObject.style.animationDelay = delayField.value;
         if (infiniteUpdate.checked){
             iterationAttribute = "infinite";
         } else{
-            iterationAttribute = iterationField.value;
+            iterationAttribute = iterationCountField.value;
         }
-        let userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
+        animatedObject.style.animationIterationCount = iterationAttribute;
+        hiddenCode.innerHTML ="";
+        hiddenCode.innerHTML = moveRightCode.innerHTML;
+        userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
         hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
     } 
+
 // For Move right: Set on click event using Event listener 
     moveRightNavButton.addEventListener("click", () => {
+        if (objectField.value === 'ball') {
+            animatedObject.style.borderRadius = "50%";
+        } else if (objectField.value = 'box'){   
+            animatedObject.style.borderRadius = "0px";
+        }
         rightColorToggle();
         rightAnimateSample();
     });
 
 
 
- // For Move left: Create functions to execute at the click of move left button
+ // For Move left: Follows the same structure as commented in detail in the move up section
  function leftColorToggle(){
-    if (moveLeftNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
-        moveLeftNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)";
-    } else{ 
+        moveUpNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveDownNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveRightNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveBlinkNavButton.style.color = "rgba(85, 85, 85, 1)";
+        bounceNavButton.style.color = "rgba(85, 85, 85, 1)";
+        fadeNavButton.style.color = "rgba(85, 85, 85, 1)";
+        flipNavButton.style.color = "rgba(85, 85, 85, 1)";
+        swingNavButton.style.color = "rgba(85, 85, 85, 1)";
+        tadaNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveUpNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveDownNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveRightNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
         moveLeftNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveBlinkNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        bounceNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        fadeNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        flipNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        swingNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        tadaNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+    if (moveLeftNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
+        moveLeftNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)",
+        moveLeftNavButton.style.color = "white";
+    } else{ 
+        
     }
 }
 function leftAnimateSample(){
+        animatedObject.className="";
+        animatedObject.classList.add("result");
         hiddenCodeContainer.style.display = 'none';
-        hiddenCode.innerHTML ="";
-        animatedObject.classList.toggle("moveleft");
-        hiddenCode.innerHTML = moveLeftCode.innerHTML;
+        animatedObject.classList.toggle("moveright");
+        animatedObject.style.animationDuration = durationField.value;
+        animatedObject.style.animationDelay = delayField.value;
         if (infiniteUpdate.checked){
             iterationAttribute = "infinite";
         } else{
-            iterationAttribute = iterationField.value;
+            iterationAttribute = iterationCountField.value;
         }
+        animatedObject.style.animationIterationCount = iterationAttribute;
+        hiddenCode.innerHTML ="";
+        hiddenCode.innerHTML = moveLeftCode.innerHTML;
         let userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
         hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
     } 
+
 // For Move Left: Set on click event using Event listener 
     moveLeftNavButton.addEventListener("click", () => {
+        if (objectField.value === 'ball') {
+            animatedObject.style.borderRadius = "50%";
+        } else if (objectField.value = 'box'){   
+            animatedObject.style.borderRadius = "0px";
+        }
         leftColorToggle();
         leftAnimateSample();
     });
 
 
 
-// For Blink: Create functions to execute at the click of blink button
+// For Blink: Follows the same structure as commented in detail in the move up section
  function blinkColorToggle(){
-    if (moveBlinkNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
-        moveBlinkNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)";
-    } else{ 
+        moveUpNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveDownNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveRightNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveLeftNavButton.style.color = "rgba(85, 85, 85, 1)";
+        bounceNavButton.style.color = "rgba(85, 85, 85, 1)";
+        fadeNavButton.style.color = "rgba(85, 85, 85, 1)";
+        flipNavButton.style.color = "rgba(85, 85, 85, 1)";
+        swingNavButton.style.color = "rgba(85, 85, 85, 1)";
+        tadaNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveUpNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveDownNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveRightNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveLeftNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
         moveBlinkNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        bounceNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        fadeNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        flipNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        swingNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        tadaNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+    if (moveBlinkNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
+        moveBlinkNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)",
+        moveBlinkNavButton.style.color = "white";
+    } else{     
     }
 }
 function blinkAnimateSample(){
-    hiddenCodeContainer.style.display = 'none';
-        hiddenCode.innerHTML ="";
+        animatedObject.className="";
+        animatedObject.classList.add("result");
+        hiddenCodeContainer.style.display = 'none';
         animatedObject.classList.toggle("blink");
-        hiddenCode.innerHTML = blinkCode.innerHTML;
+        animatedObject.style.animationDuration = durationField.value;
+        animatedObject.style.animationDelay = delayField.value;
         if (infiniteUpdate.checked){
             iterationAttribute = "infinite";
         } else{
-            iterationAttribute = iterationField.value;
+            iterationAttribute = iterationCountField.value;
         }
+        animatedObject.style.animationIterationCount = iterationAttribute;
+        hiddenCode.innerHTML ="";
+        hiddenCode.innerHTML = blinkCode.innerHTML;
         let userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
         hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
-}    
+}  
 // For blink: Set on click event using Event listener 
     moveBlinkNavButton.addEventListener("click", () => {
+        if (objectField.value === 'ball') {
+            animatedObject.style.borderRadius = "50%";
+        } else if (objectField.value = 'box'){   
+            animatedObject.style.borderRadius = "0px";
+        }
         blinkColorToggle();
         blinkAnimateSample();
     });
 
 
-// For Bounce: Create functions to execute at the click of bounce button
+// For Bounce: Follows the same structure as commented in detail in the move up section
  function bounceColorToggle(){
-    if (bounceNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
-        bounceNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)";
-    } else{ 
+        moveUpNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveDownNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveRightNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveLeftNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveBlinkNavButton.style.color = "rgba(85, 85, 85, 1)";
+        fadeNavButton.style.color = "rgba(85, 85, 85, 1)";
+        flipNavButton.style.color = "rgba(85, 85, 85, 1)";
+        swingNavButton.style.color = "rgba(85, 85, 85, 1)";
+        tadaNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveUpNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveDownNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveRightNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveLeftNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveBlinkNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
         bounceNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        fadeNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        flipNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        swingNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        tadaNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+    if (bounceNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
+        bounceNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)",
+        bounceNavButton.style.color = "white";
+    } else{ 
+        
     }
 }
 function bounceAnimateSample(){
-    hiddenCodeContainer.style.display = 'none';
-        hiddenCode.innerHTML ="";
+        animatedObject.className="";
+        animatedObject.classList.add("result");
+        hiddenCodeContainer.style.display = 'none';
         animatedObject.classList.toggle("bounce");
-        hiddenCode.innerHTML = bounceCode.innerHTML;
+        animatedObject.style.animationDuration = durationField.value;
+        animatedObject.style.animationDelay = delayField.value;
         if (infiniteUpdate.checked){
             iterationAttribute = "infinite";
         } else{
-            iterationAttribute = iterationField.value;
+            iterationAttribute = iterationCountField.value;
         }
+        animatedObject.style.animationIterationCount = iterationAttribute;
+        hiddenCode.innerHTML ="";
+        hiddenCode.innerHTML = bounceCode.innerHTML;
         let userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
         hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
 } 
 // For bounce: Set on click event using Event listener
     bounceNavButton.addEventListener("click", () => {
+        if (objectField.value === 'ball') {
+            animatedObject.style.borderRadius = "50%";
+        } else if (objectField.value = 'box'){   
+            animatedObject.style.borderRadius = "0px";
+        }
         bounceColorToggle();
         bounceAnimateSample();
     });
 
 
-// For Fade: Create functions to execute at the click of fade button
+// For Fade: Follows the same structure as commented in detail in the move up section
 function fadeColorToggle(){
-    if (fadeNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
-        fadeNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)";
-    } else{ 
+        moveUpNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveDownNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveRightNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveLeftNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveBlinkNavButton.style.color = "rgba(85, 85, 85, 1)";
+        bounceNavButton.style.color = "rgba(85, 85, 85, 1)";
+        flipNavButton.style.color = "rgba(85, 85, 85, 1)";
+        swingNavButton.style.color = "rgba(85, 85, 85, 1)";
+        tadaNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveUpNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveDownNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveRightNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveLeftNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveBlinkNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        bounceNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
         fadeNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        flipNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        swingNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        tadaNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+    if (fadeNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
+        fadeNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)",
+        fadeNavButton.style.color = "white";
+    } else{ 
+        
     }
 }
 function fadeAnimateSample(){
+    animatedObject.className="";
+    animatedObject.classList.add("result");
     hiddenCodeContainer.style.display = 'none';
-    hiddenCode.innerHTML ="";
     animatedObject.classList.toggle("fadeIn");
-    hiddenCode.innerHTML = fadeCode.innerHTML;
+    animatedObject.style.animationDuration = durationField.value;
+    animatedObject.style.animationDelay = delayField.value;
     if (infiniteUpdate.checked){
         iterationAttribute = "infinite";
     } else{
-        iterationAttribute = iterationField.value;
+        iterationAttribute = iterationCountField.value;
     }
+    animatedObject.style.animationIterationCount = iterationAttribute;
+    hiddenCode.innerHTML ="";
+    hiddenCode.innerHTML = fadeCode.innerHTML;
     let userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
     hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
 } 
 // For fade: Set on click event using Event listener
 fadeNavButton.addEventListener("click", () => {
+    if (objectField.value === 'ball') {
+        animatedObject.style.borderRadius = "50%";
+    } else if (objectField.value = 'box'){   
+        animatedObject.style.borderRadius = "0px";
+    }
     fadeColorToggle();
     fadeAnimateSample();
 });
 
-// For flip: Create functions to execute at the click of flipbutton
+// For flip: Follows the same structure as commented in detail in the move up section
 function flipColorToggle(){
-    if (flipNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
-        flipNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)";
-    } else{ 
+        moveUpNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveDownNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveRightNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveLeftNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveBlinkNavButton.style.color = "rgba(85, 85, 85, 1)";
+        bounceNavButton.style.color = "rgba(85, 85, 85, 1)";
+        fadeNavButton.style.color = "rgba(85, 85, 85, 1)";
+        swingNavButton.style.color = "rgba(85, 85, 85, 1)";
+        tadaNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveUpNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveDownNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveRightNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveLeftNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveBlinkNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        bounceNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        fadeNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
         flipNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        swingNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        tadaNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+    if (flipNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
+        flipNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)",
+        flipNavButton.style.color = "white";
+    } else{ 
+        
     }
 }
 function flipAnimateSample(){
+    animatedObject.className="";
+    animatedObject.classList.add("result");
     hiddenCodeContainer.style.display = 'none';
-    hiddenCode.innerHTML ="";
     animatedObject.classList.toggle("flip");
-    hiddenCode.innerHTML = flipCode.innerHTML;
+    animatedObject.style.animationDuration = durationField.value;
+    animatedObject.style.animationDelay = delayField.value;
     if (infiniteUpdate.checked){
         iterationAttribute = "infinite";
     } else{
-        iterationAttribute = iterationField.value;
+        iterationAttribute = iterationCountField.value;
     }
+    animatedObject.style.animationIterationCount = iterationAttribute;
+    hiddenCode.innerHTML ="";
+    hiddenCode.innerHTML = flipCode.innerHTML;
     let userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
     hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
-} 
+}
+
 // For flip: Set on click event using Event listener
     flipNavButton.addEventListener("click", () => {
+        if (objectField.value === 'ball') {
+            animatedObject.style.borderRadius = "50%";
+        } else if (objectField.value = 'box'){   
+            animatedObject.style.borderRadius = "0px";
+        }
         flipColorToggle();
         flipAnimateSample();
     });
 
 
-// For swing: Create functions to execute at the click of swing button
+// For swing: Follows the same structure as commented in detail in the move up section
 function swingColorToggle(){
-    if (swingNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
-        swingNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)";
-    } else{ 
+        moveUpNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveDownNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveRightNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveLeftNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveBlinkNavButton.style.color = "rgba(85, 85, 85, 1)";
+        bounceNavButton.style.color = "rgba(85, 85, 85, 1)";
+        fadeNavButton.style.color = "rgba(85, 85, 85, 1)";
+        flipNavButton.style.color = "rgba(85, 85, 85, 1)";
+        tadaNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveUpNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveDownNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveRightNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveLeftNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveBlinkNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        bounceNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        fadeNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        flipNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
         swingNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        tadaNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+    if (swingNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
+        swingNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)",
+        swingNavButton.style.color = "white";
+    } else{ 
+        
     }
 }
 function swingAnimateSample(){
+    animatedObject.className="";
+    animatedObject.classList.add("result");
     hiddenCodeContainer.style.display = 'none';
-    hiddenCode.innerHTML ="";
     animatedObject.classList.toggle("swing");
-    hiddenCode.innerHTML = swingCode.innerHTML;
+    animatedObject.style.animationDuration = durationField.value;
+    animatedObject.style.animationDelay = delayField.value;
     if (infiniteUpdate.checked){
         iterationAttribute = "infinite";
     } else{
-        iterationAttribute = iterationField.value;
+        iterationAttribute = iterationCountField.value;
     }
+    animatedObject.style.animationIterationCount = iterationAttribute;
+    hiddenCode.innerHTML ="";
+    hiddenCode.innerHTML = swingCode.innerHTML;
     let userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
     hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
-
-    
-    // use if loop such that if value ="" then value is infinite. check out document.getElementById("myDIV").style.animationIterationCount = "infinite";
 } 
 
 // For swing: Set on click event using Event listener
     swingNavButton.addEventListener("click", () => {
+        if (objectField.value === 'ball') {
+            animatedObject.style.borderRadius = "50%";
+        } else if (objectField.value = 'box'){   
+            animatedObject.style.borderRadius = "0px";
+        }
         swingColorToggle();
         swingAnimateSample();
     });
 
 
-// For tada: Create functions to execute at the click of tada button
+// For tada: Follows the same structure as commented in detail in the move up sectionio
 function tadaColorToggle(){
-    if (tadaNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
-        tadaNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)";
-    } else{ 
+        moveUpNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveDownNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveRightNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveLeftNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveBlinkNavButton.style.color = "rgba(85, 85, 85, 1)";
+        bounceNavButton.style.color = "rgba(85, 85, 85, 1)";
+        fadeNavButton.style.color = "rgba(85, 85, 85, 1)";
+        flipNavButton.style.color = "rgba(85, 85, 85, 1)";
+        swingNavButton.style.color = "rgba(85, 85, 85, 1)";
+        moveUpNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveDownNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveRightNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveLeftNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        moveBlinkNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        bounceNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        fadeNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        flipNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+        swingNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
         tadaNavButton.style.backgroundColor = 'rgba(31, 39, 130, 0.05)';
+    if (tadaNavButton.style.backgroundColor === 'rgba(31, 39, 130, 0.05)') {
+        tadaNavButton.style.backgroundColor = "rgba(79, 89, 213, 1)",
+        tadaNavButton.style.color = "white";
+    } else{ 
+        
     }
 }
 function tadaAnimateSample(){
+    animatedObject.className="";
+    animatedObject.classList.add("result");
     hiddenCodeContainer.style.display = 'none';
-    hiddenCode.innerHTML ="";
     animatedObject.classList.toggle("tada");
-    hiddenCode.innerHTML = tadaCode.innerHTML;
+    animatedObject.style.animationDuration = durationField.value;
+    animatedObject.style.animationDelay = delayField.value;
     if (infiniteUpdate.checked){
         iterationAttribute = "infinite";
     } else{
-        iterationAttribute = iterationField.value;
+        iterationAttribute = iterationCountField.value;
     }
+    animatedObject.style.animationIterationCount = iterationAttribute;
+    hiddenCode.innerHTML ="";
+    hiddenCode.innerHTML = tadaCode.innerHTML;
     let userGeneratedCode = "You have achieved " + "'" + nameField.value + "'" + " by setting animation-duration:" + durationField.value+"s, your animation-delay is: " + delayField.value+"s, and your animation-iteration-count is:" + iterationAttribute
     hiddenCode.innerHTML = "\n" + swingCode.innerHTML + "\n" + "\n" + userGeneratedCode;
 } 
 
 // For tada: Set on click event using Event listener
     tadaNavButton.addEventListener("click", () => {
+        if (objectField.value === 'ball') {
+            animatedObject.style.borderRadius = "50%";
+        } else if (objectField.value = 'box'){   
+            animatedObject.style.borderRadius = "0px";
+        }
         tadaColorToggle();
         tadaAnimateSample();
     });
 
-    // let myValue = document.querySelector('#infinite[type="checkbox"]:checked');
-    // console.log(myValue)
-
-
-//   const infiniteValue = document.querySelector('.ifinite[type="checkbox"]:checked');
-//   console.log(document.querySelector('.infinite[type="checkbox"]:checked'))
-  // document.getElementById("myNumber").defaultValue = "16";
-
-//     var x = document.getElementById("myText").value;
-//   document.getElementById("demo").innerHTML = x;
-
-// var e = document.getElementById("ddlViewBy");
-// var value = e.value;
-// var text = e.options[e.selectedIndex].text;
-
-// checkedValue = document.querySelector('.messageCheckbox:checked').value;
-
-// const test=document.getElementById("moveupcode");
-// console.log(test);
-
-// const test2=document.getElementById("hiddencode");
-// console.log(test2);
-
-// const generateButton=document.querySelector(".generatebutton");
-// console.log(test3);
-
-// infiniteValue = document.querySelector('.infinite:checked').value;
-// console.log(infiniteValue)
-// infiniteValue = document.querySelector('.infinite');
-// console.log(infiniteValue)
-
-// infiniteValue = document.querySelector('.input[type="checkbox"]:checked');
-// console.log(infiniteValue)
-// let x = animatedObject.className;
-
-// / animatedObject.style.animationIterationCount =2;
-        // animatedObject.offsetHeight;
-        // animatedClass = "";
-        // animatedClass = "result";
-        // location.reload();
+//    Use this to check the dynamically updated form values
+    // console.log(infiniteUpdate.checked)
+    // console.log(nameField.value)
+    // console.log(objectField.value)
+    // console.log(durationField.value)
+    // console.log(delayField.value)
+    // console.log(iterationCountField.value)
+    // console.log(iterationAttribute)
+    // console.log(hiddenCode.innerHTML)
