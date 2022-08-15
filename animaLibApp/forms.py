@@ -40,8 +40,7 @@ class CommentForm(forms.ModelForm):
         widgets = {
             'text': forms.TextInput(
                 attrs = {
-                    'class': 'container2 searchbox sidebysidebox move2 form-control',
-                    'placeholder': 'Add a comment'
+                    'placeholder': 'Add a comment...'
                 }
             )
         }
