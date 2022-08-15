@@ -96,12 +96,12 @@
       {% endfor %}
     </section>
     {% endif %}
-      <div class="commentcontainer2 sidebyside ">
-        <div class="commicon comm sidebysidebox "></div>
+      <div class="post-comment">
+        <img src="{{ user.user_image.url }}" alt="user profile picture" class="icon">
         <form method="post" id="comment-form">
           {% csrf_token %}
-          {{ comment_form.as_p }}
-          <button type="submit" class=" sendbutton sidebysidebox move1">Send</button>
+          {{ comment_form }}
+          <button type="submit">Send</button>
         </form>
       </div>
       {% endif %}
