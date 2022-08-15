@@ -945,3 +945,31 @@ body{
             margin-left:-29px;
           }
           }
+          @media screen and (max-width: 900px){
+            .savestitle3{
+              
+            }
+            .bigbox1{
+              margin-left:-50px;
+            }
+            .omega{
+              margin-left:140px;
+            }
+            .editpiclink{
+              width:110px;
+            }
+            .profilepicname{
+              margin-left:-222px;
+              margin-right:-215px;
+            }
+            .mysavestitle1{
+              margin-left:300px;
+              
+            }
+            .bigbox2{
+              width:300px;
+            }
+            .searchicon2{
+              margin-left:-29px;
+            }
+            }
