@@ -93,9 +93,9 @@ function loadAnimationsOnSideBar() {
         if (animations && animations.length) {
             animations.forEach((val) => {
                 animeList += `<!-- items -->
-                            <span class="menu_II_Item">
-                                <a href="#" class="animeLink menuLink">${val.name}</a>
-                            </span>`;
+                        <span class="menu_II_Item">
+                            <a href="#" class="animeLink menuLink">${val.name}</a>
+                        </span>`;
             });
         }
 
@@ -126,7 +126,6 @@ function showAnimeDetails() {
                                         <!-- content for main slider here -->
                                         </div>
                                        
-
                                         <div class="slideMoving" id="slide${val.id}">
                                             <!-- slider handle -->
                                             <div class="sliderHandle" onclick="showMainContent(${val.id})">
@@ -149,7 +148,6 @@ function showAnimeDetails() {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div
                                 class="customise d-flex justify-content-between"
                                 style="
@@ -196,9 +194,9 @@ function showMainContent(sliderId) {
 
     // add the main content to the slider container
     const mainContent = ` <!-- main slide content -->
-                        <div class="slideMain"> 
-                            <!-- content for main slider here -->
-                        </div>`;
+                    <div class="slideMain"> 
+                        <!-- content for main slider here -->
+                    </div>`;
     selectedSlider.after(mainContent);
     selectedMain.slideToggle("slow");
     console.log("I was clicked");
@@ -233,6 +231,15 @@ let sortByNewText = document.getElementsByClassName("sort-link");
 let sortByText = document.getElementById("sort-text");
 let searchBar = document.getElementById("search-input");
 let searchText = document.getElementById("filter");
+let toggleIcon = document.getElementById('toggle');
+let navPop = document.getElementById('nav-mobile-popup')
+let profileClickMobile = document.getElementById('profile-click-mobile')
+let profileDropDownMobile = document.getElementById('user-profile-links')
+let animationFoundContainer = document.getElementById('animation-found-container')
+let animationNotFoundContainer = document.getElementById('animation-not-found')
+let searchContainer = document.getElementById('search-container')
+let reviewsCard = document.getElementsByClassName('review-card')
+
 
 // // code for active state
 // Array.from(navLists).forEach(navList => {
@@ -256,28 +263,65 @@ let searchText = document.getElementById("filter");
 //     );
 // });
 
-// // code for authenticated header
-// login.addEventListener("click", function() {
-//     Array.from(hideAfterLogin).forEach(
-//         (element) => (element.style.display = "none")
-//     );
-//     Array.from(showAfterLogin).forEach(
-//         (element) => (element.style.display = "flex")
-//     );
-//     Array.from(changeAfterLogin).forEach(
-//         (element) => (element.innerHTML = "Read Documentation")
-//     );
-// });
+
+// code for mobile and tablet navigation dropdown
+window.addEventListener("click", function(event) {
+    if (navPop.style.display == "none") {
+        if (event.target == toggleIcon || event.target == toggleIcon.children[0]) {
+            navPop.style.display = 'block';
+            navPop.style.height = '100vh';
+            toggleIcon.children[0].classList.remove('fa-bars')
+            toggleIcon.children[0].classList.add('fa-times')
+
+        }
+    } else {
+        if (event.target == toggleIcon || event.target == toggleIcon.children[0]) {
+            navPop.style.display = 'none';
+            toggleIcon.children[0].classList.add('fa-bars')
+            toggleIcon.children[0].classList.remove('fa-times')
+
+        }
+    }
+})
+
+// code for profile links dropdown in mobile view
+window.addEventListener("click", function(event) {
+    if (profileDropDownMobile.style.display == "none") {
+        if (event.target == profileClickMobile) {
+            profileDropDownMobile.style.display = 'block'
+            profileClickMobile.style.transform = "rotateZ(180deg)"
+
+        }
+    } else {
+        if (event.target == profileClickMobile) {
+            profileDropDownMobile.style.display = 'none'
+            profileClickMobile.style.transform = "rotateZ(0deg)"
+        } else if (event.target != profileClickMobile) {
+            profileDropDownMobile.style.display = 'none'
+            profileClickMobile.style.transform = "rotateZ(0deg)"
+        }
+    }
+})
+
+// toggle mobile popup display when screen is greater than 950px
+window.addEventListener('resize', function() {
+    width = document.body.clientWidth;
+    if (width > 950) {
+        navPop.style.display = "none";
+        toggleIcon.children[0].classList.remove('fa-times')
+        toggleIcon.children[0].classList.add('fa-bars')
+    }
+})
 
 // code for support page drop down
 window.addEventListener("click", function(event) {
     if (supportDropDown.style.display == "none") {
-        if (event.target == supportNav) {
+        if (event.target == supportNav || event.target == supportNav.nextSibling) {
             supportNav.children[0].style.transform = "rotateZ(180deg)";
             supportDropDown.style.display = "block";
         }
     } else {
-        if (event.target == supportNav) {
+        if (event.target == supportNav || event.target == supportNav.nextSibling) {
             supportDropDown.style.display = "none";
             supportNav.children[0].style.transform = "rotateZ(0deg)";
             Array.from(navLists)[2].classList.remove("active");
@@ -292,7 +336,7 @@ window.addEventListener("click", function(event) {
     }
 });
 
-// code for profile drop down
+// code for profile drop down desktop
 window.addEventListener("click", function(event) {
     if (showAfterProfileClick.style.display == "none") {
         if (event.target == downArrow || event.target == profileImg) {
@@ -313,7 +357,7 @@ window.addEventListener("click", function(event) {
     }
 });
 
-// code for sort by drop down
+// code for sort by drop down desktop
 window.addEventListener("click", function(event) {
     if (sortDropDown.style.display == "none") {
         if (event.target == sortBy || event.target == sortByText) {
@@ -338,14 +382,50 @@ Array.from(sortByNewText).forEach((NewSort) => {
     });
 });
 
-// // code for search result display
-// searchBar.style.backgroundImage.addEventListener("click", function() {
-//     searchBar.style.backgroundImage.src = "";
-// });
-// searchBar.addEventListener("keyup", function() {
-//     var filter = searchBar.value;
-//     searchText.innerHTML = filter;
-// });
+// code for search result display
+searchBar.addEventListener('keyup', function() {
+    var filter = searchBar.value
+    var letters = /^[A-Za-z']+( [A-Za-z']+)*$/;
+    if (!filter.match(letters)) {
+        searchContainer.style.display = 'none'
+    } else {
+        searchContainer.style.display = 'block';
+        searchText.innerHTML = filter
+        var capFilter = filter.toUpperCase()
+        let results = ``;
+        var count = 0;
+        getAnimations().then(animations => {
+            animations.forEach(animation => {
+                if (animation.name.toUpperCase().indexOf(capFilter) > -1) {
+                    count += 1
+                    results += `<!-- Result -->
+                                <div class="anima-display-container">
+                                    <div class="anima-display">
+                                        <div class="animation ${animation.styleCode}"></div>
+                                    </div>
+                                    <div class="lower-container">
+                                        <div>
+                                            <p class="anima-name">${animation.name}</p>
+                                        </div>
+                                        <div>
+                                        <img src="./image/like-icon.png" alt="" class="react-icon like">
+                                        <img src="./image/dislike-icon.png" alt="" class="react-icon dislike">
+                                        </div>
+                                    </div>
+                                </div>`;
+                }
+            })
+            if (count > 0) {
+                animationNotFoundContainer.style.display = 'none'
+                animationFoundContainer.style.display = 'flex';
+                $("#animation-found-container").html(results);
+            } else {
+                animationFoundContainer.style.display = 'none';
+                animationNotFoundContainer.style.display = 'block'
+            }
+        })
+    }
+});
 
 // code for slider effect using owlcarousel
 $(".owl-carousel").owlCarousel({
@@ -387,6 +467,7 @@ $(window).scroll(function() {
     }
 });
 
+// code for faq accordion
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -397,3 +478,19 @@ buttons.forEach((button) => {
         icon.classList.toggle("rotate");
     });
 });
+
+// code for reviews reduction in mobile view
+window.addEventListener("resize", function() {
+    width = document.body.clientWidth;
+    if (width < 907) {
+        for (var i = 0; i < reviewsCard.length; i++) {
+            if (i >= 3) {
+                reviewsCard[i].style.display = "none"
+            }
+        }
+    } else {
+        for (var i = 0; i < reviewsCard.length; i++) {
+            reviewsCard[i].style.display = "block"
+        }
+    }
+})
