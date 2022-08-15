@@ -96,8 +96,8 @@
 
                                             <label for="object">Object</label>
                                             <select name="object" id="objectfield">
-                                                <option value="box">Box</option>
-                                                <!-- <option value="ball">Ball</option> -->
+                                                <option value=" box">Box</option>
+                                                <option value="ball">Ball</option>
                                             </select>
                                             <!-- <input id="object" type="text" value="" name="object" /> -->
                                         </section>
@@ -105,7 +105,8 @@
                                         <section class="wholeduration">
                                             <div class="duration">
                                                 <label for="duration">Duration</label>
-                                                <input id="durationfield" type="number" value="2" name="duration" />
+                                                <input id="durationfield" type="number" value="2" name="duration"
+                                                    min="1" />
                                             </div>
 
                                             <div class="secondswrapper">
@@ -120,7 +121,7 @@
                                         <section class="wholeduration">
                                             <div class="delay">
                                                 <label for="delay">Delay</label>
-                                                <input id="delayfield" type="number" value="0" name="delay" />
+                                                <input id="delayfield" type="number" value="0" name="delay" min="1" />
                                             </div>
 
                                             <div class="secondswrapper">
@@ -131,12 +132,12 @@
                                                 </select>
                                             </div>
                                         </section>
-
+                                        <input type="hidden" name="action" id="action_name" />
                                         <section>
                                             <div>
                                                 <label for="iterationcount">Iteration count</label>
                                                 <input id="iterationcountfield" type="number" value="2"
-                                                    name="iterationcount" />
+                                                    name="iterationcount" min="1" />
                                             </div>
                                             <div class="infinitecontainer">
                                                 <input class="infinite" id="infinite" checked="checked" type="checkbox"
@@ -172,6 +173,7 @@
                         </div>
 
                     </div>
+
                     <div class="sectionContentBody">
                         <div class="copywrite">
                             <h3>Animation Generator Documentation</h3>
@@ -227,6 +229,12 @@
         <!-- </div> -->
     </div>
 
+    <!-- Add this disclaimer for media query -->
+
+    <div class="disclaimer">
+        <p class="disclaimer">Please switch to a wider screen (1000px or more) to view this page.</p>
+        <p class="disclaimer">Thank you</p>
+    </div>
     <!-- This container was left over once I cut it's content to paste in mabel's containers -->
     <!-- <div class="wholepage">
     </div> -->
