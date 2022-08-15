@@ -14,10 +14,13 @@
   width: 72px;
   height: 72px;
   border-radius: 36px;
+  background-color: #d5d5d5;
+  border: 2px solid #d5d5d5;
 }
 .picholder img {
   width: 100%;
   height: 100%;
+  padding: 4px;
 }
 
 .profilepicname {

@@ -17,6 +17,26 @@
 <link href="{% static 'css/register.css' %}" rel="stylesheet" />
 
 {% endblock %} {% block content %}
+{% if messages %} 
+          <div class='showpop'>
+          <div class="showpopup">
+            <div class="close_icon">&times</div>
+                  <div class="popup_content">
+          {% for message in messages %}
+          {% if message.tags == "error" %}
+            <center><div class="cancel">&times</div></center>
+          {% else %}
+      <center><img src="{% static 'images/tick-circle.svg' %}" /></center>
+
+          {% endif %}
+            <p>{{ message}}</p>
+
+          {% endfor %} 
+                  <center><button class="close_btn">Ok</button></center>
+                  </div>
+                </div>
+          </div>
+          {% endif %}
 <div class="main_box">
 <section>
     <div class="image-card"><img src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659648861/register_animation_gvhkgk.png" class="img-fluid"
@@ -31,9 +51,6 @@
       <div class="main-form">
         <form method="POST">
           {% csrf_token %}
-          {% if messages %} {% for message in messages %}
-            {{ message}}
-          {% endfor %} {% endif %}
 
           {{ form | crispy }}
             <div class="form-group">
