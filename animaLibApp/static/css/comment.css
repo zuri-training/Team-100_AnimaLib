@@ -1,0 +1,247 @@
+.container1 {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.comm {
+  margin-top: 60px;
+  margin-left: 80px;
+}
+
+.commicon{
+
+        height: 60px;
+        width: 60px;
+        background-color: blue;
+        border-radius: 30px;
+
+
+}
+
+.container11 {
+  display: inline-block;
+  margin-top: 16px;
+  margin-left: 85px;
+  align-items: center;
+  flex-direction: row;
+}
+
+.container2 {
+  width: 300px;
+  height: 50px;
+}
+
+.commentcontainer11 {
+  width: 878px;
+  min-height: 813px;
+
+}
+.commentcontainer2 {
+  margin-top: 4vh;
+  width: 100%;
+  height: 260px;
+  background: #fcfcfc;
+  box-shadow: 0px 5px 12px rgba(167, 167, 167, 0.25);
+  border-radius: 15px;
+
+}
+
+.title {
+  color: #1f2782;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+}
+.subcontainer1 {
+  display: flex;
+  flex-direction: column;
+  min-height: 20vh;
+  overflow-y: auto;
+  width: 100%;
+  height: 120px;
+
+}
+
+.subcontainer1text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 110px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.subcontainer2 {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 48px;
+  width: 48px;
+  background-color: blue;
+  border-radius: 30px;
+  margin-left: 20px;
+}
+
+
+.subcontainer2text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 30px;
+}
+
+.replay {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+.subcontainer3 {
+  display: flex;
+  width: 100%;
+  background-color: #fcfcfc;
+ border-bottom-left-radius: 15px;
+ border-bottom-right-radius: 15px;
+}
+
+.subcontainer3text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.subcontainer3sub {
+  height: 30px;
+  width: 40px;
+
+  margin-left: 105px;
+}
+
+.subcontainer3like {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  margin-top: 4px;
+  margin-left: 40px;
+}
+
+.subcontainer3share {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 70px;
+  margin-left: 100px;
+}
+
+.sidebyside {
+  clear: both;
+  display: table;
+}
+.sidebysidebox {
+  float: left;
+  padding: 5px;
+}
+
+.searchbox {
+  width: 400px;
+  height: 100px;
+  padding: 12px 20px;
+  margin: 30px 20px;
+  display: block;
+  border: 2px solid #bfbfbf;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #bfbfbf;
+}
+
+.dis {
+  display: inline-block;
+}
+
+.sendbutton {
+  width: 152px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: #1f2782;
+}
+
+.move1 {
+margin-top: 80px;
+color: white;
+}
+
+.move2 {
+  margin-top: 60px;
+}
+
+
+.alignright{
+    text-align: right;
+    width: 75%;
+    display: inline-block;
+
+}
+
+section#comment-section {
+  width: 878px;
+  min-height: 813px;
+}
+section.post-card {
+  background-color: white;
+  max-width: 100%;
+  border-radius: 16px;
+  padding: 3%;
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-bottom: 4vh;
+}
+
+.post-card div {
+  display: flex;
+  align-items: center;
+}
+
+.post-card > div:first-of-type {
+  justify-content: space-between;
+}
+
+.post-card > div:first-of-type img,
+.post-card > div:first-of-type p,
+.post-card > div:first-of-type span
+{
+  margin-left: 8px;
+}
+
+
+.post-card > div:first-of-type span {
+  color: #bcbcbc;
+}
+
+.post-card > div:last-of-type div:first-of-type {
+  margin-right: 10%;
+}
+.post-card > div:last-of-type div img{
+  margin-right: 20%;
+}
+
+.post-card > div:last-of-type, .post-card > p {
+  margin: 20px 8%;
+}
+
+.post-card > p {
+  word-wrap: break-word;
+}
+
