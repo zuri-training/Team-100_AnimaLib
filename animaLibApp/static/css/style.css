@@ -819,6 +819,9 @@ footer {
         flex-direction: column;
         margin-bottom: 50px;
     }
+    .features-container .flex-container.rev-row {
+        flex-direction: column;
+    }
     .features-container .flex-container .flex-item {
         margin: 0 10px;
         text-align: center;
