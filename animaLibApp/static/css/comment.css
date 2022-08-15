@@ -91,12 +91,8 @@ margin-top: 10vh;
   outline: none;
   padding: 4%;
   padding-top: 2px;
-  min-height: 16vh;
+  min-height: 120px;
   width: 75%;
-}
-
-.post-comment form input[text] {
-  padding: -50px;
 }
 
 .post-comment form button {
@@ -104,6 +100,6 @@ margin-top: 10vh;
   border-radius: 8px;
   color: white;
   font-weight: 600;
-  height: 34%;
+  height: 50px;
   width: 18%;
 }
