@@ -190,11 +190,15 @@
     font-weight: 400;
     color: rgba(85, 85, 85, 1);
     font-size: 16px;
+    margin-bottom: 4px;
   }
   input{
     font-weight: 400;
     color:rgba(0, 0, 0, 1);
     font-size: 16px;
+    padding: 8px;
+    /* border: 1px solid rgba(128, 128, 128, 1); */
+    /* border: none; */
   }
    .infinitecontainer{
     display: flex;
@@ -211,6 +215,7 @@
     font-weight: 400;
     font-size: 16px;
     font-family: "Raleway", sans-serif;
+    border: 1px solid rgba(128, 128, 128, 1);
    }
    #iterationcountfield{
     width:330px;
@@ -220,6 +225,7 @@
     font-weight: 400;
     font-size: 16px;
     font-family: "Raleway", sans-serif;
+    border: 1px solid rgba(128, 128, 128, 1);
    }
 .wholeduration{
   width:100%;
@@ -235,6 +241,7 @@
     font-weight: 400;
     font-size: 16px;
     font-family: "Raleway", sans-serif;
+    border: 1px solid rgba(128, 128, 128, 1);
    }
    .delay, .duration{
     width:120px;
@@ -249,7 +256,7 @@
    .secondswrapper{
     float:left;
     width: 220px;
-    margin-top: 18.6px;
+    margin-top: 23px;
     
     /* border: 2px solid red; */
    }
@@ -320,7 +327,8 @@
     /* height: 312px; */
     display: flex;
     flex-direction: column;
-    background-color:rgba(220, 222, 247, 1);
+    /* background-color:rgba(220, 222, 247, 1); */
+    background-color: rgba(31, 39, 130, 0.05);
     border-radius:10px;
     margin-bottom: 40px;
     padding-top: 20px;
@@ -332,7 +340,8 @@
   .html-code .hiddencode{
     width: 70%;
     /* height: 100%; */
-    background-color:rgba(220, 222, 247, 1);
+    /* background-color:rgba(220, 222, 247, 1); */
+    /* background-color: rgba(31, 39, 130, 0.05); */
     border: none;
     resize: vertical;
     /* margin-top: 16px; */
@@ -402,6 +411,10 @@
 
   .animationstext{
     display: none;
+  }
+
+  #download:hover, #savelogo:hover{
+    cursor: pointer;
   }
 
   .animationstext p{
