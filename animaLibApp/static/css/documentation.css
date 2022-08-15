@@ -286,5 +286,6 @@
   .intro-button a {
     text-decoration: none;
     color: #328B8B;
+    height: 24px;
   }
 }
