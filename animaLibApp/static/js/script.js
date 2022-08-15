@@ -135,14 +135,8 @@ function showAnimeDetails() {
                             
                                             <!-- slider content -->
                                             <div class="slidingContent">
-                                                <div class="slider_innerBox d-flex justify-content-center
+                                                <div class="${val.styleCode} slider_innerBox d-flex justify-content-center
                                                     align-items-center">
-                                                    <div class="container">
-                                                        <div class="${val.styleCode}
-                                                            shadow-sm bg-danger text-white
-                                                            p-2">${val.name}</div>
-                                                    </div>
-                                                    
                                                 </div>
                                             </div>
                                         </div>
