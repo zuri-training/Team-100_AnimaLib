@@ -726,7 +726,7 @@ body{
   }
 }
     
-  @media screen and (max-width: 900px){
+@media screen and (max-width: 900px){
   .biggerbox1{
     padding: 4%;
     margin-left: 11%;
@@ -740,21 +740,8 @@ body{
     padding-right: 2
   }
 }
-  @media screen and (max-width: 360px){
-  .subtitle1{
-    padding-right: 20px;
-  
-  
-  }
-  .saves-title{
-    padding-left: 50px; 
-  }
-  .bigbox1{
-    padding: 4%;
-    margin-left:50px;
-  }
-  }
-  @media screen and (max-width:425px){
+ 
+@media screen and (max-width:425px){
   .subtitle1{
     padding-right: 20px;
   
@@ -767,10 +754,10 @@ body{
     margin-left:30px;
   }
 }
-  @media screen and (max-width:412px){
+
+@media screen and (max-width:412px){
   .subtitle1{
     padding-right: 20px;
-  
   }
   .saves-title{
     padding-left: 60px; 
@@ -779,4 +766,55 @@ body{
     padding: 4%;
     margin-left:60px;
   }
+}
+@media screen and (max-width: 414px){
+  .subtitle1{
+    padding-right: 20px;
+  
   }
+  .saves-title{
+    padding-left: 90px; 
+  }
+  .bigbox1{
+    padding: 4%;
+    margin-left:95px;
+  }
+}
+
+@media screen and (max-width: 390px){
+  .subtitle1{
+    padding-right: 20px;
+  }
+  .saves-title{
+    padding-left: 85px; 
+  }
+  .bigbox1{
+    padding: 2%;
+    margin-left:85px;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .subtitle1{
+    padding-right: 20px;
+  }
+  .saves-title{
+    padding-left: 50px; 
+  }
+  .bigbox1{
+    padding: 4%;
+    margin-left:50px;
+  }
+  }
+@media screen and (max-width: 375px){
+  .subtitle1{
+    padding-right: 20px;
+  }
+  .saves-title{
+    padding-left: 85px; 
+  }
+  .bigbox1{
+    padding: 2%;
+    margin-left:85px;
+  }
+}
