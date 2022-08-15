@@ -824,3 +824,124 @@ body{
     margin-left:-320px;
   }
   }
+  @media screen and (max-width: 414px){
+    .savestitle3{
+      display:flex;
+      flex-direction:column;
+      
+    }
+    .bigbox1{
+      margin-top:300px;
+      margin-left:-410px;
+    }
+    .omega{
+      margin-left:170px;
+    }
+    .editpiclink{
+      width:110px;
+    }
+    .profilepicname{
+      margin-left:-222px;
+      margin-right:-215px;
+    }
+    .mysavestitle1{
+      margin-left:220px;
+      width:3px;
+      margin-top:100px;
+    }
+    .bigbox2{
+      width:300px;
+    }
+    .searchicon2{
+      margin-left:-275px;
+    }
+    }
+    @media screen and (max-width: 360px){
+      .savestitle3{
+        display:flex;
+        flex-direction:column;
+        
+      }
+      .bigbox1{
+        margin-top:300px;
+        margin-left:-423px;
+      }
+      .omega{
+        margin-left:170px;
+      }
+      .editpiclink{
+        width:110px;
+      }
+      .profilepicname{
+        margin-left:-222px;
+        margin-right:-215px;
+      }
+      .mysavestitle1{
+        margin-left:220px;
+        width:3px;
+        margin-top:100px;
+      }
+      .bigbox2{
+        width:300px;
+      }
+      .searchicon2{
+        margin-left:-269px;
+      }
+      }
+      @media screen and (max-width: 412px){
+        .savestitle3{
+          display:flex;
+          flex-direction:column;
+          
+        }
+        .bigbox1{
+          margin-top:300px;
+          margin-left:-400px;
+        }
+        .omega{
+          margin-left:170px;
+        }
+        .editpiclink{
+          width:110px;
+        }
+        .profilepicname{
+          margin-left:-222px;
+          margin-right:-215px;
+        }
+        .mysavestitle1{
+          margin-left:220px;
+          width:3px;
+          margin-top:100px;
+        }
+        .bigbox2{
+          width:300px;
+        }
+        .searchicon2{
+          margin-left:-269px;
+        }
+        }
+        @media screen and (max-width: 820px){
+          .bigbox1{
+            margin-left:-50px;
+          }
+          .omega{
+            margin-left:140px;
+          }
+          .editpiclink{
+            width:110px;
+          }
+          .profilepicname{
+            margin-left:-222px;
+            margin-right:-215px;
+          }
+          .mysavestitle1{
+            margin-left:300px;
+            
+          }
+          .bigbox2{
+            width:300px;
+          }
+          .searchicon2{
+            margin-left:-29px;
+          }
+          }
