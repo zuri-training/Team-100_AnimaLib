@@ -209,33 +209,8 @@ form i {
   gap: 8px;
 }
 
-@media screen and (max-width: 600px) {
-  .login-card {
-    margin-top: 112px;
-    margin-bottom: 112px;
-    height: 600px;
-    width: 400px;
-  }
-
-  input {
-    width: 300px;
-    /* width: 100%; */
-    height: 48px;
-  }
-
-  .form-button {
-    width: 300px;
-    /* width: 90%; */
-    height: 48px;
-  }
-
-  .form-check-label {
-    margin-right: 75px;
-  }
-}
-
 @media screen and (max-width: 500px) {
-  body {
+  .main_box {
     background-color: #f8f8f8;
     background-image: none;
   }
@@ -301,3 +276,30 @@ form i {
     margin-right: 20px;
   }
 }
+
+
+@media screen and (max-width: 600px) {
+  .login-card {
+    margin-top: 112px;
+    margin-bottom: 112px;
+    height: 600px;
+    width: 400px;
+  }
+
+  input {
+    width: 300px;
+    /* width: 100%; */
+    height: 48px;
+  }
+
+  .form-button {
+    width: 300px;
+    /* width: 90%; */
+    height: 48px;
+  }
+
+  .form-check-label {
+    margin-right: 75px;
+  }
+}
+
