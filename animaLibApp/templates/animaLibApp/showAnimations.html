@@ -60,6 +60,7 @@
 
 
     {% if user.is_authenticated %}
+    {% if posts %}
     <section id="comment-section">
       <h2 id="comments">Comments</h2>
       {% for post in posts %}
@@ -94,16 +95,16 @@
       </section>
       {% endfor %}
     </section>
-
-    <div class="commentcontainer2 sidebyside ">
-      <div class="commicon comm sidebysidebox "></div>
-      <form method="post" id="comment-form">
-        {% csrf_token %}
-        {{ comment_form.as_p }}
-        <button type="submit" class=" sendbutton sidebysidebox move1">Send</button>
-      </form>
-    </div>
     {% endif %}
+      <div class="commentcontainer2 sidebyside ">
+        <div class="commicon comm sidebysidebox "></div>
+        <form method="post" id="comment-form">
+          {% csrf_token %}
+          {{ comment_form.as_p }}
+          <button type="submit" class=" sendbutton sidebysidebox move1">Send</button>
+        </form>
+      </div>
+      {% endif %}
 
 
   </div>
