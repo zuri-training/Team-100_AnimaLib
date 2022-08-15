@@ -72,7 +72,7 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.title
+        return self.text
 
 class Comment(models.Model):
     """Model for users comment on posts
@@ -88,7 +88,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return '{} commented: {}'.format(self.author, self.text)
-    
+
 # models to like and unlike the animations
 class Like(models.Model):
     """Model for users to like posts
@@ -101,7 +101,7 @@ class Like(models.Model):
         return '{} likes: {}'.format(self.user, self.post)
 
 # models to have the names of the animations.
-# This excludes the codes.    
+# This excludes the codes.
 class animations(models.Model):
     animation_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255, blank=False)
@@ -109,21 +109,21 @@ class animations(models.Model):
     description = models.TextField(blank=False)
     dateCreated = models.DateTimeField(auto_now_add=True)
     lastUpdated = models.DateTimeField(auto_now=True)
-    
+
     def __str__(self):
         return self.name
-   
-# model to save a particular animation generated. 
+
+# model to save a particular animation generated.
 class saved_animation(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='user_animation')
     animation = models.ForeignKey(animations, on_delete=models.CASCADE, related_name='saved_animation')
     code_generated = models.TextField(blank=False)
     dategenerated = models.DateTimeField(auto_now_add=True)
-    
+
     def __str__(self):
         return self.user.username + ' ' + self.animation.name
-    
-    
-    
+
+
+
 
 

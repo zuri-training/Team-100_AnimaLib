@@ -23,6 +23,9 @@ from .validators import *
 from .utils import *
 from .utils2 import *
 
+from django.views.generic import View
+from django.http import JsonResponse
+
 
 # get the base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -382,9 +385,7 @@ def post_comment(request, pk):
 	if request.user.is_authenticated:
 		template_name = 'animaLibApp/comment_reply.html'
 		post = get_object_or_404(Post, pk=pk)
-		post_title = post.title
 		print(post)
-		print(post.title)
 		print()
 		comments = post.comments
 		print(comments)
@@ -404,7 +405,7 @@ def post_comment(request, pk):
 		else:
 			reply_comment_form = ReplyCommentForm
 
-		data = {'post': post, 'post_title': post_title, 'comments': comments,
+		data = {'post': post, 'comments': comments,
 				'new_reply': new_reply, 'reply_comment_form': reply_comment_form}
 	else:
 		return HttpResponse("You must be logged in to comment")
@@ -482,7 +483,7 @@ def showAnimations(request):
 				comment_form.save()
 				print('saved')
 
-				return redirect('showAnimations')
+				return redirect (reverse('showAnimations') + '#comments')
 		else:
 			comment_form = CommentForm
 	else:
@@ -569,3 +570,9 @@ def mysaves(request):
 
 def generator(request):
 	return render(request, 'animaLibApp/generator.html')
+
+# class AjaxHandlerView(View):
+#     def post(self, request):
+#         data = request.POST.get('formData')
+
+#         return JsonResponse({'data': data}, status=200)

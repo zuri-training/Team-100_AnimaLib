@@ -118,14 +118,14 @@ function showAnimeDetails() {
                                     <h4>${val.name}</h4>
                                     <p>${val.description}</p>
                                 </div>
-                        
+
                                 <!-- Display area -->
                                 <div class="anime-displayarea" style="margin: 0px 0px; margin-top: 16px; width: 792px;">
                                     <div class="sliderContainer" style="margin-left: 0px;" >
-                                        <div class="slideMain" id="slideMain${val.id}" style="display:none"> 
+                                        <div class="slideMain" id="slideMain${val.id}" style="display:none">
                                         <!-- content for main slider here -->
                                         </div>
-                                       
+
 
                                         <div class="slideMoving" id="slide${val.id}">
                                             <!-- slider handle -->
@@ -133,7 +133,7 @@ function showAnimeDetails() {
                                                 <!-- the handle icon -->
                                                 <span>|</span>
                                             </div>
-                            
+
                                             <!-- slider content -->
                                             <div class="slidingContent">
                                                 <div class="slider_innerBox d-flex justify-content-center
@@ -143,7 +143,7 @@ function showAnimeDetails() {
                                                             shadow-sm bg-danger text-white
                                                             p-2">${val.name}</div>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
@@ -163,7 +163,7 @@ function showAnimeDetails() {
                                     <span class="download-text">Customise animation</span>
                                   </button>
                                 </span>
-                        
+
                                 <div class="customise-icon">
                                   <img
                                     src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660273140/thumbs_up_icon_wfjv7f.jpg"
@@ -177,7 +177,7 @@ function showAnimeDetails() {
                                   />
                                 </div>
                               </div>
-                                
+
                             </div>`;
             });
         }
@@ -195,7 +195,7 @@ function showMainContent(sliderId) {
 
     // add the main content to the slider container
     const mainContent = ` <!-- main slide content -->
-                        <div class="slideMain"> 
+                        <div class="slideMain">
                             <!-- content for main slider here -->
                         </div>`;
     selectedSlider.after(mainContent);
@@ -396,3 +396,5 @@ buttons.forEach((button) => {
         icon.classList.toggle("rotate");
     });
 });
+
+// const reply_btn = document.getElementById('comment-form')

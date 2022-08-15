@@ -81,16 +81,13 @@
 }
 
 .icon {
-  height: 60px;
-  width: 60px;
+  height: 48px;
+  width: 48px;
   background-color: blue;
   border-radius: 30px;
   margin-left: 20px;
 }
 
-.note{
-
-}
 
 .subcontainer2text {
   font-family: "Raleway";
@@ -195,3 +192,56 @@ color: white;
     display: inline-block;
 
 }
+
+section#comment-section {
+  width: 878px;
+  min-height: 813px;
+}
+section.post-card {
+  background-color: white;
+  max-width: 100%;
+  border-radius: 16px;
+  padding: 3%;
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-bottom: 4vh;
+}
+
+.post-card div {
+  display: flex;
+  align-items: center;
+}
+
+.post-card > div:first-of-type {
+  justify-content: space-between;
+}
+
+.post-card > div:first-of-type img,
+.post-card > div:first-of-type p,
+.post-card > div:first-of-type span
+{
+  margin-left: 8px;
+}
+
+
+.post-card > div:first-of-type span {
+  color: #bcbcbc;
+}
+
+.post-card > div:last-of-type div:first-of-type {
+  margin-right: 10%;
+}
+.post-card > div:last-of-type div img{
+  margin-right: 20%;
+}
+
+.post-card > div:last-of-type, .post-card > p {
+  margin: 20px 8%;
+}
+
+.post-card > p {
+  word-wrap: break-word;
+}
+
