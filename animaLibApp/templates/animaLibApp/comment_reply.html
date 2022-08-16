@@ -1,17 +1,24 @@
-{% extends 'base.html' %}
-<!-- --------------------------------------------------------->
-{% load active_link_tags %}
-<!-- --------------------------------------------------------->
-{% block title %} Docs Page {% endblock %}
-<!-- ---------------------------------------------------------------------------- -->
+{% extends 'base.html' %} {% load static %}
+{% load humanize %}
+{% block style %}
+<link href="{% static 'css/componentDesign.css' %}" rel="stylesheet" />
+<link href="{% static 'css/design.css' %}" rel="stylesheet" />
+<link href="{% static 'css/layout.css' %}" rel="stylesheet" />
+<link href="{% static 'css/animation.css' %}" rel="stylesheet" />
+<link href="{% static 'css/comment.css' %}" rel="stylesheet" />
+{% endblock %}
+
 {% block content %}
-<div class="container">
-  <div class="row">
-    <h3>Comment on post: {{ post_title }}</h3>
-    <form method="post" style="margin-top: 1.3em">
-      {% csrf_token %} {{ reply_comment_form.as_p }}
-      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-    </form>
-  </div>
-  <div>{% endblock %}</div>
-</div>
+<section id="comment-reply">
+	<p>Replying to comment: <b>{{ post | truncatewords:4 }}</b></p>
+	<div class="post-comment">
+		<img src="{{ user.user_image.url }}" alt="user profile picture" class="icon">
+		<form method="post">
+			{% csrf_token %}
+			{{ reply_comment_form }}
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+</section>
+<script></script>
+{% endblock %}

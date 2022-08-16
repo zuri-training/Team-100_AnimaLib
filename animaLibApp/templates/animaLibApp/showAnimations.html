@@ -72,12 +72,13 @@
             </p>
           </div>
           <div class="reply-comment" >
-
-            <img src="../../static/images/Reply icon.jpg"
+            <a href="{% url 'post_comment' post.pk %}">
+              <img src="../../static/images/Reply icon.jpg"
                  width="20"
                  height="20"
                  alt="reply icon">
-                 <p>Reply</p>
+                <p>Reply</p>
+              </a>
           </div>
         </div>
         <p>{{ post.text | linebreaksbr }}</p>
@@ -93,18 +94,48 @@
           </div>
         </div>
       </section>
+        <!-- Comments on posts -->
+      {% if post.comments %}
+      <section id="comment-on-post">
+        {% for comment in post.comments.all %}
+        <section class="post-card">
+          <div>
+            <div>
+              <img src="{{ comment.author.user_image.url }}" alt="user profile picture" class="icon" width="48px" height="48px">
+              <p>{{ comment.author.name }} <span>{{ comment.created_on | naturaltime }} </span>
+              </p>
+            </div>
+          </div>
+          <p>{{ comment.text | linebreaksbr }}</p>
+          <div>
+            <div>
+              <img src="../../static/images/share-2.svg" alt="share icon ">
+              <p> Share</p>
+            </div>
+
+            <div>
+              <img src="../../static/images/heart.svg" alt="like icon ">
+              <p> Like</p>
+            </div>
+          </div>
+        </section>
+        {% endfor %}
+      </section>
+      {% endif %}
       {% endfor %}
     </section>
     {% endif %}
-      <div class="post-comment">
-        <img src="{{ user.user_image.url }}" alt="user profile picture" class="icon">
-        <form method="post" id="comment-form">
-          {% csrf_token %}
-          {{ comment_form }}
-          <button type="submit">Send</button>
-        </form>
-      </div>
-      {% endif %}
+
+    <!-- Creating posts -->
+    <div class="post-comment">
+      <img src="{{ user.user_image.url }}" alt="user profile picture" class="icon">
+      <form method="post" id="comment-form">
+        {% csrf_token %}
+        {{ comment_form }}
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    {% endif %}
 
 
   </div>

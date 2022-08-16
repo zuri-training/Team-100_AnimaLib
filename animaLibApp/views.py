@@ -401,7 +401,7 @@ def post_comment(request, pk):
 				new_reply.created_date = timezone.now()
 				new_reply.save()
 
-				return redirect('documentation')
+				return redirect (reverse('showAnimations') + '#comments')
 		else:
 			reply_comment_form = ReplyCommentForm
 

@@ -59,10 +59,13 @@ class ReplyCommentForm(forms.ModelForm):
         widgets = {
             'text': forms.TextInput(
                 attrs = {
-                    'class': 'container2 searchbox sidebysidebox move2 form-control',
                     'placeholder': 'Reply to comment'
                 }
             )
+        }
+
+        labels = {
+            'text':''
         }
 
 class EditCommentForm(forms.ModelForm):
