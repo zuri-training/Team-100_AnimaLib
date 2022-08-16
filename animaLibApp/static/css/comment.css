@@ -7,9 +7,23 @@
 }
 
 section#comment-section {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
   max-width: 878px;
   /* min-height: 813px; */
 }
+
+section#comment-on-post {
+  /* background-color: blue; */
+  align-self: flex-end;
+  width: 80%;
+}
+
+#comment-on-post section {
+  margin-bottom: 2vh;
+}
+
 section.post-card {
   background-color: white;
   max-width: 100%;
@@ -41,6 +55,12 @@ section.post-card {
 
 .post-card > div:first-of-type span {
   color: #bcbcbc;
+}
+
+.post-card > div:first-of-type div:last-of-type a{
+  color: #212121;
+  display: flex;
+  flex-direction: row;
 }
 
 .post-card > div:last-of-type div:first-of-type {
@@ -102,4 +122,21 @@ margin-top: 10vh;
   font-weight: 600;
   height: 50px;
   width: 18%;
+}
+
+#comment-reply {
+  background-color: white;
+  border-radius: 16px;
+  padding: 6% 6%;
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset; */
+  margin: 5% 4%;
+  margin-top: 10%;
+  max-width: 100% !important;
+}
+
+#comment-reply div {
+  max-width: 100%;
 }
