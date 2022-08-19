@@ -89,8 +89,10 @@
           </div>
 
           <div>
-            <img src="../../static/images/heart.svg" alt="like icon ">
-            <p> Like</p>
+            <button class="like-button" value="{{ post.id }}">
+              <img src="../../static/images/heart.svg" alt="like icon ">
+            </button>
+            <p id="like_count{{post.id}}"><span>{{ post.like_count}}</span></p>
           </div>
         </div>
       </section>
@@ -141,5 +143,27 @@
   </div>
 </div>
 
-<script></script>
+<script>
+  $(document).on('click', '.like-button', function (e) {
+    e.preventDefault();
+    let catid;
+    catid = $(this).attr("value");
+    $.ajax({
+        type: 'POST',
+        cache: false,
+        url: '{% url "like" %}',
+        data: {
+            postid: $(this).val(),
+            csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+            action: 'post'
+        },
+        success: function (json) {
+            $("#like_count" + catid).text(json['result'])
+        },
+        error: function (xhr, errmsg, err) {
+
+        }
+    })
+  })
+</script>
 {% endblock %}

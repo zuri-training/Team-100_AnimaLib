@@ -26,4 +26,6 @@ urlpatterns = [
     path('post/<int:pk>/delete', post_remove, name='post_remove'),
     path('activate/<uidb64>/<token>/', verification, name='activate'),
     path('generator/', generator, name='generator'),
+
+    path('like/', like, name='like')
 ]

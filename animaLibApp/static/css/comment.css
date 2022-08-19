@@ -78,6 +78,12 @@ section.post-card {
   word-wrap: break-word;
 }
 
+.like-button {
+  outline: none;
+  margin-right: 5px;
+  background-color: white;
+  border: none;
+}
 
 .post-comment {
 background-color: white;

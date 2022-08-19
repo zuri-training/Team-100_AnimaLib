@@ -67,9 +67,15 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(default=timezone.now, blank=True, null=True)
 
+    likes = models.ManyToManyField(newUser, related_name='likes', default=None, blank=True)
+    like_count = models.BigIntegerField(default='0')
+
     def publish(self):
         self.published_date = timezone.now()
         self.save()
+
+    def number_of_likes(self):
+        return self.likes.count()
 
     def __str__(self):
         return self.text
@@ -90,15 +96,15 @@ class Comment(models.Model):
         return '{} commented: {}'.format(self.author, self.text)
 
 # models to like and unlike the animations
-class Like(models.Model):
-    """Model for users to like posts
-    """
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='likes')
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    state = models.BooleanField(default=True)
+# class Like(models.Model):
+#     """Model for users to like posts
+#     """
+#     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='likes')
+#     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+#     state = models.BooleanField(default=True)
 
-    def __str__(self):
-        return '{} likes: {}'.format(self.user, self.post)
+#     def __str__(self):
+#         return '{} likes: {}'.format(self.user, self.post)
 
 # models to have the names of the animations.
 # This excludes the codes.

@@ -455,6 +455,28 @@ def post_remove(request, pk):
 
 	return redirect('documentation')
 
+@login_required
+def like(request):
+    if request.POST.get('action') == 'post':
+        result = ''
+        id = int(request.POST.get('postid'))
+        post = get_object_or_404(Post, id=id)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+            post.like_count -= 1
+            result = post.like_count
+            post.save()
+        else:
+            post.likes.add(request.user)
+            post.like_count += 1
+            result = post.like_count
+            post.save()
+
+        return JsonResponse({
+			'result': result,
+		})
+
 
 def introduction(request):
 	return render(request,'animaLibApp/introduction.html')
@@ -467,6 +489,13 @@ def showAnimations(request):
 		posts = get_list_or_404(Post.objects.all())
 		posts.reverse()
 		# print(type(posts))
+
+		for post in posts:
+			liked = False
+			if post.likes.filter(id=request.user.id).exists():
+				liked = True
+			number_of_likes = post.number_of_likes()
+			post_is_liked = liked
 
 	if request.user.is_authenticated:
 		print("authenticated")
@@ -489,7 +518,13 @@ def showAnimations(request):
 	else:
 		comment_form = CommentForm
 
-	data = {'posts':posts, 'comment_form': comment_form}
+
+	data = {
+     'posts':posts,
+     'comment_form': comment_form,
+     'number_of_likes': number_of_likes,
+     'post_is_liked': post_is_liked,
+     }
 
 	return render(request, template_name, data)
 
