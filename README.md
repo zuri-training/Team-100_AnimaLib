@@ -5,6 +5,9 @@
 </p>
 This project provides an easy to use guide to developers, precisely beginners, on how to add animations to the several elements on their webpage(s). In essence, we try to avoid the hassle of a developer trying to think critically on how they can create or add animations to their webpage.
 
+[live_preview](https://group100animo.herokuapp.com/)
+
+
 ## Acknowledgements
 
 - [Zuri x I4G](https://www.linkedin.com/company/zuri-team)
