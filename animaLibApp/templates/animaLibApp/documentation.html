@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% load static %} {% block style %}
+{% extends 'base.html' %} {% load static %}
+<!-- ---------------------------------------------------------------->
+{% block title %} Documentation {% endblock %} {% block style %}
 <link href="{% static 'css/componentDesign.css' %}" rel="stylesheet" />
 <link href="{% static 'css/documentation.css' %}" rel="stylesheet" />
 <link href="{% static 'css/layout.css' %}" rel="stylesheet" />
@@ -8,7 +10,7 @@
   {% include 'common/sideNav.html' %}
 
   <!-- menu content -->
-  <div class="menuContentContainer" style="margin-top: 86px">
+  <div class="menuContentContainer" id="big_div">
     <!-- top row with documentation -->
     <div class="documentationRow">
       <!-- section content -->
@@ -271,18 +273,19 @@
     </div>
     <div
       class="intro-button d-flex justify-content-end"
-      style="text-align: end; width: 850px"
+      style="text-align: end; width: 1000px"
     >
       <span>
-        <a href="./Introduction.html" style="height: 24px">
+        <a href="{% url 'introduction' %}">
           <span> Introduction</span>
 
           <span>
             <img
-              src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660560635/arrow-right_e22btk.png"
-              height="17px"
+              src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660220328/arrow-right_vu83jq.jpg"
+              width="24px"
               alt=""
-          /></span>
+            />
+          </span>
         </a>
       </span>
     </div>

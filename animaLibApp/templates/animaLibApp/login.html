@@ -14,8 +14,6 @@
     />
 <link href="{% static 'css/login.css' %}" rel="stylesheet" />
 
-
-
 {% endblock %} {% block content %}
 {% if messages %} 
           <div class='showpop'>
@@ -40,15 +38,17 @@
 <div class="main_box">
 <div class="section">
   <section class="login-card">
+  <a href="{% url 'index' %}" style="color:#000; float:right; font-size:30px; padding:20px;">&times</a>
+  <br/>
+
       <div class="logo">
-      <img src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659815158/logo_1_vsfmjo.png" width="140" height="39"/>
+      <center><img src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659815158/logo_1_vsfmjo.png" width="140" height="39"/></center>
     </div>
 
       <h4>Login into your account</h4>
       <p class="para-text">Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
 
       <div class="main-form">
-
     <form method="POST">
           {% csrf_token %}
           <div class="input-container" data-error="First Name cannot be empty">
@@ -109,21 +109,6 @@
         
       </div>
     </section>
-
-    <script>
-      const togglePassword = document.querySelector("#togglePassword");
-  
-      const password = document.querySelector("#password");
-  
-      togglePassword.addEventListener("click", () => {
-        const type =
-          password.getAttribute("type") === "password" ? "text" : "password";
-  
-        password.setAttribute("type", type);
-  
-        this.classList.toggle("bi-eye");
-      });
-    </script>
   </div>
   </div>
 {% endblock %}

@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8f8f8;
+  background-size: 130px, 130px, 150px, 150px;
+  background-image: url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813476/login_left_blobs_k8yobf.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813477/login_right_blobs_cy94zh.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813480/bottom_left_blobs_zkbchn.png"),
+    url("https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659813480/bottom_right_blobs_bepgpl.png");
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 10% -60%, 90% -60%, 0% 520px, 100% 520px;
+}
+
+.login-card {
+  border-radius: 16px;
+  background: #edeef2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* text-align: center; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 592px;
+  height: 520px;
+}
+
+h4 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 72px;
+  margin-bottom: 16px;
+}
+
+.form-check-label {
+  margin-right: 200px;
+  width: 100%;
+}
+
+p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #121212;
+  width: 416px;
+  margin-top: 16px;
+}
+.paragraph {
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  /* justify-content: center; */
+  /* padding: 30px 0 0px 0; */
+}
+
+label {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  color: #080808;
+}
+
+input {
+  /* width: 80%; */
+  padding: 12px 20px;
+  margin-top: 8px;
+  /* margin: 8px 0 0px 0; */
+  width: 432px;
+  /* width: 100%; */
+  height: 48px;
+  left: 80px;
+  top: 236px;
+  background: #edeef2;
+  border: 1px solid #5e5e5e;
+  border-radius: 8px;
+  color: #9f9f9f;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  /* transition: background 0.2s, border 0.2s; */
+}
+
+.form-group {
+  margin-top: 8px;
+}
+
+.radio-check {
+  /* display: flex; */
+  text-align: center;
+  display: inline-block;
+  justify-content: center;
+  width: 100%;
+}
+input.form-check-input {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(122, 122, 122, 0.8);
+  border-radius: 2px;
+}
+.main-form {
+  border-radius: 6px;
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  /* justify-content: center; */
+  padding: 30px 0 0px 0;
+  /* display: inline-block; */
+}
+
+form i {
+  margin-left: -30px;
+  cursor: pointer;
+  color: #808080;
+}
+
+.center {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-button {
+  background-color: #1f2782;
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  height: 48px;
+  width: 432px;
+  /* padding: 12px, 40px, 12px, 40px; */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.15px;
+  padding: 12px 40px;
+  gap: 8px;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.back-button i {
+  color: #292d32;
+  margin-right: 8px;
+}
+.back-button a {
+  text-decoration: none;
+  color: #121212;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .main-form {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .login-card {
+    width: 93%;
+    padding: 10px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .form-button {
+    width: 100%;
+  }
+}

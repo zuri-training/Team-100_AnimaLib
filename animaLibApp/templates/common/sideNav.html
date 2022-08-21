@@ -1,4 +1,4 @@
-<div class="container">
+<div class="containers">
   <div class="aside">
     <a href="{% url 'documentation' %}" class="docheader active"><img
         src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660250667/home_ms97bm.png" width="20px" />Get
@@ -8,32 +8,31 @@
 
     </span><br>
     <ul>
-      <li><a href="../introduction#overviewSection" class="">Overview</a></li>
-      <li><a href="../introduction#installationUsageSection" class="">Installation</a></li>
-      <li><a href="../introduction#installationUsageSection" class="">Usage</a></li>
-      <li><a href="../introduction#downloadSection" class="">Download</a></li>
-      <li><a href="introduction#demoSection" class="">Demo</a></li>
+      <li><a href="{% url 'introduction' %}#overviewSection" class="">Overview</a></li>
+      <li><a href="{% url 'introduction' %}#installationUsageSection" class="">Installation</a></li>
+      <li><a href="{% url 'introduction' %}#installationUsageSection" class="">Usage</a></li>
+      <li><a href="{% url 'introduction' %}#downloadSection" class="">Download</a></li>
+      <li><a href="{% url 'introduction' %}#demoSection" class="">Demo</a></li>
       
     </ul>
 
     <a href="{% url 'showAnimations' %}" class="docheader active"><img
         src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660250667/3dcube_Animations_icon_cmgmbt.png"
         width="20px" />Animations</a></span><br>
-
     <ul>
-      <li><a href="" class="">Move up</a></li>
-      <li><a href="../introduction#installationUsageSection" class="">Move down</a></li>
-      <li><a href="../introduction#installationUsageSection" class="">Move right</a></li>
-      <li><a href="../introduction#downloadSection" class="">Move left</a></li>
-      <li><a href="introduction#demoSection" class="">Blink</a></li>
-      <li><a href="introduction#demoSection" class="">Bounce</a></li>
-      <li><a href="introduction#demoSection" class="">Fade</a></li>
-      <li><a href="introduction#demoSection" class="">Flip</a></li>
-      <li><a href="introduction#demoSection" class="">Swing</a></li>
-      <li><a href="introduction#demoSection" class="">Tada</a></li>
+      <li><a href="#" class="">Move up</a></li>
+      <li><a href="#" class="">Move down</a></li>
+      <li><a href="#" class="">Move right</a></li>
+      <li><a href="#" class="">Move left</a></li>
+      <li><a href="#" class="">Blink</a></li>
+      <li><a href="#" class="">Bounce</a></li>
+      <li><a href="#" class="">Fade</a></li>
+      <li><a href="#" class="">Flip</a></li>
+      <li><a href="#" class="">Swing</a></li>
+      <li><a href="#" class="">Tada</a></li>
     </ul>
 
-    <a href="" class="docheader active"><img
+    <a href="{% url 'generator' %}" class="docheader active"><img
         src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660504481/box-2_103416_tjpdnt.png"
         width="20px" />Generator</a></span><br>
 
@@ -41,11 +40,12 @@
 </div>
 
 <style>
-  .container {
-    margin-top: 60px;
-    margin-left: 30px;
-    margin-right: 300px;
-    bottom: 524px;
+  .containers {
+    margin-top: 20px;
+    margin-left: 120px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    border-right: 2px solid #C0C0C0;
     /* margin-bottom: 300px; */
   }
 
@@ -53,17 +53,14 @@
     /* background: #CCCCCC;; */
     padding: 10px;
     width: 200px;
-    z-index: 10;
     /* overflow-x: hidden;
     overflow-y: auto; */
-    position: fixed;
     height: 100%;
     padding: 0px 8px;
     /* bottom: 524px; */
-    border-right: 1px solid #C0C0C0;
+    margin-top: 40px;
     /* position: absolute; */
     /* right: 50%; */
-
   }
 
   .aside .intro {
@@ -111,8 +108,8 @@
   }
 
   .docheader.active{
-    background-color: #cbcbcb;
-    /* background-color: #1F2782; */
+   /* background-color: #cbcbcb; */
+    color:#1F2782;
   }
 
   .docheader img {
@@ -135,8 +132,17 @@
 background-color: #1F2782;
 } */
 
-</style>
+#big_div{
+  margin-top: 20px; 
+  margin-left: 60px;
+}
 
+@media (max-width: 768px){
+  
+}
+
+</style>
+</script>
 <!-- <script>
   let docheaders = document.getElementsByClassName("docheader");
 

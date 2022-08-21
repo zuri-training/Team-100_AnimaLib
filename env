@@ -1,6 +1,6 @@
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='davidakwuruu@gmail.com'
-EMAIL_HOST_PASSWORD='tdbnbdijsquwemht'
+EMAIL_HOST_USER='animo.group100@gmail.com'
+EMAIL_HOST_PASSWORD='njmdrkzejbylnzdw'
 SECRET_KEY='django-insecure-obs3m1l@^)pwv_z8pv#n1k#miwa2xj$f3n^&9a5f54y-)0gbk%'
 DEBUG=FALSE
 CLOUD_NAME='dc29czhf9'

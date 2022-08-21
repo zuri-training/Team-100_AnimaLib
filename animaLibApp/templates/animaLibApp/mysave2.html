@@ -7,19 +7,29 @@
 {% block style %}
 <link href="{% static 'css/mysave3.css' %}" rel="stylesheet" /> {% endblock %}
 {% block content %}
-<div class="savetitle3" style="margin-top: 170px;">
+<div class="showpop" style="display:none">
+  <div class="showpopup">
+        <div class="close_icon">&times</div>
+
+    <div class="popup_content">
+      
+    </div>
+  </div>
+</div>
+<div class="savetitle3">
                 <div class="mysavestitle1">
                     <p>My Saves {{get_all}}</p>
                 </div>
                 <div class="searchicon2">
                     <input id="search-input" class="hide search-bar" type="search" name="search-animation" maxlength="10" placeholder="Search Saves">
                 </div>
-        </div>
+  </div>
     <div class="content-holder2">
             <div class="omega">
                 <div class="picholder">
-                    <img src="{{user.user_image.url}}" alt="Profile Picture">
-                </div>
+                    <img src="{{image}}" alt="Profile Picture">
+                
+                  </div>
                 <div class="profilepicname">
                     <p>{{user.username | capfirst}}</p>
                 </div>
@@ -31,16 +41,19 @@
             </div>
 
             <div class="bigbox1">
+              {% csrf_token %}
+
               {% if anims %}
                 {% for anim in all_animations %}
                     <div class="bigbox2">
                       <div class="line1"></div>
                       <div class="smallbox12">
+
                         <div class="imgicon">
                           <p class="subtitle1">{{anim.animation.name | upper}}</p>
-                          <button style='border: none; background-color: rgba(31, 39, 130, 0);;'; type="button"> <img style="background-color: none; width: 24px; height: 24px; align-content: space-between;" src="https://i.postimg.cc/tCGBc87M/close-icon-my-saves-page.png" alt="Escape"></button>
+                          <button style='border: none; background-color: rgba(31, 39, 130, 0);'; type="button"> <a href="#" id="{{anim.id}}" class="del"><img style="background-color: none; width: 24px; height: 24px; align-content: space-between;" src="https://i.postimg.cc/tCGBc87M/close-icon-my-saves-page.png" alt="Escape"></a></button>
                         </div>
-                        <p class="view1"><a href='#'>View in Documentation</a></p>
+                        <p class="view1"><a href="{% url 'saved_generator' anim.id %}#show" id="{{anim.id}}" class="view">View in Documentation</a></p>
                       </div>
                     </div>
                 {% endfor %} {% endif %}
@@ -53,5 +66,6 @@
             </div>
         </div>
     </div>
+  </div>
 
 {% endblock %}

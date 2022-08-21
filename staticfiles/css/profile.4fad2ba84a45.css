@@ -1,0 +1,361 @@
+main {
+  padding: 0px;
+  padding-bottom: 120px;
+}
+
+.profile-container {
+  width: 992px;
+  height: 780px;
+  margin: 80px auto;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #e0e1eb;
+}
+
+.profile-container p.profile {
+  padding-top: 48px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #121212;
+}
+
+.profile_little {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 32px;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 25% 55%;
+  grid-gap: 10px;
+  margin: 30px 0px;
+}
+
+.form-group .label p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 32px;
+  color: #121212;
+}
+
+.back_btn a {
+  text-decoration: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #3faeae;
+  padding: 0px 170px 0px 120px;
+}
+
+a {
+  color: #3faeae;
+}
+
+.back_btn {
+  margin: 0px 100px 0px 80px;
+  padding-top: 80px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+  width: 80%;
+  height: 40px;
+  padding: 5px;
+  background-color: inherit;
+  border-radius: 5px;
+  border: 2px solid #85868c;
+  outline: none;
+}
+.form-group input[type="password"] {
+  margin: 10px auto;
+}
+
+#email_update,
+#password_update {
+  text-align: left;
+  width: 30%;
+  height: 40px;
+  padding: 0px;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+  color: #121212;
+}
+
+#password_update {
+  margin-top: -5px;
+}
+
+.form-group input[type="text"]:focus {
+  border: 2px solid #85868c;
+}
+button:hover {
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 12px;
+  margin: 5px 10px 10px 0px;
+  width: 75px;
+  height: 36px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.cancel_button {
+  background-color: inherit;
+  color: #85868c;
+  border: 2px solid #85868c;
+  -webkit-appearance: none;
+}
+
+.update_button {
+  background-color: #1f2782;
+  border: 2px solid #1f2782;
+  color: #f8f8f8;
+  -webkit-appearance: none;
+}
+
+.disabled {
+  background-color: inherit;
+  color: #85868c;
+  align-items: center;
+  padding: 8px 12px;
+  border: 2px solid #85868c;
+  border-radius: 8px;
+  float: right;
+  -webkit-appearance: none;
+}
+.save {
+  background-color: #1f2782;
+  color: #f8f8f8;
+  align-items: center;
+  padding: 8px 12px;
+  border: 2px solid #1f2782;
+  border-radius: 8px;
+  float: right;
+  -webkit-appearance: none;
+}
+
+#email_container_edit p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.form-group #username,
+.form-group #email {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #85868c;
+  margin: 5px auto;
+}
+.form-group #email {
+  margin: 10px auto;
+}
+
+#profile_img {
+  display: grid;
+  grid-template-columns: 20% 70%;
+  padding: 10px 0px;
+}
+
+#profile_img p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 4px;
+  color: rgba(18, 18, 18, 0.7);
+}
+.form-group .input_value #img {
+  border-radius: 36px;
+  width: 72px;
+  height: 72px;
+  border: 2px solid #85868c;
+}
+
+.form-group .input_value #img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+label {
+  display: inline-block;
+  padding: 0 0.5em;
+  text-align: right;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+#email_container_edit,
+#password_container_edit {
+  display: none;
+}
+
+/* Hide the file input using
+opacity */
+input[type="file"] {
+  margin-top: 10px;
+  position: absolute;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+input[type="file"] + label {
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  width: 120px;
+  margin: 10px 0px 0px 0px;
+  left: 0;
+  position: relative;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* Decorative */
+  color: #85868c;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #85868c;
+}
+input[type="file"] + label:hover {
+  background: #1f2782;
+  color: #f8f8f8;
+  border: 2px solid #1f2782;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-container {
+    width: 92%;
+    margin: 20px auto;
+    height: 900px;
+    padding: 2px 15px;
+  }
+  .back_btn {
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .back_btn a {
+    padding: 0px 20px;
+    font-size: 16px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  #email_update,
+  #password_update {
+    width: 100%;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="password"],
+  .form-group input[type="email"] {
+    width: 100%;
+  }
+  .form-group label {
+    width: 100%;
+  }
+  .form-group button {
+    width: 100%;
+  }
+  .form-group .form-control {
+    width: 100%;
+  }
+  .form-group .form-control::placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-webkit-input-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-moz-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control:-ms-input-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-ms-input-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-moz-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-webkit-input-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-moz-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-webkit-input-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-moz-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-webkit-input-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-moz-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-webkit-input-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-moz-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-webkit-input-placeholder {
+    width: 100%;
+  }
+  .form-group .form-control::-moz-placeholder {
+    width: 100%;
+  }
+  #profile_img {
+    grid-gap: 2em;
+  }
+  .form-group .input_value #img img {
+    border-radius: 50%;
+  }
+}

@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
+
 {% load static %}
+{% block title %} Introduction {% endblock %}
+
 {% block style %}
 <link href="{% static 'css/componentDesign.css' %}" rel="stylesheet" />
 <link href="{% static 'css/introduction.css' %}" rel="stylesheet" />
@@ -18,7 +21,7 @@
 
           {% endfor %}   
           <center><a href="{% url 'register' %}" class="close_btn_register">Register</a></center>
-              <p>Already have and account? <a href="{% url 'login' %}">Log in</a></p>
+              <p>Already have an account? <a href="{% url 'login' %}">Log in</a></p>
             </div>
             
                 </div>
@@ -28,7 +31,7 @@
 <div class="maincontentContainer container">
   {% include 'common/sideNav.html' %}
 
-  <div class="menuContentContainer" style="margin-top: 86px;" >
+  <div class="menuContentContainer" id="big_div">
     <!-- top row with documentation -->
     <div class="documentationRow">
       <!-- section content -->
@@ -57,7 +60,7 @@
       <!-- section content -->
       <div class="section-content">
         <!-- section content holder -->
-        <div class="section-contentHolder">
+        <div class="section-contentHolder" id="overviewSection">
           <div class="sectionTitle">
             <span class="anime-contentHeader">Overview</span>
           </div>
@@ -78,7 +81,7 @@
       <!-- the getStarted column -->
       <div class="anime-sectionColumn">
         <!-- section title -->
-        <div class="sectionTitle">
+        <div class="sectionTitle" id="installationUsageSection">
           <span class="anime-sectionHeader">Installation and usage</span>
         </div>
 
@@ -134,7 +137,7 @@
         </div>
 
         <!-- section content -->
-        <div class="section-content3">
+        <div class="section-content3" id="downloadSection">
           <!-- section content holder -->
           <div class="section-contentHolder">
 
@@ -193,7 +196,7 @@
         </div>
 
         <!-- section content -->
-        <div class="section-content4">
+        <div class="section-content4" id="demoSection">
           <!-- section content holder -->
           <div class="section-contentHolder">
             <div class="sectionHeaderHolder4">
@@ -212,8 +215,8 @@
 
               <div class="mb-2">
                 <video class="videoContent" width="100%" height="350" controls>
-                  <source src="video.mp4" type="video/mp4" />
-                  <source src="video.mp4" type="video/mp4" />
+                  <source src="https://res.cloudinary.com/dxjvlbskz/video/upload/v1660572022/bandicam_2022-08-14_22-14-50-411_x8sz7b.mp4" type="video/mp4" />
+                  <source src="https://res.cloudinary.com/dxjvlbskz/video/upload/v1660572022/bandicam_2022-08-14_22-14-50-411_x8sz7b.mp4" type="video/mp4" />
                   Your browser does not support the video tag
                 </video>
                 <!-- <iframe width="100%" height="350" src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
@@ -233,8 +236,8 @@
                 <a href="{% url 'introduction' %}" style="color: #328B8B;">
                   <span>
                     <img
-                      src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660560635/arrow-left_fh447h.png"
-                      width="17px"
+                      src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660220326/arrow-left_kof3hb.jpg"
+                      width="24px"
                     />
                   </span>
                   <span> Get started</span>
@@ -254,8 +257,8 @@
   
                 <span>
                   <img
-                  src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660560635/arrow-right_e22btk.png"
-                  height="17px"
+                    src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1660220328/arrow-right_vu83jq.jpg"
+                    width="24px"
                   />
                 </span>
               </a>

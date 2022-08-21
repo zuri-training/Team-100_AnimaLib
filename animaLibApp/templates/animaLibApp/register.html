@@ -39,9 +39,11 @@
           {% endif %}
 <div class="main_box">
 <section>
-    <div class="image-card"><img src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659648861/register_animation_gvhkgk.png" class="img-fluid"
+    <div class="image-card"><img src="https://res.cloudinary.com/dc29czhf9/image/upload/v1660436512/image/register_illustration_update_sqhd6q.gif" class="img-fluid"
         alt="Sample image"></div>
-    <main class="login-card">
+    <main class="login-card" style="padding-top: 10px;">
+    <a href="{% url 'index' %}" style="color:#000; float:right; font-size:30px; padding:10px;">&times</a>
+
       <div class="logo">
         <img src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659815158/logo_1_vsfmjo.png" width="140" height="39"/>
       </div>
@@ -51,7 +53,6 @@
       <div class="main-form">
         <form method="POST">
           {% csrf_token %}
-
           {{ form | crispy }}
             <div class="form-group">
               <div class="row mb-1">
@@ -70,7 +71,7 @@
                   <div class="col d-flex justify-content-center">
                     <!-- Checkbox -->
                     <div class="form-check" >
-                      <input class="form-check-input" type="checkbox" value="" id="form2Example31"/>
+                      <input class="form-check-input" type="checkbox" value="" id="form2Example31" required/>
                       <label class="form-check-label" for="form2Example31"> By signing up, you agree to our <a
                           href>T&Cs</a> and <a href>Privacy Statement</a></label>
                     </div>

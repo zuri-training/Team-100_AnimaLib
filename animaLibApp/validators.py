@@ -47,10 +47,10 @@ def send_verification_email(request, user, user_email, user_name):
     contact_us=reverse('support')
     home_page= reverse('index')
     
-    contact_url ='http://{domain}{contact_us}'.format(domain=domain, contact_us=contact_us)
-    homepage_url ='http://{domain}{home_page}'.format(domain=domain, home_page=home_page)
+    contact_url ='https://{domain}{contact_us}'.format(domain=domain, contact_us=contact_us)
+    homepage_url ='https://{domain}{home_page}'.format(domain=domain, home_page=home_page)
     
-    url_path= 'http://{domain}{link}'.format(domain=domain, link=link)
+    url_path= 'https://{domain}{link}'.format(domain=domain, link=link)
     mail_content ={
         'username':user_name,
         'url_path':url_path,
@@ -92,9 +92,9 @@ def send_forgot_mail(request, user, user_email, user_name):
     link = reverse('resetpassword',kwargs={'uidb64':uidb64,'token':token})
     home_page= reverse('index')
     
-    homepage_url ='http://{domain}{home_page}'.format(domain=domain, home_page=home_page)
+    homepage_url ='https://{domain}{home_page}'.format(domain=domain, home_page=home_page)
     
-    url_path= 'http://{domain}{link}'.format(domain=domain, link=link)
+    url_path= 'https://{domain}{link}'.format(domain=domain, link=link)
     mail_content ={
         'username':user_name,
         'url_path':url_path,

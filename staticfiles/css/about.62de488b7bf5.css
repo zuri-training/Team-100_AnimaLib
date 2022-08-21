@@ -1,0 +1,249 @@
+/* Content Styling */
+
+main {
+  padding-top: 0px;
+  margin-top: 60px;
+  background-color: var(--white);
+}
+
+.description {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+#about-us {
+  width: 100%;
+  height: 400px;
+  background: url("../images/About.9da999d0abc2.png") no-repeat center center;
+  background-size: cover;
+}
+
+.about-us-container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 114px 7%;
+}
+
+.about-us-container h1 {
+  font-size: 56px;
+}
+
+.about-us-container p {
+  max-width: 686px;
+  margin: 0 auto;
+  font-size: 24px;
+}
+
+.goal-mission-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 110px 4% 70px 4%;
+}
+
+.goal-mission-container .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goal-mission-container .flex-container .flex-item {
+  flex-basis: 50%;
+  padding: 0 35px;
+}
+
+.goal-mission-container .flex-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.goal-mission-container .flex-container .flex-item img {
+  width: 100%;
+}
+
+#belief {
+  background-color: rgba(31, 39, 130, 0.05);
+}
+
+.belief-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 105px 0;
+}
+
+.belief-container .title {
+  margin-bottom: 76px;
+  text-align: center;
+}
+
+.belief-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 3%;
+  align-items: center;
+  justify-content: center;
+}
+
+.belief-flex-item {
+  display: grid;
+  grid-template-columns: 0.05fr 1fr;
+  column-gap: 30px;
+  max-width: 370px;
+  padding: 13px;
+  justify-content: center;
+  align-content: center;
+  margin: 15px auto;
+}
+
+.belief-flex-item .belief-icon-container .belief-icon {
+  width: 30px;
+}
+
+.belief-flex-item .belief-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.meet-the-team-container {
+  max-width: 1440px;
+  padding: 100px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.meet-the-team-container p.description {
+  max-width: 622px;
+  margin: 0 auto;
+  margin-bottom: 72px;
+  padding: 0 35px;
+}
+
+.team-member-cards-container {
+  display: flex;
+  padding: 0 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-member {
+  width: 180px;
+  height: 180px;
+  margin: 12px;
+  padding: 16px;
+  background-color: rgba(31, 39, 130, 0.11);
+  border-radius: 12px;
+  align-self: center;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+}
+
+.team-member p {
+  width: 140px;
+  height: 40px;
+  background: rgba(31, 39, 130, 0.08);
+  box-shadow: 0px 19px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 7px 0px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.team-member p .role {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.our-sponsors-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0px 7% 120px 7%;
+}
+
+.our-sponsors-container .description {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sponsors-link {
+  color: #3faeae;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.sponsors-logo {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsors-logo img {
+  padding: 0 50px;
+  margin-bottom: 30px;
+}
+
+.sponsors-logo img.i4g-logo {
+  width: 396px;
+}
+
+.sponsors-logo img.zuri-logo {
+  width: 396px;
+}
+
+@media screen and (min-width: 1400px) {
+  .goal-mission-container {
+    padding: 110px 90px 70px 90px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .goal-mission-container .flex-container {
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .goal-mission-container .flex-container.reverse {
+    flex-direction: column-reverse;
+  }
+  .goal-mission-container .flex-container .title {
+    font-size: 32px;
+    margin: 18px 0px;
+  }
+  .goal-mission-container .flex-container .description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .sponsors-logo img.i4g-logo {
+    width: 300px;
+  }
+  .sponsors-logo img.zuri-logo {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .goal-mission-container {
+    padding: 110px 3% 70px 3%;
+  }
+  .goal-mission-container .flex-container .description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}

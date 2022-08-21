@@ -15,6 +15,26 @@
 <link href="{% static 'css/forgotpword.css' %}" rel="stylesheet" />
 
 {% endblock %} {% block content %}
+{% if messages %} 
+          <div class='showpop'>
+          <div class="showpopup">
+            <div class="close_icon">&times</div>
+                  <div class="popup_content">
+          {% for message in messages %}
+          {% if message.tags == "error" %}
+            <center><div class="cancel">&times</div></center>
+          {% else %}
+      <center><img src="{% static 'images/tick-circle.svg' %}" /></center>
+
+          {% endif %}
+            <p>{{ message}}</p>
+
+          {% endfor %} 
+                  <center><button class="close_btn">Ok</button></center>
+                  </div>
+                </div>
+          </div>
+          {% endif %}
     <section class="login-card">
         <div class="logo">
             <img src="https://res.cloudinary.com/ddrdcj3lb/image/upload/v1659815158/logo_1_vsfmjo.png" width="140" height="39"/>
@@ -27,10 +47,8 @@
             
             <form method="POST">
                 {% csrf_token %}
-                {% if messages %} {% for message in messages %}
-            {{ message}}
-          {% endfor %} {% endif %}
-                <div class="input-container" data-error="Looks like this is not an email">
+                
+                <div class="input-container" data-error="Looks like this is not an email" style="paddng:0px;margin:0px;width:100%;">
                     <label for="eaddress">Email</label><br />
                     <input type="email" name="email" id="eaddress" placeholder="jacksmith@gmail.com" required /><br />
                   </div>

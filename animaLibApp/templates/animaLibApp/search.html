@@ -7,7 +7,7 @@
 {% block style %} {% comment %}
 <link href="{% static 'css/animation.css' %}" rel="stylesheet" />
 <link href="{% static 'css/search.css' %}" rel="stylesheet" /> {% endblock %} {% block content %}
-<div id="search-container">
+<div class="search-container">
     <div class="search-top-container">
         <div class="search-result-text">
             <p>Search results for "<span id="filter"></span>"</p>
@@ -22,11 +22,75 @@
         </div>
     </div>
     <div id="animation-found-container">
+        <div class="anima-display-container">
+            <div class="anima-display">
+                <div class="animation moveup"></div>
+            </div>
+            <div class="lower-container">
+                <div>
+                    <p>Name</p>
+                </div>
+                <div>
+                    <i id="profile-click" class="fa-thin fa-chevron-down"></i><i id="profile-click" class="fa-thin fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="anima-display-container">
+            <div class="anima-display">
+                <div class="animation moveup"></div>
+            </div>
+            <div class="lower-container">
+                <div>
+                    <p>Name</p>
+                </div>
+                <div>
+                    <i id="profile-click" class="fa-thin fa-chevron-down"></i><i id="profile-click" class="fa-thin fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="anima-display-container">
+            <div class="anima-display">
+                <div class="animation moveup"></div>
+            </div>
+            <div class="lower-container">
+                <div>
+                    <p class="anima-name">Name</p>
+                </div>
+                <div>
+                    <i id="profile-click" class="fa-thin fa-chevron-down"></i><i id="profile-click" class="fa-thin fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="anima-display-container">
+            <div class="anima-display">
+                <div class="animation moveup"></div>
+            </div>
+            <div class="lower-container">
+                <div>
+                    <p>Name</p>
+                </div>
+                <div>
+                    <i id="profile-click" class="fa-thin fa-chevron-down"></i><i id="profile-click" class="fa-thin fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="anima-display-container">
+            <div class="anima-display">
+                <div class="animation moveup"></div>
+            </div>
+            <div class="lower-container">
+                <div>
+                    <p>Name</p>
+                </div>
+                <div>
+                    <i id="profile-click" class="fa-thin fa-chevron-down"></i><i id="profile-click" class="fa-thin fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="animation-not-found">
-        <img src="{% static 'image/search-not-found-img.png' %}" alt="not-found-image">
+        <img src="./image/Laptop with a search magnifying glass. Page is not found.png" alt="not-found-image">
         <h3 class="nf-title">No results found</h3>
         <p class="nf-desc">We couldn’t find any animations related to your search</p>
     </div>
-</div>
 </div>

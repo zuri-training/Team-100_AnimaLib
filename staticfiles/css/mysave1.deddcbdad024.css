@@ -1,0 +1,13 @@
+/* Main content styling */
+
+.content-holder {
+  width: 80%;
+  margin: 170px auto !important;
+}
+.saves-title2 {
+  padding-left: 263px;
+  font: Raleway;
+  font-weight: 700;
+  size: 20px;
+  line-height: 24px;
+}
